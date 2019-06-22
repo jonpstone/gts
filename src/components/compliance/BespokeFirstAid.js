@@ -1,9 +1,6 @@
 import React from 'react'
 
-const BespokeFirstAid = () => (
+export default props => 
   <div>
-
+    Bespoke first aid
   </div>
-);
-
-export default BespokeFirstAid

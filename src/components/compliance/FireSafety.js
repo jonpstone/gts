@@ -1,9 +1,6 @@
 import React from 'react'
 
-const FireSafety = () => (
+export default props => 
   <div>
-
+    Fire safety
   </div>
-);
-
-export default FireSafety

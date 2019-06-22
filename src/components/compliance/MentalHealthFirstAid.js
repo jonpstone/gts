@@ -1,9 +1,6 @@
 import React from 'react'
 
-const MentalHealthFirstAid = () => (
+export default props => 
   <div>
-
+    Mental Health First Aid
   </div>
-);
-
-export default MentalHealthFirstAid

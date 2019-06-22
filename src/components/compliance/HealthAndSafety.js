@@ -1,9 +1,6 @@
 import React from 'react'
 
-const HealthAndSafety = () => (
+export default props => 
   <div>
-
+    Health and safety
   </div>
-);
-
-export default HealthAndSafety

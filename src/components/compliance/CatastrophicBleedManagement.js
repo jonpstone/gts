@@ -1,9 +1,6 @@
 import React from 'react'
 
-const CatastrophicBleedManagement = () => (
+export default props => 
   <div>
-
+    Catastrophic bleed management
   </div>
-);
-
-export default CatastrophicBleedManagement

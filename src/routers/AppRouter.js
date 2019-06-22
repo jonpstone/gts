@@ -2,15 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header, Footer } from '../components/layouts'
 import {
-  Home, About, Auditing, Contact, 
-  ForcesCovenant, OrgSec, Public, TeamBuilding
+  Home, About, Auditing, Contact, ForcesCovenant, OrgSec, Public, TeamBuilding
 } from '../components/singlePages'
 import ComplianceRouter from './ComplianceRouter'
 
-const AppRouter = () => (
+export default props =>
   <BrowserRouter>
     <Header/>
-    <ComplianceRouter/>
+    {ComplianceRouter}
     <Switch>
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
@@ -23,6 +22,3 @@ const AppRouter = () => (
     </Switch>
     <Footer/>
   </BrowserRouter>
-);
-
-export default AppRouter;

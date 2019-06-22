@@ -1,9 +1,6 @@
 import React from 'react'
 
-const FirstAidAtWorkRequal = () => (
+export default props => 
   <div>
-
+    First aid at work
   </div>
-);
-
-export default FirstAidAtWorkRequal

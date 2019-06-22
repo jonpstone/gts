@@ -1,9 +1,6 @@
 import React from 'react'
 
-const SafeGuarding = () => (
+export default props => 
   <div>
-
+    Safeguarding
   </div>
-);
-
-export default SafeGuarding

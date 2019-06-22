@@ -1,9 +1,6 @@
 import React from 'react'
 
-const CprBlsAed = () => (
+export default props => 
   <div>
-
+    CPR, BLS and AED
   </div>
-);
-
-export default CprBlsAed

@@ -1,9 +1,6 @@
 import React from 'react'
 
-const JuniorFirstAid = () => (
+export default props => 
   <div>
-
+    Junior first aid
   </div>
-);
-
-export default JuniorFirstAid

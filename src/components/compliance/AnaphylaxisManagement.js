@@ -1,9 +1,6 @@
 import React from 'react'
 
-const AnaphylazxisManagement = () => (
+export default props => 
   <div>
-
+    Anaphylaxis management
   </div>
-);
-
-export default AnaphylazxisManagement

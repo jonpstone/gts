@@ -1,9 +1,6 @@
 import React from 'react'
 
-const ManualHandling = () => (
+export default props => 
   <div>
-
+    Manual handling
   </div>
-);
-
-export default ManualHandling

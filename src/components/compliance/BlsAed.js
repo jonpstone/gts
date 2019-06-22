@@ -1,9 +1,6 @@
 import React from 'react'
 
-const BlsAed = () => (
+export default props => 
   <div>
-
+    BLS and AED
   </div>
-);
-
-export default BlsAed

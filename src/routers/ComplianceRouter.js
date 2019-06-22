@@ -20,7 +20,7 @@ import {
   SafeGuarding
 } from '../components/compliance'
 
-const ComplianceRouter = () => (
+export default props =>
   <BrowserRouter>
       <Switch>
         <Route path="/activity-first-aid" component={ActivityFirstAid} />
@@ -42,6 +42,3 @@ const ComplianceRouter = () => (
         <Route path="safe-guarding" component={SafeGuarding} />
       </Switch>
   </BrowserRouter>
-);
-
-export default ComplianceRouter

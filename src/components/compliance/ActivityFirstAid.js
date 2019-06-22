@@ -1,9 +1,6 @@
 import React from 'react'
 
-const ActivityFirstAid = () => (
+export default props => 
   <div>
-
+    Activity first aid
   </div>
-);
-
-export default ActivityFirstAid

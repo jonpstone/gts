@@ -1,9 +1,6 @@
 import React from 'react'
 
-const OxygenTherapy = () => (
+export default props => 
   <div>
-
+    Oxygen therapy
   </div>
-);
-
-export default OxygenTherapy
