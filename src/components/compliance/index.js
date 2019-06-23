@@ -2,7 +2,10 @@ import ActivityFirstAid from '../compliance/ActivityFirstAid'
 import AnaphylaxisManagement from '../compliance/AnaphylaxisManagement'
 import BespokeFirstAid from '../compliance/BespokeFirstAid'
 import BlsAed from '../compliance/BlsAed'
+import CprBlsAed from '../compliance/CprBlsAed'
+import CatastrophicBleedManagement from '../compliance/CatastrophicBleedManagement'
 import EmergencyFirstAid from '../compliance/EmergencyFirstAid'
+import EmergencyPaediatricFirstAid from '../compliance/EmergencyPaediatricFirstAid'
 import FireSafety from '../compliance/FireSafety'
 import FirstAidAtWorkRequal from '../compliance/FirstAidAtWorkRequal'
 import FirstAidAtWork from './FirstAidAtWork'
@@ -20,7 +23,10 @@ export {
   ActivityFirstAid,
   AnaphylaxisManagement,
   BespokeFirstAid,
+  EmergencyPaediatricFirstAid,
   BlsAed,
+  CprBlsAed,
+  CatastrophicBleedManagement,
   EmergencyFirstAid,
   FireSafety,
   FirstAidAtWorkRequal,

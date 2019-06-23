@@ -1,6 +1,7 @@
 import React from 'react'
+import { Container, Header, Image} from 'semantic-ui-react'
 
 export default props => 
-  <div>
+  <Container text style={{ marginTop: '7em' }}>
     Anaphylaxis management
-  </div>
+  </Container>

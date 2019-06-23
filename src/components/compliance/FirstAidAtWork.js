@@ -1,6 +1,7 @@
 import React from 'react'
+import { Container } from 'semantic-ui-react'
 
 export default props => 
-  <div>
-    First aid at work
-  </div>
+  <Container text style={{ marginTop: '7em' }}>
+    First Aid at Work
+  </Container>

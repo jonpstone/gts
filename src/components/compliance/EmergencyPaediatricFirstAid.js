@@ -1,6 +1,7 @@
 import React from 'react'
+import { Container } from 'semantic-ui-react'
 
 export default props => 
-  <div>
-    Emergency paediatric first aid
-  </div>
+  <Container text style={{ marginTop: '7em' }}>
+    Emeregency Paediatric First Aid
+  </Container>
