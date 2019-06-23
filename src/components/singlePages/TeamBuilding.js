@@ -1,9 +1,8 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react'
 
-const TeamBuild = () => (
-  <div className="teamBuild">
 
-  </div>
-);
-
-export default TeamBuild;
+export default props =>
+  <Container text style={{ marginTop: '7em' }}>
+    Team Building
+  </Container>

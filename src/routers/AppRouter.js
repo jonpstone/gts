@@ -3,7 +3,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NotFound from '../components/singlePages/NotFound'
 import { Header, Footer } from '../components/layouts'
 import {
-  Home, About, Auditing, Contact, ForcesCovenant, Public, TeamBuilding
+  Home, 
+  About, 
+  Auditing, 
+  Contact, 
+  ForcesCovenant, 
+  Public, 
+  TeamBuilding
 } from '../components/singlePages'
 import {
   ActivityFirstAid,

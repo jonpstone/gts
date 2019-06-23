@@ -1,9 +1,7 @@
-import React from 'react';
+import React from 'react'
+import { Container } from 'semantic-ui-react'
 
-const ForcesCovenant = () => (
-  <div className="forcesCovenant">
-    On Scroll Sticky Header
-  </div>
-);
-
-export default ForcesCovenant;
+export default props => 
+  <Container text style={{ marginTop: '7em' }}>
+    Forces Covenant
+  </Container>

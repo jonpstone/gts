@@ -1,9 +1,8 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react'
 
-const About = () => (
-  <div className="about">
 
-  </div>
-);
-
-export default About;
+export default props =>
+  <Container text style={{ marginTop: '7em' }}>
+    About
+  </Container>

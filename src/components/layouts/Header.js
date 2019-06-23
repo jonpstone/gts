@@ -1,18 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { Container, Dropdown, Image, Menu } from 'semantic-ui-react'
 
 export default props =>
   <Menu fixed='top' inverted>
     <Container>
       <Menu.Item header>
-        <NavLink to="/">
+        <Link to="/">
           <Image size='mini' src='/images/GTS.png' style={{ marginRight: '1.5em' }} />
-        </NavLink>
+        </Link>
       </Menu.Item>
       <Dropdown item simple text='Compliance'>
-
-        {/* Compliance */}
         <Dropdown.Menu>
 
           {/* Compliance - First Aid */}
@@ -20,50 +18,32 @@ export default props =>
             <i className='dropdown icon' />
             <span className='text'>First Aid</span>
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <NavLink to="/compliance/first-aid-at-work" className="menuItem">
-                  First Aid at Work (3 Days)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/first-aid-at-work">
+                First Aid at Work (3 Days)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/first-aid-at-work-requal" className="menuItem">
-                  First Aid at Work Requalification (2 Days)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/first-aid-at-work-requal">
+                First Aid at Work Requalification (2 Days)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/emergency-first-aid" className="menuItem">
-                  Emergency First Aid at Work (1 Day)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/emergency-first-aid">
+                Emergency First Aid at Work (1 Day)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/paediatric-first-aid" className="menuItem">
-                  Paediatric First Aid (2 Days)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/paediatric-first-aid">
+                Paediatric First Aid (2 Days)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/emergency-paediatric-first-aid" className="menuItem">
-                  Emergency Paediatric First Aid (1 Day)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/emergency-paediatric-first-aid">
+                Emergency Paediatric First Aid (1 Day)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/activity-first-aid" className="menuItem">
-                  Activity First Aid (2 Days)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/activity-first-aid">
+                Activity First Aid (2 Days)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/bespoke-first-aid" className="menuItem">
-                  Bespoke First Aid
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/bespoke-first-aid">
+                Bespoke First Aid
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/catastrophic-bleed-management" className="menuItem">
-                  Catastrophic Bleed Management
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/catastrophic-bleed-management">
+                Catastrophic Bleed Management
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/junior-first-aid" className="menuItem">
-                  Junior First Aiders
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/junior-first-aid">
+                Junior First Aiders
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
@@ -73,20 +53,14 @@ export default props =>
             <i className='dropdown icon' />
             <span className='text'>Life Support</span>
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <NavLink to="/compliance/cpr-bls-aed" className="menuItem">
-                  CPR/BLS & AED (1 Day)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/cpr-bls-aed">
+                CPR/BLS & AED (1 Day)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/bls-aed" className="menuItem">
-                  BLS & AED (4 Hours)
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/bls-aed">
+                BLS & AED (4 Hours)
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/oxygen-therapy" className="menuItem">
-                  Oxygen Therapy
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/oxygen-therapy">
+                Oxygen Therapy
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
@@ -96,44 +70,30 @@ export default props =>
             <i className='dropdown icon' />
             <span className='text'>Health & Safety</span>
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <NavLink to="/compliance/health-and-safety" className="menuItem">
-                  Health and Safety
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/health-and-safety">
+                Health and Safety
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/health-and-safety-first-aid" className="menuItem">
-                  Health and Safety First Aid
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/health-and-safety-first-aid">
+                Health and Safety First Aid
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/manual-handling" className="menuItem">
-                  Manual Handling
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/manual-handling">
+                Manual Handling
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/food-safety" className="menuItem">
-                  Food Safety
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/food-safety">
+                Food Safety
               </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/compliance/fire-safety" className="menuItem">
-                  Fire Safety
-                </NavLink>
+              <Dropdown.Item as={Link} to="/compliance/fire-safety">
+                Fire Safety
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
 
           {/* Compliance - Misc */}
-          <Dropdown.Item>
-            <NavLink to="/compliance/anaphylaxis-management" className="menuItem">
-              Anaphylaxis Management
-            </NavLink>
+          <Dropdown.Item as={Link} to="/compliance/anaphylaxis-management">
+            Anaphylaxis Management
           </Dropdown.Item>
-          <Dropdown.Item>
-            <NavLink to="/compliance/safe-guarding" className="menuItem">
-              Safe Guarding
-            </NavLink>
+          <Dropdown.Item as={Link} to="/compliance/safe-guarding">
+            Safe Guarding
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
@@ -141,37 +101,27 @@ export default props =>
       {/* Organisation Security */}
       <Dropdown item simple text='Organisation Security'>
         <Dropdown.Menu>
-          <Dropdown.Item>
-            <NavLink to="/organisation-security/lockdown-consultancy" className="menuItem">
+          <Dropdown.Item as={Link} to="/organisation-security/lockdown-consultancy">
               Lockdown Consultancy
-            </NavLink>
           </Dropdown.Item>
-          <Dropdown.Item>
-            <NavLink to="/organisation-security/security-audit" className="menuItem">
+          <Dropdown.Item as={Link} to="/organisation-security/security-audit">
               Security Audit
-            </NavLink>
           </Dropdown.Item>
-          <Dropdown.Item>
-            <NavLink to="/organisation-security/safe-guarding" className="menuItem">
+          <Dropdown.Item as={Link} to="/organisation-security/safe-guarding">
               Serious Incident Control Measures
-            </NavLink>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <Menu.Item as='a'>Auditing</Menu.Item>
-      <Menu.Item as='a'>Team Building</Menu.Item>
-      <Menu.Item as='a'>Forces Covenant</Menu.Item>
-      <Menu.Item as='a'>Public Course</Menu.Item>
-      <Menu.Item as='a'>About</Menu.Item>
-      <Menu.Item as='a'>Contact</Menu.Item>
+      
+      {/* Single Pages */}
+      <Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
+      <Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
+      <Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
+      <Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
+      <Menu.Item as={Link} to="/about">About</Menu.Item>
+      <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
+      <Menu.Item as='a' href="#"><i class="facebook icon"></i></Menu.Item>
+      <Menu.Item as='a' href="#"><i class="linkedin icon"></i></Menu.Item>
+      <Menu.Item as='a' href="#"><i class="instagram icon"></i></Menu.Item>
     </Container>
   </Menu>
-
-//  <Dropdown.Item><NavLink to="/compliance">Compliance</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/organisation-security">Organisation Security</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/auditing">Auditing</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/team-building">Team Building</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/forces-covenant">Forces Covenant</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/public-courses">Public Courses</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/about">About</NavLink></Dropdown.Item>
-//  <Dropdown.Item><NavLink to="/contact">Contact</NavLink></Dropdown.Item>

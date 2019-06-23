@@ -1,9 +1,8 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react'
 
-const Public = () => (
-  <div className="public">
 
-  </div>
-);
-
-export default Public;
+export default props =>
+  <Container text style={{ marginTop: '7em' }}>
+    Public Courses
+  </Container>
