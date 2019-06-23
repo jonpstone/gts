@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import NotFound from '../components/singlePages/NotFound'
 import { Header, Footer } from '../components/layouts'
 import {
-  Home, About, Auditing, Contact, ForcesCovenant, OrgSec, Public, TeamBuilding
+  Home, About, Auditing, Contact, ForcesCovenant, Public, TeamBuilding
 } from '../components/singlePages'
 import {
   ActivityFirstAid,
@@ -26,18 +27,23 @@ import {
   PaediatricFirstAid,
   SafeGuarding,
 } from '../components/compliance'
+import {
+  LockdownConsultancy,
+  SecurityAudit,
+  SICM,
+} from '../components/orgSec'
 
 export default props =>
   <BrowserRouter>
     <Header/>
     <Switch>
+    
       {/* Single Pages */}
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
       <Route path="/auditing" component={Auditing} />
       <Route path="/contact" component={Contact} />
       <Route path="/forces-covenant" component={ForcesCovenant} />
-      <Route path="/organisation-security" component={OrgSec} />
       <Route path="/public-courses" component={Public} />
       <Route path="/team-building" component={TeamBuilding} />
 
@@ -62,6 +68,14 @@ export default props =>
       <Route path="/compliance/paediatric-first-aid" component={PaediatricFirstAid} />
       <Route path="/compliance/emergency-paediatric-first-aid" component={EmergencyPaediatricFirstAid} />
       <Route path="/compliance/safe-guarding" component={SafeGuarding} />
+
+      {/* Organisation Security */}
+      <Route path="/organisation-security/lockdown-consultancy" component={LockdownConsultancy} />
+      <Route path="/organisation-security/security-audit" component={SecurityAudit} />
+      <Route path="/organisation-security/safe-guarding" component={SICM} />
+
+      {/* 404 Not Found */}
+      <Route component={NotFound} />
     </Switch>
     <Footer/>
   </BrowserRouter>

@@ -42,7 +42,8 @@ export default props =>
         </Grid>
 
         <Divider inverted section />
-        <Image centered size='mini' src='/images/GTS.png' />
+        <Image centered size='mini' src='/images/GTS.png' style={{ marginBottom: '.6em'}}/>
+        GOLLUM TRAINING SOLUTIONS<br />
         <List horizontal inverted divided link size='small'>
           <List.Item as='a' href='#'>
             Site Map

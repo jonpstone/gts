@@ -11,7 +11,11 @@ export default props =>
         </NavLink>
       </Menu.Item>
       <Dropdown item simple text='Compliance'>
+
+        {/* Compliance */}
         <Dropdown.Menu>
+
+          {/* Compliance - First Aid */}
           <Dropdown.Item>
             <i className='dropdown icon' />
             <span className='text'>First Aid</span>
@@ -38,7 +42,7 @@ export default props =>
               </Dropdown.Item>
               <Dropdown.Item>
                 <NavLink to="/compliance/emergency-paediatric-first-aid" className="menuItem">
-                  Emergency Paediatric First Aid (1 Days)
+                  Emergency Paediatric First Aid (1 Day)
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
@@ -63,6 +67,8 @@ export default props =>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
+
+          {/* Compliance - Life Support */ }
           <Dropdown.Item>
             <i className='dropdown icon' />
             <span className='text'>Life Support</span>
@@ -84,6 +90,8 @@ export default props =>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
+
+          {/* Compliance - Health and Safety */}
           <Dropdown.Item>
             <i className='dropdown icon' />
             <span className='text'>Health & Safety</span>
@@ -115,9 +123,41 @@ export default props =>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown.Item>
+
+          {/* Compliance - Misc */}
+          <Dropdown.Item>
+            <NavLink to="/compliance/anaphylaxis-management" className="menuItem">
+              Anaphylaxis Management
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/compliance/safe-guarding" className="menuItem">
+              Safe Guarding
+            </NavLink>
+          </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <Menu.Item as='a'>Organisation Security</Menu.Item>
+
+      {/* Organisation Security */}
+      <Dropdown item simple text='Organisation Security'>
+        <Dropdown.Menu>
+          <Dropdown.Item>
+            <NavLink to="/organisation-security/lockdown-consultancy" className="menuItem">
+              Lockdown Consultancy
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/organisation-security/security-audit" className="menuItem">
+              Security Audit
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavLink to="/organisation-security/safe-guarding" className="menuItem">
+              Serious Incident Control Measures
+            </NavLink>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
       <Menu.Item as='a'>Auditing</Menu.Item>
       <Menu.Item as='a'>Team Building</Menu.Item>
       <Menu.Item as='a'>Forces Covenant</Menu.Item>
