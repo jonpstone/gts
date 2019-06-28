@@ -83,5 +83,5 @@ export default props =>
       {/* 404 Not Found */}
       <Route component={NotFound} />
     </Switch>
-    <Footer/>
+    {/* <Footer/> */}
   </BrowserRouter>
