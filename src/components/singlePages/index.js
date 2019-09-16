@@ -11,3 +11,6 @@ export {
   Home, About, Auditing, Contact, 
   ForcesCovenant, OrgSec, Public, TeamBuilding
 }
+
+// This is and export bundler file for the singlePages 
+// category
