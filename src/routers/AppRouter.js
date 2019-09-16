@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import NotFound from '../components/singlePages/NotFound'
 import { Header, Footer } from '../components/layouts'
+// Single page Imports
 import {
+  NotFound,
   Home, 
   About, 
   Auditing, 
@@ -11,6 +12,7 @@ import {
   Public, 
   TeamBuilding
 } from '../components/singlePages'
+// Multi page imports
 import {
   ActivityFirstAid,
   AnaphylaxisManagement,
