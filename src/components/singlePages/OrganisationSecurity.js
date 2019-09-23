@@ -25,5 +25,3 @@ export default props =>
       </p>
      </Container>
   </React.Fragment>
-
-export default OrgSec;
