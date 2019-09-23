@@ -4,14 +4,14 @@ import { Container } from 'semantic-ui-react'
 
 export default props =>
   <Container text style={{ marginTop: '7em' }}>
-    <h1>Team Building & Events</h1>
+    <Header as='h1'>Team Building & Events</Header>
     <p>
       Golbourn Training Solutions has many years’ experience in organising different team building exercises and 
       events, from walking Hadrian’s Wall over 6 days to developing groups communication skills.
     </p>
 
-    <h1>OUR EXPERT EVENT MANAGER FRED BOUCHER IS SECOND TO NONE – </h1>
-    <h2>your staff will be energised and motivated to achieve results</h2>
+    <Header as='h1'>OUR EXPERT EVENT MANAGER FRED BOUCHER IS SECOND TO NONE – </Header>
+    <Header as='h2'>your staff will be energised and motivated to achieve results</Header>
 
     <p>
       <b>Regular asked questions:</b>
@@ -20,7 +20,7 @@ export default props =>
       You can incorporate the event into your companies training packages to suit your message.
     </p>
 
-    <h2>WOODLAND SURVIVAL COURSE</h2> - Bring your team together in this exciting outdoor experience, they will develop new skills and learn dynamic ways to work together to solve any task:
+    <Header as='h2'>WOODLAND SURVIVAL COURSE</Header> - Bring your team together in this exciting outdoor experience, they will develop new skills and learn dynamic ways to work together to solve any task:
     
     <ul>
       <li>Building Shelter</li>
@@ -41,7 +41,7 @@ export default props =>
       and mental.
     </p>
 
-    <h1>CORPORATE TEAM BUILDING EVENTS</h1> 
+    <Header as='h1'>CORPORATE TEAM BUILDING EVENTS</Header> 
 
     <p>
       – Tailored to meet your bespoke needs for all group sizes and abilities. Our team will build you the package to 
@@ -56,11 +56,11 @@ export default props =>
       <li>Many Many More</li> 
     </ul>
 
-    <h1>Contact Us Today: 01926 825682</h1>
+    <Header as='h2'>Contact Us Today: 01926 825682</Header>
 
-    <h1>Some of our past events</h1>
+    <Header as='h1'>Some of our past events</Header>
 
-    <h3>TEAM BUILDING WALKS WITH GOLBOURN TRAINING SOLUTIONS:</h3>
+    <Header as='h3'>TEAM BUILDING WALKS WITH GOLBOURN TRAINING SOLUTIONS:</Header>
 
     <b>Walk Hadrian’s wall - Empires End. (6 days)</b>
     <p>
@@ -96,7 +96,7 @@ export default props =>
 
     <b>Other walks and events:</b>
 
-    Battlefield Tour - Battle of Bosworth. (1day)
+    Battlefield Tour - Battle of Bosworth. (1 day)
 
     Cotswold Way - Chipping Campden to Bath. (4 days)
 
