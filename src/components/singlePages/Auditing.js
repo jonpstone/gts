@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react'
 
 export default props =>
   <Container text style={{ marginTop: '7em' }}>
-    <h1>Auditing</h1>
+    <Header as='h1'>Auditing</Header>
     <p>
       Coming soon to Golbourn Training Solutions
     </p>
