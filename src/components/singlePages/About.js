@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react'
 
-
 export default props =>
   <Container text style={{ marginTop: '7em' }}>
     <Header='h2'>About</Header>
@@ -20,6 +19,8 @@ export default props =>
       We aim to help make your staff the best they can be, and with our security training we will prepare you with the skills to protect
       your staff and clients.
     </p>
+  </Container>
+  <Container text style={{ marginTop: '7em' }}>
     <Header='h2'>Our Team</Header>
     <p>
       Steven Golbourn
