@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Header} from 'semantic-ui-react'
 
 export default props =>
-  <React.Fragment>
+  <>
     <Container text style={{ marginTop: '7em' }}>
       <Header as='h2'>Compliance</Header>
       <p>
@@ -27,4 +27,4 @@ export default props =>
         Every programme is tailor made to the clients needs.  Corporate Team Building, Woodland Survival Team Building.
       </p>
     </Container>
-  <React.Fragment>
+  </>
