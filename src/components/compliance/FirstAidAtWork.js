@@ -1,12 +1,12 @@
-import React from 'react'
+asimport React from 'react'
 import { Container } from 'semantic-ui-react'
 
 export default props =>
    <Container text style={{ marginTop: '7em' }}>
      
-    <h2>First Aid at Work</h2>
+    <Header as='h2'>First Aid at Work</Header>
 
-    <h3>Level 3 First Aid at Work: 3 day course</h3>
+    <Header as='h3'>Level 3 First Aid at Work: 3 day course</Header>
 
     <p>
       This comprehensive three-day course covers a wide range of first aid emergencies, enabling all participants to deal with emergency 
@@ -17,7 +17,7 @@ export default props =>
       Health and Safety (First Aid) Regulations 1981.
     </p>
 
-    <h4>Course Duration</h4>
+    <Header as'h4'>Course Duration</Header>
   
     <p>
       This course runs over 18 hours spread over at least 3 days. Ideally, the course should be run over three consecutive days, but we 
@@ -25,7 +25,7 @@ export default props =>
       course and the training sessions last for a minimum of two hours.
     </p>
 
-    <h4>Syllabus</h4>
+    <Header as='h4'>Syllabus</Header>
 
     A range of subjects are covered in:
     
