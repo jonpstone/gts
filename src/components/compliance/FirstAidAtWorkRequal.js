@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react'
 export default props => 
   <Container text style={{ marginTop: '7em' }}>
   
-    <h2>First Aid at Work Requalification</h2>
+    <Header as='h2'>First Aid at Work Requalification</Header>
 
     <p>This two day First Aid at Work course is designed for those who currently hold a First Aid at Work qualification and are due to 
     expire.</p>
