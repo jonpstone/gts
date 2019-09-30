@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Header} from 'semantic-ui-react'
 
 export default props =>
-  <React.Fragment>
+  <>
     <Container text style={{ marginTop: '7em' }}>
       <Header as'h2'>Security Audit</h2>
       <p>
@@ -24,4 +24,4 @@ export default props =>
         This course also includes serious injury first aid.
       </p>
      </Container>
-  </React.Fragment>
+  </>
