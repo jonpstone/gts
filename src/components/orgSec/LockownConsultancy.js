@@ -9,7 +9,8 @@ export default props =>
         prepared to react effectively and instantly. Having a Lockdown procedure in place is essential, however your Lockdown is only as 
         good as the people doing it.
       </p>
-      <h4>Ask yourself these simple questions:</h4>
+
+      <Header as='h4'>Ask yourself these simple questions:</Header>
 
       <ol>
         <li>Do you have a Lockdown procedure?</li>
@@ -31,20 +32,20 @@ export default props =>
         
     <Container text style={{ marginTop: '7em' }}>
       
-      <h3>Basic Package</h3>
+      <Header as='h3'>Basic Package</Header>
       <p>
         One of our instructors will meet with the Senior Leadership/Management Team to gain knowledge of current procedures and understand 
         the layout.  They will then comprise a recommendation report, this will inform areas of improvement and recommendations.
       </p>
 
-      <h3>Intermediate Package</h3>
+      <Header as='h3'>Intermediate Package</Header>
       <p>
         One of our instructors will meet with the Senior Leadership/Management Team to gain knowledge of current procedures and understand 
         the layout.  They will then design the bespoke procedures for your organisation within a week of this meeting.  This procedure will
         then be shared with the Managemnt team and once approved the staff will then undergo training in the new procedures.
       </p>
 
-      <h3>Intermediate Plus Package</h3>
+      <Header='h3'>Intermediate Plus Package</Header>
       <p>
         One of our instructors will meet with the Senior Leadership/Management Team to gain knowledge of current procedures and understand 
         the layout.  They will then design the bespoke procedures for your organistaion within a week of this meeting.  This procedure will 
@@ -54,7 +55,7 @@ export default props =>
         chest seals.  
       </p>
 
-      <h3>Advanced Package - Serious Incident Control Measures</h3>
+      <Header as='h3'>Advanced Package - Serious Incident Control Measures</Header>
       <p>
         The S.I.C.M Package can be suitable as a stand alone management system or as an intergrated cell of your current Corporate Incident 
         Management system.
