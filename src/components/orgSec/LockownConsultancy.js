@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 
 export default props => 
   <>
@@ -45,7 +45,7 @@ export default props =>
         then be shared with the Managemnt team and once approved the staff will then undergo training in the new procedures.
       </p>
 
-      <Header='h3'>Intermediate Plus Package</Header>
+      <Header as='h3'>Intermediate Plus Package</Header>
       <p>
         One of our instructors will meet with the Senior Leadership/Management Team to gain knowledge of current procedures and understand 
         the layout.  They will then design the bespoke procedures for your organistaion within a week of this meeting.  This procedure will 

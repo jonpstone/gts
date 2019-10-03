@@ -6,10 +6,11 @@ import ForcesCovenant from './ForcesCovenant';
 import OrgSec from './OrganisationSecurity';
 import Public from './PublicCourses';
 import TeamBuilding from './TeamBuilding';
+import NotFound from './NotFound';
 
 export {
-  Home, About, Auditing, Contact, 
-  ForcesCovenant, OrgSec, Public, TeamBuilding
+  Home, About, Auditing, Contact, ForcesCovenant, 
+  OrgSec, Public, TeamBuilding, NotFound
 }
 
 // This is and export bundler file for the singlePages 

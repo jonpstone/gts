@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 
 export default props =>
   <>
     <Container text style={{ marginTop: '7em' }}>
-      <Header='h2'>About</Header>
+      <Header as='h2'>About</Header>
       <p>
         Golbourn Training Solutions believes in making training fun, interactive and realistic. With our courses the dreaded mandatory 
         training is a thing of the past. We will adapt our courses around each and every learner to maximise not only their individual 
@@ -22,7 +22,7 @@ export default props =>
       </p>
     </Container>
     <Container text style={{ marginTop: '7em' }}>
-      <Header='h2'>Our Team</Header>
+      <Header as='h2'>Our Team</Header>
       <p>
         Steven Golbourn
         Managing Director

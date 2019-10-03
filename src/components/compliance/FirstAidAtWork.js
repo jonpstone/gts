@@ -1,5 +1,5 @@
-asimport React from 'react'
-import { Container } from 'semantic-ui-react'
+import React from 'react'
+import { Container, Header } from 'semantic-ui-react'
 
 export default props =>
    <Container text style={{ marginTop: '7em' }}>
@@ -17,7 +17,7 @@ export default props =>
       Health and Safety (First Aid) Regulations 1981.
     </p>
 
-    <Header as'h4'>Course Duration</Header>
+    <Header as='h4'>Course Duration</Header>
   
     <p>
       This course runs over 18 hours spread over at least 3 days. Ideally, the course should be run over three consecutive days, but we 
