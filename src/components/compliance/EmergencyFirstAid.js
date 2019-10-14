@@ -5,26 +5,34 @@ export default props =>
   <>
     
     <Container text style={{ marginTop: '7em' }}>
-      <Header as='h2'>Emergency First Aid at Work</Header>
-
-      <Header as='h3'>Level 3 Emergency First Aid at Work : 1 day course</Header>
+      <Header as='h2'>Paediatric First Aid</Header>
 
       <p>
-        The Emergency First Aid at Work course will enable your company to meet its 
-        regulatory requirements, if after completing a First Aid risk assessment your 
-        organisation is classed as a low risk working environment. Golbourn Training 
-        Solutions can provide First Aid risk assessment.
+        This course has been developed for those who are working with children and 
+        infants. It will be of particular interest to teachers, child minders, crèche 
+        assistants, playgroup personnel and anyone else who has a responsibility for the
+        welfare of children whilst in their care.
       </p>
 
       <p>
-        All learners will have the skills and knowledge to provide basic, lifesaving 
-        First Aid in the workplace.
+        It is ideal for individuals who are responsible for children and infants, who 
+        wish to gain a nationally accredited Level 3 Award.
+      </p>
+
+      <p>
+        This two-day course satisfies the guidelines and criteria as laid down by the 
+        Early Years Foundation Stage (EYFS) and Ofsted. In order to obtain this 
+        qualification, you must attend both days and complete the two units of 
+        accreditation.
       </p>
 
       <p>
         <strong>Course Duration</strong><br />
-        This course runs over a minimum of six contact hours in the classroom, consisting
-        of practical and theoretical activities.
+        This course runs over a minimum of 12 hours making up these two units 
+        consisting of theoretical and practical work. should be run over two 
+        consecutive days, but we have the flexibility to accommodate your specific 
+        needs if you so desire providing it is completed within 6 weeks of starting 
+        the course.
       </p>
 
       <p>
@@ -34,41 +42,42 @@ export default props =>
 
       <ul>
         <li>Responsibilities and reporting</li>
-        <li>Assessment of the situation</li>
-        <li>Dealing with an unresponsive casualty</li>
-        <li>Basic hygiene in First Aid</li>
-        <li>Burns</li>
-        <li>Epilepsy</li>
         <li>Resuscitation including AED</li>
-        <li>Anatomy</li>
-        <li>Minor injuries</li>
-        <li>Bleeding control</li>
+        <li>Assessment of the situation</li>
+        <li>Fainting</li>
+        <li>Dealing with an unresponsive casualty</li>
         <li>Choking</li>
+        <li>Head injuries</li>
+        <li>Diabetes</li>
+        <li>Burns</li>
         <li>Shock</li>
+        <li>Infantile convulsions</li>
+        <li>Foreign bodies</li>
+        <li>Control of bleeding</li>
+        <li>Anaphylaxis</li>
+        <li>Eye injuries</li>
+        <li>Fractures</li>
+        <li>Heat and Cold</li>
+        <li>Asthma</li>
+        <li>Sickle cell anemia</li>
+        <li>Meningitis</li>
       </ul>
 
       <p>
-        Please note add-ons like +F and Catastrophic Bleed Control can be run in 
-        conjunction, also this course includes AED training.
+      Each student will also receive a free comprehensive fully illustrated training 
+      book to supplement the Paediatric First Aid course this will be provided in your
+      training pack.
       </p>
 
       <p>
-        Each student will also receive a free comprehensive fully illustrated training 
-        book to supplement the Emergency First Aid at Work course this will be provided 
-        in your training pack.
+        A maximum of 12 students are allowed and must be a minimum of 16 years of age 
+        and a certificate can be offered to all, subject to assessment. It is the 
+        employer's responsibility to ensure that the student is suitable for that role.
       </p>
 
       <p>
-        A maximum of 12 students are allowed and must be a minimum of 14 years of age 
-        and a certificate can be offered to all, subject to assessment.  A student 
-        cannot assume a responsibility in the workplace until they reach the age of 16,
-        and then it is the employer's responsibility to ensure that the student is 
-        suitable for that role.
-      </p>
-
-      <p>
-        This qualification must be renewed every 3 years.  It is recommended that every
-        first aider completes refresher training annually to keep their skills current 
+        This qualification must be renewed every 3 years. It is recommended that every
+        first aider completes refresher training annually to keep their skills current
         and competent.
       </p>
     </Container>
