@@ -40,7 +40,6 @@ export default props =>
       <li>Chest injuries</li>
       <li>Assessment of the situation</li>
       <li>Diabetes</li>
-
       <li>Shock (including Anaphylaxis)</li>
       <li>Asthma</li>
       <li>Head injuries</li>
