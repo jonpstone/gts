@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Header, Image} from 'semantic-ui-react'
+import { Container, Header} from 'semantic-ui-react'
 
 export default props => 
   <Container text style={{ marginTop: '7em' }}>    
@@ -72,7 +72,7 @@ export default props =>
     <p>
       A maximum of 12 students are allowed and must be a minimum of 16 years of age.
     </p>  
-    
+
     <p>
       This qualification lasts for 3 years. To renew their qualification after 3 
       years, delegates will need to retake the full course. However, it is 
