@@ -33,17 +33,17 @@ export default props =>
     </p>
 
     <ul>
-        <li>Describe anaphylaxis</li>
-        <li>Identify triggers for anaphylaxis</li>
-        <li>Describe life threatening problems associated with the:
-          <ul>
-            <li>Airway</li>
-            <li>Breathing</li>
-            <li>Circulation</li>
-            <li>Disability (Neurological status)</li>
-            <li>Exposure (Skin and mucosal changes)</li>
-          </ul>
-        </li>
+      <li>Describe anaphylaxis</li>
+      <li>Identify triggers for anaphylaxis</li>
+      <li>Describe life threatening problems associated with the:
+        <ul>
+          <li>Airway</li>
+          <li>Breathing</li>
+          <li>Circulation</li>
+          <li>Disability (Neurological status)</li>
+          <li>Exposure (Skin and mucosal changes)</li>
+        </ul>
+      </li>
       <li>Explain the need for an early call for help</li>
       <li>Explain the treatment for anaphylaxis:
         <ul>
