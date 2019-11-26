@@ -29,7 +29,7 @@ export default props =>
     
 
     <p>
-      This course provides an ideal approach to safer and more effective manual handpng 
+      This course provides an ideal approach to safer and more effective manual handling 
       – not only meeting HSE recommendations, but also promoting good and safe practices 
       in any situation.
     </p>
