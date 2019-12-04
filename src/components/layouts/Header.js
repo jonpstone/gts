@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {
@@ -38,24 +37,20 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='PROFESSIONAL | AFFORDABLE | FLEXIBLE'
+      content='PROFESSIONAL   |   AFFORDABLE   |   FLEXIBLE'
       inverted
       style={{
         fontSize: mobile ? '1em' : '1.7em',
         fontWeight: 'normal',
         marginTop: mobile ? '0.5em' : '1.5em',
+        marginBottom: mobile ? '1em' : '2em'
       }}
     />
     <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
+      Learn More
     </Button>
   </Container>
 )
-
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-}
 
 class DesktopContainer extends Component {
   state = {}
@@ -96,7 +91,7 @@ class DesktopContainer extends Component {
                 outline: 'none',
               } : null}
             >
-              <Container>
+              
                 <Menu.Item>
                   <Image as={Link} to="/" size='mini' src='/images/GTS.png' style={{ marginRight: '1.5em' }} />
                 </Menu.Item>
@@ -188,7 +183,7 @@ class DesktopContainer extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
 
-                {/* Organisation Security */}
+                {/* Organization Security */}
                 <Dropdown item simple text='Organisation Security'>
                   <Dropdown.Menu>
                     <Dropdown.Item as={Link} to="/organisation-security/lockdown-consultancy">
@@ -208,12 +203,13 @@ class DesktopContainer extends Component {
                 <Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
                 <Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
                 <Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
-                <Menu.Item as={Link} to="/about">About</Menu.Item>
-                <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
-                <Menu.Item as='a' href="#"><i class="facebook icon"></i></Menu.Item>
-                <Menu.Item as='a' href="#"><i class="linkedin icon"></i></Menu.Item>
-                <Menu.Item as='a' href="#"><i class="instagram icon"></i></Menu.Item>
-              </Container>
+                <Menu.Menu position='right'>
+                  <Menu.Item as={Link} to="/about">About</Menu.Item>
+                  <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
+                  <Menu.Item as='a' href="#"><i class="facebook icon"></i></Menu.Item>
+                  <Menu.Item as='a' href="#"><i class="linkedin icon"></i></Menu.Item>
+                  <Menu.Item as='a' href="#"><i class="instagram icon"></i></Menu.Item>
+                </Menu.Menu>
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -224,15 +220,10 @@ class DesktopContainer extends Component {
   }
 }
 
-DesktopContainer.propTypes = {
-  children: PropTypes.node,
-}
-
 class MobileContainer extends Component {
   state = {}
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
-
   handleToggle = () => this.setState({ sidebarOpened: true })
 
   render() {
@@ -294,20 +285,12 @@ class MobileContainer extends Component {
   }
 }
 
-MobileContainer.propTypes = {
-  children: PropTypes.node,
-}
-
 const ResponsiveContainer = ({ children }) => (
   <div>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </div>
 )
-
-ResponsiveContainer.propTypes = {
-  children: PropTypes.node,
-}
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
