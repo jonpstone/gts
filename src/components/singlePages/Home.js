@@ -99,93 +99,7 @@ class DesktopContainer extends React.Component {
                   />
               </Menu.Item>
               <Menu.Menu position='right'>
-                <Dropdown item simple text='Compliance'>
-                  <Dropdown.Menu>
-
-                    {/* Compliance - First Aid */}
-                    <Dropdown.Item>
-                      <i className='dropdown icon' />
-                      <span className='text'>First Aid</span>
-                      <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="/compliance/first-aid-at-work">
-                          First Aid at Work (3 Days)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/first-aid-at-work-requal">
-                          First Aid at Work Requalification (2 Days)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/emergency-first-aid">
-                          Emergency First Aid at Work (1 Day)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/paediatric-first-aid">
-                          Paediatric First Aid (2 Days)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/emergency-paediatric-first-aid">
-                          Emergency Paediatric First Aid (1 Day)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/activity-first-aid">
-                          Activity First Aid (2 Days)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/bespoke-first-aid">
-                          Bespoke First Aid
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/catastrophic-bleed-management">
-                          Catastrophic Bleed Management
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/junior-first-aid">
-                          Junior First Aiders
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown.Item>
-
-                    {/* Compliance - Life Support */ }
-                    <Dropdown.Item>
-                      <i className='dropdown icon' />
-                      <span className='text'>Life Support</span>
-                      <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="/compliance/cpr-bls-aed">
-                          CPR/BLS & AED (1 Day)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/bls-aed">
-                          BLS & AED (4 Hours)
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/oxygen-therapy">
-                          Oxygen Therapy
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown.Item>
-
-                    {/* Compliance - Health and Safety */}
-                    <Dropdown.Item>
-                      <i className='dropdown icon' />
-                      <span className='text'>Health & Safety</span>
-                      <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="/compliance/health-and-safety">
-                          Health and Safety
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/health-and-safety-first-aid">
-                          Health and Safety First Aid
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/manual-handling">
-                          Manual Handling
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/food-safety">
-                          Food Safety
-                        </Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/compliance/fire-safety">
-                          Fire Safety
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown.Item>
-
-                    {/* Compliance - Misc */}
-                    <Dropdown.Item as={Link} to="/compliance/anaphylaxis-management">
-                      Anaphylaxis Management
-                    </Dropdown.Item>
-                    <Dropdown.Item as={Link} to="/compliance/safe-guarding">
-                      Safe Guarding
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+              <Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
 
                 {/* Organization Security */}
                 <Dropdown item simple text='Organisation Security'>
@@ -213,8 +127,7 @@ class DesktopContainer extends React.Component {
                   as='a' 
                   href='https://www.facebook.com/golbourntrainingsolutions/'
                   target='_blank'
-                >
-                  <i className='facebook icon'></i>
+                ><i className='facebook icon'></i>
                 </Menu.Item>
                 <Menu.Item as='a' href="#"><i className="linkedin icon"></i></Menu.Item>
                 <Menu.Item as='a' href="#"><i className="instagram icon"></i></Menu.Item>
@@ -302,58 +215,62 @@ const ResponsiveContainer = ({ children }) => (
 )
 
 const HomepageLayout = () => (
-  <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-    <Segment style={{ padding: '0em' }} vertical>
-      <Grid celled='internally' columns='equal' stackable>
-        <Grid.Row textAlign='center'>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+	<ResponsiveContainer>
+		<Segment style={{ padding: '8em 8em' }} vertical>
+			<Grid columns='equal' container stackable verticalAlign='top'>
+				<Grid.Row>
+					<Grid.Column floated='left' width={8} style={{paddingRight: '5em', marginBottom: '1.5em'}}>
+						<Header as='h3' style={{ fontSize: '2em' }}>
+							We Will Train Your Employees
+						</Header>
+						<p style={{ fontSize: '1.33em' }}>
+							Gollum Training Solutions understands it can be difficult to release staff for mandatory courses. All
+							our courses can be delivered around your business, in training hours or days, delivered during the day, 
+							evening or weekend. We will travel to your business premises or supply a training centre and carry out a
+							group session or 1-2-1 training.
+						</p>
+					</Grid.Column>
+					<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+						<Header as='h3' style={{ fontSize: '2em' }}>
+							A Diverse Array of Training Packages
+						</Header>
+						<p style={{ fontSize: '1.33em' }}>
+							We offer courses covering a wide variety of business critical subjects, including compliance, security,
+							auditing and team building.
+						</p>          
+					</Grid.Column>
+				</Grid.Row>
+				<Grid.Row>
+					<Grid.Column textAlign='center'>
+						<Button primary as={Link} to="/contact" size='huge'>Contact Us Today</Button>
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Segment>
+		<Segment style={{ padding: '0em' }} vertical>
+			<Grid celled='internally' columns='equal' stackable>
+				<Grid.Row textAlign='center'>
+					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
+						<Header inverted as='h3' style={{ fontSize: '2em' }}>
+							"The real life experiences and stories that are brought to the training make it far more 
+							interesting than a standard course."
+						</Header>
+						<p style={{ fontSize: '1.33em', color: 'white' }}>
+							<b>Bridget</b> - Human Resources Administrator
+						</p>
+					</Grid.Column>
+					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
+						<Header as='h3' style={{ fontSize: '2em' }}>
+							"Attended a fire warden course with Gollum Training Solutions, best fire safety and warden
+							course I have done."
+						</Header>
+						<p style={{ fontSize: '1.33em' }}>
+							<b>Larni</b> - Compliance Officer
+						</p>
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>

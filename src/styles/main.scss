@@ -14,3 +14,20 @@ body {
     url('/images/CPR_training-06.jpg');
   background-size: cover;
 }
+
+#comOne {
+  background-image: linear-gradient(to right bottom,
+    rgba(rgb(161, 110, 15), 0.8),
+    rgba(rgb(199, 47, 47), 0.8)),
+    url('/images/businessMeeting.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+#comTwo {
+  background-image: linear-gradient(to right bottom,
+    rgba(rgb(62, 204, 27), 0.8),
+    rgba(rgb(62, 204, 27), 0.8));
+  background-size: cover;
+  background-position: bottom;
+}
