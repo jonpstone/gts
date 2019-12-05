@@ -2,32 +2,32 @@
 @import "components/footer";
 
 body {
-  font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 #heroHome {
-  min-height: 60vh;
-  padding: 1em 0em;
-  background-image: linear-gradient(to right bottom,
-    rgba(#2998ff, 0.8),
-    rgba(#5643fa, 0.8)),
-    url('/images/CPR_training-06.jpg');
-  background-size: cover;
+	min-height: 60vh;
+	padding: 1em 0em;
+	background-size: cover;
+	background-image: linear-gradient(to right bottom,
+		rgba(#2998ff, 0.8),
+		rgba(#5643fa, 0.8)),
+		url('/images/CPR_training-06.jpg');
 }
 
 #comOne {
-  background-image: linear-gradient(to right bottom,
-    rgba(rgb(161, 110, 15), 0.8),
-    rgba(rgb(199, 47, 47), 0.8)),
-    url('/images/businessMeeting.jpg');
-  background-size: cover;
-  background-position: bottom;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(161, 110, 15), 0.8),
+		rgba(rgb(199, 47, 47), 0.8)),
+		url('/images/businessMeeting.jpg');
 }
 
 #comTwo {
-  background-image: linear-gradient(to right bottom,
-    rgba(rgb(62, 204, 27), 0.8),
-    rgba(rgb(62, 204, 27), 0.8));
-  background-size: cover;
-  background-position: bottom;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(62, 204, 27), 0.8),
+		rgba(rgb(62, 204, 27), 0.8));
 }

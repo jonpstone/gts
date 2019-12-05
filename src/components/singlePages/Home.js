@@ -1,59 +1,79 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Button,
-  Dropdown,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
+	Button,
+	Dropdown,
+	Container,
+	Divider,
+	Grid,
+	Header,
+	Icon,
+	Image,
+	List,
+	Menu,
+	Responsive,
+	Segment,
+	Sidebar,
+	Visibility,
 } from 'semantic-ui-react'
 
 const getWidth = () => {
-  const isSSR = typeof window === 'undefined'
-  return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
+	const isSSR = typeof window === 'undefined'
+	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
 const HomepageHeading = ({ mobile }) => (
-  <Container fluid>
-    <Image 
-      src='/images/GTS1.png' 
-      size='small'
-      style={{ marginTop: mobile ? '1em' : '5em' }} 
-      wrapped
-    />
-    <Header
-      as='h1'
-      content='GOLLUM TRAINING SOLUTIONS'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-      }}
-    />
-    <Header
-      as='h2'
-      content='PROFESSIONAL   |   AFFORDABLE   |   FLEXIBLE'
-      inverted
-      style={{
-        fontSize: mobile ? '1em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-        marginBottom: mobile ? '1em' : '2em'
-      }}
-    />
-    <Button as={Link} to="/about" inverted size='huge'>
-      Learn More
-    </Button>
-  </Container>
+	<Container fluid>
+		<Image 
+			src='/images/GTS1.png' 
+			size='small'
+			style={{ marginTop: mobile ? '1em' : '5em' }} 
+			wrapped
+		/>
+		<Header
+			as='h1'
+			content='GOLLUM TRAINING SOLUTIONS'
+			inverted
+			style={{
+				fontSize: mobile ? '2em' : '4em',
+				fontWeight: 'normal',
+			}}
+		/>
+		<Grid 
+			container
+			stackable
+			columns='equal'
+			style={{
+				fontSize: mobile ? '1em' : '1.7em',
+				fontWeight: 'normal',
+				marginTop: mobile ? '0.5em' : '1.5em',
+				marginBottom: mobile ? '1em' : '2em',
+				marginLeft: '15em'
+			}}>
+			<Grid.Row>				
+				<Grid.Column width={2}>
+				</Grid.Column>
+				<Grid.Column width={4}>
+					<Header as='h2' inverted style={{color: '#FF5733'}}>
+						PROFESSIONAL
+					</Header>
+				</Grid.Column>
+				<Grid.Column width={4}>
+					<Header as='h2' inverted style={{color: '#FFC300'}}>
+						AFFORDABLE
+					</Header>
+				</Grid.Column>
+				<Grid.Column width={4}>
+					<Header as='h2' inverted style={{color: '#DAF7A6'}}>
+						FLEXIBLE
+					</Header>
+				</Grid.Column>
+			</Grid.Row>
+		</Grid>
+		<Button as={Link} to="/about" inverted size='huge'>
+			Learn More
+		</Button>
+	</Container>
 )
 
 class DesktopContainer extends React.Component {
@@ -217,17 +237,22 @@ const ResponsiveContainer = ({ children }) => (
 const HomepageLayout = () => (
 	<ResponsiveContainer>
 		<Segment style={{ padding: '8em 8em' }} vertical>
-			<Grid columns='equal' container stackable verticalAlign='top'>
+			<Grid divided container stackable verticalAlign='top'>
 				<Grid.Row>
-					<Grid.Column floated='left' width={8} style={{paddingRight: '5em', marginBottom: '1.5em'}}>
+					<Grid.Column 
+						floated='left' 
+						width={8} 
+						style={{paddingRight: '5em', marginBottom: '1.5em'}}
+					>
 						<Header as='h3' style={{ fontSize: '2em' }}>
 							We Will Train Your Employees
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							Gollum Training Solutions understands it can be difficult to release staff for mandatory courses. All
-							our courses can be delivered around your business, in training hours or days, delivered during the day, 
-							evening or weekend. We will travel to your business premises or supply a training centre and carry out a
-							group session or 1-2-1 training.
+							Gollum Training Solutions understands it can be difficult to release 
+							staff for mandatory courses. All our courses can be delivered around 
+							your business, in training hours or days, delivered during the day, 
+							evening or weekend. We will travel to your business premises or supply
+							a training centre and carry out a group session or 1-2-1 training.
 						</p>
 					</Grid.Column>
 					<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
@@ -235,9 +260,13 @@ const HomepageLayout = () => (
 							A Diverse Array of Training Packages
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							We offer courses covering a wide variety of business critical subjects, including compliance, security,
+							We offer courses covering a wide variety of operationally critical 
+							subjects for any modern business, including compliance, security, 
 							auditing and team building.
 						</p>          
+						<p style={{ fontSize: '1.33em' }}>
+							Explore further to get a feel for our unique take on learning.
+						</p>
 					</Grid.Column>
 				</Grid.Row>
 				<Grid.Row>
@@ -252,8 +281,8 @@ const HomepageLayout = () => (
 				<Grid.Row textAlign='center'>
 					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
 						<Header inverted as='h3' style={{ fontSize: '2em' }}>
-							"The real life experiences and stories that are brought to the training make it far more 
-							interesting than a standard course."
+							"The real life experiences and stories that are brought to the training 
+							make it far more interesting than a standard course."
 						</Header>
 						<p style={{ fontSize: '1.33em', color: 'white' }}>
 							<b>Bridget</b> - Human Resources Administrator
@@ -261,8 +290,8 @@ const HomepageLayout = () => (
 					</Grid.Column>
 					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
 						<Header as='h3' style={{ fontSize: '2em' }}>
-							"Attended a fire warden course with Gollum Training Solutions, best fire safety and warden
-							course I have done."
+							"Attended a fire warden course with Gollum Training Solutions, best 
+							fire safety and warden course I have done."
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
 							<b>Larni</b> - Compliance Officer
