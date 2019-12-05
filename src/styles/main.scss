@@ -6,6 +6,8 @@ body {
 }
 
 #heroHome {
+  min-height: 60vh;
+  padding: 1em 0em;
   background-image: linear-gradient(to right bottom,
     rgba(#2998ff, 0.8),
     rgba(#5643fa, 0.8)),

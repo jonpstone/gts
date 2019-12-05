@@ -43,7 +43,6 @@ import {
 
 export default props =>
   <BrowserRouter>
-    <Header/>
     <Switch>
     
       {/* Single Pages */}
@@ -77,7 +76,7 @@ export default props =>
       <Route path="/compliance/emergency-paediatric-first-aid" component={EmergencyPaediatricFirstAid} />
       <Route path="/compliance/safe-guarding" component={SafeGuarding} />
 
-      {/* Organisation Security */}
+      {/* Organization Security */}
       <Route path="/organisation-security/lockdown-consultancy" component={LockdownConsultancy} />
       <Route path="/organisation-security/security-audit" component={SecurityAudit} />
       <Route path="/organisation-security/safe-guarding" component={SICM} />
