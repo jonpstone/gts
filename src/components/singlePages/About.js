@@ -3,6 +3,7 @@ import { Container, Header } from 'semantic-ui-react'
 
 export default props =>
   <>
+    {console.log(window.location.href)}
     <Container text style={{ marginTop: '7em' }}>
       <Header as='h2'>About</Header>
       <p>

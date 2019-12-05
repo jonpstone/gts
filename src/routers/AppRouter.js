@@ -20,6 +20,7 @@ import {
   BlsAed,
   CprBlsAed,
   CatastrophicBleedManagement,
+  Compliance,
   EmergencyFirstAid,
   EmergencyPaediatricFirstAid,
   FireSafety,
@@ -44,7 +45,7 @@ import {
 export default props =>
   <BrowserRouter>
     <Switch>
-    
+
       {/* Single Pages */}
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
@@ -55,6 +56,7 @@ export default props =>
       <Route path="/team-building" component={TeamBuilding} />
 
       {/* Compliance */}
+      <Route path="/compliance" component={Compliance} />
       <Route path="/compliance/activity-first-aid" component={ActivityFirstAid} />
       <Route path="/compliance/anaphylaxis-management" component={AnaphylaxisManagement} />
       <Route path="/compliance/bespoke-first-aid" component={BespokeFirstAid} />

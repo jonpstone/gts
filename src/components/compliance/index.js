@@ -18,6 +18,7 @@ import MentalHealthFirstAid from '../compliance/MentalHealthFirstAid'
 import OxygenTherapy from '../compliance/OxygenTherapy'
 import PaediatricFirstAid from '../compliance/PaediatricFirstAid'
 import SafeGuarding from '../compliance/SafeGuarding'
+import Compliance from '../compliance/Compliance'
 
 export {
   ActivityFirstAid,
@@ -27,6 +28,7 @@ export {
   BlsAed,
   CprBlsAed,
   CatastrophicBleedManagement,
+  Compliance,
   EmergencyFirstAid,
   FireSafety,
   FirstAidAtWorkRequal,

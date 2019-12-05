@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   Button,
@@ -56,7 +56,7 @@ const HomepageHeading = ({ mobile }) => (
   </Container>
 )
 
-class DesktopContainer extends Component {
+class DesktopContainer extends React.Component {
   state = {}
 
   hideFixedMenu = () => this.setState({ fixed: false })
@@ -95,7 +95,7 @@ class DesktopContainer extends Component {
                 <Image 
                   as={Link} to="/" 
                   size='mini' 
-                  src='/images/GTS.png' 
+                  src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
                   />
               </Menu.Item>
               <Menu.Menu position='right'>
@@ -214,10 +214,10 @@ class DesktopContainer extends Component {
                   href='https://www.facebook.com/golbourntrainingsolutions/'
                   target='_blank'
                 >
-                  <i class='facebook icon'></i>
+                  <i className='facebook icon'></i>
                 </Menu.Item>
-                <Menu.Item as='a' href="#"><i class="linkedin icon"></i></Menu.Item>
-                <Menu.Item as='a' href="#"><i class="instagram icon"></i></Menu.Item>
+                <Menu.Item as='a' href="#"><i className="linkedin icon"></i></Menu.Item>
+                <Menu.Item as='a' href="#"><i className="instagram icon"></i></Menu.Item>
               </Menu.Menu>
             </Menu>
             <HomepageHeading />
@@ -229,7 +229,7 @@ class DesktopContainer extends Component {
   }
 }
 
-class MobileContainer extends Component {
+class MobileContainer extends React.Component {
   state = {}
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
@@ -295,10 +295,10 @@ class MobileContainer extends Component {
 }
 
 const ResponsiveContainer = ({ children }) => (
-  <div>
+  <>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
-  </div>
+  </>
 )
 
 const HomepageLayout = () => (
