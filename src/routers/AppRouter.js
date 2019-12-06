@@ -45,7 +45,7 @@ import {
 export default props =>
   <BrowserRouter>
     <Switch>
-
+      
       {/* Single Pages */}
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />

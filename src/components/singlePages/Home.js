@@ -4,7 +4,6 @@ import {
 	Button,
 	Dropdown,
 	Container,
-	Divider,
 	Grid,
 	Header,
 	Icon,
@@ -54,17 +53,17 @@ const HomepageHeading = ({ mobile }) => (
 				<Grid.Column width={2}>
 				</Grid.Column>
 				<Grid.Column width={4}>
-					<Header as='h2' inverted style={{color: '#FF5733'}}>
+					<Header as='h2' inverted style={{color: '#FFC300'}}>
 						PROFESSIONAL
 					</Header>
 				</Grid.Column>
 				<Grid.Column width={4}>
-					<Header as='h2' inverted style={{color: '#FFC300'}}>
+					<Header as='h2' inverted style={{color: '#DAF7A6'}}>
 						AFFORDABLE
 					</Header>
 				</Grid.Column>
 				<Grid.Column width={4}>
-					<Header as='h2' inverted style={{color: '#DAF7A6'}}>
+					<Header as='h2' inverted style={{color: 'white'}}>
 						FLEXIBLE
 					</Header>
 				</Grid.Column>
@@ -72,6 +71,7 @@ const HomepageHeading = ({ mobile }) => (
 		</Grid>
 		<Button as={Link} to="/about" inverted size='huge'>
 			Learn More
+			<Icon name='angle right'/>
 		</Button>
 	</Container>
 )
@@ -248,11 +248,12 @@ const HomepageLayout = () => (
 							We Will Train Your Employees
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							Gollum Training Solutions understands it can be difficult to release 
-							staff for mandatory courses. All our courses can be delivered around 
-							your business, in training hours or days, delivered during the day, 
-							evening or weekend. We will travel to your business premises or supply
-							a training centre and carry out a group session or 1-2-1 training.
+							Gollum Training Solutions understands that it can be difficult to 
+							release staff for mandatory courses. All our courses can be delivered 
+							around your business, in training hours or days. Courses can be conducted
+							during the day, evening or weekend. We will travel to your business 
+							premises or	supply a training centre and carry out a group session or 
+							1-2-1 training.
 						</p>
 					</Grid.Column>
 					<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
@@ -265,19 +266,22 @@ const HomepageLayout = () => (
 							auditing and team building.
 						</p>          
 						<p style={{ fontSize: '1.33em' }}>
-							Explore further to get a feel for our unique take on learning.
+							Explore further to get a feel for our unique take on training.
 						</p>
 					</Grid.Column>
 				</Grid.Row>
 				<Grid.Row>
 					<Grid.Column textAlign='center'>
-						<Button primary as={Link} to="/contact" size='huge'>Contact Us Today</Button>
+						<Button inverted color='blue' as={Link} to="/contact" size='huge'>
+							Contact Us Today
+							<Icon name='angle right'/>
+						</Button>
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
 		</Segment>
 		<Segment style={{ padding: '0em' }} vertical>
-			<Grid celled='internally' columns='equal' stackable>
+			<Grid columns='equal' stackable>
 				<Grid.Row textAlign='center'>
 					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
 						<Header inverted as='h3' style={{ fontSize: '2em' }}>
@@ -285,54 +289,74 @@ const HomepageLayout = () => (
 							make it far more interesting than a standard course."
 						</Header>
 						<p style={{ fontSize: '1.33em', color: 'white' }}>
-							<b>Bridget</b> - Human Resources Administrator
+							Bridget - Human Resources Administrator
 						</p>
 					</Grid.Column>
 					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
 						<Header as='h3' style={{ fontSize: '2em' }}>
-							"Attended a fire warden course with Gollum Training Solutions, best 
+							"I attended a fire warden course with Gollum Training Solutions, best 
 							fire safety and warden course I have done."
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							<b>Larni</b> - Compliance Officer
+							Larni - Compliance Officer
 						</p>
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
 		</Segment>
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
-        </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
-        <Divider
-          as='h4'
-          className='header'
-          horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-        >
-          <a href='#'>Case Studies</a>
-        </Divider>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
-        </p>
-        <Button as='a' size='large'>
-          I'm Still Quite Interested
-        </Button>
-      </Container>
+    <Segment style={{ padding: '8em 0em 0em' }} vertical borderless>
+		<Grid stackable columns='equal'>
+			<Grid.Row>
+				<Grid.Column textAlign='center' style={{ padding: '0 35em 5em' }}>
+					<Header as='h3' style={{ fontSize: '2em' }}>
+						Public Courses
+					</Header>
+					<p style={{ fontSize: '1.33em', marginBottom: '2em' }}>
+						Gollum Training Solutions offer training packages open to the public, these 
+						are led	the Managing Director if local to our main office or otherwise by 
+						our	regional instructors. These courses include Catastrophic Bleed Control,
+						Health & Safety in the Workplace, Safeguarding of Children, Fire Safety and
+						many more.
+					</p>
+					<Button inverted color='blue' as={Link} to="/public-courses" size='huge'>
+						Read More
+						<Icon name='angle right'/>
+					</Button>
+				</Grid.Column>
+			</Grid.Row>
+			<Grid.Row style={{ margin: '0', padding: '0' }}>
+				<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
+					<Header as='h3' style={{ fontSize: '2em' }}>
+						Next Public Courses
+					</Header>
+					<p style={{ fontSize: '1.33em', marginBottom: '1em' }}>
+						<b>SUPERVISOR FOR MENTAL HEALTH FIRST AID LEVEL 3</b><br></br>
+						Stockton, Warwickshire - 7-8 September 2020<br></br>
+						Aldershot, Hampshire - 18-19 September 2020<br></br>
+						Aldershot, Hampshire - 21-22 October 2020
+					</p>
+					<Button color='black' as={Link} to="#" size='huge'>
+						I'm Interested
+						<Icon name='angle right'/>
+					</Button>
+				</Grid.Column>
+				<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
+				<Header inverted as='h3' style={{ fontSize: '2em' }}>
+						Supporting HM Forces and Veterans
+					</Header>
+					<p style={{ fontSize: '1.33em', color: 'white' }}>
+						We pride our selves on helping our Armed Forces to gain qualifications 
+						either during their services or after.  Our MOD Bundle courses are available 
+						throughout the year and multiple locations for both service personnel and their 
+						direct families.
+					</p>
+					<Button inverted as={Link} to="/forces-covenant" size='huge'>
+						Forces Covenant
+						<Icon name='angle right'/>
+					</Button>
+				</Grid.Column>
+			</Grid.Row>
+		</Grid>
     </Segment>
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
