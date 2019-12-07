@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CoursesCarousel from '../NonPageComponents/CoursesCarousel'
 import {
 	Button,
-	Dropdown,
 	Container,
 	Grid,
 	Header,
 	Icon,
 	Image,
-	List,
 	Menu,
 	Responsive,
 	Segment,
@@ -31,7 +30,7 @@ const HomepageHeading = ({ mobile }) => (
 		/>
 		<Header
 			as='h1'
-			content='GOLLUM TRAINING SOLUTIONS'
+			content='GOLBOURN TRAINING SOLUTIONS'
 			inverted
 			style={{
 				fontSize: mobile ? '2em' : '4em',
@@ -99,11 +98,10 @@ class DesktopContainer extends React.Component {
             textAlign='center'
             vertical>
             <Menu
+			compact
               borderless
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              // pointing={!fixed}
-              // secondary={!fixed}
+			  inverted={!fixed}
               size='large'
               style={!fixed ? {
                 backgroundColor: 'transparent',
@@ -111,47 +109,22 @@ class DesktopContainer extends React.Component {
                 outline: 'none',
               } : null}
             >
-              <Menu.Item>
-                <Image 
-                  as={Link} to="/" 
-                  size='mini' 
-                  src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
-                  />
-              </Menu.Item>
-              <Menu.Menu position='right'>
-              <Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
-
-                {/* Organization Security */}
-                <Dropdown item simple text='Organisation Security'>
-                  <Dropdown.Menu>
-                    <Dropdown.Item as={Link} to="/organisation-security/lockdown-consultancy">
-                        Lockdown Consultancy
-                    </Dropdown.Item>
-                    <Dropdown.Item as={Link} to="/organisation-security/security-audit">
-                        Security Audit
-                    </Dropdown.Item>
-                    <Dropdown.Item as={Link} to="/organisation-security/safe-guarding">
-                        Serious Incident Control Measures
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                
-                {/* Single Pages */}
-                <Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
-                <Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
-                <Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
-                <Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
-                <Menu.Item as={Link} to="/about">About</Menu.Item>
-                <Menu.Item as={Link} to="/contact">Contact</Menu.Item>
-                <Menu.Item 
-                  as='a' 
-                  href='https://www.facebook.com/golbourntrainingsolutions/'
-                  target='_blank'
-                ><i className='facebook icon'></i>
-                </Menu.Item>
-                <Menu.Item as='a' href="#"><i className="linkedin icon"></i></Menu.Item>
-                <Menu.Item as='a' href="#"><i className="instagram icon"></i></Menu.Item>
-              </Menu.Menu>
+				<Menu.Item>
+					<Image 
+						as={Link} to="/" 
+						size='mini' 
+						src={!fixed ? null : '/images/GTS.png'}
+						style={!fixed ? { display: 'none' } : null }
+					/>
+				</Menu.Item>
+				<Menu.Menu>
+					<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
+					<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
+					<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
+					<Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
+					<Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
+					<Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
+				</Menu.Menu>
             </Menu>
             <HomepageHeading />
           </Segment>
@@ -227,15 +200,38 @@ class MobileContainer extends React.Component {
   }
 }
 
-const ResponsiveContainer = ({ children }) => (
+const ResponsiveContainer = ({ children }) => 
   <>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </>
-)
 
 const HomepageLayout = () => (
 	<ResponsiveContainer>
+		<Segment style={{ padding: '0em' }} vertical>
+			<Grid columns='equal' stackable>
+				<Grid.Row textAlign='center'>
+					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
+						<Header inverted as='h3' style={{ fontSize: '2em' }}>
+							"The real life experiences and stories that are brought to the training 
+							make it far more interesting than a standard course."
+						</Header>
+						<p style={{ fontSize: '1.33em', color: 'white' }}>
+							Bridget - Human Resources Administrator
+						</p>
+					</Grid.Column>
+					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
+						<Header as='h3' style={{ fontSize: '2em' }}>
+							"I attended a fire warden course with Golbourn Training Solutions, best 
+							fire safety and warden course I have done."
+						</Header>
+						<p style={{ fontSize: '1.33em' }}>
+							Larni - Compliance Officer
+						</p>
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Segment>
 		<Segment style={{ padding: '8em 8em' }} vertical>
 			<Grid divided container stackable verticalAlign='top'>
 				<Grid.Row>
@@ -248,7 +244,7 @@ const HomepageLayout = () => (
 							We Will Train Your Employees
 						</Header>
 						<p style={{ fontSize: '1.33em' }}>
-							Gollum Training Solutions understands that it can be difficult to 
+							Golbourn Training Solutions understands that it can be difficult to 
 							release staff for mandatory courses. All our courses can be delivered 
 							around your business, in training hours or days. Courses can be conducted
 							during the day, evening or weekend. We will travel to your business 
@@ -280,119 +276,34 @@ const HomepageLayout = () => (
 				</Grid.Row>
 			</Grid>
 		</Segment>
-		<Segment style={{ padding: '0em' }} vertical>
-			<Grid columns='equal' stackable>
-				<Grid.Row textAlign='center'>
-					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
+		<Segment style={{ padding: '0' }} vertical borderless>
+			<Grid stackable columns='equal'>
+				<Grid.Row style={{ margin: '0', padding: '0' }}>
+					<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
 						<Header inverted as='h3' style={{ fontSize: '2em' }}>
-							"The real life experiences and stories that are brought to the training 
-							make it far more interesting than a standard course."
+							Upcoming Public Courses
+						</Header>
+						<CoursesCarousel />
+					</Grid.Column>
+					<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
+					<Header inverted as='h3' style={{ fontSize: '2em' }}>
+							Supporting HM Forces and Veterans
 						</Header>
 						<p style={{ fontSize: '1.33em', color: 'white' }}>
-							Bridget - Human Resources Administrator
-						</p>
-					</Grid.Column>
-					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
-						<Header as='h3' style={{ fontSize: '2em' }}>
-							"I attended a fire warden course with Gollum Training Solutions, best 
-							fire safety and warden course I have done."
-						</Header>
-						<p style={{ fontSize: '1.33em' }}>
-							Larni - Compliance Officer
-						</p>
+							We pride our selves on helping our Armed Forces to gain qualifications 
+							either during their service or after.  Our MOD Bundle courses are available 
+							throughout the year and multiple locations for both service personnel and their 
+							direct families.
+						</p><br/>
+						<Button inverted as={Link} to="/forces-covenant" size='huge'>
+							Forces Covenant
+							<Icon name='angle right'/>
+						</Button>
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>
 		</Segment>
-    <Segment style={{ padding: '8em 0em 0em' }} vertical borderless>
-		<Grid stackable columns='equal'>
-			<Grid.Row>
-				<Grid.Column textAlign='center' style={{ padding: '0 35em 5em' }}>
-					<Header as='h3' style={{ fontSize: '2em' }}>
-						Public Courses
-					</Header>
-					<p style={{ fontSize: '1.33em', marginBottom: '2em' }}>
-						Gollum Training Solutions offer training packages open to the public, these 
-						are led	the Managing Director if local to our main office or otherwise by 
-						our	regional instructors. These courses include Catastrophic Bleed Control,
-						Health & Safety in the Workplace, Safeguarding of Children, Fire Safety and
-						many more.
-					</p>
-					<Button inverted color='blue' as={Link} to="/public-courses" size='huge'>
-						Read More
-						<Icon name='angle right'/>
-					</Button>
-				</Grid.Column>
-			</Grid.Row>
-			<Grid.Row style={{ margin: '0', padding: '0' }}>
-				<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
-					<Header as='h3' style={{ fontSize: '2em' }}>
-						Next Public Courses
-					</Header>
-					<p style={{ fontSize: '1.33em', marginBottom: '1em' }}>
-						<b>SUPERVISOR FOR MENTAL HEALTH FIRST AID LEVEL 3</b><br></br>
-						Stockton, Warwickshire - 7-8 September 2020<br></br>
-						Aldershot, Hampshire - 18-19 September 2020<br></br>
-						Aldershot, Hampshire - 21-22 October 2020
-					</p>
-					<Button color='black' as={Link} to="#" size='huge'>
-						I'm Interested
-						<Icon name='angle right'/>
-					</Button>
-				</Grid.Column>
-				<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
-				<Header inverted as='h3' style={{ fontSize: '2em' }}>
-						Supporting HM Forces and Veterans
-					</Header>
-					<p style={{ fontSize: '1.33em', color: 'white' }}>
-						We pride our selves on helping our Armed Forces to gain qualifications 
-						either during their services or after.  Our MOD Bundle courses are available 
-						throughout the year and multiple locations for both service personnel and their 
-						direct families.
-					</p>
-					<Button inverted as={Link} to="/forces-covenant" size='huge'>
-						Forces Covenant
-						<Icon name='angle right'/>
-					</Button>
-				</Grid.Column>
-			</Grid.Row>
-		</Grid>
-    </Segment>
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Footer Header
-              </Header>
-              <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment>
-  </ResponsiveContainer>
+	</ResponsiveContainer>
 )
 
 export default HomepageLayout

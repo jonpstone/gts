@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { Header, Footer } from '../components/layouts'
 // Single page Imports
 import {
   NotFound,
@@ -10,7 +9,8 @@ import {
   Contact, 
   ForcesCovenant, 
   Public, 
-  TeamBuilding
+  TeamBuilding,
+  Policy
 } from '../components/singlePages'
 // Multi page imports
 import {
@@ -41,11 +41,12 @@ import {
   SecurityAudit,
   SICM,
 } from '../components/orgSec'
+import { Footer } from '../components/layouts'
 
 export default props =>
   <BrowserRouter>
     <Switch>
-      
+    
       {/* Single Pages */}
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
@@ -54,6 +55,7 @@ export default props =>
       <Route path="/forces-covenant" component={ForcesCovenant} />
       <Route path="/public-courses" component={Public} />
       <Route path="/team-building" component={TeamBuilding} />
+      <Route path="/policy" component={Policy} />
 
       {/* Compliance */}
       <Route path="/compliance" component={Compliance} />
@@ -81,10 +83,10 @@ export default props =>
       {/* Organization Security */}
       <Route path="/organisation-security/lockdown-consultancy" component={LockdownConsultancy} />
       <Route path="/organisation-security/security-audit" component={SecurityAudit} />
-      <Route path="/organisation-security/safe-guarding" component={SICM} />
+      {/* <Route path="/organisation-security/safe-guarding" component={SICM} /> */}
 
       {/* 404 Not Found */}
       <Route component={NotFound} />
     </Switch>
-    {/* <Footer/> */}
+    <Footer />
   </BrowserRouter>

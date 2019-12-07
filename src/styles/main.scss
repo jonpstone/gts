@@ -1,11 +1,8 @@
-@import "components/header";
-@import "components/footer";
-
 body {
 	font-family: 'Poppins', sans-serif;
 }
 #heroHome {
-	min-height: 60vh;
+	min-height: 70vh;
 	padding: 1em 0em;
 	background-size: cover;
 	background-image: linear-gradient(to right bottom,
@@ -30,14 +27,15 @@ body {
 #comThree {
 	background-size: cover;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(167, 167, 167), 0.8),
-		rgba(rgb(167, 167, 167), 0.8));
+		rgba(rgb(62, 172, 40), 0.9),
+		rgba(rgb(62, 172, 40), 0.9)),
+		url('/images/classRoom.jpg');
 }
 #comFour {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(0, 0, 0), 0.6),
-		rgba(rgb(0, 0, 0), 0.6)),
+		rgba(rgb(0, 0, 0), 0.7),
+		rgba(rgb(0, 0, 0), 0.7)),
 		url('/images/HMS_Dragon.jpg');
 }
