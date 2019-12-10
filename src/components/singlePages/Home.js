@@ -212,10 +212,10 @@ const ResponsiveContainer = ({ children }) =>
 const HomepageLayout = () => (
 	<ResponsiveContainer>
 		<Segment style={{ padding: '6em' }} vertical>
-			<Grid container stackable verticalAlign='top'>
+			<Grid stackable>
 				<Grid.Row>
 					<Grid.Column>
-						<Image src='/images/logoChain.png' />
+						<Image src='/images/logoChain.png' size='massive' centered/>
 					</Grid.Column>
 				</Grid.Row>
 			</Grid>

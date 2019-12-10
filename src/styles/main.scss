@@ -39,3 +39,11 @@ body {
 		rgba(rgb(0, 0, 0), 0.7)),
 		url('/images/HMS_Dragon.jpg');
 }
+#compHero {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(0, 0, 0), 0.7),
+		rgba(rgb(0, 0, 0), 0.7)),
+		url('/images/Palace_of_Westminster.jpg');
+}
