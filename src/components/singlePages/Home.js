@@ -96,18 +96,19 @@ class DesktopContainer extends React.Component {
             id='heroHome'
             inverted
             textAlign='center'
-            vertical>
+            vertical
+		>
             <Menu
-			compact
-              borderless
-              fixed={fixed ? 'top' : null}
-			  inverted={!fixed}
-              size='large'
-              style={!fixed ? {
-                backgroundColor: 'transparent',
-                border: 'none',
-                outline: 'none',
-              } : null}
+				compact
+				borderless
+				fixed={fixed ? 'top' : null}
+				inverted={!fixed}
+				size='large'
+				style={!fixed ? {
+					backgroundColor: 'transparent',
+					border: 'none',
+					outline: 'none',
+				} : null}
             >
 				<Menu.Item>
 					<Image 
@@ -117,13 +118,15 @@ class DesktopContainer extends React.Component {
 						style={!fixed ? { display: 'none' } : null }
 					/>
 				</Menu.Item>
-				<Menu.Menu>
+				<Menu.Menu style={{ fontSize: '1.2em' }}>
 					<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
 					<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
 					<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
 					<Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
 					<Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
 					<Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
+					<Menu.Item ></Menu.Item>
+
 				</Menu.Menu>
             </Menu>
             <HomepageHeading />
@@ -208,6 +211,15 @@ const ResponsiveContainer = ({ children }) =>
 
 const HomepageLayout = () => (
 	<ResponsiveContainer>
+		<Segment style={{ padding: '6em' }} vertical>
+			<Grid container stackable verticalAlign='top'>
+				<Grid.Row>
+					<Grid.Column>
+						<Image src='/images/logoChain.png' />
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Segment>
 		<Segment style={{ padding: '0em' }} vertical>
 			<Grid columns='equal' stackable>
 				<Grid.Row textAlign='center'>
@@ -232,7 +244,7 @@ const HomepageLayout = () => (
 				</Grid.Row>
 			</Grid>
 		</Segment>
-		<Segment style={{ padding: '8em 8em' }} vertical>
+		<Segment style={{ padding: '8em' }} vertical>
 			<Grid divided container stackable verticalAlign='top'>
 				<Grid.Row>
 					<Grid.Column 
