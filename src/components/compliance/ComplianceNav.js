@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Menu, Responsive, Header, Grid, Segment } from 'semantic-ui-react'
+import { Menu, Responsive, Header, Grid, Segment } from 'semantic-ui-react'
 import NavBar from '../layouts/Header'
 import {
     ActivityFirstAid,

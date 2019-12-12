@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container, Header, Grid } from 'semantic-ui-react'
+import { Container, Header, Segment } from 'semantic-ui-react'
 
 export default props => 
-<Grid borderless style={{ padding: '3em' }}>
+<>
     <p style={{ fontSize: '1.6em' }}>
         Is your organisation HSE Compliant?  If you have over 5 employees you must have 
         a written Health & Safety policy, safe system of work, risk assessments and 
@@ -15,4 +15,4 @@ export default props =>
         courses or onsite training at your premises. We will always aim to tailor the 
         course to reflect your business needs.
     </p>
-</Grid>
+</>

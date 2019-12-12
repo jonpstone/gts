@@ -21,10 +21,8 @@ import {
   CprBlsAed,
   CatastrophicBleedManagement,
   ComplianceNav,
-  EmergencyFirstAid,
   EmergencyPaediatricFirstAid,
   FireSafety,
-  FirstAidAtWorkRequal,
   FirstAidAtWork,
   FoodSafety,
   HealthAndSafety,
@@ -65,9 +63,7 @@ export default props =>
       <Route path="/compliance/bls-aed" component={BlsAed} />
       <Route path="/compliance/cpr-bls-aed" component={CprBlsAed} />
       <Route path="/compliance/catastrophic-bleed-management" component={CatastrophicBleedManagement} />
-      <Route path="/compliance/emergency-first-aid" component={EmergencyFirstAid} />
       <Route path="/compliance/fire-safety" component={FireSafety} />
-      <Route path="/compliance/first-aid-at-work-requal" component={FirstAidAtWorkRequal} />
       <Route path="/compliance/first-aid-at-work" component={FirstAidAtWork} />
       <Route path="/compliance/food-safety" component={FoodSafety} />
       <Route path="/compliance/health-and-safety" component={HealthAndSafety} />
