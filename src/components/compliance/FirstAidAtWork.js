@@ -1,59 +1,69 @@
 import React from 'react'
-import { Container, Header } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, List, Segment } from 'semantic-ui-react'
 
 export default props =>
-	 <Container text style={{ marginTop: '2em' }}>
+	 <Container style={{ marginTop: '2em', fontSize: '1.2em' }}>
 		 
-		<Header as='h2'>First Aid at Work</Header>
+		<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>First Aid at Work</Header>
+		<Divider horizontal style={{ margin: '5em 0' }}>Level 3 First Aid at Work: 3 day course</Divider>
+		<Grid divided stackable columns='equal'>
+			<Grid.Row>
+				<Grid.Column style={{ padding: '0 2em 0 0' }}>
+					This comprehensive three-day course covers a wide range of first aid emergencies, enabling all participants to deal with emergency 
+					situations with confidence in a prompt, safe and effective way.
+				</Grid.Column>
+				<Grid.Column style={{ padding: '0 2em' }}>
+					This course will give the participants a qualification to the highest level of First Aid, meeting the statutory requirements of the 
+					Health and Safety (First Aid) Regulations 1981.
+				</Grid.Column>
+			</Grid.Row>
+		</Grid>
 
-		<Header as='h3'>Level 3 First Aid at Work: 3 day course</Header>
-
+		<Divider horizontal style={{ margin: '5em 0' }}>Course Duration</Divider>
 		<p>
-			This comprehensive three-day course covers a wide range of first aid emergencies, enabling all participants to deal with emergency 
-			situations with confidence in a prompt, safe and effective way.
-		</p>
-		<p>
-			This course will give the participants a qualification to the highest level of First Aid, meeting the statutory requirements of the 
-			Health and Safety (First Aid) Regulations 1981.
-		</p>
-
-		<Header as='h4'>Course Duration</Header>
-	
-		<p>
-			This course runs over 18 hours spread over at least 3 days. Ideally, the course should be run over three consecutive days, but we 
+			This course runs over 18 hours, spread over at least 3 days. Ideally, the course should be run over three consecutive days, but we 
 			have the flexibility to accommodate your specific needs if you so desire providing it is completed within 10 weeks of starting the 
 			course and the training sessions last for a minimum of two hours.
 		</p>
 
-		<Header as='h4'>Syllabus</Header>
-
-		A range of subjects are covered in:
-		
-		<ul>
-			<li>Legalities, responsibilities and reporting</li>
-			<li>Heart attacks</li>
-			<li>Dealing with an unresponsive casualty</li>
-			<li>Eye injuries</li>
-			<li>Fractures and spinal injuries</li>
-			<li>Choking</li>
-			<li>Control of bleeding</li>
-			<li>Chest injuries</li>
-			<li>Assessment of the situation</li>
-			<li>Diabetes</li>
-			<li>Shock (including Anaphylaxis)</li>
-			<li>Asthma</li>
-			<li>Head injuries</li>
-			<li>Poisoning</li>
-			<li>Sprains and strains</li>
-			<li>Stroke</li>
-			<li>Burns</li>
-			<li>Epilepsy</li>
-			<li>Resuscitation including AED</li>
-			<li>Bandaging</li>
-		</ul>
+		<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
+		<Grid columns='equal' stackable >
+			<Grid.Row id='faawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+				<Grid.Column>
+					<List items={[
+							'Legalities, responsibilities and reporting', 
+							'Heart attacks',
+							'Dealing with an unresponsive casualty',
+							'Eye injuries',
+							'Fractures and spinal injuries',
+							'Choking',
+							'Control of bleeding',
+							'Chest injuries',
+							'Assessment of the situation',
+							'Diabetes'
+						]}
+					/>
+				</Grid.Column>
+				<Grid.Column>
+					<List items={[
+							'Shock (including Anaphylaxis)', 
+							'Asthma',
+							'Head injuries',
+							'Poisoning',
+							'Sprains and strains',
+							'Stroke',
+							'Burns',
+							'Epilepsy',
+							'Resuscitation including AED',
+							'Bandaging'
+						]}
+					/>
+				</Grid.Column>
+			</Grid.Row>
+		</Grid><br/><br/>
 
 		<p>
-			Each student will also receive a free comprehensive fully illustrated training book to supplement the First Aid at Work course this
+			Each student will also receive a free comprehensive fully illustrated training book to supplement the First Aid at Work course; this
 			will be provided in your training pack.
 		</p>
 		<p>
@@ -131,6 +141,50 @@ export default props =>
 			This qualification must be renewed every 3 years.  It is recommended that every
 			first aider completes refresher training annually to keep their skills current 
 			and competent.
+		</p>
+
+		<Header as='h2'>First Aid at Work Requalification</Header>
+
+		<p>This two day First Aid at Work course is designed for those who currently hold a First Aid at Work qualification and are due to 
+		expire.</p>
+
+		<p>Please consider the following rules for attendance:</p>
+		
+		<ul>
+		<li>
+			A First Aider can renew their First Aid at Work qualification by attending a 2-day requalification course without question, if it’s
+			within 1 month past the expiry date
+		</li>
+		<li>
+			If the First Aider has lapsed by more than 1 month, but no longer than 3 months, then the First 
+			Aider can requalify by attending a 2-day course providing ‘Special considerations’ have been applied
+		</li>
+		</ul>
+
+		<p>Special considerations are:</p>
+
+		<ul>
+		<li>
+			A signed letter from the employer to the provider of the training stating the reasons why in their opinion, the First Aider is 
+			suitably experienced to attend a 2-day course and does not require a full 3-day FAW course
+		</li>
+		Or
+		<li>
+			A decision is made by the provider of the training after discussions with the employer, or the First Aider, and deciding that 
+			their previous experience is sufficient to attend a 2-day course.
+		</li>
+		</ul>
+
+		<p>
+		IMPORTANT:   If the First Aider has lapsed beyond 3 months, then they must attend a full 3-day First Aid at Work course.
+		</p>
+		<p>
+		The important thing to remember is that as soon as the certificate expires, the First Aider is no longer considered competent to 
+		act as a First Aider in the workplace which may well leave the employer with a shortfall of First Aiders. Therefore, it would be 
+		prudent to arrange their First Aid at Work Requalification before they expire.
+		</p>
+		<p>
+		Please note add-ons like +F and Catastrophic Bleed Control can be run in conjunction.
 		</p>
 
 	</Container>

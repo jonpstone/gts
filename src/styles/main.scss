@@ -43,7 +43,15 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(0, 0, 0), 0.5),
-		rgba(rgb(0, 0, 0), 0.5)),
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
 		url('/images/Palace_of_Westminster.jpg');
+}
+#faawSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(78, 65, 65), 0.9),
+		rgba(rgb(78, 65, 65), 0.9)),
+		url('/images/faaw1.jpg');
 }

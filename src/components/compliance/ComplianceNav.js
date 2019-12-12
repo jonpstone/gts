@@ -8,10 +8,8 @@ import {
     BlsAed,
     CprBlsAed,
     CatastrophicBleedManagement,
-    EmergencyFirstAid,
     EmergencyPaediatricFirstAid,
     FireSafety,
-    FirstAidAtWorkRequal,
     FirstAidAtWork,
     FoodSafety,
     HealthAndSafety,
@@ -38,6 +36,8 @@ export default class Compliance extends React.Component {
         switch (name) {
             case "Compliance":
                 return <ComplianceHome/>
+            case "First Aid At Work":
+                return <FirstAidAtWork/>
             case "Activity First Aid":
                 return <ActivityFirstAid/>
             case "Anaphylaxis Management":
@@ -50,18 +50,10 @@ export default class Compliance extends React.Component {
                 return <CprBlsAed/>
             case "Catastrophic Bleeds":
                 return <CatastrophicBleedManagement/>
-            case "Emergency First Aid":
-                return <EmergencyFirstAid/>
-            case "Emergency FAAW":
-                return <EmergencyFirstAid/>
             case "Emergency Paediatric First Aid":
                 return <EmergencyPaediatricFirstAid/>
             case "Fire Safety":
                 return <FireSafety/>
-            case "First Aid At Work":
-                return <FirstAidAtWork/>
-            case "FAAW Requalification":
-                return <FirstAidAtWorkRequal/>
             case "Food Safety":
                 return <FoodSafety/>
             case "Health & Safety":
@@ -104,12 +96,17 @@ export default class Compliance extends React.Component {
                     </Grid.Column>
                 </Grid>
                 <Responsive>
-                    <Grid>
+                    <Grid style={{ marginBottom: '.1em' }}>
                         <Grid.Column width={2}>
                             <Menu fluid vertical tabular>
-                            <Menu.Item
+                                <Menu.Item
                                     name='Compliance'
                                     active={activeItem === 'Compliance'}
+                                    onClick={this.handleItemClick}
+                                />
+                                <Menu.Item
+                                    name='First Aid At Work'
+                                    active={activeItem === 'First Aid At Work'}
                                     onClick={this.handleItemClick}
                                 />
                                 <Menu.Item
@@ -143,11 +140,6 @@ export default class Compliance extends React.Component {
                                     onClick={this.handleItemClick}
                                 />
                                 <Menu.Item
-                                    name='Emergency First Aid'
-                                    active={activeItem === 'Emergency First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
                                     name="Emergency Paediatric First Aid"
                                     active={activeItem === "Emergency Paediatric First Aid"}
                                     onClick={this.handleItemClick}
@@ -155,16 +147,6 @@ export default class Compliance extends React.Component {
                                 <Menu.Item
                                     name='Fire Safety'
                                     active={activeItem === 'Fire Safety'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='First Aid At Work'
-                                    active={activeItem === 'First Aid At Work'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='FAAW Requalification'
-                                    active={activeItem === 'FAAW Requalification'}
                                     onClick={this.handleItemClick}
                                 />
                                 <Menu.Item
