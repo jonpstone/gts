@@ -1,5 +1,5 @@
-import React from 'react';
-import { Menu, Responsive, Header, Grid, Segment } from 'semantic-ui-react'
+import React, { createRef } from 'react';
+import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail } from 'semantic-ui-react'
 import NavBar from '../layouts/Header'
 import {
     ActivityFirstAid,
@@ -24,7 +24,9 @@ import {
   } from '.'
 
 export default class Compliance extends React.Component {
-    state = { activeItem: 'First Aid at Work', activeComponent: <ComplianceHome/> }
+    state = { activeItem: 'Compliance', activeComponent: <ComplianceHome/> }
+
+    contextRef = createRef()
   
     handleItemClick = (e, { name }) => 
         this.setState({ 
@@ -96,105 +98,107 @@ export default class Compliance extends React.Component {
                     </Grid.Column>
                 </Grid>
                 <Responsive>
-                    <Grid style={{ marginBottom: '.1em' }}>
-                        <Grid.Column width={2}>
-                            <Menu fluid vertical tabular>
-                                <Menu.Item
-                                    name='Compliance'
-                                    active={activeItem === 'Compliance'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='First Aid At Work'
-                                    active={activeItem === 'First Aid At Work'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Activity First Aid'
-                                    active={activeItem === 'Activity First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Anaphylaxis Management'
-                                    active={activeItem === 'Anaphylaxis Management'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Bespoke First Aid'
-                                    active={activeItem === 'Bespoke First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='BLS & AED'
-                                    active={activeItem === 'BLS & AED'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='CPR, BLS & AED'
-                                    active={activeItem === 'CPR, BLS & AED'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Catastrophic Bleeds'
-                                    active={activeItem === 'Catastrophic Bleed Management'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name="Emergency Paediatric First Aid"
-                                    active={activeItem === "Emergency Paediatric First Aid"}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Fire Safety'
-                                    active={activeItem === 'Fire Safety'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Health & Safety'
-                                    active={activeItem === 'Health & Safety'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Health & Safety First Aid'
-                                    active={activeItem === 'Health & Safety First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Junior First Aid'
-                                    active={activeItem === 'Junior First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Manual Handling'
-                                    active={activeItem === 'Manual Handling'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Mental Health First Aid'
-                                    active={activeItem === 'Mental Health First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Oxygen Therapy'
-                                    active={activeItem === 'Oxygen Therapy'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Paediatric First Aid'
-                                    active={activeItem === 'Paediatric First Aid'}
-                                    onClick={this.handleItemClick}
-                                />
-                                <Menu.Item
-                                    name='Safe Guarding'
-                                    active={activeItem === 'links'}
-                                    onClick={this.handleItemClick}
-                                />
-                            </Menu>
-                        </Grid.Column>
-                        <Grid.Column borderless stretched width={12}>
-                            <Segment>
-                                {activeComponent}
-                            </Segment>
+                    <Grid centered style={{ marginBottom: '.1em' }}>
+                        <Grid.Column borderless stretched width={10}>
+                            <Ref innerRef={this.contextRef}>
+                                <Rail position='left'>
+                                    <Sticky context={this.contextRef}>
+                                        <Menu fluid vertical tabular style={{ marginTop: '5em'}}>
+                                            <Menu.Item
+                                                name='Compliance'
+                                                active={activeItem === 'Compliance'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='First Aid At Work'
+                                                active={activeItem === 'First Aid At Work'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Activity First Aid'
+                                                active={activeItem === 'Activity First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Anaphylaxis Management'
+                                                active={activeItem === 'Anaphylaxis Management'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Bespoke First Aid'
+                                                active={activeItem === 'Bespoke First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='BLS & AED'
+                                                active={activeItem === 'BLS & AED'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='CPR, BLS & AED'
+                                                active={activeItem === 'CPR, BLS & AED'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Catastrophic Bleeds'
+                                                active={activeItem === 'Catastrophic Bleed Management'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name="Emergency Paediatric First Aid"
+                                                active={activeItem === "Emergency Paediatric First Aid"}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Fire Safety'
+                                                active={activeItem === 'Fire Safety'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Health & Safety'
+                                                active={activeItem === 'Health & Safety'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Health & Safety First Aid'
+                                                active={activeItem === 'Health & Safety First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Junior First Aid'
+                                                active={activeItem === 'Junior First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Manual Handling'
+                                                active={activeItem === 'Manual Handling'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Mental Health First Aid'
+                                                active={activeItem === 'Mental Health First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Oxygen Therapy'
+                                                active={activeItem === 'Oxygen Therapy'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Paediatric First Aid'
+                                                active={activeItem === 'Paediatric First Aid'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Safe Guarding'
+                                                active={activeItem === 'links'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                        </Menu>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            {activeComponent}
                         </Grid.Column>
                     </Grid>
                 </Responsive>

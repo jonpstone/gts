@@ -57,8 +57,8 @@ const TextCarousel = () => (
       <Slide index={4}>
         <p style={{ fontSize: '1.33em', color: 'white' }}>
             <b>CATASTROPHIC BLEED CONTROL TRAUMA CPD</b><br/>
-            Stockton, Warwickshire - 17th September 2019
-            Aldershot, Hampshire - 24th September 2019
+            Stockton, Warwickshire - 17th September 2019<br/>
+            Aldershot, Hampshire - 24th September 2019<br/>
             Stockton, Warwickshire - 6th November 2019
         </p>
       </Slide>
