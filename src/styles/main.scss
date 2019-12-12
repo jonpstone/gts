@@ -41,9 +41,9 @@ body {
 }
 #compHero {
 	background-size: cover;
-	background-position: top;
+	background-position: center;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(0, 0, 0), 0.7),
-		rgba(rgb(0, 0, 0), 0.7)),
+		rgba(rgb(0, 0, 0), 0.5),
+		rgba(rgb(0, 0, 0), 0.5)),
 		url('/images/Palace_of_Westminster.jpg');
 }

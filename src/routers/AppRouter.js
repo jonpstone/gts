@@ -20,7 +20,7 @@ import {
   BlsAed,
   CprBlsAed,
   CatastrophicBleedManagement,
-  Compliance,
+  ComplianceNav,
   EmergencyFirstAid,
   EmergencyPaediatricFirstAid,
   FireSafety,
@@ -58,7 +58,7 @@ export default props =>
       <Route path="/policy" component={Policy} />
 
       {/* Compliance */}
-      <Route path="/compliance" component={Compliance} />
+      <Route path="/compliance" component={ComplianceNav} />
       <Route path="/compliance/activity-first-aid" component={ActivityFirstAid} />
       <Route path="/compliance/anaphylaxis-management" component={AnaphylaxisManagement} />
       <Route path="/compliance/bespoke-first-aid" component={BespokeFirstAid} />

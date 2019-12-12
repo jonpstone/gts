@@ -115,7 +115,7 @@ class DesktopContainer extends React.Component {
 						as={Link} to="/" 
 						size='mini' 
 						src={!fixed ? null : '/images/GTS.png'}
-						style={!fixed ? { display: 'none' } : null }
+						style={!fixed ? { display: 'none' } : null}
 					/>
 				</Menu.Item>
 				<Menu.Menu style={{ fontSize: '1.2em' }}>
@@ -126,10 +126,9 @@ class DesktopContainer extends React.Component {
 					<Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
 					<Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
 					<Menu.Item ></Menu.Item>
-
 				</Menu.Menu>
             </Menu>
-            <HomepageHeading />
+            <HomepageHeading/>
           </Segment>
         </Visibility>
         {children}
