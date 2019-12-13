@@ -91,19 +91,19 @@ export default class Compliance extends React.Component {
                     textAlign='center'
                     style={{ margin: '1em 0 1em 0' }}
                 >
-                    <Grid.Column>
+                    <Grid.Row>
                         <Header inverted as='h1' style={{ marginTop: '.4em', fontSize: '5em' }}>
                             COMPLIANCE
                         </Header>
-                    </Grid.Column>
+                    </Grid.Row>
                 </Grid>
                 <Responsive>
                     <Grid centered style={{ marginBottom: '.1em' }}>
                         <Grid.Column borderless stretched width={10}>
                             <Ref innerRef={this.contextRef}>
                                 <Rail position='left'>
-                                    <Sticky context={this.contextRef}>
-                                        <Menu fluid vertical tabular style={{ marginTop: '5em'}}>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                        <Menu fluid vertical tabular>
                                             <Menu.Item
                                                 name='Compliance'
                                                 active={activeItem === 'Compliance'}
@@ -198,7 +198,9 @@ export default class Compliance extends React.Component {
                                     </Sticky>
                                 </Rail>
                             </Ref>
-                            {activeComponent}
+                            <Segment style={{ padding: '3em' }}>
+                                {activeComponent}
+                            </Segment>
                         </Grid.Column>
                     </Grid>
                 </Responsive>
@@ -206,3 +208,12 @@ export default class Compliance extends React.Component {
         )
     }
 }
+
+// Compliance
+
+// First Aid At Work
+// -- Emergency First Aid
+// -- First Aid at Work Requalification
+
+// First Aid
+// --

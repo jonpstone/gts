@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CoursesCarousel from '../NonPageComponents/CoursesCarousel'
+import Fade from 'react-reveal/Fade'
 import {
 	Button,
 	Container,
@@ -27,7 +28,7 @@ const HomepageHeading = ({ mobile }) => (
 			size='small'
 			style={{ marginTop: mobile ? '1em' : '5em' }} 
 			wrapped
-		/>
+			/>
 		<Header
 			as='h1'
 			content='GOLBOURN TRAINING SOLUTIONS'
@@ -210,110 +211,119 @@ const ResponsiveContainer = ({ children }) =>
 
 const HomepageLayout = () => (
 	<ResponsiveContainer>
-		<Segment style={{ padding: '6em' }} vertical>
-			<Grid stackable>
-				<Grid.Row>
-					<Grid.Column>
-						<Image src='/images/logoChain.png' size='massive' centered/>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
-		</Segment>
-		<Segment style={{ padding: '0em' }} vertical>
-			<Grid columns='equal' stackable>
-				<Grid.Row textAlign='center'>
-					<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
+		<Fade bottom>
+			<Segment style={{ padding: '6em' }} vertical>
+				<Grid stackable>
+					<Grid.Row>
+						<Grid.Column>
+							<Image src='/images/logoChain.png' size='massive' centered/>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Segment>
+		</Fade>
+		<Fade bottom>
+			<Segment style={{ padding: '0em' }} vertical>
+				<Grid columns='equal' stackable>
+					<Grid.Row textAlign='center'>
+						<Grid.Column invert style={{ padding: '5em' }} id='comOne'>
+							<Header inverted as='h3' style={{ fontSize: '2em' }}>
+								"The real life experiences and stories that are brought to the training 
+								make it far more interesting than a standard course."
+							</Header>
+							<p style={{ fontSize: '1.33em', color: 'white' }}>
+								Bridget - Human Resources Administrator
+							</p>
+						</Grid.Column>
+						<Grid.Column style={{ padding: '5em' }} id='comTwo'>
+							<Header as='h3' style={{ fontSize: '2em' }}>
+								"I attended a fire warden course with Golbourn Training Solutions, best 
+								fire safety and warden course I have done."
+							</Header>
+							<p style={{ fontSize: '1.33em' }}>
+								Larni - Compliance Officer
+							</p>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Segment>
+		</Fade>
+		<Fade bottom>
+			<Segment style={{ padding: '8em' }} vertical>
+				<Grid divided container stackable verticalAlign='top'>
+					<Grid.Row>
+						<Grid.Column 
+							floated='left' 
+							width={8} 
+							style={{paddingRight: '5em', marginBottom: '1.5em'}}
+						>
+							<Header as='h3' style={{ fontSize: '2em' }}>
+								We Will Train Your Employees
+							</Header>
+							<p style={{ fontSize: '1.33em' }}>
+								Golbourn Training Solutions understands that it can be difficult to 
+								release staff for mandatory courses. All our courses can be delivered 
+								around your business, in training hours or days. Courses can be conducted
+								during the day, evening or weekend. We will travel to your business 
+								premises or	supply a training centre and carry out a group session or 
+								1-2-1 training.
+							</p>
+						</Grid.Column>
+						<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+							<Header as='h3' style={{ fontSize: '2em' }}>
+								A Diverse Array of Training Packages
+							</Header>
+							<p style={{ fontSize: '1.33em' }}>
+								We offer courses covering a wide variety of operationally critical 
+								subjects for any modern business, including compliance, security, 
+								auditing and team building.
+							</p>          
+							<p style={{ fontSize: '1.33em' }}>
+								Explore further to get a feel for our unique take on training.
+							</p>
+						</Grid.Column>
+					</Grid.Row>
+					<Grid.Row>
+						<Grid.Column textAlign='center'>
+							<Button inverted color='blue' as={Link} to="/contact" size='huge'>
+								Contact Us Today
+								<Icon name='angle right'/>
+							</Button>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Segment>
+		</Fade>
+
+		<Fade bottom>
+			<Segment style={{ padding: '0' }} vertical borderless>
+				<Grid stackable columns='equal'>
+					<Grid.Row style={{ margin: '0', padding: '0' }}>
+						<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
+							<Header inverted as='h3' style={{ fontSize: '2em' }}>
+								Upcoming Public Courses
+							</Header>
+							<CoursesCarousel />
+						</Grid.Column>
+						<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
 						<Header inverted as='h3' style={{ fontSize: '2em' }}>
-							"The real life experiences and stories that are brought to the training 
-							make it far more interesting than a standard course."
-						</Header>
-						<p style={{ fontSize: '1.33em', color: 'white' }}>
-							Bridget - Human Resources Administrator
-						</p>
-					</Grid.Column>
-					<Grid.Column style={{ padding: '5em' }} id='comTwo'>
-						<Header as='h3' style={{ fontSize: '2em' }}>
-							"I attended a fire warden course with Golbourn Training Solutions, best 
-							fire safety and warden course I have done."
-						</Header>
-						<p style={{ fontSize: '1.33em' }}>
-							Larni - Compliance Officer
-						</p>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
-		</Segment>
-		<Segment style={{ padding: '8em' }} vertical>
-			<Grid divided container stackable verticalAlign='top'>
-				<Grid.Row>
-					<Grid.Column 
-						floated='left' 
-						width={8} 
-						style={{paddingRight: '5em', marginBottom: '1.5em'}}
-					>
-						<Header as='h3' style={{ fontSize: '2em' }}>
-							We Will Train Your Employees
-						</Header>
-						<p style={{ fontSize: '1.33em' }}>
-							Golbourn Training Solutions understands that it can be difficult to 
-							release staff for mandatory courses. All our courses can be delivered 
-							around your business, in training hours or days. Courses can be conducted
-							during the day, evening or weekend. We will travel to your business 
-							premises or	supply a training centre and carry out a group session or 
-							1-2-1 training.
-						</p>
-					</Grid.Column>
-					<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
-						<Header as='h3' style={{ fontSize: '2em' }}>
-							A Diverse Array of Training Packages
-						</Header>
-						<p style={{ fontSize: '1.33em' }}>
-							We offer courses covering a wide variety of operationally critical 
-							subjects for any modern business, including compliance, security, 
-							auditing and team building.
-						</p>          
-						<p style={{ fontSize: '1.33em' }}>
-							Explore further to get a feel for our unique take on training.
-						</p>
-					</Grid.Column>
-				</Grid.Row>
-				<Grid.Row>
-					<Grid.Column textAlign='center'>
-						<Button inverted color='blue' as={Link} to="/contact" size='huge'>
-							Contact Us Today
-							<Icon name='angle right'/>
-						</Button>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
-		</Segment>
-		<Segment style={{ padding: '0' }} vertical borderless>
-			<Grid stackable columns='equal'>
-				<Grid.Row style={{ margin: '0', padding: '0' }}>
-					<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
-						<Header inverted as='h3' style={{ fontSize: '2em' }}>
-							Upcoming Public Courses
-						</Header>
-						<CoursesCarousel />
-					</Grid.Column>
-					<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
-					<Header inverted as='h3' style={{ fontSize: '2em' }}>
-							Supporting HM Forces and Veterans
-						</Header>
-						<p style={{ fontSize: '1.33em', color: 'white' }}>
-							We pride our selves on helping our Armed Forces to gain qualifications 
-							either during their service or after.  Our MOD Bundle courses are available 
-							throughout the year and multiple locations for both service personnel and their 
-							direct families.
-						</p><br/>
-						<Button inverted as={Link} to="/forces-covenant" size='huge'>
-							Forces Covenant
-							<Icon name='angle right'/>
-						</Button>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
-		</Segment>
+								Supporting HM Forces and Veterans
+							</Header>
+							<p style={{ fontSize: '1.33em', color: 'white' }}>
+								We pride our selves on helping our Armed Forces to gain qualifications 
+								either during their service or after.  Our MOD Bundle courses are available 
+								throughout the year and multiple locations for both service personnel and their 
+								direct families.
+							</p><br/>
+							<Button inverted as={Link} to="/forces-covenant" size='huge'>
+								Forces Covenant
+								<Icon name='angle right'/>
+							</Button>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Segment>
+		</Fade>
 	</ResponsiveContainer>
 )
 
