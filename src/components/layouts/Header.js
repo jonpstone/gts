@@ -23,7 +23,10 @@ class DesktopContainerMenu extends React.Component {
 				getWidth={getWidth} 
 				minWidth={Responsive.onlyTablet.minWidth}
 			>
-				<Segment>
+				<Segment
+						textAlign='center'
+						vertical
+				>
 					<Menu
 						compact
 						borderless
@@ -37,7 +40,7 @@ class DesktopContainerMenu extends React.Component {
 							src='/images/GTS.png'
 						/>
 						</Menu.Item>
-						<Menu.Menu>
+						<Menu.Menu 	size='large' style={{ paddingLeft: '26%' }}>
 							<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
 							<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
 							<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>

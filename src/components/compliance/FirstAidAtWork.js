@@ -9,6 +9,10 @@ export class FirstAidAtWork extends React.Component {
 		this.faawRequalFocus = React.createRef()
 	}
 
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
+
 	handleLeftOnClick = (event) => {
         if(this.emergencyFaawFocus.current){
             this.emergencyFaawFocus.current.scrollIntoView({ 
@@ -43,12 +47,12 @@ export class FirstAidAtWork extends React.Component {
 						onClick={this.handleLeftOnClick} 
 						style={{ marginRight: '1.2em'}}
 					>
-						Emergency First Aid at Work &nbsp;
+						&nbsp; Emergency First Aid at Work &nbsp;
 						<Icon name='angle down'/>
 					</Button>
 					<Button inverted color='blue' size='huge' onClick={this.handleRightOnClick}>
-						First Aid at Work Requalification &nbsp;
-						<Icon name='double angle down'/>
+					&nbsp; First Aid at Work Requalification &nbsp;
+						<Icon name='angle down'/>
 					</Button>
 				</Container>
 
@@ -252,7 +256,7 @@ export class FirstAidAtWork extends React.Component {
 				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Rules for Attendance</Divider>
-						<Grid.Row id='faawRequal' style={{ color: 'white', padding: '3em' }}>
+						<Grid.Row id='faawRequal' style={{ color: 'white', padding: '5em' }}>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								A First Aider can renew their First Aid at Work qualification by attending a two 
 								day	requalification course without question, if within 1 month past the expiry 

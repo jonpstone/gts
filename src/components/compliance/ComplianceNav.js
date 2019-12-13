@@ -1,5 +1,6 @@
-import React, { createRef } from 'react';
-import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail } from 'semantic-ui-react'
+import React, { createRef } from 'react'
+import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon, Container } from 'semantic-ui-react'
+import Back2Top from 'react-back2top';
 import NavBar from '../layouts/Header'
 import {
     ActivityFirstAid,
@@ -8,7 +9,6 @@ import {
     BlsAed,
     CprBlsAed,
     CatastrophicBleedManagement,
-    EmergencyPaediatricFirstAid,
     FireSafety,
     FirstAidAtWork,
     FoodSafety,
@@ -52,8 +52,6 @@ export default class Compliance extends React.Component {
                 return <CprBlsAed/>
             case "Catastrophic Bleeds":
                 return <CatastrophicBleedManagement/>
-            case "Emergency Paediatric First Aid":
-                return <EmergencyPaediatricFirstAid/>
             case "Fire Safety":
                 return <FireSafety/>
             case "Food Safety":
@@ -101,6 +99,18 @@ export default class Compliance extends React.Component {
                     <Grid centered style={{ marginBottom: '.1em' }}>
                         <Grid.Column borderless stretched width={10}>
                             <Ref innerRef={this.contextRef}>
+                                <Rail position='right'>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                        <Back2Top>
+                                            <Button inverted color='blue' size='huge'>
+                                                &nbsp; Top &nbsp;
+                                                <Icon name='double angle up'/>
+                                            </Button>
+                                        </Back2Top>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            <Ref innerRef={this.contextRef}>
                                 <Rail position='left'>
                                     <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
                                         <Menu fluid vertical tabular>
@@ -112,6 +122,11 @@ export default class Compliance extends React.Component {
                                             <Menu.Item
                                                 name='First Aid At Work'
                                                 active={activeItem === 'First Aid At Work'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
+                                                name='Paediatric First Aid'
+                                                active={activeItem === 'Paediatric First Aid'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
@@ -142,11 +157,6 @@ export default class Compliance extends React.Component {
                                             <Menu.Item
                                                 name='Catastrophic Bleeds'
                                                 active={activeItem === 'Catastrophic Bleed Management'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name="Emergency Paediatric First Aid"
-                                                active={activeItem === "Emergency Paediatric First Aid"}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
@@ -185,11 +195,6 @@ export default class Compliance extends React.Component {
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
-                                                name='Paediatric First Aid'
-                                                active={activeItem === 'Paediatric First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
                                                 name='Safe Guarding'
                                                 active={activeItem === 'links'}
                                                 onClick={this.handleItemClick}
@@ -198,7 +203,7 @@ export default class Compliance extends React.Component {
                                     </Sticky>
                                 </Rail>
                             </Ref>
-                            <Segment style={{ padding: '3em' }}>
+                            <Segment style={{ padding: '3em', marginBottom: '1em' }}>
                                 {activeComponent}
                             </Segment>
                         </Grid.Column>
@@ -209,11 +214,30 @@ export default class Compliance extends React.Component {
     }
 }
 
-// Compliance
+// First Aid??????????????????????
+// -- Activity First Aid
+// -- Bespoke First Aid
+// -- Junior First Aid
 
 // First Aid At Work
 // -- Emergency First Aid
 // -- First Aid at Work Requalification
 
-// First Aid
-// --
+// Paediatric First Aid
+// -- Emergency Paediatric First Aid
+
+// Basic Life Support
+// -- BLS AED
+// -- CPR BLS AED
+
+// Health & Safety
+// -- Health & Safety First Aid
+// -- Manual Handling
+
+// Catastrophic Bleeds
+
+// Fire Safety
+
+// Oxygen Therapy
+
+// Safe Guarding

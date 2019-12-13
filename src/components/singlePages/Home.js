@@ -119,7 +119,7 @@ class DesktopContainer extends React.Component {
 						style={!fixed ? { display: 'none' } : null}
 					/>
 				</Menu.Item>
-				<Menu.Menu style={{ fontSize: '1.2em' }}>
+				<Menu.Menu style={!fixed ? { fontSize: '1.2em' } : { fontSize: '1.2em', paddingLeft: '22%'}}>
 					<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
 					<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
 					<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
@@ -294,7 +294,6 @@ const HomepageLayout = () => (
 				</Grid>
 			</Segment>
 		</Fade>
-
 		<Fade bottom>
 			<Segment style={{ padding: '0' }} vertical borderless>
 				<Grid stackable columns='equal'>
