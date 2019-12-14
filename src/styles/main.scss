@@ -105,9 +105,17 @@ body {
 }
 #juniorSyllabus {
 	background-size: cover;
-	background-position: bottom;
+	background-position: center;
 	background-image: linear-gradient(to right bottom,
 		rgba(rgb(33, 158, 102), 0.8),
 		rgba(rgb(8, 7, 5), 0.8)),
 		url('/images/junior.png');
+}
+#anaphylaxisSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right top,
+		rgba(rgb(167, 164, 4), 0.8),
+		rgba(rgb(8, 7, 5), 0.8)),
+		url('/images/anaphylaxis.jpg');
 }

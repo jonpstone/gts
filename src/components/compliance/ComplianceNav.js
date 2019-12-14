@@ -201,10 +201,8 @@ export default class Compliance extends React.Component {
     }
 }
 
-// First Aid??????????????????????
 // -- Activity First Aid
-// -- Bespoke First Aid
-// -- Junior First Aid
+// -- Bespoke First Aid & Junior First Aid
 
 // First Aid At Work
 // -- Emergency First Aid
