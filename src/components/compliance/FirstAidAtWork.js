@@ -58,7 +58,7 @@ export class FirstAidAtWork extends React.Component {
 
 				<Grid divided stackable columns='equal'>
 					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 3 First Aid at Work &nbsp; | &nbsp; 3 day course
+						Level 3 First Aid at Work &nbsp; | &nbsp; 3 days
 					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -152,7 +152,7 @@ export class FirstAidAtWork extends React.Component {
 					<Fade bottom>
 						<Grid.Row>
 							<Divider horizontal style={{ margin: '5em 0' }}>
-								Level 3 Emergency First Aid at Work &nbsp; | &nbsp; 1 day course
+								Level 3 Emergency First Aid at Work &nbsp; | &nbsp; 1 day
 							</Divider>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								The Emergency First Aid at Work course will enable your company to meet its 
@@ -238,7 +238,7 @@ export class FirstAidAtWork extends React.Component {
 				<Fade bottom>
 					<Grid divided stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>
-							Requalification &nbsp; | &nbsp; 2 day course
+							Requalification &nbsp; | &nbsp; 2 days
 						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>

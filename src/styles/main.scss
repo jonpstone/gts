@@ -119,3 +119,19 @@ body {
 		rgba(rgb(8, 7, 5), 0.8)),
 		url('/images/anaphylaxis.jpg');
 }
+#blsAedSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left top,
+		rgba(rgb(199, 197, 87), 0.8),
+		rgba(rgb(32, 122, 167), 0.8)),
+		url('/images/AED.jpg');
+}
+#cprBlsAedSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(62, 124, 33), 0.8),
+		rgba(rgb(167, 104, 32), 0.8)),
+		url('/images/blsAed.jpg');
+}

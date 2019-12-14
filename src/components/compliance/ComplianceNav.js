@@ -45,10 +45,8 @@ export default class Compliance extends React.Component {
                 return <AnaphylaxisManagement/>
             case "Junior and Bespoke First Aid":
                 return <BespokeFirstAid/>
-            case "BLS & AED":
+            case "Basic Life Support with AED":
                 return <BlsAed/>
-            case "CPR, BLS & AED":
-                return <CprBlsAed/>
             case "Catastrophic Bleeds":
                 return <CatastrophicBleedManagement/>
             case "Fire Safety":
@@ -57,8 +55,6 @@ export default class Compliance extends React.Component {
                 return <FoodSafety/>
             case "Health & Safety":
                 return <HealthAndSafety/>
-            case "Health & Safety First Aid":
-                return <HealthAndSafetyFirstAid/>
             case "Manual Handling":
                 return <ManualHandling/>
             case "Mental Health First Aid":
@@ -127,6 +123,11 @@ export default class Compliance extends React.Component {
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
+                                                name='Basic Life Support with AED'
+                                                active={activeItem === 'Basic Life Support with AED'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            <Menu.Item
                                                 name='Activity First Aid'
                                                 active={activeItem === 'Activity First Aid'}
                                                 onClick={this.handleItemClick}
@@ -139,16 +140,6 @@ export default class Compliance extends React.Component {
                                             <Menu.Item
                                                 name='Anaphylaxis Management'
                                                 active={activeItem === 'Anaphylaxis Management'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='BLS & AED'
-                                                active={activeItem === 'BLS & AED'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='CPR, BLS & AED'
-                                                active={activeItem === 'CPR, BLS & AED'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item

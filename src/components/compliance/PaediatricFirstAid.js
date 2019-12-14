@@ -43,7 +43,7 @@ export class PaediatricFirstAid extends React.Component {
 
 				<Grid divided stackable columns='equal'>
 					<Divider horizontal style={{ margin: '5em 0' }}>
-						Paediatric First Aid &nbsp; | &nbsp; 2 day course
+						Paediatric First Aid &nbsp; | &nbsp; 2 days
 					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -139,7 +139,7 @@ export class PaediatricFirstAid extends React.Component {
 					<Fade bottom>
 						<Grid.Row>
 							<Divider horizontal style={{ margin: '5em 0' }}>
-								Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day course
+								Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day
 							</Divider>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								The Emergency First Aid at Work course will enable your company to meet its 
@@ -165,25 +165,19 @@ export class PaediatricFirstAid extends React.Component {
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='emergencyPaediatricSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
 							<Grid.Column>
-								<List items={[
+								<List bulleted items={[
 										'Responsibilities and reporting',
-										'',
 										'Resuscitation (including AED)',
-										'',
 										'Dealing with an unresponsive casualty',
-										'',
 										'Minor injuries ',
 									]}
 								/>
 							</Grid.Column>
 							<Grid.Column>
-								<List items={[
+								<List bulleted items={[
 										'Assessment of the situation',
-										'',
 										'Epilepsy',
-										'',
 										'Wounds and bleeding',
-										'',
 										'Anaphylaxis and Shock',
 									]}
 								/>

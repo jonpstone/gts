@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom'
-import { Container, Header, Divider, Grid, List, Button, Icon } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, List, Button, Icon, GridColumn } from 'semantic-ui-react'
 
 export class BespokeFirstAid extends React.Component {
 
@@ -50,11 +50,15 @@ export class BespokeFirstAid extends React.Component {
 		
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
-						At Golbourn Training Solutions we believe that children can save lives too. That is why we 
-						have designed our Junior First Aiders Course. Aimed at teaching children as young as eight 
-						how to save lives.<br/><br/>
-						This course can be taught in a whole day or broken down to four 2 hour lessons. Essentially 
-						we can work with you to make the course fit around your other needs.
+						<Grid.Column>
+							At Golbourn Training Solutions we believe that children can save lives too. That is why we 
+							have designed our Junior First Aiders Course. Aimed at teaching children as young as eight 
+							how to save lives.
+						</Grid.Column>
+						<Grid.Column>
+							This course can be taught in a whole day or broken down to four 2 hour lessons. Essentially 
+							we can work with you to make the course fit around your other needs.
+						</Grid.Column>
 					</Grid.Row>
 				</Grid>
 		

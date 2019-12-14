@@ -18,7 +18,7 @@ export class ActivityFirstAid extends React.Component {
 	
 			<Grid divided stackable columns='equal'>
 				<Divider horizontal style={{ margin: '5em 0' }}>
-					Level 3 Activity First Aid &nbsp; | &nbsp; 2 day course
+					Level 3 Activity First Aid &nbsp; | &nbsp; 2 days
 				</Divider>
 				<Grid.Row>
 					<Grid.Column style={{ padding: '0 2em 0 0' }}>
