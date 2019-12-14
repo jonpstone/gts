@@ -103,3 +103,11 @@ body {
 		rgba(rgb(33, 32, 56), 0.8)),
 		url('/images/activityFirstAid.jpg');
 }
+#juniorSyllabus {
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(33, 158, 102), 0.8),
+		rgba(rgb(8, 7, 5), 0.8)),
+		url('/images/junior.png');
+}

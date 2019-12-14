@@ -14,7 +14,6 @@ import {
     FoodSafety,
     HealthAndSafety,
     HealthAndSafetyFirstAid,
-    JuniorFirstAid,
     ManualHandling,
     MentalHealthFirstAid,
     OxygenTherapy,
@@ -28,7 +27,7 @@ export default class Compliance extends React.Component {
 
     contextRef = createRef()
   
-    handleItemClick = (e, { name }) => 
+    handleItemClick = (event, { name }) => 
         this.setState({ 
             activeItem: name,
             activeComponent: this.setComponent(name)
@@ -44,7 +43,7 @@ export default class Compliance extends React.Component {
                 return <ActivityFirstAid/>
             case "Anaphylaxis Management":
                 return <AnaphylaxisManagement/>
-            case "Bespoke First Aid":
+            case "Junior and Bespoke First Aid":
                 return <BespokeFirstAid/>
             case "BLS & AED":
                 return <BlsAed/>
@@ -60,8 +59,6 @@ export default class Compliance extends React.Component {
                 return <HealthAndSafety/>
             case "Health & Safety First Aid":
                 return <HealthAndSafetyFirstAid/>
-            case "Junior First Aid":
-                return <JuniorFirstAid/>
             case "Manual Handling":
                 return <ManualHandling/>
             case "Mental Health First Aid":
@@ -100,7 +97,7 @@ export default class Compliance extends React.Component {
                         <Grid.Column borderless stretched width={10}>
                             <Ref innerRef={this.contextRef}>
                                 <Rail position='right'>
-                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
                                         <Back2Top>
                                             <Button inverted color='blue' size='huge'>
                                                 &nbsp; Top &nbsp;
@@ -135,13 +132,13 @@ export default class Compliance extends React.Component {
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
-                                                name='Anaphylaxis Management'
-                                                active={activeItem === 'Anaphylaxis Management'}
+                                                name='Junior and Bespoke First Aid'
+                                                active={activeItem === 'Junior and Bespoke First Aid'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
-                                                name='Bespoke First Aid'
-                                                active={activeItem === 'Bespoke First Aid'}
+                                                name='Anaphylaxis Management'
+                                                active={activeItem === 'Anaphylaxis Management'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
@@ -156,7 +153,7 @@ export default class Compliance extends React.Component {
                                             />
                                             <Menu.Item
                                                 name='Catastrophic Bleeds'
-                                                active={activeItem === 'Catastrophic Bleed Management'}
+                                                active={activeItem === 'Catastrophic Bleeds'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
@@ -167,16 +164,6 @@ export default class Compliance extends React.Component {
                                             <Menu.Item
                                                 name='Health & Safety'
                                                 active={activeItem === 'Health & Safety'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Health & Safety First Aid'
-                                                active={activeItem === 'Health & Safety First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Junior First Aid'
-                                                active={activeItem === 'Junior First Aid'}
                                                 onClick={this.handleItemClick}
                                             />
                                             <Menu.Item
@@ -231,12 +218,10 @@ export default class Compliance extends React.Component {
 // -- CPR BLS AED
 
 // Health & Safety
-// -- Health & Safety First Aid
+// -- Fire Safety
 // -- Manual Handling
 
 // Catastrophic Bleeds
-
-// Fire Safety
 
 // Oxygen Therapy
 
