@@ -1,4 +1,5 @@
 import React, { createRef } from 'react'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon, Container } from 'semantic-ui-react'
 import Back2Top from 'react-back2top';
 import NavBar from '../layouts/Header'
@@ -7,14 +8,11 @@ import {
     AnaphylaxisManagement,
     BespokeFirstAid,
     BlsAed,
-    CprBlsAed,
     CatastrophicBleedManagement,
     FireSafety,
     FirstAidAtWork,
     FoodSafety,
     HealthAndSafety,
-    HealthAndSafetyFirstAid,
-    ManualHandling,
     MentalHealthFirstAid,
     OxygenTherapy,
     PaediatricFirstAid,
@@ -27,48 +25,7 @@ export default class Compliance extends React.Component {
 
     contextRef = createRef()
   
-    handleItemClick = (event, { name }) => 
-        this.setState({ 
-            activeItem: name,
-            activeComponent: this.setComponent(name)
-        })
-
-    setComponent = (name) => {
-        switch (name) {
-            case "Compliance":
-                return <ComplianceHome/>
-            case "First Aid At Work":
-                return <FirstAidAtWork/>
-            case "Activity First Aid":
-                return <ActivityFirstAid/>
-            case "Anaphylaxis Management":
-                return <AnaphylaxisManagement/>
-            case "Junior and Bespoke First Aid":
-                return <BespokeFirstAid/>
-            case "Basic Life Support with AED":
-                return <BlsAed/>
-            case "Catastrophic Bleeds":
-                return <CatastrophicBleedManagement/>
-            case "Fire Safety":
-                return <FireSafety/>
-            case "Food Safety":
-                return <FoodSafety/>
-            case "Health & Safety":
-                return <HealthAndSafety/>
-            case "Manual Handling":
-                return <ManualHandling/>
-            case "Mental Health First Aid":
-                return <MentalHealthFirstAid/>
-            case "Oxygen Therapy":
-                return <OxygenTherapy/>
-            case "Paediatric First Aid":
-                return <PaediatricFirstAid/>
-            case "Safe Guarding":
-                return <SafeGuarding/>
-            default:
-                return <ComplianceHome/>;
-        }
-    }
+    handleItemClick = (event, { name }) => this.setState({ activeItem: name })
         
     render() {
         const { activeItem, activeComponent } = this.state
@@ -88,105 +45,136 @@ export default class Compliance extends React.Component {
                         </Header>
                     </Grid.Row>
                 </Grid>
-                <Responsive>
-                    <Grid centered style={{ marginBottom: '.1em' }}>
-                        <Grid.Column borderless stretched width={10}>
-                            <Ref innerRef={this.contextRef}>
-                                <Rail position='right'>
-                                    <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
-                                        <Back2Top>
-                                            <Button inverted color='blue' size='huge'>
-                                                &nbsp; Top &nbsp;
-                                                <Icon name='double angle up'/>
-                                            </Button>
-                                        </Back2Top>
-                                    </Sticky>
-                                </Rail>
-                            </Ref>
-                            <Ref innerRef={this.contextRef}>
-                                <Rail position='left'>
-                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
-                                        <Menu fluid vertical tabular>
-                                            <Menu.Item
-                                                name='Compliance'
-                                                active={activeItem === 'Compliance'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='First Aid At Work'
-                                                active={activeItem === 'First Aid At Work'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Paediatric First Aid'
-                                                active={activeItem === 'Paediatric First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Basic Life Support with AED'
-                                                active={activeItem === 'Basic Life Support with AED'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Activity First Aid'
-                                                active={activeItem === 'Activity First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Junior and Bespoke First Aid'
-                                                active={activeItem === 'Junior and Bespoke First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Anaphylaxis Management'
-                                                active={activeItem === 'Anaphylaxis Management'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Catastrophic Bleeds'
-                                                active={activeItem === 'Catastrophic Bleeds'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Fire Safety'
-                                                active={activeItem === 'Fire Safety'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Health & Safety'
-                                                active={activeItem === 'Health & Safety'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Manual Handling'
-                                                active={activeItem === 'Manual Handling'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Mental Health First Aid'
-                                                active={activeItem === 'Mental Health First Aid'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Oxygen Therapy'
-                                                active={activeItem === 'Oxygen Therapy'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                            <Menu.Item
-                                                name='Safe Guarding'
-                                                active={activeItem === 'links'}
-                                                onClick={this.handleItemClick}
-                                            />
-                                        </Menu>
-                                    </Sticky>
-                                </Rail>
-                            </Ref>
-                            <Segment style={{ padding: '3em', marginBottom: '1em' }}>
-                                {activeComponent}
-                            </Segment>
-                        </Grid.Column>
-                    </Grid>
-                </Responsive>
+                <Router>
+                    <Responsive>
+                        <Grid centered style={{ marginBottom: '.1em' }}>
+                            <Grid.Column borderless stretched width={10}>
+                                <Ref innerRef={this.contextRef}>
+                                    <Rail position='right'>
+                                        <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
+                                            <Back2Top>
+                                                <Button inverted color='blue' size='huge'>
+                                                    &nbsp; Top &nbsp;
+                                                    <Icon name='double angle up'/>
+                                                </Button>
+                                            </Back2Top>
+                                        </Sticky>
+                                    </Rail>
+                                </Ref>
+                                <Ref innerRef={this.contextRef}>
+                                    <Rail position='left'>
+                                        <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                            <Menu fluid vertical tabular>
+                                                <Menu.Item
+                                                    name='Compliance'
+                                                    as={Link}
+                                                    to='/compliance'
+                                                    active={activeItem === 'Compliance'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='First Aid At Work'
+                                                    as={Link}
+                                                    to='/compliance/first-aid-at-work'
+                                                    active={activeItem === 'First Aid At Work'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Basic Life Support with AED'
+                                                    as={Link}
+                                                    to='/compliance/bls-aed'
+                                                    active={activeItem === 'Basic Life Support with AED'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Paediatric First Aid'
+                                                    as={Link}
+                                                    to='/compliance/paediatric-first-aid'
+                                                    active={activeItem === 'Paediatric First Aid'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Activity First Aid'
+                                                    as={Link}
+                                                    to='/compliance/activity-first-aid'
+                                                    active={activeItem === 'Activity First Aid'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Junior and Bespoke First Aid'
+                                                    as={Link}
+                                                    to='/compliance/bespoke-first-aid'
+                                                    active={activeItem === 'Junior and Bespoke First Aid'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Anaphylaxis Management'
+                                                    as={Link}
+                                                    to='/compliance/anaphylaxis-management'
+                                                    active={activeItem === 'Anaphylaxis Management'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Catastrophic Bleeds'
+                                                    as={Link}
+                                                    to='/compliance/catastrophic-bleed-management'
+                                                    active={activeItem === 'Catastrophic Bleeds'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Health and Safety'
+                                                    as={Link}
+                                                    to='/compliance/health-and-safety'
+                                                    active={activeItem === 'Health and Safety'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Mental Health First Aid'
+                                                    as={Link}
+                                                    to='/compliance/mental-health-first-aid'
+                                                    active={activeItem === 'Mental Health First Aid'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Oxygen Therapy'
+                                                    as={Link}
+                                                    to='/compliance/oxygen-therapy'
+                                                    active={activeItem === 'Oxygen Therapy'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    name='Safe Guarding'
+                                                    as={Link}
+                                                    to='/compliance/safe-guarding'
+                                                    active={activeItem === 'links'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                            </Menu>
+                                        </Sticky>
+                                    </Rail>
+                                </Ref>
+                                <Segment style={{ padding: '3em', marginBottom: '1em' }}>
+                                    <Switch>
+                                        <Route exact path="/compliance" component={ComplianceHome} />
+                                        <Route path="/compliance/first-aid-at-work" component={FirstAidAtWork} />
+                                        <Route path="/compliance/bls-aed" component={BlsAed} />
+                                        <Route path="/compliance/paediatric-first-aid" component={PaediatricFirstAid} />
+                                        <Route path="/compliance/activity-first-aid" component={ActivityFirstAid} />
+                                        <Route path="/compliance/bespoke-first-aid" component={BespokeFirstAid} />
+                                        <Route path="/compliance/anaphylaxis-management" component={AnaphylaxisManagement} />
+                                        <Route path="/compliance/catastrophic-bleed-management" component={CatastrophicBleedManagement} />
+                                        <Route path="/compliance/health-and-safety" component={HealthAndSafety} />
+                                        <Route path="/compliance/fire-safety" component={FireSafety} />
+                                        <Route path="/compliance/food-safety" component={FoodSafety} />
+                                        <Route path="/compliance/mental-health-first-aid" component={MentalHealthFirstAid} />
+                                        <Route path="/compliance/oxygen-therapy" component={OxygenTherapy} />
+                                        <Route path="/compliance/safe-guarding" component={SafeGuarding} />
+                                    </Switch>
+                                </Segment>
+                            </Grid.Column>
+                        </Grid>
+                    </Responsive>
+                </Router>
             </>
         )
     }

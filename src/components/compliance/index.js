@@ -11,7 +11,6 @@ import FirstAidAtWorkRequal from '../compliance/FirstAidAtWorkRequal'
 import FirstAidAtWork from './FirstAidAtWork'
 import FoodSafety from '../compliance/FoodSafety'
 import HealthAndSafety from '../compliance/HealthAndSafety'
-import HealthAndSafetyFirstAid from '../compliance/HealthAndSafetyFirstAid'
 import JuniorFirstAid from '../compliance/JuniorFirstAid'
 import ManualHandling from '../compliance/ManualHandling'
 import MentalHealthFirstAid from '../compliance/MentalHealthFirstAid'
@@ -36,7 +35,6 @@ export {
   FirstAidAtWork,
   FoodSafety,
   HealthAndSafety,
-  HealthAndSafetyFirstAid,
   JuniorFirstAid,
   ManualHandling,
   MentalHealthFirstAid,

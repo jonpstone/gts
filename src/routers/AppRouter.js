@@ -28,7 +28,6 @@ import {
   FirstAidAtWork,
   FoodSafety,
   HealthAndSafety,
-  HealthAndSafetyFirstAid,
   JuniorFirstAid,
   ManualHandling,
   MentalHealthFirstAid,
@@ -71,7 +70,6 @@ export default props =>
       <Route path="/compliance/first-aid-at-work" component={FirstAidAtWork} />
       <Route path="/compliance/food-safety" component={FoodSafety} />
       <Route path="/compliance/health-and-safety" component={HealthAndSafety} />
-      <Route path="/compliance/health-and-safety-first-aid" component={HealthAndSafetyFirstAid} />
       <Route path="/compliance/junior-first-aid" component={JuniorFirstAid} />
       <Route path="/compliance/manual-handling" component={ManualHandling} />
       <Route path="/compliance/mental-health-first-aid" component={MentalHealthFirstAid} />

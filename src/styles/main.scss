@@ -117,7 +117,7 @@ body {
 	background-image: linear-gradient(to right top,
 		rgba(rgb(167, 164, 4), 0.8),
 		rgba(rgb(8, 7, 5), 0.8)),
-		url('/images/anaphylaxis.jpg');
+		url('/images/wasps.jpg');
 }
 #blsAedSyllabus {
 	background-size: cover;
@@ -134,4 +134,20 @@ body {
 		rgba(rgb(62, 124, 33), 0.8),
 		rgba(rgb(167, 104, 32), 0.8)),
 		url('/images/blsAed.jpg');
+}
+#bleedsSyllabus {
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to left,
+		rgba(rgb(33, 47, 124), 0.7),
+		rgba(rgb(177, 14, 14), 0.7)),
+		url('/images/Bleeding.png');
+}
+#fireSyllabus {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to top,
+		rgba(rgb(184, 21, 16), 0.7),
+		rgba(rgb(90, 3, 3), 0.7)),
+		url('/images/fireSafety.jpg');
 }
