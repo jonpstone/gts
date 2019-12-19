@@ -21,14 +21,14 @@ import {
   } from '.'
 
 export default class Compliance extends React.Component {
-    state = { activeItem: 'Compliance', activeComponent: <ComplianceHome/> }
+    state = { activeItem: 'Compliance' }
 
     contextRef = createRef()
   
     handleItemClick = (event, { name }) => this.setState({ activeItem: name })
         
     render() {
-        const { activeItem, activeComponent } = this.state
+        const { activeItem } = this.state
 
         return (
             <>
@@ -66,6 +66,7 @@ export default class Compliance extends React.Component {
                                         <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
                                             <Menu fluid vertical tabular>
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Compliance'
                                                     as={Link}
                                                     to='/compliance'
@@ -73,6 +74,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='First Aid At Work'
                                                     as={Link}
                                                     to='/compliance/first-aid-at-work'
@@ -80,6 +82,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Basic Life Support with AED'
                                                     as={Link}
                                                     to='/compliance/bls-aed'
@@ -87,6 +90,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Paediatric First Aid'
                                                     as={Link}
                                                     to='/compliance/paediatric-first-aid'
@@ -94,6 +98,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Activity First Aid'
                                                     as={Link}
                                                     to='/compliance/activity-first-aid'
@@ -101,6 +106,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Junior and Bespoke First Aid'
                                                     as={Link}
                                                     to='/compliance/bespoke-first-aid'
@@ -108,6 +114,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Anaphylaxis Management'
                                                     as={Link}
                                                     to='/compliance/anaphylaxis-management'
@@ -115,6 +122,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Catastrophic Bleeds'
                                                     as={Link}
                                                     to='/compliance/catastrophic-bleed-management'
@@ -122,6 +130,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Health and Safety'
                                                     as={Link}
                                                     to='/compliance/health-and-safety'
@@ -129,6 +138,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Mental Health First Aid'
                                                     as={Link}
                                                     to='/compliance/mental-health-first-aid'
@@ -136,6 +146,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Oxygen Therapy'
                                                     as={Link}
                                                     to='/compliance/oxygen-therapy'
@@ -143,6 +154,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Safe Guarding'
                                                     as={Link}
                                                     to='/compliance/safe-guarding'

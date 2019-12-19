@@ -116,16 +116,16 @@ class DesktopContainer extends React.Component {
 						as={Link} to="/" 
 						size='mini' 
 						src={!fixed ? null : '/images/GTS.png'}
-						style={!fixed ? { display: 'none' } : null}
+						style={!fixed ? { display: 'none' } : { outline: 'none' }}
 					/>
 				</Menu.Item>
 				<Menu.Menu style={!fixed ? { fontSize: '1.2em' } : { fontSize: '1.2em', paddingLeft: '22%'}}>
-					<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
-					<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
-					<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
-					<Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
-					<Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
-					<Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
+					<Menu.Item as={Link} to="/compliance" style={{ outline: 'none' }}>Compliance</Menu.Item>
+					<Menu.Item as={Link} to="/" style={{ outline: 'none' }}>Organisation Security</Menu.Item>
+					<Menu.Item as={Link} to="/auditing" style={{ outline: 'none' }}>Auditing</Menu.Item>
+					<Menu.Item as={Link} to="/team-building" style={{ outline: 'none' }}>Team Building</Menu.Item>
+					<Menu.Item as={Link} to="/forces-covenant" style={{ outline: 'none' }}>Forces Covenant</Menu.Item>
+					<Menu.Item as={Link} to="/public-courses" style={{ outline: 'none' }}>Public Courses</Menu.Item>
 					<Menu.Item ></Menu.Item>
 				</Menu.Menu>
             </Menu>

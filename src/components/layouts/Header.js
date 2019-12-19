@@ -34,19 +34,20 @@ class DesktopContainerMenu extends React.Component {
 						size='large'
 					>
 						<Menu.Item>
-						<Image 
+						<Image
+							style={{ outline: 'none' }}
 							as={Link} to='/'
 							size='mini' 
 							src='/images/GTS.png'
 						/>
 						</Menu.Item>
 						<Menu.Menu 	size='large' style={{ paddingLeft: '26%' }}>
-							<Menu.Item as={Link} to="/compliance">Compliance</Menu.Item>
-							<Menu.Item as={Link} to="/">Organisation Security</Menu.Item>
-							<Menu.Item as={Link} to="/auditing">Auditing</Menu.Item>
-							<Menu.Item as={Link} to="/team-building">Team Building</Menu.Item>
-							<Menu.Item as={Link} to="/forces-covenant">Forces Covenant</Menu.Item>
-							<Menu.Item as={Link} to="/public-courses">Public Courses</Menu.Item>
+							<Menu.Item as={Link} to="/compliance" style={{ outline: 'none' }}>Compliance</Menu.Item>
+							<Menu.Item as={Link} to="/" style={{ outline: 'none' }}>Organisation Security</Menu.Item>
+							<Menu.Item as={Link} to="/auditing" style={{ outline: 'none' }}>Auditing</Menu.Item>
+							<Menu.Item as={Link} to="/team-building" style={{ outline: 'none' }}>Team Building</Menu.Item>
+							<Menu.Item as={Link} to="/forces-covenant" style={{ outline: 'none' }}>Forces Covenant</Menu.Item>
+							<Menu.Item as={Link} to="/public-courses" style={{ outline: 'none' }}>Public Courses</Menu.Item>
 						</Menu.Menu>
 					</Menu>
 				</Segment>
