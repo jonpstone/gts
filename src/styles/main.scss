@@ -143,10 +143,34 @@ body {
 		rgba(rgb(177, 14, 14), 0.7)),
 		url('/images/Bleeding.png');
 }
-#fireSyllabus {
+#healthAndSafetySyllabus {
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to top,
+		rgba(rgb(17, 110, 98), 0.7),
+		rgba(rgb(21, 23, 54), 0.7)),
+		url('/images/healthAndSafetyone.jpg');
+}
+#healthAndSafetyTwoSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to top,
+		rgba(rgb(146, 106, 31), 0.7),
+		rgba(rgb(21, 23, 54), 0.7)),
+		url('/images/healthAndSafetyTwo.jpg');
+}
+#manualHandlingSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to bottom,
+		rgba(rgb(184, 21, 16), 0.7),
+		rgba(rgb(90, 3, 3), 0.7)),
+		url('/images/manualHandling.jpg');
+}
+#fireSyllabus {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to bottom,
 		rgba(rgb(184, 21, 16), 0.7),
 		rgba(rgb(90, 3, 3), 0.7)),
 		url('/images/fireSafety.jpg');
@@ -154,7 +178,23 @@ body {
 #mentalHealthOneSyllabus {
 	background-size: cover;
 	background-position: center;
-	background-image: linear-gradient(to top,
+	background-image: linear-gradient(to right top,
+		rgba(rgb(184, 21, 16), 0.7),
+		rgba(rgb(90, 3, 3), 0.7)),
+		url('/images/mentalHealth1.jpg');
+}
+#mentalHealthTwoSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left top,
+		rgba(rgb(184, 21, 16), 0.7),
+		rgba(rgb(90, 3, 3), 0.7)),
+		url('/images/mentalHealth1.jpg');
+}
+#mentalHealthThreeSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
 		rgba(rgb(184, 21, 16), 0.7),
 		rgba(rgb(90, 3, 3), 0.7)),
 		url('/images/mentalHealth1.jpg');

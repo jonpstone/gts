@@ -10,6 +10,7 @@
     "node-sass": "^4.12.0",
     "pure-react-carousel": "^1.24.1",
     "react": "^16.8.6",
+    "react-back-to-top": "^1.0.1",
     "react-back2top": "^0.1.6",
     "react-dom": "^16.8.6",
     "react-reveal": "^1.2.2",

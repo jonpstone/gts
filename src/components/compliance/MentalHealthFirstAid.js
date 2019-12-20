@@ -239,7 +239,8 @@ export default class MentalHealthFirstAid extends React.Component {
 							<Grid.Column style={{ padding: '0 0 0 2em' }}>
 								<p>
 									Upon successful completion of the qualification assessment, Learners will be 
-									awarded the Ofqual regulated Level 2 Award in First Aid for Mental Health.
+									awarded the Ofqual regulated Level 3 Award in Supervising First Aid for Mental 
+									Health.
 								</p>
 								<p>
 									A maximum of 12 students can be accommodated on this course and all candidates 

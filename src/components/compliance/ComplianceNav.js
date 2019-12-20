@@ -2,7 +2,7 @@ import React, { createRef } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon, Container } from 'semantic-ui-react'
 import Back2Top from 'react-back2top';
-import NavBar from '../layouts/Header'
+import NavBar from '../layouts/Header';
 import {
     ActivityFirstAid,
     AnaphylaxisManagement,
@@ -52,7 +52,10 @@ export default class Compliance extends React.Component {
                                 <Ref innerRef={this.contextRef}>
                                     <Rail position='right'>
                                         <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
-                                            <Back2Top>
+                                            <Back2Top
+                                                scrollDuration={500}
+                                                fadeDuration={1200}
+                                            >
                                                 <Button inverted color='blue' size='huge'>
                                                     &nbsp; Top &nbsp;
                                                     <Icon name='double angle up'/>
@@ -135,6 +138,14 @@ export default class Compliance extends React.Component {
                                                     as={Link}
                                                     to='/compliance/health-and-safety'
                                                     active={activeItem === 'Health and Safety'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    style={{ outline: 'none' }}
+                                                    name='Food Safety'
+                                                    as={Link}
+                                                    to='/compliance/food-safety'
+                                                    active={activeItem === 'Food Safety'}
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item

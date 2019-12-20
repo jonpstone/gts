@@ -1,12 +1,12 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Container, Header, Divider, Grid, List, Button, Icon  } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, List, Button, Icon } from 'semantic-ui-react'
 
 export class FirstAidAtWork extends React.Component {
 	constructor(props) {
 		super(props);
-		this.emergencyFaawFocus = React.createRef()
-		this.faawRequalFocus = React.createRef()
+		this.firstFocus = React.createRef()
+		this.secondFocus = React.createRef()
 	}
 
 	componentDidMount() {
@@ -14,8 +14,8 @@ export class FirstAidAtWork extends React.Component {
 	}
 
 	handleLeftOnClick = (event) => {
-        if(this.emergencyFaawFocus.current){
-            this.emergencyFaawFocus.current.scrollIntoView({ 
+        if(this.firstFocus.current){
+            this.firstFocus.current.scrollIntoView({ 
                behavior: "smooth", 
                block: "start"
             })
@@ -23,8 +23,8 @@ export class FirstAidAtWork extends React.Component {
 	}
 	
 	handleRightOnClick = (event) => {
-		if(this.faawRequalFocus.current){
-			this.faawRequalFocus.current.scrollIntoView({
+		if(this.secondFocus.current){
+			this.secondFocus.current.scrollIntoView({
 				behavior: "smooth", 
 				block: "start"
 			})
@@ -52,7 +52,7 @@ export class FirstAidAtWork extends React.Component {
 					</Button>
 					<Button inverted color='blue' size='huge' onClick={this.handleRightOnClick}>
 					&nbsp; First Aid at Work Requalification &nbsp;
-						<Icon name='angle down'/>
+						<Icon name='double angle down'/>
 					</Button>
 				</Container>
 
@@ -133,7 +133,7 @@ export class FirstAidAtWork extends React.Component {
 								Each student will also receive a free comprehensive fully illustrated training
 								book to supplement the First Aid at Work course; this will be provided in your 
 								training pack.<br /><br/>
-								<div ref={this.emergencyFaawFocus}></div>
+								<div ref={this.firstFocus}></div>
 								This qualification must be renewed every 3 years. It is recommended that 
 								every first aider completes refresher training annually to keep their skills 
 								current and competent.
@@ -223,7 +223,7 @@ export class FirstAidAtWork extends React.Component {
 								This qualification must be renewed every 3 years.  It is recommended that every
 								first aider completes refresher training annually to keep their skills current 
 								and competent.
-								<div ref={this.faawRequalFocus}></div>
+								<div ref={this.secondFocus}></div>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
