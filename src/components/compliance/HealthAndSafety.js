@@ -56,28 +56,52 @@ export class HealthAndSafety extends React.Component {
 					</Button>
 				</Container>
 
-				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
-					</Divider>
-					<Grid.Row>
-						<Grid.Column style={{ padding: '0 2em 0 0' }}>
-							This is an excellent introduction to health and safety in the workplace and will benefit any
-							worker, in any industry or sector and accommodates induction training for the new employee 
-							very well.
+				<Grid stackable columns='equal'>
+					<Grid.Row style={{ margin: '3em 0' }}>
+						<Grid.Column>
+							All workers have a right to work in places where risks to their health and safety are 
+							properly controlled. Health and safety is there to help prevent you from suffering injury or
+							illness	through work.
 						</Grid.Column>
-						<Grid.Column style={{ padding: '0 0 0 2em' }}>
-							All aspects of Health and Safety are important to a business whether you are an employee, 
-							contractor or supplier and this half-day course will benefit both the learner and the 
-							business, ensuring that the working environment is a safe and healthy one.
+					</Grid.Row>
+					<Grid.Row id='healthAndSafetySyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
+						<Grid.Column>
+							<List bulleted items={[
+									'Carryout Risk Assessments',
+									'Put in place control measures',
+									'Provide information',
+									'Provide adequate training',
+									'Provide appropriate level of supervision'
+								]}
+							/>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
 				
 				<Fade bottom>
+					<Grid divided stackable columns='equal'>
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
+						</Divider>
+						<Grid.Row>
+							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+								This is an excellent introduction to health and safety in the workplace and will benefit any
+								worker, in any industry or sector and accommodates induction training for the new employee 
+								very well.
+							</Grid.Column>
+							<Grid.Column style={{ padding: '0 0 0 2em' }}>
+								All aspects of Health and Safety are important to a business whether you are an employee, 
+								contractor or supplier and this half-day course will benefit both the learner and the 
+								business, ensuring that the working environment is a safe and healthy one.
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
+				
+				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
-						<Grid.Row id='healthAndSafetySyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
+						<Grid.Row id='healthAndSafetyOneSyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Understanding the importance of health, safety and welfare standards in the workplace',
@@ -116,7 +140,7 @@ export class HealthAndSafety extends React.Component {
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='healthAndSafetyTwoSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 5em 0', fontSize: '1.5em' }}
+							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -181,7 +205,7 @@ export class HealthAndSafety extends React.Component {
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='manualHandlingSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 5em 0', fontSize: '1.5em' }}
+							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -191,11 +215,11 @@ export class HealthAndSafety extends React.Component {
 										'Be able to apply safe manual handling principles'
 									]}
 								/>
+								<div ref={this.secondFocus}></div>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
-				<div ref={this.secondFocus}></div>
 
 				<Fade bottom>
 					<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '.5em' }}>

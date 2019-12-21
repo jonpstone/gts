@@ -70,24 +70,19 @@ export default class BlsAed extends React.Component {
 				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
-						<Grid.Row id='blsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
+						<Grid.Row 
+							id='foodSafetyOneSyllabus' 
+							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 5em 0', fontSize: '1.5em' }}
+						>
 							<Grid.Column>
 								<List bulleted items={[
-										'Responsibilities and reporting',
-										'Assessment of the situation',
-										'Dealing with an unresponsive casualty',
-										'Infection control',
+										'How individuals can take responsibility for food safety',
+										'The importance of keeping him/herself clean and hygienic',
+										'The importance of keeping the work areas clean and hygienic',
+										'The importance of keeping food safe'
 									]}
 								/>
-							</Grid.Column>
-							<Grid.Column>
-								<List bulleted items={[
-										'Resuscitation',
-										'AED functions',
-										'Defibrillation procedures',
-										'Safety measures',
-									]}
-								/>
+								<div ref={this.secondFocus}></div>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

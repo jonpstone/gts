@@ -70,10 +70,18 @@ export default class Compliance extends React.Component {
                                             <Menu fluid vertical tabular>
                                                 <Menu.Item
                                                     style={{ outline: 'none' }}
-                                                    name='Compliance'
+                                                    name='Compliance Home'
                                                     as={Link}
                                                     to='/compliance'
-                                                    active={activeItem === 'Compliance'}
+                                                    active={activeItem === 'Compliance Home'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    style={{ outline: 'none' }}
+                                                    name='Health and Safety'
+                                                    as={Link}
+                                                    to='/compliance/health-and-safety'
+                                                    active={activeItem === 'Health and Safety'}
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
@@ -118,6 +126,22 @@ export default class Compliance extends React.Component {
                                                 />
                                                 <Menu.Item
                                                     style={{ outline: 'none' }}
+                                                    name='Mental Health First Aid'
+                                                    as={Link}
+                                                    to='/compliance/mental-health-first-aid'
+                                                    active={activeItem === 'Mental Health First Aid'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    style={{ outline: 'none' }}
+                                                    name='Oxygen Therapy'
+                                                    as={Link}
+                                                    to='/compliance/oxygen-therapy'
+                                                    active={activeItem === 'Oxygen Therapy'}
+                                                    onClick={this.handleItemClick}
+                                                />
+                                                <Menu.Item
+                                                    style={{ outline: 'none' }}
                                                     name='Anaphylaxis Management'
                                                     as={Link}
                                                     to='/compliance/anaphylaxis-management'
@@ -134,34 +158,10 @@ export default class Compliance extends React.Component {
                                                 />
                                                 <Menu.Item
                                                     style={{ outline: 'none' }}
-                                                    name='Health and Safety'
-                                                    as={Link}
-                                                    to='/compliance/health-and-safety'
-                                                    active={activeItem === 'Health and Safety'}
-                                                    onClick={this.handleItemClick}
-                                                />
-                                                <Menu.Item
-                                                    style={{ outline: 'none' }}
                                                     name='Food Safety'
                                                     as={Link}
                                                     to='/compliance/food-safety'
                                                     active={activeItem === 'Food Safety'}
-                                                    onClick={this.handleItemClick}
-                                                />
-                                                <Menu.Item
-                                                    style={{ outline: 'none' }}
-                                                    name='Mental Health First Aid'
-                                                    as={Link}
-                                                    to='/compliance/mental-health-first-aid'
-                                                    active={activeItem === 'Mental Health First Aid'}
-                                                    onClick={this.handleItemClick}
-                                                />
-                                                <Menu.Item
-                                                    style={{ outline: 'none' }}
-                                                    name='Oxygen Therapy'
-                                                    as={Link}
-                                                    to='/compliance/oxygen-therapy'
-                                                    active={activeItem === 'Oxygen Therapy'}
                                                     onClick={this.handleItemClick}
                                                 />
                                                 <Menu.Item
@@ -202,27 +202,3 @@ export default class Compliance extends React.Component {
         )
     }
 }
-
-// -- Activity First Aid
-// -- Bespoke First Aid & Junior First Aid
-
-// First Aid At Work
-// -- Emergency First Aid
-// -- First Aid at Work Requalification
-
-// Paediatric First Aid
-// -- Emergency Paediatric First Aid
-
-// Basic Life Support
-// -- BLS AED
-// -- CPR BLS AED
-
-// Health & Safety
-// -- Fire Safety
-// -- Manual Handling
-
-// Catastrophic Bleeds
-
-// Oxygen Therapy
-
-// Safe Guarding

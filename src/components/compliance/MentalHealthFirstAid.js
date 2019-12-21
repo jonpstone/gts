@@ -149,7 +149,7 @@ export default class MentalHealthFirstAid extends React.Component {
 				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
-						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='mentalHealthTwoSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
 										'What is First Aid for Mental Health?',
@@ -211,7 +211,7 @@ export default class MentalHealthFirstAid extends React.Component {
 				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
-						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='mentalHealthThreeSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
 										'What is First Aid for Mental Health?',

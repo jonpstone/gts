@@ -178,7 +178,7 @@ export class FirstAidAtWork extends React.Component {
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
-								<List items={[
+								<List bulleted items={[
 										'Responsibilities and reporting', 
 										'Assessment of the situation',
 										'Dealing with an unresponsive casualty',
@@ -189,7 +189,7 @@ export class FirstAidAtWork extends React.Component {
 								/>
 							</Grid.Column>
 							<Grid.Column>
-								<List items={[
+								<List bulleted items={[
 										'Resuscitation (including AED)', 
 										'Anatomy',
 										'Minor injuries',
