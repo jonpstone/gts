@@ -94,3 +94,6 @@ const TextCarousel = () => (
 );
 
 export default TextCarousel;
+
+
+// Reminder top review this component after Christmas
