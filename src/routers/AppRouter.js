@@ -31,7 +31,6 @@ import {
   JuniorFirstAid,
   ManualHandling,
   MentalHealthFirstAid,
-  OxygenTherapy,
   PaediatricFirstAid,
   SafeGuarding,
 } from '../components/compliance'
@@ -73,7 +72,6 @@ export default props =>
       <Route path="/compliance/junior-first-aid" component={JuniorFirstAid} />
       <Route path="/compliance/manual-handling" component={ManualHandling} />
       <Route path="/compliance/mental-health-first-aid" component={MentalHealthFirstAid} />
-      <Route path="/compliance/oxygen-therapy" component={OxygenTherapy} />
       <Route path="/compliance/paediatric-first-aid" component={PaediatricFirstAid} />
       <Route path="/compliance/emergency-paediatric-first-aid" component={EmergencyPaediatricFirstAid} />
       <Route path="/compliance/safe-guarding" component={SafeGuarding} />

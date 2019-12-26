@@ -72,7 +72,7 @@ export default class BlsAed extends React.Component {
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='foodSafetyOneSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 5em 0', fontSize: '1.5em' }}
+							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -82,36 +82,6 @@ export default class BlsAed extends React.Component {
 										'The importance of keeping food safe'
 									]}
 								/>
-								<div ref={this.secondFocus}></div>
-							</Grid.Column>
-						</Grid.Row>
-					</Grid>
-				</Fade>
-				<Fade bottom>
-					<Grid divided stackable columns='equal'>
-						<Grid.Row style={{ margin: '5em 0' }}>
-							<Grid.Column style={{ padding: '0 2em 0 0' }}>
-								<p>
-									CPR and AED training is fast becoming a necessity. Golbourn Training Solutions 
-									not only offer this dedicated CPR and AED training course but also a 4 hour 
-									Basic pfe Support and AED course.
-								</p>
-								<p>
-									Each student will also receive a free comprehensive fully illustrated training 
-									book to supplement the CPR and AED course this will be provided in your training
-									pack. 
-								</p>
-							</Grid.Column>
-							<Grid.Column style={{ padding: '0 0 0 2em' }}>
-								<p>
-									A maximum of 12 students are allowed and must be a minimum of 16 years of age.
-								</p>
-
-								<p>
-									This qualification lasts for 3 years. To renew their qualification after 3 
-									years, delegates will need to retake the full course. However, it is recommended
-									that, during the 3 year period, delegates attend annual refresher courses.
-								</p>    
 								<div ref={this.emergencyFocus}></div>
 							</Grid.Column>
 						</Grid.Row>
@@ -119,48 +89,61 @@ export default class BlsAed extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '.5em' }}>
-						CPR with Basic Life Support & AED
-					</Header>
-				</Fade>
-				
-				<Grid divided stackable columns='equal'>
-					<Fade bottom>
+					<Grid divided stackable columns='equal'>
+						<Divider horizontal style={{ margin: '7em 0 5em 0' }}>
+							Level 2 Good Nutrition &nbsp; | &nbsp; 4 hours
+						</Divider>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								CPR with BLS & AED &nbsp; | &nbsp; 1 day
-							</Divider>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
-								Not only does this course deal with the use of an AED and the above syllabus, but
-								it also includes vital training in resuscitation and choking procedures. A minimum 
-								of six contact hours in the classroom, consisting of practical and theoretical 
-								activities.
+								<p>
+									This Good Nutrition course is designed for anyone who is working or seeking a
+									career in food preparation and/or food service. It will give you basic knowledge of 
+									nutrition which will help you prepare well-balanced meals and menus, the result of 
+									which will have a positive impact on health as well as an understanding of special 
+									dietary requirements.
+								</p>
+								<p>
+									In particular, if you work in hospital or school kitchens, residential homes or 
+									community based kitchens, then this course will assist you in preparing well 
+									balanced and nutritional meals.
+								</p>
+							</Grid.Column>
+							<Grid.Column style={{ padding: '0 0 0 2em' }}>
+								<p>
+									If you are considering a career in the food industry, then this course will give you
+									a good understanding and appreciation of nutritional values and well-balanced diets.
+								</p>
+								<p>
+									It will also help those who are active in sport and recreation, children or adults, 
+									in respect of producing well-balanced diets to support that activity.
+								</p>
 							</Grid.Column>
 						</Grid.Row>
-					</Fade>
-				</Grid>
+					</Grid>
+				</Fade>
 
 				<Fade bottom>
 					<Grid stackable columns='equal'>
 						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
-						<Grid.Row id='cprBlsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
+						<Grid.Row 
+							id='foodSafetyTwoSyllabus' 
+							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
+						>
 							<Grid.Column>
 								<List bulleted items={[
-										'Responsibilities and reporting', 
-										'Dealing with an unresponsive casualty',
-										'Assessment of the situation',
-										'Paediatric defibrillation',
-										'Defibrillation procedures',
+										'The principle of balanced diets',
+										'Current Government nutritional guidelines for a healthy diet',
+										'Sources of essential nutrients',
+										'Catering practices to be considered when planning and providing meals for those on special diets'
 									]}
 								/>
 							</Grid.Column>
 							<Grid.Column>
 								<List bulleted items={[
-										'Resuscitation',
-										'Choking',
-										'Heart attacks',
-										'AED safety and Functions',
-										'Infection control',
+										'Catering practices that help maintain the nutritional value of food',
+										'How to plan and provide special diets',
+										'The impact of special diets on health',
+										'The impact of diet on health'
 									]}
 								/>
 							</Grid.Column>
@@ -169,21 +152,17 @@ export default class BlsAed extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
-					<Grid divided stackable columns='equal'>
-						<Grid.Row style={{ margin: '5em 0' }}>
-							<Grid.Column style={{ padding: '0 2em 0 0' }}>
-								Each student will also receive a free comprehensive fully illustrated training 
-								book to supplement the Emergency Paediatric First Aid course this will be 
-								provided in your training pack.<br/><br/>
-								A maximum of 12 students are allowed and must be a minimum of 16 years of age 
-								and a certificate can be offered to all, subject to assessment. It is the 
-								employer's responsibility to ensure that the student is suitable for that role.
-							</Grid.Column>
-							<Grid.Column style={{ padding: '0 0 0 2em' }}>
-								This qualification must be renewed every 3 years. It is recommended that every 
-								first aider completes refresher training annually to keep their skills current 
-								and competent.
-							</Grid.Column>
+					<Grid>
+						<Divider horizontal style={{ margin: '5em 0' }}>Certification</Divider>
+						<Grid.Row>
+							This is achieved by on-going theoretical teaching by the instructor, culminating with a 
+							written test. This qualification does not expire, but refresher training and keeping up to 
+							date with changes to policies and procedures is vital to keep the qualification current.
+						</Grid.Row>
+						<Divider horizontal style={{ margin: '5em 0' }}>Certification</Divider>
+						<Grid.Row>
+							A maximum of 16 students are allowed and must be a minimum of 14 years of age and a 
+							certificate can be offered to all, subject to assessment.
 						</Grid.Row>
 					</Grid>
 				</Fade>

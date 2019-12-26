@@ -26,13 +26,13 @@ export default props =>
 				</p>
 				</Grid.Column>
 				<Grid.Column width={3}>
-				<Header inverted as='h4' content='Our Company' />
-				<List link inverted>
-					<List.Item as={Link} to="/about">About</List.Item>
-					<List.Item as={Link} to="/contact">Contact</List.Item>
-					<List.Item as={Link} to="/">Sitemap</List.Item>
-					<List.Item as={Link} to="/policy">Policy</List.Item>
-				</List>
+					<Header inverted as='h4' content='Our Company' />
+					<List link inverted>
+						<List.Item as={Link} to="/about">About</List.Item>
+						<List.Item as={Link} to="/contact">Contact</List.Item>
+						<List.Item as={Link} to="/">Sitemap</List.Item>
+						<List.Item as={Link} to="/policy">Policy</List.Item>
+					</List>
 				</Grid.Column>
 				<Grid.Column width={3}>
 				<Header inverted as='h4' content='Links & Resources' />

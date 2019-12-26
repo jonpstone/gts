@@ -14,7 +14,6 @@ import HealthAndSafety from '../compliance/HealthAndSafety'
 import JuniorFirstAid from '../compliance/JuniorFirstAid'
 import ManualHandling from '../compliance/ManualHandling'
 import MentalHealthFirstAid from '../compliance/MentalHealthFirstAid'
-import OxygenTherapy from '../compliance/OxygenTherapy'
 import PaediatricFirstAid from '../compliance/PaediatricFirstAid'
 import SafeGuarding from '../compliance/SafeGuarding'
 import ComplianceNav from './ComplianceNav'
@@ -38,7 +37,6 @@ export {
   JuniorFirstAid,
   ManualHandling,
   MentalHealthFirstAid,
-  OxygenTherapy,
   PaediatricFirstAid,
   SafeGuarding,
   ComplianceHome

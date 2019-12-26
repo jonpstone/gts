@@ -35,7 +35,7 @@ export class BespokeFirstAid extends React.Component {
 					</Grid.Row>
 					<Grid.Row>
 						<Grid.Column textAlign='center' style={{ paddingTop: '1em' }}>
-							Please Contact us to arrange a course just for you.<br/><br/>
+							<b>Please Contact us to arrange a course just for you.</b><br/><br/>
 							<Button inverted size='huge' color='blue' as={Link} to='/contact' style={{ margin: '3em 0' }}>
 								&nbsp; Call Today &nbsp;
 								<Icon name='angle right'/>
