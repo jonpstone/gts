@@ -237,3 +237,11 @@ body {
 .menuItems {
 	outline: none !important;
 }
+#orgSecHero {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/policeOfficer.jpg');
+}

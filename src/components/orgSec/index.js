@@ -1,12 +1,11 @@
-import LockdownConsultancy from './LockownConsultancy'
+import LockdownConsultancy from './LockdownConsultancy'
 import SecurityAudit from './SecurityAudit'
 import SICM from './SICM'
+import OrgSecHome from './OrgSecHome'
 
 export {
   LockdownConsultancy,
   SecurityAudit,
-  SICM
+  SICM,
+  OrgSecHome
 }
-
-// This is an export bundle file for the organization
-// security catergory

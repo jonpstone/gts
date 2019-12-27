@@ -21,15 +21,6 @@ const getWidth = () => {
 	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
-const handleOnClick = (event) => {
-	if(this.emergencyFocus.current){
-		this.emergencyFocus.current.scrollIntoView({ 
-			behavior: "smooth", 
-			block: "start"
-		})
-	}
-}
-
 const HomepageHeading = ({ mobile }) => (
 	<Container>
 		<Grid
@@ -47,7 +38,7 @@ const HomepageHeading = ({ mobile }) => (
 				<Image 
 					src='/images/GTS1.png' 
 					size='small'
-					style={{ marginTop: mobile ? '1em' : '6%' }} 
+					style={{ marginTop: mobile ? '1em' : '5%' }} 
 					wrapped
 				/>
 			</Grid.Row>
@@ -121,11 +112,10 @@ class DesktopContainer extends React.Component {
 								backgroundColor: 'transparent', 
 								border: 'none', 
 								outline: 'none',
-
 							} : null}
 						>
 							<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
-							<Menu.Item as={Link} to="/" className='menuItems'>Organisation Security</Menu.Item>
+							<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 							<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
 							<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
 							<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
