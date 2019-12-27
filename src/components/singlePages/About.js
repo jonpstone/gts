@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react'
+import NavBar from '../../components/layouts/Header'
 
 export default props =>
   <>
-    {console.log(window.location.href)}
+    <NavBar/>
     <Container text style={{ marginTop: '7em' }}>
       <Header as='h2'>About</Header>
       <p>

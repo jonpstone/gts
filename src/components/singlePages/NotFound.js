@@ -1,7 +1,11 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
+import NavBar from '../../components/layouts/Header'
 
-export default props => 
-  <Container text style={{ marginTop: '7em' }}>
-    404 Not Found
-  </Container>
+export default props =>
+	<>
+		<NavBar/>
+		<Container text style={{ marginTop: '7em' }}>
+			404 Not Found
+		</Container>
+	</>

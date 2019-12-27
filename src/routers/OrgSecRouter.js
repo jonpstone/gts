@@ -1,9 +1,9 @@
 import React, { createRef } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon } from 'semantic-ui-react'
-import Back2Top from 'react-back2top';
-import NavBar from '../components/layouts/Header';
 import { SICM, LockdownConsultancy, SecurityAudit, OrgSecHome } from '../components/orgSec'
+import Back2Top from 'react-back2top'
+import NavBar from '../components/layouts/Header'
 
 export default class Compliance extends React.Component {
     state = { activeItem: null }
