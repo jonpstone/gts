@@ -114,37 +114,39 @@ export default class MentalHealthFirstAid extends React.Component {
 					</Grid>
 				</Fade>
 				
-				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
-					</Divider>
-					<Grid.Row>
-						<Grid.Column style={{ padding: '0 2em 0 0' }}>
-							This course is suitable for everyone but has been designed to help employers to provide	a 
-							positive mental health culture within the workplace and to provide learners with 
-							comprehensive knowledge on a range of the most common mental health conditions and the 
-							skills to be able to act should a condition be suspected.
-						</Grid.Column>
-						<Grid.Column style={{ padding: '0 0 0 2em' }}>							
-							Learners undertaking this course will be considered First Aiders for Mental Health and be a 
-							point of contact within the workplace to help and support those with a suspected mental 
-							health condition.
-						</Grid.Column>
-						<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
-						<Grid.Column style={{ padding: '0 2em 0 0' }}>
-							Building on the Level 1 Award in Awareness of First Aid for Mental Health this course 
-							introduces the First Aid for Mental Health Action Plan which allows learners to provide 
-							their peers with comprehensive guidance and support for a suspected mental health condition. 
-							Learners will be able to provide signposting to professional help and support that person 
-							whilst they are receiving professional assistance.
-						</Grid.Column>
-						<Grid.Column style={{ padding: '0 0 0 2em' }}>
-							This course also covers the effects of drugs and alcohol and provides learners with the 
-							skills and knowledge to	assist employers in implementing a positive mental health culture to
-							 support employees within a workplace.
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
+				<Fade bottom>
+					<Grid divided stackable columns='equal'>
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
+						</Divider>
+						<Grid.Row>
+							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+								This course is suitable for everyone but has been designed to help employers to provide	a 
+								positive mental health culture within the workplace and to provide learners with 
+								comprehensive knowledge on a range of the most common mental health conditions and the 
+								skills to be able to act should a condition be suspected.
+							</Grid.Column>
+							<Grid.Column style={{ padding: '0 0 0 2em' }}>							
+								Learners undertaking this course will be considered First Aiders for Mental Health and be a 
+								point of contact within the workplace to help and support those with a suspected mental 
+								health condition.
+							</Grid.Column>
+							<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
+							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+								Building on the Level 1 Award in Awareness of First Aid for Mental Health this course 
+								introduces the First Aid for Mental Health Action Plan which allows learners to provide 
+								their peers with comprehensive guidance and support for a suspected mental health condition. 
+								Learners will be able to provide signposting to professional help and support that person 
+								whilst they are receiving professional assistance.
+							</Grid.Column>
+							<Grid.Column style={{ padding: '0 0 0 2em' }}>
+								This course also covers the effects of drugs and alcohol and provides learners with the 
+								skills and knowledge to	assist employers in implementing a positive mental health culture to
+								support employees within a workplace.
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
 
 				<Fade bottom>
 					<Grid stackable columns='equal'>
@@ -188,25 +190,27 @@ export default class MentalHealthFirstAid extends React.Component {
 						</Grid.Row>
 					</Grid>
 				</Fade>
-
-				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
-					</Divider>
-					<Grid.Row>
-						<Grid.Column style={{ padding: '0 2em 0 0' }}>
-							This course builds on the Level 2 Award in First Aid for Mental Health and covers a wider 
-							range of mental health conditions and goes into detail on the range of therapy and 
-							professional support that a person may be given by professional bodies during treatment for 
-							a mental health condition.
-						</Grid.Column>
-						<Grid.Column style={{ padding: '0 0 0 2em' }}>							
-							Learners undertaking this course will be considered First Aiders for Mental Health and be a 
-							point of contact within the workplace to help and support those with a suspected mental 
-							health condition.
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
+				
+				<Fade bottom>
+					<Grid divided stackable columns='equal'>
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
+						</Divider>
+						<Grid.Row>
+							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+								This course builds on the Level 2 Award in First Aid for Mental Health and covers a wider 
+								range of mental health conditions and goes into detail on the range of therapy and 
+								professional support that a person may be given by professional bodies during treatment for 
+								a mental health condition.
+							</Grid.Column>
+							<Grid.Column style={{ padding: '0 0 0 2em' }}>							
+								Learners undertaking this course will be considered First Aiders for Mental Health and be a 
+								point of contact within the workplace to help and support those with a suspected mental 
+								health condition.
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
 
 				<Fade bottom>
 					<Grid stackable columns='equal'>

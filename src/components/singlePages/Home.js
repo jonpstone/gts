@@ -21,55 +21,66 @@ const getWidth = () => {
 	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
+const handleOnClick = (event) => {
+	if(this.emergencyFocus.current){
+		this.emergencyFocus.current.scrollIntoView({ 
+			behavior: "smooth", 
+			block: "start"
+		})
+	}
+}
+
 const HomepageHeading = ({ mobile }) => (
-	<Container fluid>
-		<Image 
-			src='/images/GTS1.png' 
-			size='small'
-			style={{ marginTop: mobile ? '1em' : '5em' }} 
-			wrapped
-			/>
-		<Header
-			as='h1'
-			content='GOLBOURN TRAINING SOLUTIONS'
-			inverted
-			style={{
-				fontSize: mobile ? '2em' : '4em',
-				fontWeight: 'normal',
-			}}
-		/>
-		<Grid 
-			container
+	<Container>
+		<Grid
 			stackable
+			textAlign='center'
 			columns='equal'
 			style={{
-				fontSize: mobile ? '1em' : '1.7em',
+				fontSize: mobile ? '1em' : '1.8em',
 				fontWeight: 'normal',
 				marginTop: mobile ? '0.5em' : '1.5em',
 				marginBottom: mobile ? '1em' : '2em',
-				marginLeft: '15em'
-			}}>
+			}}
+		>
+			<Grid.Row>
+				<Image 
+					src='/images/GTS1.png' 
+					size='small'
+					style={{ marginTop: mobile ? '1em' : '6%' }} 
+					wrapped
+				/>
+			</Grid.Row>
+			<Grid.Row>
+				<Header
+					as='h1'
+					content='GOLBOURN TRAINING SOLUTIONS'
+					inverted
+					style={{
+						fontSize: mobile ? '2em' : '4em',
+						fontWeight: 'normal',
+					}}
+				/>
+			</Grid.Row>
 			<Grid.Row>				
-				<Grid.Column width={2}>
-				</Grid.Column>
-				<Grid.Column width={4}>
+				<Grid.Column>
 					<Header as='h2' inverted style={{color: '#FFC300'}}>
 						PROFESSIONAL
 					</Header>
 				</Grid.Column>
-				<Grid.Column width={4}>
+				<Grid.Column>
 					<Header as='h2' inverted style={{color: '#DAF7A6'}}>
 						AFFORDABLE
 					</Header>
 				</Grid.Column>
-				<Grid.Column width={4}>
+				<Grid.Column>
 					<Header as='h2' inverted style={{color: 'white'}}>
 						FLEXIBLE
 					</Header>
 				</Grid.Column>
 			</Grid.Row>
 		</Grid>
-		<Button as={Link} to="/about" inverted size='huge'>
+		<Button as={Link} to="/about" inverted size='huge' style={{ marginBottom: '8%' }}>
 			Learn More
 			<Icon name='angle right'/>
 		</Button>
@@ -77,65 +88,55 @@ const HomepageHeading = ({ mobile }) => (
 )
 
 class DesktopContainer extends React.Component {
-  state = {}
+	state = {}
 
-  hideFixedMenu = () => this.setState({ fixed: false })
-  showFixedMenu = () => this.setState({ fixed: true })
+	hideFixedMenu = () => this.setState({ fixed: false })
+	showFixedMenu = () => this.setState({ fixed: true })
 
-  render() {
-    const { children } = this.props
-    const { fixed } = this.state
+	render() {
+		const { children } = this.props
+		const { fixed } = this.state
 
-    return (
-      <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
-        >
-          <Segment
-            id='heroHome'
-            inverted
-            textAlign='center'
-            vertical
-		>
-            <Menu
-				compact
-				borderless
-				fixed={fixed ? 'top' : null}
-				inverted={!fixed}
-				size='large'
-				style={!fixed ? {
-					backgroundColor: 'transparent',
-					border: 'none',
-					outline: 'none',
-				} : null}
-            >
-				<Menu.Item>
-					<Image 
-						as={Link} to="/" 
-						size='mini' 
-						src={!fixed ? null : '/images/GTS.png'}
-						style={!fixed ? { display: 'none' } : { outline: 'none' }}
-					/>
-				</Menu.Item>
-				<Menu.Menu style={!fixed ? { fontSize: '1.2em' } : { fontSize: '1.2em', paddingLeft: '22%'}}>
-					<Menu.Item as={Link} to="/compliance" style={{ outline: 'none' }}>Compliance</Menu.Item>
-					<Menu.Item as={Link} to="/" style={{ outline: 'none' }}>Organisation Security</Menu.Item>
-					<Menu.Item as={Link} to="/auditing" style={{ outline: 'none' }}>Auditing</Menu.Item>
-					<Menu.Item as={Link} to="/team-building" style={{ outline: 'none' }}>Team Building</Menu.Item>
-					<Menu.Item as={Link} to="/forces-covenant" style={{ outline: 'none' }}>Forces Covenant</Menu.Item>
-					<Menu.Item as={Link} to="/public-courses" style={{ outline: 'none' }}>Public Courses</Menu.Item>
-					<Menu.Item ></Menu.Item>
-				</Menu.Menu>
-            </Menu>
-            <HomepageHeading/>
-          </Segment>
-        </Visibility>
-        {children}
-      </Responsive>
-    )
-  }
+		return (
+			<Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+				<Visibility
+					once={false}
+					onBottomPassed={this.showFixedMenu}
+					onBottomPassedReverse={this.hideFixedMenu}
+				>
+					<Segment
+						id='heroHome'
+						inverted
+						textAlign='center'
+						vertical
+					>
+						<Menu
+							borderless={!fixed}
+							fluid
+							widths={10}
+							fixed={!fixed ? null : 'top'}
+							inverted={!fixed}
+							size='large'
+							style={!fixed ? {
+								backgroundColor: 'transparent', 
+								border: 'none', 
+								outline: 'none',
+
+							} : null}
+						>
+							<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+							<Menu.Item as={Link} to="/" className='menuItems'>Organisation Security</Menu.Item>
+							<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+							<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+							<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
+						</Menu>
+					<HomepageHeading/>
+					</Segment>
+				</Visibility>
+				{children}
+			</Responsive>
+		)
+	}
 }
 
 class MobileContainer extends React.Component {

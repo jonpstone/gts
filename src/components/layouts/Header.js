@@ -9,6 +9,8 @@ import {
 	Responsive,
 	Segment,
 	Sidebar,
+	Visibility,
+	MenuItem,
 } from 'semantic-ui-react'
 
 const getWidth = () => {
@@ -19,38 +21,32 @@ const getWidth = () => {
 class DesktopContainerMenu extends React.Component {	
 	render() {
 		return (
-			<Responsive 
-				getWidth={getWidth} 
-				minWidth={Responsive.onlyTablet.minWidth}
-			>
-				<Segment
+			<Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+				<Visibility
+					once={false}
+					onBottomPassed={this.showFixedMenu}
+					onBottomPassedReverse={this.hideFixedMenu}
+				>
+					<Segment
+						inverted
 						textAlign='center'
 						vertical
-				>
-					<Menu
-						compact
-						borderless
-						fixed='top'
-						size='large'
 					>
-						<Menu.Item>
-						<Image
-							style={{ outline: 'none' }}
-							as={Link} to='/'
-							size='mini' 
-							src='/images/GTS.png'
-						/>
-						</Menu.Item>
-						<Menu.Menu 	size='large' style={{ paddingLeft: '26%' }}>
-							<Menu.Item as={Link} to="/compliance" style={{ outline: 'none' }}>Compliance</Menu.Item>
-							<Menu.Item as={Link} to="/" style={{ outline: 'none' }}>Organisation Security</Menu.Item>
-							<Menu.Item as={Link} to="/auditing" style={{ outline: 'none' }}>Auditing</Menu.Item>
-							<Menu.Item as={Link} to="/team-building" style={{ outline: 'none' }}>Team Building</Menu.Item>
-							<Menu.Item as={Link} to="/forces-covenant" style={{ outline: 'none' }}>Forces Covenant</Menu.Item>
-							<Menu.Item as={Link} to="/public-courses" style={{ outline: 'none' }}>Public Courses</Menu.Item>
-						</Menu.Menu>
-					</Menu>
-				</Segment>
+						<Menu
+							fluid
+							widths={10}
+							fixed='top'
+							size='large'
+						>
+							<Menu.Item as={Link} to="/" className='menuItems'>GTS Home</Menu.Item>
+							<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+							<Menu.Item as={Link} to="/" className='menuItems'>Organisation Security</Menu.Item>
+							<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+							<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+							<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
+						</Menu>
+					</Segment>
+				</Visibility>
 			</Responsive>
 		)
 	}

@@ -17,12 +17,20 @@ export default class ComplianceHome extends React.Component {
 
                 <Grid divided stackable columns='equal'>
                     <Grid.Row>
-                        Regulatory compliance describes the goal that organizations aspire to achieve in their efforts 
-                        to ensure that they are aware of and take steps to comply with relevant laws, policies, and 
-                        regulations. Due to the increasing number of regulations and need for operational transparency, 
-                        organizations are increasingly adopting the use of consolidated and harmonized sets of 
-                        compliance controls. This approach is used to ensure that all necessary governance requirements 
-                        can be met without the unnecessary duplication of effort and activity from resources.
+                        <p>
+                            Regulatory compliance describes the goal that organizations aspire to achieve in their efforts 
+                            to ensure that they are aware of and take steps to comply with relevant laws, policies, and 
+                            regulations. Due to the increasing number of regulations and need for operational transparency, 
+                            organizations are increasingly adopting the use of consolidated and harmonized sets of 
+                            compliance controls. This approach is used to ensure that all necessary governance requirements 
+                            can be met without the unnecessary duplication of effort and activity from resources.
+                        </p>
+                        <p>
+                            There is considerable regulation in the United Kingdom, some of which is from European Union 
+                            legislation. Various areas are policed by different bodies, such as the Financial Conduct 
+                            Authority (FCA), Environment Agency, Scottish Environment Protection Agency, Information 
+                            Commissioner's Office, Care Quality Commission, and others. 
+                        </p>
                         <Label 
                             as='a' 
                             href='https://en.wikipedia.org/wiki/Regulatory_compliance'
@@ -36,10 +44,7 @@ export default class ComplianceHome extends React.Component {
                             Wikipedia
                         </Label>
                     </Grid.Row>
-                    
-                    <Fade></Fade>
                     <Grid.Row id='complianceSpacer' style={{ height: '20em' }}></Grid.Row>
-
                     <Divider horizontal style={{ margin: '3.5em 0' }}>
                         Is your organisation HSE Compliant?
                     </Divider>

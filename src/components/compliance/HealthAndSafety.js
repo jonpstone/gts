@@ -150,11 +150,11 @@ export class HealthAndSafety extends React.Component {
 										'How to respond to workplace incidents and accidents'
 									]}
 								/>
+								<div ref={this.firstFocus}></div>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
-				<div ref={this.firstFocus}></div>
 
 				<Fade bottom>
 					<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '.5em' }}>

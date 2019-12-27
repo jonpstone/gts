@@ -2,11 +2,21 @@ import React, { createRef } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon } from 'semantic-ui-react'
 import Back2Top from 'react-back2top';
-import NavBar from '../layouts/Header';
+import NavBar from '../components/layouts/Header';
 import {
-    ActivityFirstAid, AnaphylaxisManagement, BespokeFirstAid, BlsAed, CatastrophicBleedManagement, FirstAidAtWork,
-    FoodSafety, HealthAndSafety, MentalHealthFirstAid, PaediatricFirstAid, SafeGuarding, ComplianceHome,
-  } from '.'
+    ActivityFirstAid, 
+    AnaphylaxisManagement, 
+    BespokeFirstAid, 
+    BlsAed, 
+    CatastrophicBleedManagement, 
+    FirstAidAtWork,
+    FoodSafety, 
+    HealthAndSafety, 
+    MentalHealthFirstAid, 
+    PaediatricFirstAid, 
+    SafeGuarding, 
+    ComplianceHome,
+  } from '../components/compliance'
 
 export default class Compliance extends React.Component {
     state = { activeItem: null }
@@ -18,9 +28,17 @@ export default class Compliance extends React.Component {
     render() {
         const { activeItem } = this.state
         const linkNames = [
-            'Health And Safety', 'First Aid At Work', 'Basic Life Support with AED', 'Paediatric First Aid', 
-            'Activity First Aid', 'Junior And Bespoke First Aid', 'Mental Health First Aid', 'Anaphylaxis Management',
-            'Catastrophic Bleeds', 'Food Safety', 'Safe Guarding'
+            'Health And Safety', 
+            'First Aid At Work', 
+            'Basic Life Support with AED', 
+            'Paediatric First Aid', 
+            'Activity First Aid', 
+            'Junior And Bespoke First Aid', 
+            'Mental Health First Aid', 
+            'Anaphylaxis Management',
+            'Catastrophic Bleeds', 
+            'Food Safety', 
+            'Safe Guarding'
         ]
 
         return (
@@ -69,17 +87,19 @@ export default class Compliance extends React.Component {
                                                     active={activeItem === 'Compliance Home'}
                                                     onClick={this.handleItemClick}
                                                 />
-                                                {linkNames.map((item) => (
-                                                    <Menu.Item
-                                                        id='menuItem'
-                                                        style={{ outline: 'none' }}
-                                                        name={item}
-                                                        as={Link}
-                                                        to={`/compliance/${item.replace(/\s+/g, '-')}`}
-                                                        active={activeItem === item}
-                                                        onClick={this.handleItemClick}
-                                                    />
-                                                ))}
+                                                {
+                                                    linkNames.map((item) => (
+                                                        <Menu.Item
+                                                            id='menuItem'
+                                                            style={{ outline: 'none' }}
+                                                            name={item}
+                                                            as={Link}
+                                                            to={`/compliance/${item.replace(/\s+/g, '-')}`}
+                                                            active={activeItem === item}
+                                                            onClick={this.handleItemClick}
+                                                        />
+                                                    ))
+                                                }
                                             </Menu>
                                         </Sticky>
                                     </Rail>

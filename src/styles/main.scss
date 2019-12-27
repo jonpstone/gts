@@ -2,7 +2,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 #heroHome {
-	min-height: 65vh;
+	min-height: 70vh;
 	padding: 1em 0em;
 	background-size: cover;
 	background-image: linear-gradient(to right bottom,
@@ -233,4 +233,7 @@ body {
 }
 #menuItem:hover {
 	color: grey;
+}
+.menuItems {
+	outline: none !important;
 }

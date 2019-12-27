@@ -27,27 +27,27 @@ export default props =>
 				</Grid.Column>
 				<Grid.Column width={3}>
 					<Header inverted as='h4' content='Our Company' />
-					<List link inverted>
-						<List.Item as={Link} to="/about">About</List.Item>
-						<List.Item as={Link} to="/contact">Contact</List.Item>
-						<List.Item as={Link} to="/">Sitemap</List.Item>
-						<List.Item as={Link} to="/policy">Policy</List.Item>
+					<List link inverted >
+						<List.Item as={Link} to="/about" style={{ outline: 'none' }}>About</List.Item >
+						<List.Item as={Link} to="/contact" style={{ outline: 'none' }}>Contact</List.Item>
+						<List.Item as={Link} to="/" style={{ outline: 'none' }}>Sitemap</List.Item>
+						<List.Item as={Link} to="/policy" style={{ outline: 'none' }}>Policy</List.Item>
 					</List>
 				</Grid.Column>
 				<Grid.Column width={3}>
 				<Header inverted as='h4' content='Links & Resources' />
 				<List link inverted>
-					<List.Item as='a' href='https://www.hse.gov.uk/' target='_blank'>
-					Health & Safety Executive
+					<List.Item as='a' href='https://www.hse.gov.uk/' target='_blank' style={{ outline: 'none' }}>
+						Health & Safety Executive
 					</List.Item>
-					<List.Item as='a' href='https://www.gov.uk/government/publications/first-aid-in-schools' target='_blank'>
-					First Aid in Schools 
+					<List.Item as='a' href='https://www.gov.uk/government/publications/first-aid-in-schools' target='_blank' style={{ outline: 'none' }}>
+						First Aid in Schools 
 					</List.Item>
-					<List.Item as='a' href='http://www.sja.org.uk/sja/default.aspx' target='_blank'>
-					St John Ambulance
+					<List.Item as='a' href='http://www.sja.org.uk/sja/default.aspx' target='_blank' style={{ outline: 'none' }}>
+						St John Ambulance
 					</List.Item>
-					<List.Item as='a' href='https://www.mind.org.uk/' target='_blank'>
-					Mind
+					<List.Item as='a' href='https://www.mind.org.uk/' target='_blank' style={{ outline: 'none' }}>
+						Mind
 					</List.Item>
 				</List>
 				</Grid.Column>
