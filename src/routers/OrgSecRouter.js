@@ -23,7 +23,7 @@ export default class Compliance extends React.Component {
                     borderless 
                     id='orgSecHero'
                     textAlign='center'
-                    style={{ margin: '1em 0 1em 0' }}
+                    style={{ margin: '0 0 1em 0' }}
                 >
                     <Grid.Row>
                         <Header inverted as='h1' style={{ marginTop: '.4em', fontSize: '5em' }}>

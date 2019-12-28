@@ -61,7 +61,7 @@ export default class LockDownConsultancy extends React.Component {
 							<Divider horizontal style={{ margin: '0 0 5em' }}>
 								Option 1 &nbsp; | &nbsp; Basic Package
 							</Divider>
-							<Grid.Column style={{ marginRight: '1em' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#c8dbe3' }}>
 								One of our instructors will meet with the Senior Leadership/Management Team to gain 
 								knowledge of current procedures and understand the layout.  They will then comprise a 
 								recommendation report, this will inform areas of improvement and recommendations.
@@ -78,7 +78,7 @@ export default class LockDownConsultancy extends React.Component {
 								Option 2 &nbsp; | &nbsp; Intermediate Package
 							</Divider>
 							<Grid.Column id='lockdownOptionTwo'></Grid.Column>
-							<Grid.Column style={{ marginLeft: '1em' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#acc2b1', color: 'white' }}>
 								One of our instructors will meet with the Senior Leadership/Management Team to gain 
 								knowledge of current procedures and understand the layout. They will then design the bespoke 
 								procedures for your organisation within a week of this meeting.  This procedure will then be
@@ -90,12 +90,12 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Grid stackable columns='equal'>
+					<Grid padded stackable columns='equal'>
 						<Grid.Row>
 							<Divider horizontal style={{ margin: '5em 0' }}>
 								Option 3 &nbsp; | &nbsp; Intermediate Plus Package
 							</Divider>
-							<Grid.Column style={{ marginRight: '1em' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed' }}>
 								One of our instructors will meet with the Senior Leadership/Management Team to gain 
 								knowledge of current procedures and understand the layout. They will then design the bespoke
 								procedures for your organistaion within a week of this meeting.  This procedure will then 
@@ -117,10 +117,10 @@ export default class LockDownConsultancy extends React.Component {
 								Option 4 &nbsp; | &nbsp; Advanced Package - Serious Incident Control Measures
 							</Divider>
 							<Grid.Column id='lockdownOptionFour'></Grid.Column>
-							<Grid.Column style={{ marginLeft: '1em' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#e0c8bf', color: 'white' }}>
 								The S.I.C.M Package can be suitable as a stand alone management system or as an integrated 
-								cell of your current Corporate Incident Management system. See SCIM in the Organisation
-								Security Menu.
+								cell of your current Corporate Incident Management system. See the menu to the left for 
+								further information.
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
