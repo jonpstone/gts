@@ -56,10 +56,10 @@ export default class Compliance extends React.Component {
                                                 <Menu.Item
                                                     id='menuItem'
                                                     style={{ outline: 'none' }}
-                                                    name='Organisation Security'
+                                                    name='Operational Security'
                                                     as={Link}
                                                     to='/organisation-security'
-                                                    active={activeItem === 'Organisation Security'}
+                                                    active={activeItem === 'Operational Security'}
                                                     onClick={this.handleItemClick}
                                                 />
                                                 {

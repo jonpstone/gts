@@ -1,5 +1,4 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 import { Container, Header, Grid, Divider, Image, Label } from 'semantic-ui-react'
 
 export default class ComplianceHome extends React.Component {
