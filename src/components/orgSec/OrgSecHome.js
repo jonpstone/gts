@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Container, Header, Grid, Divider, Image, Label } from 'semantic-ui-react'
+import { Container, Header, Grid } from 'semantic-ui-react'
 
 export default class OrgSecHome extends React.Component {
     
@@ -17,7 +16,7 @@ export default class OrgSecHome extends React.Component {
 
                 <Grid divided stackable columns='equal'>
                     <Grid.Row>
-                        <Grid.Column as={Link} to='/organisation-security/Security-Audit' style={{ color: 'inherit' }}>
+                        <Grid.Column>
                             <Grid.Row id='orgSecOne'>
                                 <h1>SECURITY AUDIT</h1>
                             </Grid.Row>
@@ -25,14 +24,14 @@ export default class OrgSecHome extends React.Component {
                             security measures and processes and complete a report of their findings and
                             recommendations.
                         </Grid.Column>
-                        <Grid.Column as={Link} to='/organisation-security/Lockdown-Consultancy' style={{ color: 'inherit' }}>
+                        <Grid.Column>
                             <Grid.Row id='orgSecTwo'>
                                 <h1>LOCKDOWN CONSULTANCY</h1>
                             </Grid.Row>
                             We hope and we pray that the worst will never happen, but we must always be prepared. We
                             will provide consultancy and training to ensure your orgainisation is Lockdown ready.
                         </Grid.Column>
-                        <Grid.Column as={Link} to='/organisation-security/SICM' style={{ color: 'inherit' }}>
+                        <Grid.Column>
                             <Grid.Row id='orgSecThree'>
                                 <h1>SERIOUS INCIDENT CONTROL MEASURES</h1>
                             </Grid.Row>

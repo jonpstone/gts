@@ -284,3 +284,47 @@ body {
 		rgba(rgb(24, 23, 70), 0.5)),
 		url('/images/seriousIncidentTwo.jpg');
 }
+#lockdownQuestions {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.8),
+		rgba(rgb(24, 23, 70), 0.8)),
+		url('/images/seriousIncidentOne.jpg');
+}
+#lockdownOptionOne {
+	height: 18em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/policeTape.jpg');
+}
+#lockdownOptionTwo {
+	height: 18em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/emergencyResponseVehicle.jpg');
+}
+#lockdownOptionThree {
+	height: 18em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/fireLondon.jpg');
+}
+#lockdownOptionFour {
+	height: 18em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/bombDisposal.jpg');
+}
