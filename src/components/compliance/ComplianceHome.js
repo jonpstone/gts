@@ -13,7 +13,6 @@ export default class ComplianceHome extends React.Component {
                 <Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
                     What is Compliance?
                 </Header>
-
                 <Grid divided stackable columns='equal'>
                     <Grid.Row>
                         <p>
@@ -28,7 +27,8 @@ export default class ComplianceHome extends React.Component {
                             There is considerable regulation in the United Kingdom, some of which is from European Union 
                             legislation. Various areas are policed by different bodies, such as the Financial Conduct 
                             Authority (FCA), Environment Agency, Scottish Environment Protection Agency, Information 
-                            Commissioner's Office, Care Quality Commission, and others. 
+                            Commissioner's Office, Care Quality Commission, and others. For you and your employees, one 
+                            of the most important is the Health and Safety Executive (HSE). 
                         </p>
                         <Label 
                             as='a' 

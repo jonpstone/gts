@@ -98,7 +98,7 @@ export default class LockDownConsultancy extends React.Component {
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed' }}>
 								One of our instructors will meet with the Senior Leadership/Management Team to gain 
 								knowledge of current procedures and understand the layout. They will then design the bespoke
-								procedures for your organistaion within a week of this meeting.  This procedure will then 
+								procedures for your organisation within a week of this meeting.  This procedure will then 
 								be shared with the management team and once approved, the staff will then undergo training
 								in the new procedures. All first aiders can undergo 3 hour upgrade CPD Regulated trauma 
 								training to deal with catastrophic injuries, ideal for first aid cover to Europe. HSE 

@@ -10,11 +10,18 @@ export default class Compliance extends React.Component {
 
     contextRef = createRef()
   
-    handleItemClick = (event, { name }) => this.setState({ activeItem: name })
-        
+    handleItemClick = (event, { name }) => {
+        this.setState({ activeItem: name })
+    }
+
+    stripPathToString = (path) => {
+        var newPath = path.replace(/\\|\//g,' ').split(' ')
+        return newPath[2].replace("-"," ")
+    }
+
     render() {
         const { activeItem } = this.state
-        const linkNames = ['Lockdown Consultancy', 'Security Audit', 'SICM']
+        const linkNames = ['Security Audit', 'Lockdown Consultancy', 'SICM']
 
         return (
             <>
