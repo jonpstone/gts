@@ -10,7 +10,7 @@ export default class ActivityFirstAid extends React.Component {
 
 	render() {
 		return (
-			<Container style={{ marginTop: '2em', fontSize: '1.2em' }}>
+			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 	
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Activity First Aid

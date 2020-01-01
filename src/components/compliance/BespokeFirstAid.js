@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom'
-import { Container, Header, Divider, Grid, List, Button, Icon, GridColumn } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, List, Button, Icon } from 'semantic-ui-react'
 
 export class BespokeFirstAid extends React.Component {
 
@@ -11,7 +11,7 @@ export class BespokeFirstAid extends React.Component {
 
 	render() {
 		return (
-			<Container style={{ marginTop: '2em', fontSize: '1.2em' }}>
+			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Bespoke First Aid
 				</Header>

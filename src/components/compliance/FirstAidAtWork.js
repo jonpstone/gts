@@ -33,7 +33,7 @@ export class FirstAidAtWork extends React.Component {
 		
 	render() {
 		return (
-			<Container style={{ marginTop: '2em', fontSize: '1.2em' }}>
+			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
 					First Aid at Work
