@@ -5,21 +5,36 @@ import { SICM, LockdownConsultancy, SecurityAudit, OrgSecHome } from '../compone
 import Back2Top from 'react-back2top'
 import NavBar from '../components/layouts/Header'
 
-export default class Compliance extends React.Component {
-    state = { activeItem: null }
-
+export default class Compliance extends React.PureComponent {
+    state = { activeItem: 'Operational Security' }
     contextRef = createRef()
-  
+
     handleItemClick = (event, { name }) => {
         this.setState({ activeItem: name })
     }
 
+    componentDidMount() {
+        let strippedPath = this.stripPathToString(this.props.location.pathname)
+        if (this.state.activeItem !== strippedPath) {
+            this.setState({ 
+                activeItem: strippedPath 
+            })
+        }
+    }
+
+    toUpper = (str) => {
+        str.split(' ').map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);
+        }).join(' ')
+    }
+
     stripPathToString = (path) => {
         var newPath = path.replace(/\\|\//g,' ').split(' ')
-        return newPath[2].replace("-"," ")
+        return newPath[2] ? newPath[2].replace("-"," ") : this.toUpper(newPath[1].replace("-"," "))
     }
 
     render() {
+
         const { activeItem } = this.state
         const linkNames = ['Security Audit', 'Lockdown Consultancy', 'SICM']
 

@@ -20,10 +20,25 @@ import {
 
 export default class Compliance extends React.Component {
     state = { activeItem: null }
-
     contextRef = createRef()
-  
-    handleItemClick = (event, { name }) => this.setState({ activeItem: name })
+
+    componentDidMount() {
+        let strippedPath = this.stripPathToString(this.props.location.pathname)
+        if (this.state.activeItem !== strippedPath) {
+            this.setState({ 
+                activeItem: strippedPath 
+            })
+        }
+    }
+
+    stripPathToString = (path) => {
+        var newPath = path.replace(/\\|\//g,' ').split(' ')
+        return newPath[2] ? newPath[2].replace("-"," ") : newPath[1]
+    }
+
+    handleItemClick = (event, { name }) => {
+        this.setState({ activeItem: name })
+    }
         
     render() {
         const { activeItem } = this.state
