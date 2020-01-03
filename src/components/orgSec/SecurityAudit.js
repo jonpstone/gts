@@ -1,16 +1,35 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Container, Header, Grid } from 'semantic-ui-react'
 
-export default props =>
-	<>
-		<Container style={{ marginTop: '7em', lineHeight: '1.5' }}>
-			Designed for organisations who have security processes and procedures in place and would like them tested to ensure they are 
-			effective.  Or for organisations who would like a review on what security measures are needed for there organisation.
+export default class SecurityAudit extends React.Component {
 
-			Our team of security experts will visit your premises and will inspect and review your orgainisations security and provide 
-			a report of our findings.
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
 
-			For more information please <a href={"mailto:enqurires@golbourntrainingsolutions.co.uk"}>email us</a>.
-		</Container>
-	</>
+	render() {
+		return (
+			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 
+				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
+					Security Audit
+				</Header>
+		
+				<Grid divided stackable columns='equal' style={{ marginTop: '3em' }}>
+					<Grid.Row style={{ marginBottom: '2em' }}>
+						<p>
+							Designed for organisations who have security processes and procedures in place and would like 
+							them tested to ensure they are effective.  Or for organisations who would like a review on what
+							security measures are needed for there organisation. Our team of security experts will 
+							visit your premises and will inspect and review your orgainisations security and provide a
+							report of our findings. For more information please&nbsp;
+							<a href={"mailto:enqurires@golbourntrainingsolutions.co.uk"}>email us</a>.
+						</p>
+					</Grid.Row>
+					<Grid.Row id='secAudit'>
+					</Grid.Row>
+				</Grid>
+			</Container>
+		)
+	}
+}

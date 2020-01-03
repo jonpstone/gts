@@ -10,7 +10,13 @@ body {
 		url('/images/CPR_training-06.jpg');
 }
 #headerHome {
-	padding: .2em 2em;
+	padding: .2em 2.4em;
+}
+#telOne:hover {
+	color: grey !important;
+}
+#telTwo:hover {
+	color: grey !important;
 }
 #comOne {
 	background-size: cover;
@@ -333,4 +339,13 @@ body {
 }
 #gtsLogoHeader {
 	margin: .5em;
+}
+#secAudit {
+	height: 35em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/internetSecurity.jpg');
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { NotFound, Home, About, Contact, ForcesCovenant, Public, TeamBuilding, Policy } from '../components/singlePages'
+import { NotFound, Home, About, Contact, ForcesCovenant, TeamBuilding, Policy } from '../components/singlePages'
 import { Footer } from '../components/layouts'
 import ComplianceRouter from './ComplianceRouter'
 import OrgSecRouter from './OrgSecRouter'
@@ -14,7 +14,6 @@ export default props =>
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/forces-covenant" component={ForcesCovenant} />
-      <Route path="/public-courses" component={Public} />
       <Route path="/team-building" component={TeamBuilding} />
       <Route path="/policy" component={Policy} />
 

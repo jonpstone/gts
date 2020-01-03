@@ -33,14 +33,22 @@ class DesktopContainerMenu extends React.Component {
 							as={Link} to='/'
 							size='mini' 
 							src='/images/GTS.png'
+							style={{ outline: 'none' }}
 						/>
+						<Menu.Item 
+									className='menuPhoneNumbers'							
+								>
+							Call Us Today:&nbsp; &nbsp;
+							<a id='telOne' style={{ color: 'black', outline: 'none' }} href='tel:07904014772'>07904 014772</a>
+							&nbsp; | &nbsp; 
+							<a id='telTwo' style={{ color: 'black', outline: 'none' }} href='tel:01926825682'>01926 825682</a>
+						</Menu.Item>
 					</Menu.Menu>
 					<Menu.Menu position='right'>
 						<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 						<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 						<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
 						<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
-						<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
 					</Menu.Menu>
 				</Menu>
 			</Responsive>
