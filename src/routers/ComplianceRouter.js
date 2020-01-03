@@ -24,22 +24,29 @@ export default class Compliance extends React.Component {
 
     componentDidMount() {
         let strippedPath = this.stripPathToString(this.props.location.pathname)
-        if (this.state.activeItem !== strippedPath) {
+        console.log("strippedPath VALUE", strippedPath)
+        if (this.state.activeItem !== strippedPath && (strippedPath === 'compliance')) {
             this.setState({ 
-                activeItem: strippedPath 
+                activeItem: 'Compliance Home'
+            })
+        }
+        else if (this.state.activeItem !== strippedPath) {
+            this.setState({ 
+                activeItem: strippedPath
             })
         }
     }
 
     stripPathToString = (path) => {
         var newPath = path.replace(/\\|\//g,' ').split(' ')
-        return newPath[2] ? newPath[2].replace("-"," ") : newPath[1]
+        console.log("stripStingToPath VALUE", newPath)
+        return newPath[2] ? newPath[2].replace(/-/g, ' ') : newPath[1]
     }
 
     handleItemClick = (event, { name }) => {
         this.setState({ activeItem: name })
     }
-        
+
     render() {
         const { activeItem } = this.state
         const linkNames = [

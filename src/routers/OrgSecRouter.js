@@ -6,7 +6,7 @@ import Back2Top from 'react-back2top'
 import NavBar from '../components/layouts/Header'
 
 export default class Compliance extends React.PureComponent {
-    state = { activeItem: 'Operational Security' }
+    state = { activeItem: null }
     contextRef = createRef()
 
     handleItemClick = (event, { name }) => {
@@ -15,26 +15,24 @@ export default class Compliance extends React.PureComponent {
 
     componentDidMount() {
         let strippedPath = this.stripPathToString(this.props.location.pathname)
-        if (this.state.activeItem !== strippedPath) {
+        if (this.state.activeItem !== strippedPath && (strippedPath === 'organisation-security')) {
             this.setState({ 
-                activeItem: strippedPath 
+                activeItem: 'Operational Security'
+            })
+        }
+        else if (this.state.activeItem !== strippedPath) {
+            this.setState({ 
+                activeItem: strippedPath
             })
         }
     }
 
-    toUpper = (str) => {
-        str.split(' ').map(function(word) {
-            return word[0].toUpperCase() + word.substr(1);
-        }).join(' ')
-    }
-
     stripPathToString = (path) => {
         var newPath = path.replace(/\\|\//g,' ').split(' ')
-        return newPath[2] ? newPath[2].replace("-"," ") : this.toUpper(newPath[1].replace("-"," "))
+        return newPath[2] ? newPath[2].replace("-"," ") : newPath[1]
     }
 
     render() {
-
         const { activeItem } = this.state
         const linkNames = ['Security Audit', 'Lockdown Consultancy', 'SICM']
 
