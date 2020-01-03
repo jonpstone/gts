@@ -9,8 +9,6 @@ import {
 	Responsive,
 	Segment,
 	Sidebar,
-	Visibility,
-	MenuItem,
 } from 'semantic-ui-react'
 
 const getWidth = () => {
@@ -22,31 +20,29 @@ class DesktopContainerMenu extends React.Component {
 	render() {
 		return (
 			<Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-				<Visibility
-					once={false}
-					onBottomPassed={this.showFixedMenu}
-					onBottomPassedReverse={this.hideFixedMenu}
+				<Menu
+					id='headerHome'
+					borderless
+					compact
+					fixed='top'
+					size='large'
 				>
-					<Segment
-						inverted
-						textAlign='center'
-						vertical
-					>
-						<Menu
-							fluid
-							widths={10}
-							fixed='top'
-							size='large'
-						>
-							<Menu.Item as={Link} to="/" className='menuItems'>GTS Home</Menu.Item>
-							<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
-							<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
-							<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
-							<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
-							<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
-						</Menu>
-					</Segment>
-				</Visibility>
+					<Menu.Menu>
+						<Image
+							id='gtsLogoHeader'
+							as={Link} to='/'
+							size='mini' 
+							src='/images/GTS.png'
+						/>
+					</Menu.Menu>
+					<Menu.Menu position='right'>
+						<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+						<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+						<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+						<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+						<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
+					</Menu.Menu>
+				</Menu>
 			</Responsive>
 		)
 	}

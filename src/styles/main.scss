@@ -3,12 +3,15 @@ body {
 }
 #heroHome {
 	min-height: 70vh;
-	padding: 1em 0em;
+	padding: .2em 2em;
 	background-size: cover;
 	background-image: linear-gradient(to right bottom,
 		rgba(#39a70e, 0.8),
 		rgba(#2998ff, 0.8)),
 		url('/images/CPR_training-06.jpg');
+}
+#headerHome {
+	padding: .2em 2em;
 }
 #comOne {
 	background-size: cover;
@@ -179,15 +182,15 @@ body {
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to bottom,
-		rgba(rgb(184, 21, 16), 0.7),
-		rgba(rgb(90, 3, 3), 0.7)),
+		rgba(rgb(151, 17, 12), 0.7),
+		rgba(rgb(49, 1, 1), 0.7)),
 		url('/images/fireSafety.jpg');
 }
 #mentalHealthOneSyllabus {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right top,
-		rgba(rgb(19, 16, 184), 0.7),
+		rgba(rgb(57, 56, 107), 0.7),
 		rgba(rgb(90, 3, 3), 0.7)),
 		url('/images/mentalHealth1.jpg');
 }
@@ -203,7 +206,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(218, 24, 18), 0.7),
+		rgba(rgb(141, 13, 8), 0.7),
 		rgba(rgb(13, 43, 3), 0.7)),
 		url('/images/mentalHealth3.jpg');
 }
@@ -236,6 +239,7 @@ body {
 }
 .menuItems {
 	outline: none !important;
+	padding: '1em' !important;
 }
 #orgSecHero {
 	background-size: cover;
@@ -287,10 +291,10 @@ body {
 #lockdownQuestions {
 	background-size: cover;
 	background-position: center;
-	background-image: linear-gradient(to right,
-		rgba(rgb(114, 20, 20), 0.8),
-		rgba(rgb(24, 23, 70), 0.8)),
-		url('/images/seriousIncidentOne.jpg');
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.65),
+		rgba(rgb(24, 23, 70), 0.65)),
+		url('/images/lockdownFence.jpg');
 }
 #lockdownOptionOne {
 	height: 18em;
@@ -327,4 +331,7 @@ body {
 		rgba(rgb(114, 20, 20), 0.5),
 		rgba(rgb(24, 23, 70), 0.5)),
 		url('/images/bombDisposal.jpg');
+}
+#gtsLogoHeader {
+	margin: .5em;
 }

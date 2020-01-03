@@ -73,7 +73,7 @@ export default class Compliance extends React.Component {
                     style={{ margin: '0 0 1em 0' }}
                 >
                     <Grid.Row>
-                        <Header inverted as='h1' style={{ marginTop: '.4em', fontSize: '5em' }}>
+                        <Header inverted as='h1' style={{ marginTop: '.7em', fontSize: '5em' }}>
                             COMPLIANCE
                         </Header>
                     </Grid.Row>

@@ -46,7 +46,7 @@ export default class Compliance extends React.PureComponent {
                     style={{ margin: '0 0 1em 0' }}
                 >
                     <Grid.Row>
-                        <Header inverted as='h1' style={{ marginTop: '.4em', fontSize: '5em' }}>
+                        <Header inverted as='h1' style={{ marginTop: '.7em', fontSize: '5em' }}>
                             ORGANISATION SECURITY
                         </Header>
                     </Grid.Row>
