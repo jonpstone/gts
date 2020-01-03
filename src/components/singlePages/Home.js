@@ -102,7 +102,7 @@ class DesktopContainer extends React.Component {
 						vertical
 					>
 						<Menu
-							borderless={!fixed}
+							borderless
 							fixed={!fixed ? null : 'top'}
 							inverted={!fixed}
 							size='large'
@@ -110,22 +110,23 @@ class DesktopContainer extends React.Component {
 								backgroundColor: 'transparent', 
 								border: 'none', 
 								outline: 'none',
-							} : null}
+								padding: '.2em 2em'
+							} : { padding: '.2em 2em'}}
 						> 
 							<Menu.Menu>
 								<Image
 									id='gtsLogoHeader'
 									as={Link} to='/'
 									size='mini' 
-									src='/images/GTS1.png'
+									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
 								/>
 							</Menu.Menu>
-							<Menu.Menu position='right'>
-								<Menu.Item as={Link} to="/compliance" className='menuItems'><strong>Compliance</strong></Menu.Item>
-								<Menu.Item as={Link} to="/organisation-security" className='menuItems'><strong>Organisation Security</strong></Menu.Item>
-								<Menu.Item as={Link} to="/team-building" className='menuItems'><strong>Team Building</strong></Menu.Item>
-								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'><strong>Forces Covenant</strong></Menu.Item>
-								<Menu.Item as={Link} to="/public-courses" className='menuItems'><strong>Public Courses</strong></Menu.Item>
+							<Menu.Menu position='right' style={{ fontWeight: 'bold' }}>
+								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+								<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
 							</Menu.Menu>
 						</Menu>
 					<HomepageHeading/>
