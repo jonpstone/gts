@@ -250,8 +250,8 @@ body {
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(58, 41, 34), 0.8),
-		rgba(rgb(58, 41, 34), 0.8)),
+		rgba(rgb(114, 20, 20), 0.7),
+		rgba(rgb(24, 23, 70), 0.7)),
 		url('/images/policeOfficer.jpg');
 }
 #orgSecOne {
@@ -348,4 +348,66 @@ body {
 		rgba(rgb(114, 20, 20), 0.5),
 		rgba(rgb(24, 23, 70), 0.5)),
 		url('/images/internetSecurity.jpg');
+}
+#terroristSICM {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to left,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/terrorist.jpg');
+}
+#SICM2 {
+	height: 21.5em;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM4.jpg');
+}
+#SICM3 {
+	height: 21.5em;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to left,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM3.jpg');
+}
+#SICM4 {
+	height: 28.5em;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM2.jpg');
+}
+#SICM5 {
+	height: 17.5em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM6.jpg');
+}
+#SICM6 {
+	height: 25.4em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM8.jpg');
+}
+#SICM7 {
+	height: 18.5em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/SICM9.jpg');
 }

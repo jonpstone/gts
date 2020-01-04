@@ -65,7 +65,7 @@ export default class LockDownConsultancy extends React.Component {
 							<Divider horizontal style={{ margin: '0 0 5em' }}>
 								Option 1 &nbsp; | &nbsp; Basic Package
 							</Divider>
-							<Grid.Column style={{ padding: '1em', backgroundColor: '#c8dbe3' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#c8dbe3', color: '#4f4f4f' }}>
 								One of our instructors will meet with the Senior Leadership or Management Team to gain 
 								knowledge of current procedures and understand the layout.  They will then comprise a 
 								recommendation report, this will inform areas of improvement and recommendations.
@@ -99,7 +99,7 @@ export default class LockDownConsultancy extends React.Component {
 							<Divider horizontal style={{ margin: '5em 0' }}>
 								Option 3 &nbsp; | &nbsp; Intermediate Plus Package
 							</Divider>
-							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed' }}>
+							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed', color: '#4f4f4f' }}>
 								One of our instructors will meet with the Senior Leadership or Management Team to gain 
 								knowledge of current procedures and understand the layout. They will then design the bespoke
 								procedures for your organisation within a week of this meeting.  This procedure will then 
