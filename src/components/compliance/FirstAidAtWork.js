@@ -51,7 +51,7 @@ export class FirstAidAtWork extends React.Component {
 						<Icon name='angle down'/>
 					</Button>
 					<Button inverted color='blue' size='huge' onClick={this.handleRightOnClick}>
-					&nbsp; First Aid at Work Requalification &nbsp;
+						&nbsp; First Aid at Work Requalification &nbsp;
 						<Icon name='double angle down'/>
 					</Button>
 				</Container>

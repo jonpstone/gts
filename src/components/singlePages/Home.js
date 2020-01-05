@@ -21,7 +21,7 @@ const getWidth = () => {
 	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
-const HomepageHeading = ({ mobile }) => (
+const HomepageHeading = ({ mobile }) => 
 	<Container>
 		<Grid
 			stackable
@@ -38,7 +38,7 @@ const HomepageHeading = ({ mobile }) => (
 				<Image 
 					src='/images/GTS1.png' 
 					size='small'
-					style={{ marginTop: mobile ? '1em' : '5%' }} 
+					style={{ marginTop: mobile ? '1em' : '14%' }} 
 					wrapped
 				/>
 			</Grid.Row>
@@ -71,18 +71,20 @@ const HomepageHeading = ({ mobile }) => (
 				</Grid.Column>
 			</Grid.Row>
 		</Grid>
-		<Button as={Link} to="/about" inverted size='huge' style={{ marginBottom: '8%' }}>
-			Learn More
-			<Icon name='angle right'/>
-		</Button>
+			<a href='#finish'>
+				<Button inverted size='huge' className='scrollBottom' style={{ marginBottom: '8%' }}>
+					&nbsp; Learn More &nbsp;
+					<Icon name='angle down'/>
+				</Button>
+			</a>
 	</Container>
-)
+
 
 class DesktopContainer extends React.Component {
 	state = {}
 
-	hideFixedMenu = () => this.setState({ fixed: false })
-	showFixedMenu = () => this.setState({ fixed: true })
+	hideFixedMenu = () => { this.setState({ fixed: false }) }
+	showFixedMenu = () => { this.setState({ fixed: true }) }
 
 	render() {
 		const { children } = this.props
@@ -150,7 +152,7 @@ class DesktopContainer extends React.Component {
 								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
-								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
 							</Menu.Menu>
 						</Menu>
 					<HomepageHeading/>
@@ -233,8 +235,9 @@ const ResponsiveContainer = ({ children }) =>
 		<MobileContainer>{children}</MobileContainer>
 	</>
 
-const HomepageLayout = () => (
+const HomepageLayout = () => 
 	<ResponsiveContainer>
+		<div id='finish'></div>
 		<Fade bottom>
 			<Segment style={{ padding: '6em' }} vertical>
 				<Grid stackable>
@@ -348,6 +351,6 @@ const HomepageLayout = () => (
 			</Segment>
 		</Fade>
 	</ResponsiveContainer>
-)
+
 
 export default HomepageLayout

@@ -172,7 +172,7 @@ export default class LockDownConsultancy extends React.Component {
 
 				<Fade bottom>
 					<Grid stackable columns='equal'>
-						<Grid.Row style={{ marginTop: '3em' }}>
+						<Grid.Row style={{ margin: '2em 0' }}>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#efdaca', color: '#4f4f4f' }}>
 								<h4>HOW TO BOOK TRAINING</h4>
 								<p>

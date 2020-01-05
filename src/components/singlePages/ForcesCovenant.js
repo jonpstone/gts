@@ -1,45 +1,67 @@
 import React from 'react'
-import { Container, Header } from 'semantic-ui-react'
+import { Container, Header, Grid, Segment, Button, Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import NavBar from '../../components/layouts/Header'
 
-export default props => 
-  <>
-    <NavBar/>
-    <Container text style={{ marginTop: '7em' }}>
-      <Header as='h2'>Armed Forces Covenant</Header>
-      <p>
-        Whether you are leaving the Armed Forces or your direct family would like to increase their employability, 
-        Golbourn Training Solutions are passionate in helping our Armed Forces and their families.
+export default class ForceCovenant extends React.Component {
+	state = {}
 
-        We work with serving personnel (Regular and Reserves), Veterans and direct family members.
+	hideFixedMenu = () => { this.setState({ fixed: false }) }
+	showFixedMenu = () => { this.setState({ fixed: true }) }
 
-        All Armed Forces can access any one of our public courses at a discounted rate or can attend one of our specialised MOD Courses 
-        where we cover multiple subjects over 3 days.  We teach nationwide and can teach on MOD bases, including ATCs if requested.
+	componentDidMount() { window.scrollTo(0, 0)	}
 
-        Please contact us for further details.
-      </p>
-    </Container>
-    <Container text style={{ marginTop: '7em' }}>
-      <Header as='h2'>Example of our most popular MOD Courses</Header>
-      <p>
-        Option 1 - 3 Days
-        Emergency First Aid at Work Level 3
-        Control of Catastrophic Bleeding CPD
-        Fire Safety Level 2
-        Health & Safety in the workplace Level 2
+	render() {
+		return (
+			<>
+				<NavBar/>
+				<Segment
+					id='forcesHero'
+					inverted
+					textAlign='center'
+					vertical
+					style={{ padding: '0'}}
+				>
+					<Container>
+						<Grid
+							stackable
+							textAlign='center'
+							columns='equal'
+							style={{
+								fontSize: '1.8em',
+								fontWeight: 'normal',
+								marginTop: '1.5em',
+								marginBottom: '2em',
+							}}
+						>
+							<Grid.Row>
+								<Header
+									as='h1'
+									content='FORCES SUPPORT'
+									inverted
+									style={{
+										fontSize: '4em',
+										fontWeight: 'normal',
+										marginTop: '35%'
+									}}
+								/>
+							</Grid.Row>
+							<Grid.Row>				
+								<Grid.Column>
+									<Header as='h2' inverted style={{color: '#FFC300'}}>
+										Armed Forces Support - You can be ready for CIV DIV for as little as £125.00* 
+									</Header>
+								</Grid.Column>
+							</Grid.Row>
+						</Grid>
+						<Button as={Link} to="/about" inverted size='huge' style={{ marginBottom: '8%' }}>
+							&nbsp; Learn More &nbsp;
+							<Icon name='angle down'/>
+						</Button>
+					</Container>
+				</Segment>
 
-        Option 2 - 3 Days
-        Manual Handling Level 2
-        Food Safety Level 2
-        Safeguarding Level 3
-
-        Option 3 - 3 Days
-        Supervisor for Mental Health First Aid Level 3
-
-        <p><b>
-          As a serving soldier with a family I understand that money does not grow on trees, that is why I am offering all my courses 
-          at a discounted rate for Serving Armed Forces Personnel, their families, <bold>veterans</bold> and Civil Service workers and contractors.
-        </b></p>
-      </p>
-     </Container>
-   </>
+			</>
+		)
+	}
+}

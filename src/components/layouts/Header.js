@@ -48,7 +48,7 @@ class DesktopContainerMenu extends React.Component {
 						<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 						<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 						<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
-						<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Covenant</Menu.Item>
+						<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
 					</Menu.Menu>
 				</Menu>
 			</Responsive>

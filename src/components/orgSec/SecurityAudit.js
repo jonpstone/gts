@@ -9,7 +9,7 @@ export default class SecurityAudit extends React.Component {
 
 	render() {
 		return (
-			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
+			<Container style={{ margin: '2em 0', fontSize: '1.2em', lineHeight: '1.5' }}>
 
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Security Audit
