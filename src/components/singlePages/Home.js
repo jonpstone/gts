@@ -77,6 +77,7 @@ const HomepageHeading = ({ mobile }) =>
 					<Icon name='angle down'/>
 				</Button>
 			</a>
+			<div id='finish' style={{ marginTop: '11em' }}></div>
 	</Container>
 
 
@@ -128,7 +129,6 @@ class DesktopContainer extends React.Component {
 								<Menu.Item 
 									className='menuPhoneNumbers' 
 									inverted={!fixed}
-									
 								>
 									Call Us Today:&nbsp; &nbsp;
 									<a 
@@ -164,7 +164,7 @@ class DesktopContainer extends React.Component {
 	}
 }
 
-class MobileContainer extends React.Component {
+export class MobileContainer extends React.Component {
 	state = {}
 
 	handleSidebarHide = () => this.setState({ sidebarOpened: false })
@@ -237,7 +237,6 @@ const ResponsiveContainer = ({ children }) =>
 
 const HomepageLayout = () => 
 	<ResponsiveContainer>
-		<div id='finish'></div>
 		<Fade bottom>
 			<Segment style={{ padding: '6em' }} vertical>
 				<Grid stackable>
@@ -332,7 +331,7 @@ const HomepageLayout = () =>
 							<CoursesCarousel />
 						</Grid.Column>
 						<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
-						<Header inverted as='h3' style={{ fontSize: '2em' }}>
+							<Header inverted as='h3' style={{ fontSize: '2em' }}>
 								Supporting HM Forces and Veterans
 							</Header>
 							<p style={{ fontSize: '1.33em', color: 'white' }}>
@@ -351,6 +350,5 @@ const HomepageLayout = () =>
 			</Segment>
 		</Fade>
 	</ResponsiveContainer>
-
 
 export default HomepageLayout

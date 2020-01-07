@@ -7,11 +7,8 @@ import Public from './PublicCourses';
 import TeamBuilding from './TeamBuilding';
 import NotFound from './NotFound';
 import Policy from './Policy';
+import MobileContainer from './Home'
 
 export {
-  Home, About, Contact, ForcesCovenant, 
-  OrgSec, Public, TeamBuilding, NotFound, Policy
+  Home, About, Contact, ForcesCovenant, OrgSec, Public, TeamBuilding, NotFound, Policy, MobileContainer
 }
-
-// This is and export bundler file for the singlePages 
-// category

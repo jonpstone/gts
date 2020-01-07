@@ -1,7 +1,7 @@
 import React from "react";
-import TextCarousel from "./TextCarousel";
+import ForcesTextCarousel from "./ForcesTextCarousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 export default props =>
-    <TextCarousel />
+    <ForcesTextCarousel />
 
