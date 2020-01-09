@@ -38,7 +38,7 @@ const HomepageHeading = ({ mobile }) =>
 				<Image 
 					src='/images/GTS1.png' 
 					size='small'
-					style={{ marginTop: mobile ? '1em' : '14%' }} 
+					style={{ marginTop: mobile ? '1em' : '10%' }} 
 					wrapped
 				/>
 			</Grid.Row>
@@ -77,7 +77,6 @@ const HomepageHeading = ({ mobile }) =>
 					<Icon name='angle down'/>
 				</Button>
 			</a>
-			<div id='finish' style={{ marginTop: '11em' }}></div>
 	</Container>
 
 
@@ -102,8 +101,8 @@ class DesktopContainer extends React.Component {
 						id='heroHome'
 						inverted
 						textAlign='center'
+						style={{ padding: '1em 0em' }}
 						vertical
-						style={{ padding: '0'}}
 					>
 						<Menu
 							borderless
@@ -124,7 +123,6 @@ class DesktopContainer extends React.Component {
 									size='mini'
 									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
 									style={{ outline: 'none' }}
-
 								/>
 								<Menu.Item 
 									className='menuPhoneNumbers' 
@@ -237,6 +235,7 @@ const ResponsiveContainer = ({ children }) =>
 
 const HomepageLayout = () => 
 	<ResponsiveContainer>
+		<div id='finish'></div>
 		<Fade bottom>
 			<Segment style={{ padding: '6em' }} vertical>
 				<Grid stackable>

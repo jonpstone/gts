@@ -32,8 +32,8 @@ class ForceCovenant extends React.Component {
 						id='forcesHero'
 						inverted
 						textAlign='center'
+						style={{ padding: '1em 0em' }}
 						vertical
-						style={{ padding: '0'}}
 					>
 						<Menu
 							id='headerHome'
@@ -106,7 +106,7 @@ class ForceCovenant extends React.Component {
 										style={{
 											fontSize: '4em',
 											fontWeight: 'normal',
-											marginTop: '33%'
+											marginTop: '23%'
 										}}
 									/>
 								</Grid.Row>
@@ -125,10 +125,10 @@ class ForceCovenant extends React.Component {
 								</Button>
 							</a>
 						</Container>
-						<div id='finish' style={{ marginTop: '16em' }}></div>
 					</Segment>
 				</Visibility>
 					<Fade bottom>
+					<div id='finish'></div>
 						<Segment style={{ padding: '8em' }} vertical>
 							<Grid divided container stackable verticalAlign='top'>
 								<Grid.Row>
@@ -164,6 +164,9 @@ class ForceCovenant extends React.Component {
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
+									<Header as='h3' style={{ fontSize: '2em' }}>
+										Veteran Staff
+									</Header>
 									<p style={{ fontSize: '1.33em' }}>
 										All our instructors are veterans themselves and understand the need for flexible 
 										training. If you want a bespoke package putting together to meet your needs 
@@ -175,7 +178,7 @@ class ForceCovenant extends React.Component {
 								</Grid.Row>
 								<Grid.Row>
 									<p style={{ fontSize: '1.33em' }}>
-										*You can use your SLC on all our course packages.
+										* You can use your SLC on all our course packages.
 									</p>
 								</Grid.Row>
 							</Grid>
