@@ -16,7 +16,7 @@ class ForceCovenant extends React.Component {
 	hideFixedMenu = () => { this.setState({ fixed: false }) }
 	showFixedMenu = () => { this.setState({ fixed: true }) }
 
-	componentDidMount() { window.scrollTo(0, 0)	}
+	// componentDidMount() { window.scrollTo(0, 0) }
 
 	render() {
 		const { fixed } = this.state
@@ -164,7 +164,7 @@ class ForceCovenant extends React.Component {
 									</Grid.Column>
 								</Grid.Row>
 								<Grid.Row>
-									<Header as='h3' style={{ fontSize: '2em' }}>
+									<Header as='h3' style={{ fontSize: '2em', marginTop: '2em' }}>
 										Veteran Staff
 									</Header>
 									<p style={{ fontSize: '1.33em' }}>

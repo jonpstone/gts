@@ -79,7 +79,6 @@ const HomepageHeading = ({ mobile }) =>
 			</a>
 	</Container>
 
-
 class DesktopContainer extends React.Component {
 	state = {}
 
