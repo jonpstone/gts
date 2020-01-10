@@ -424,3 +424,12 @@ html {
 		rgba(#262e36, 0.7)),
 		url('/images/British_troops_2.jpg');
 }
+#teamBuildingHero {
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/HadrianWall.jpg');
+}

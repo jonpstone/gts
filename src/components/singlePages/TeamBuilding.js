@@ -1,107 +1,250 @@
-import React from 'react';
-import { Container, Header } from 'semantic-ui-react'
-import NavBar from '../../components/layouts/Header'
+import React from 'react'
+import { Container, Header, Grid, Segment, Button, Icon, Menu, Sidebar, Responsive, Image, Visibility } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { MobileContainer } from './Home'
+import Fade from 'react-reveal/Fade'
+import ForcesCoursesCarousel from '../NonPageComponents/ForcesCoursesCarousel'
 
-export default props =>
+const getWidth = () => {
+	const isSSR = typeof window === 'undefined'
+	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
+}
+
+class ForceCovenant extends React.Component {
+	state = {}
+
+	hideFixedMenu = () => { this.setState({ fixed: false }) }
+	showFixedMenu = () => { this.setState({ fixed: true }) }
+
+	// componentDidMount() { window.scrollTo(0, 0) }
+
+	render() {
+		const { fixed } = this.state
+
+		return (
+			<Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+				<Visibility
+					once={false}
+					onBottomPassed={this.showFixedMenu}
+					onBottomPassedReverse={this.hideFixedMenu}
+				>
+					<Segment
+						id='teamBuildingHero'
+						inverted
+						textAlign='center'
+						style={{ padding: '1em 0em' }}
+						vertical
+					>
+						<Menu
+							id='headerHome'
+							borderless
+							fixed={!fixed ? null : 'top'}
+							inverted={!fixed}
+							size='large'
+							style={!fixed ? {
+								backgroundColor: 'transparent', 
+								border: 'none', 
+								outline: 'none',
+								padding: '.2em 2.4em'
+							} : { padding: '.2em 2.4em'}}
+						>
+							<Menu.Menu>
+								<Image
+									id='gtsLogoHeader'
+									as={Link} to='/'
+									size='mini'
+									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
+									style={{ outline: 'none' }}
+
+								/>
+								<Menu.Item 
+									className='menuPhoneNumbers' 
+									inverted={!fixed}
+								>
+									Call Us Today:&nbsp; &nbsp;
+									<a 
+										id='telOne' 
+										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
+										href='tel:07904014772'
+									>
+										07904 014772
+									</a>
+									&nbsp; | &nbsp; 
+									<a 
+										id='telTwo' 
+										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
+										href='tel:01926825682'
+									>
+										01926 825682
+									</a>
+								</Menu.Item>
+							</Menu.Menu>
+							<Menu.Menu position='right'>
+								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
+							</Menu.Menu>
+						</Menu>
+						<Container>
+							<Grid
+								stackable
+								textAlign='center'
+								columns='equal'
+								style={{
+									fontSize: '1.8em',
+									fontWeight: 'normal',
+									marginTop: '1.5em',
+									marginBottom: '2em',
+								}}
+							>
+								<Grid.Row>
+									<Header
+										as='h1'
+										content='TEAM BUILDING & EVENTS'
+										inverted
+										style={{
+											fontSize: '4em',
+											fontWeight: 'normal',
+											marginTop: '18%'
+										}}
+									/>
+								</Grid.Row>
+								<Grid.Row>				
+									<Grid.Column>
+										<Header as='h2' inverted style={{color: '#DAF7A6'}}>
+											OUR EXPERT EVENT MANAGER FRED BOUCHER IS SECOND TO NONE<br/>
+											Your staff will be energised and motivated to achieve results 
+										</Header>
+									</Grid.Column>
+								</Grid.Row>
+							</Grid>
+							<a href='#finish'>
+								<Button inverted size='huge' className='scrollBottom' style={{ marginBottom: '8%' }}>
+									&nbsp; Learn More &nbsp;
+									<Icon name='angle down'/>
+								</Button>
+							</a>
+						</Container>
+					</Segment>
+				</Visibility>
+					<Fade bottom>
+					<div id='finish'></div>
+						<Segment style={{ padding: '4em 8em 8em 8em' }} vertical>
+							<Grid divided container stackable verticalAlign='top'>
+								<Grid.Row style={{ margin: '1em 0 2em 0' }}>
+									<Header as='h3' icon textAlign='center' style={{ fontSize: '2em' }}>
+										WOODLAND SURVIVAL COURSE
+									</Header>
+								</Grid.Row>
+								<Grid.Row>
+									<Grid.Column 
+										floated='left' 
+										width={8} 
+										style={{paddingRight: '5em', marginBottom: '1.5em'}}
+									>
+										<Header as='h3' style={{ fontSize: '2em' }}>
+											Serving, Retired, Dependent?
+										</Header>
+										<p style={{ fontSize: '1.33em' }}>
+											Whether you are leaving the Armed Forces or your direct family would like to 
+											increase their employability, Golbourn Training Solutions are passionate in 
+											helping our Armed Forces and their families.
+										</p>
+										<p style={{ fontSize: '1.33em' }}>
+											We work with serving personnel (Regular and Reserves), Veterans and direct 
+											family members.
+										</p>
+									</Grid.Column>
+									<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+										<Header as='h3' style={{ fontSize: '2em' }}>
+											Forces Discount
+										</Header>
+										<p style={{ fontSize: '1.33em' }}>
+											All Armed Forces can access any one of our public courses at a discounted rate 
+											or can attend one of our specialised MOD Courses where we cover multiple 
+											subjects over 3 days.  We run courses from Poole, Aldershot, Coventry, 
+											Catterick and Lossiemouth. We can run courses to meet Unit needs at Unit or 
+											from our locations. 
+										</p>
+									</Grid.Column>
+								</Grid.Row>
+								<Grid.Row>
+									<Grid.Column 
+										floated='left' 
+										width={8} 
+										style={{paddingRight: '5em', marginBottom: '1.5em'}}
+									>
+										<Header as='h3' style={{ fontSize: '2em' }}>
+											Serving, Retired, Dependent?
+										</Header>
+										<p style={{ fontSize: '1.33em' }}>
+											Whether you are leaving the Armed Forces or your direct family would like to 
+											increase their employability, Golbourn Training Solutions are passionate in 
+											helping our Armed Forces and their families.
+										</p>
+										<p style={{ fontSize: '1.33em' }}>
+											We work with serving personnel (Regular and Reserves), Veterans and direct 
+											family members.
+										</p>
+									</Grid.Column>
+									<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+										<Header as='h3' style={{ fontSize: '2em' }}>
+											Forces Discount
+										</Header>
+										<p style={{ fontSize: '1.33em' }}>
+											All Armed Forces can access any one of our public courses at a discounted rate 
+											or can attend one of our specialised MOD Courses where we cover multiple 
+											subjects over 3 days.  We run courses from Poole, Aldershot, Coventry, 
+											Catterick and Lossiemouth. We can run courses to meet Unit needs at Unit or 
+											from our locations. 
+										</p>
+									</Grid.Column>
+								</Grid.Row>
+							</Grid>
+						</Segment>
+					</Fade>
+					<Fade bottom>
+						<Segment style={{ padding: '0' }} vertical borderless>
+							<Grid stackable columns='equal'>
+								<Grid.Row style={{ margin: '0', padding: '0' }}>
+									<Grid.Column style={{ backgroundColor: '#607e6d', padding: '5em 10em 5em 15em' }}>
+										<Header 
+											inverted 
+											as='h3' 
+											style={{ fontSize: '2em', color: 'white' }}
+										>
+											GTS MOD 3 Day Bundle Course Offers<br/><br/>
+										</Header>
+										<ForcesCoursesCarousel/>
+									</Grid.Column>
+									<Grid.Column style={{ backgroundColor: '#6eb8ff', padding: '5em 0 0 0' }}>
+										<Grid.Row>
+											<Image centered src='/images/SLC.jpg' size='big' />
+										</Grid.Row>
+										<Grid.Row>
+											<Image 
+												centered 
+												src='/images/forcesFamily.jpg' 
+												size='massive' 
+												style={{ margin: '0', padding: '0' }} 
+											/>
+										</Grid.Row>
+									</Grid.Column>
+								</Grid.Row>
+							</Grid>
+						</Segment>
+					</Fade>
+			</Responsive>
+		)
+	}
+}
+
+const ResponsiveContainer = () => (
 	<>
-		<NavBar />
-		<Container text style={{ marginTop: '7em' }}>
-			<Header as='h1'>Team Building & Events</Header>
-			<p>
-				Golbourn Training Solutions has many years’ experience in organising different team building exercises and 
-				events, from walking Hadrian’s Wall over 6 days to developing groups communication skills.
-			</p>
-
-			<Header as='h1'>OUR EXPERT EVENT MANAGER FRED BOUCHER IS SECOND TO NONE – </Header>
-			<Header as='h2'>your staff will be energised and motivated to achieve results</Header>
-
-			<p>
-				<b>Regular asked questions:</b>
-				You can have an event run at your location or we can provide a suitable venue.
-				You can pay per head or for an overall booking. We will build an event to meet your needs.
-				You can incorporate the event into your companies training packages to suit your message.
-			</p>
-
-			<Header as='h2'>WOODLAND SURVIVAL COURSE</Header> - Bring your team together in this exciting outdoor experience, they will develop new skills and learn dynamic ways to work together to solve any task:
-			
-			<ul>
-				<li>Building Shelter</li>
-				<li>Making Fire</li>
-				<li>Purifying Water</li>
-				<li>Hunting Food</li>
-				<li>Navigation</li>
-				<li>Team Command Tasks</li>
-				<li>Assualt Courses (optional)</li>
-				<li>Problem Solving</li>
-			</ul>
-
-			<p>
-				Our new Survival Skills and Command Tasks, run by our survival expert Fred Boucher will bring your teams together 
-				to problem solve outside of the office environment.  These can be run over a few hours or over night.  A fun, 
-				active, action packed experience awaits all that are courageous enough to take on this opportunity. A tried and 
-				tested technique of developing a groups cohesion and communication abilities are group activities both physical 
-				and mental.
-			</p>
-
-			<Header as='h1'>CORPORATE TEAM BUILDING EVENTS</Header> 
-
-			<p>
-				– Tailored to meet your bespoke needs for all group sizes and abilities. Our team will build you the package to 
-				motivate and inspire your staff. You tell us what you want to achieve and we will do the rest.
-			</p>
-
-			<ul>
-				<li>The Maze</li>
-				<li>Who did it</li>
-				<li>Army challenge</li>
-				<li>The Den</li>
-				<li>Many Many More</li> 
-			</ul>
-
-			<Header as='h2'>Contact Us Today: 01926 825682</Header>
-
-			<Header as='h1'>Some of our past events</Header>
-
-			<Header as='h3'>TEAM BUILDING WALKS WITH GOLBOURN TRAINING SOLUTIONS:</Header>
-
-			<b>Walk Hadrian’s wall - Empires End. (6 days)</b>
-			<p>
-				A group walk to truly test the limits of your staff, 82 miles in 6 days across 
-				diverse terrain, carrying our party’s own tent, equipment, food and water. 
-				Although this is not for the faint hearted, the bond and team spirit your 
-				staff will gain from this experience will only be matched by their sense of 
-				overwhelming achievement. You will be walking in history’s footsteps, our 
-				instructor guides will be informing you of the historical facts of key moments in the Walls history and events, the 
-				units that manned the mile forts and where these men came from.
-			</p>
-
-			<b>Experience Hadrian’s wall - Hadrian’s Gift. (5 days)</b>
-			<p>
-				This adventure is far less demanding on the feet than Empires End Walk, but still a life experience never to be 
-				forgotten. This 5-day event will see you and your staff mini bused around the spectacular roman museums along the 
-				length off the wall, while enjoying the local hospitality from tea rooms to traditional overnight accommodation. 
-				However, you won’t miss out on the iconic views of the pennines section of the wall, snaking through the cliffs and 
-				see the wall tree made famous in the Kevin costner film Robin Hood the Prince of Thieves. This 21-mile walk is slow 
-				time, allowing you to take in the beautiful landscapes. This event will finish with a well-deserved evening out in 
-				Newcastle.
-			</p>
-
-			<b>Battlefield Tour - Battle of Edgehill. (1 day)</b>
-			<p>
-				This 15-mile walk will see you walk through some of the most amazing hill views the midlands has to offer, covering 
-				the iconic Burton Dassett and Edgehill hills. On your travels you and your staff will learn about the murderous local 
-				history of the trails as well as stop at some of the oldest Warwickshire pubs for refreshments and lunch. After 
-				dinner a period dressed matter expert in the history of the Battle of Edgehill will give a detailed account from the 
-				view point of which the King stood to observe the battle, detailing where the units formed and engaged each other. 
-				You will also be able to handle period weapons and equipment during this talk.
-			</p>
-
-			<b>Other walks and events:</b>
-
-			Battlefield Tour - Battle of Bosworth. (1 day)
-
-			Cotswold Way - Chipping Campden to Bath. (4 days)
-
-			Warwickshire Military Museum Tours. (3 days)
-		</Container>
+		<ForceCovenant />
+		<MobileContainer />
 	</>
+)
+
+export default ResponsiveContainer
