@@ -1,5 +1,18 @@
 import React from 'react'
-import { Container, Header, Grid, Segment, Button, Icon, Menu, Sidebar, Responsive, Image, Visibility } from 'semantic-ui-react'
+import { 
+	Container, 
+	Header, 
+	Grid, 
+	Segment, 
+	Button, 
+	Icon, 
+	Menu, 
+	Sidebar, 
+	Responsive, 
+	Image, 
+	Visibility, 
+	List 
+} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { MobileContainer } from './Home'
 import Fade from 'react-reveal/Fade'
@@ -128,112 +141,110 @@ class ForceCovenant extends React.Component {
 						</Container>
 					</Segment>
 				</Visibility>
-					<Fade bottom>
 					<div id='finish'></div>
-						<Segment style={{ padding: '4em 8em 8em 8em' }} vertical>
-							<Grid divided container stackable verticalAlign='top'>
-								<Grid.Row style={{ margin: '1em 0 2em 0' }}>
+						<Fade bottom>
+							<Grid borderless stackable verticalAlign='top'>
+								<Grid.Row style={{ margin: '5em 0 1em 0' }}>
 									<Header as='h3' icon textAlign='center' style={{ fontSize: '2em' }}>
 										WOODLAND SURVIVAL COURSE
 									</Header>
 								</Grid.Row>
 								<Grid.Row>
-									<Grid.Column 
+									<Grid.Column
+										id='teamBuildingBullets'
 										floated='left' 
 										width={8} 
-										style={{paddingRight: '5em', marginBottom: '1.5em'}}
+										style={{ 
+											padding: '2em 4em', 
+											marginBottom: '1.5em', 
+											color: 'white', 
+											fontSize: '1.33em'
+										}}
 									>
-										<Header as='h3' style={{ fontSize: '2em' }}>
-											Serving, Retired, Dependent?
-										</Header>
-										<p style={{ fontSize: '1.33em' }}>
-											Whether you are leaving the Armed Forces or your direct family would like to 
-											increase their employability, Golbourn Training Solutions are passionate in 
-											helping our Armed Forces and their families.
+										<p>
+											Bring your team together in this exciting outdoor experience, they will 
+											develop new skills and learn dynamic ways to work together to solve any task
 										</p>
-										<p style={{ fontSize: '1.33em' }}>
-											We work with serving personnel (Regular and Reserves), Veterans and direct 
-											family members.
-										</p>
+											<List bulleted items={[
+												'Building Shelter',
+												'Making Fire',
+												'Purifying Water',
+												'Hunting Food',
+												'Navigation',
+												'Team Command Tasks',
+												'Assault Courses (optional)',
+												'Problem Solving'
+											]}
+										/>
 									</Grid.Column>
-									<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
-										<Header as='h3' style={{ fontSize: '2em' }}>
-											Forces Discount
-										</Header>
+									<Grid.Column id='paraSurvival' floated='right' width={8} style={{ padding: '2em 4em' }}>
 										<p style={{ fontSize: '1.33em' }}>
-											All Armed Forces can access any one of our public courses at a discounted rate 
-											or can attend one of our specialised MOD Courses where we cover multiple 
-											subjects over 3 days.  We run courses from Poole, Aldershot, Coventry, 
-											Catterick and Lossiemouth. We can run courses to meet Unit needs at Unit or 
-											from our locations. 
-										</p>
-									</Grid.Column>
-								</Grid.Row>
-								<Grid.Row>
-									<Grid.Column 
-										floated='left' 
-										width={8} 
-										style={{paddingRight: '5em', marginBottom: '1.5em'}}
-									>
-										<Header as='h3' style={{ fontSize: '2em' }}>
-											Serving, Retired, Dependent?
-										</Header>
-										<p style={{ fontSize: '1.33em' }}>
-											Whether you are leaving the Armed Forces or your direct family would like to 
-											increase their employability, Golbourn Training Solutions are passionate in 
-											helping our Armed Forces and their families.
+											Our new Survival Skills and Command Tasks, run by our survival expert Fred 
+											Boucher will bring your teams together to problem solve outside of the 
+											office environment.
 										</p>
 										<p style={{ fontSize: '1.33em' }}>
-											We work with serving personnel (Regular and Reserves), Veterans and direct 
-											family members.
-										</p>
-									</Grid.Column>
-									<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
-										<Header as='h3' style={{ fontSize: '2em' }}>
-											Forces Discount
-										</Header>
-										<p style={{ fontSize: '1.33em' }}>
-											All Armed Forces can access any one of our public courses at a discounted rate 
-											or can attend one of our specialised MOD Courses where we cover multiple 
-											subjects over 3 days.  We run courses from Poole, Aldershot, Coventry, 
-											Catterick and Lossiemouth. We can run courses to meet Unit needs at Unit or 
-											from our locations. 
+											These can be run over a few hours or over night. A fun, active, action packed 
+											experience awaits all that are courageous enough to take on this opportunity. A 
+											tried and tested technique of developing a groups cohesion and communication 
+											abilities are group activities both physical and mental.
 										</p>
 									</Grid.Column>
 								</Grid.Row>
 							</Grid>
-						</Segment>
-					</Fade>
+						</Fade>
 					<Fade bottom>
-						<Segment style={{ padding: '0' }} vertical borderless>
-							<Grid stackable columns='equal'>
-								<Grid.Row style={{ margin: '0', padding: '0' }}>
-									<Grid.Column style={{ backgroundColor: '#607e6d', padding: '5em 10em 5em 15em' }}>
-										<Header 
-											inverted 
-											as='h3' 
-											style={{ fontSize: '2em', color: 'white' }}
-										>
-											GTS MOD 3 Day Bundle Course Offers<br/><br/>
-										</Header>
-										<ForcesCoursesCarousel/>
-									</Grid.Column>
-									<Grid.Column style={{ backgroundColor: '#6eb8ff', padding: '5em 0 0 0' }}>
-										<Grid.Row>
-											<Image centered src='/images/SLC.jpg' size='big' />
-										</Grid.Row>
-										<Grid.Row>
-											<Image 
-												centered 
-												src='/images/forcesFamily.jpg' 
-												size='massive' 
-												style={{ margin: '0', padding: '0' }} 
-											/>
-										</Grid.Row>
-									</Grid.Column>
-								</Grid.Row>
-							</Grid>
-						</Segment>
+						<Grid divided stackable verticalAlign='top'>
+							<Grid.Row style={{ margin: '2em 0 1em 0' }}>
+								<Header as='h3' icon textAlign='center' style={{ fontSize: '2em' }}>
+									CORPORATE TEAM BUILDING EVENTS 
+								</Header>
+							</Grid.Row>
+							<Grid.Row>
+								<Grid.Column
+									id='faq' 
+									floated='right' 
+									width={8} 
+									style={{ padding: '2em 4em' }}
+								>
+									<Header as='h1'>
+										Frequently Asked Questions
+									</Header><br/>
+									<p style={{ fontSize: '1.33em' }}>
+										<b>Do we need to travel or do you come to us?</b><br/>
+										You can have an event run at your location or we can provide a suitable venue.<br/><br/>
+										<b>How does pricing work?</b><br/>
+										You can pay per head or for an overall booking. We will build an event to meet your needs.<br/><br/>
+										<b>Ethos?</b><br/>
+										You can incorporate the event into your company's training package to suit your message.<br/><br/>
+									</p>
+								</Grid.Column>
+								<Grid.Column
+									id='corporateTeamBuildingBullets'
+									floated='left' 
+									width={8} 
+									style={{
+										padding: '2em 4em', 
+										color: 'white', 
+										fontSize: '1.33em'
+									}}
+								>
+									<p>
+										Tailored to meet your bespoke needs for all group sizes and abilities. Our team 
+										will build you the package to motivate and inspire your staff. You tell us what 
+										you want to achieve and we will do the rest.
+									</p>
+										<List bulleted items={[
+											'The Maze',
+											'Who did it',
+											'Army challenge',
+											'The Den',
+											'Many, many More' 			
+										]}
+									/>
+								</Grid.Column>
+							</Grid.Row>
+						</Grid>
 					</Fade>
 			</Responsive>
 		)

@@ -433,3 +433,33 @@ html {
 		rgba(rgb(24, 23, 70), 0.5)),
 		url('/images/HadrianWall.jpg');
 }
+#teamBuildingBullets {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(#1c360b, 1),
+		rgba(#262e36, 0.7)),
+		url('/images/woodlandSurvival.jpg');
+}
+#paraSurvival {
+	height: 26.6em;
+	background-size: cover;
+	background-color: #bbd0c4;
+}
+#corporateTeamBuilding {
+	background-size: cover;
+	background-color: #bbd0c4;
+}
+#corporateTeamBuildingBullets {
+	height: 20.85em;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right,
+		rgba(#4b4705, 1),
+		rgba(#082507, 0.7)),
+		url('/images/woodlandSurvivalTwo.jpg');
+}
+#faq {
+	background-size: cover;
+	background-color: #d0c4bb;
+}
