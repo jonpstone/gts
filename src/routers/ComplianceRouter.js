@@ -65,86 +65,72 @@ export default class Compliance extends React.Component {
 
         return (
             <>
-                <NavBar/>
-                <Grid
-                    borderless 
-                    id='compHero'
-                    textAlign='center'
-                    style={{ margin: '0 0 1em 0' }}
-                >
-                    <Grid.Row>
-                        <Header inverted as='h1' style={{ marginTop: '.8em', fontSize: '5em' }}>
-                            COMPLIANCE
-                        </Header>
-                    </Grid.Row>
-                </Grid>
+				<NavBar path={this.props.location.pathname} />
                 <Router>
-                    <Responsive>
-                        <Grid centered style={{ marginBottom: '.1em' }}>
-                            <Grid.Column borderless stretched width={10}>
-                                <Ref innerRef={this.contextRef}>
-                                    <Rail position='right'>
-                                        <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
-                                            <Back2Top
-                                                scrollDuration={500}
-                                            >
-                                                <Button inverted color='blue' size='huge'>
-                                                    &nbsp; Top &nbsp;
-                                                    <Icon name='double angle up'/>
-                                                </Button>
-                                            </Back2Top>
-                                        </Sticky>
-                                    </Rail>
-                                </Ref>
-                                <Ref innerRef={this.contextRef}>
-                                    <Rail position='left'>
-                                        <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
-                                            <Menu fluid vertical tabular>
-                                                <Menu.Item
-                                                    id='menuItem'
-                                                    style={{ outline: 'none' }}
-                                                    name='Compliance Home'
-                                                    as={Link}
-                                                    to='/compliance'
-                                                    active={activeItem === 'Compliance Home'}
-                                                    onClick={this.handleItemClick}
-                                                />
-                                                {
-                                                    linkNames.map((item) => (
-                                                        <Menu.Item
-                                                            id='menuItem'
-                                                            style={{ outline: 'none' }}
-                                                            name={item}
-                                                            as={Link}
-                                                            to={`/compliance/${item.replace(/\s+/g, '-')}`}
-                                                            active={activeItem === item}
-                                                            onClick={this.handleItemClick}
-                                                        />
-                                                    ))
-                                                }
-                                            </Menu>
-                                        </Sticky>
-                                    </Rail>
-                                </Ref>
-                                <Segment style={{ padding: '3em', marginBottom: '1em' }}>
-                                    <Switch>
-                                        <Route exact path="/compliance" component={ComplianceHome} />
-                                        <Route path="/compliance/Health-And-Safety" component={HealthAndSafety} />
-                                        <Route path="/compliance/First-Aid-At-Work" component={FirstAidAtWork} />
-                                        <Route path="/compliance/Basic-Life-Support-with-AED" component={BlsAed} />
-                                        <Route path="/compliance/Paediatric-First-Aid" component={PaediatricFirstAid} />
-                                        <Route path="/compliance/Activity-First-Aid" component={ActivityFirstAid} />
-                                        <Route path="/compliance/Junior-And-Bespoke-First-Aid" component={BespokeFirstAid} />
-                                        <Route path="/compliance/Anaphylaxis-Management" component={AnaphylaxisManagement} />
-                                        <Route path="/compliance/Catastrophic-Bleeds" component={CatastrophicBleedManagement} />
-                                        <Route path="/compliance/Food-Safety" component={FoodSafety} />
-                                        <Route path="/compliance/Mental-Health-First-Aid" component={MentalHealthFirstAid} />
-                                        <Route path="/compliance/Safe-Guarding" component={SafeGuarding} />
-                                    </Switch>
-                                </Segment>
-                            </Grid.Column>
-                        </Grid>
-                    </Responsive>
+                    <Grid centered style={{ margin: '1em 0 .1em 0' }}>
+                        <Grid.Column borderless stretched width={10}>
+                            <Ref innerRef={this.contextRef}>
+                                <Rail position='right'>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
+                                        <Back2Top
+                                            scrollDuration={500}
+                                        >
+                                            <Button inverted color='blue' size='huge'>
+                                                &nbsp; Top &nbsp;
+                                                <Icon name='double angle up'/>
+                                            </Button>
+                                        </Back2Top>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            <Ref innerRef={this.contextRef}>
+                                <Rail position='left'>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                        <Menu fluid vertical tabular>
+                                            <Menu.Item
+                                                id='menuItem'
+                                                style={{ outline: 'none' }}
+                                                name='Compliance Home'
+                                                as={Link}
+                                                to='/compliance'
+                                                active={activeItem === 'Compliance Home'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            {
+                                                linkNames.map((item) => (
+                                                    <Menu.Item
+                                                        id='menuItem'
+                                                        style={{ outline: 'none' }}
+                                                        name={item}
+                                                        as={Link}
+                                                        to={`/compliance/${item.replace(/\s+/g, '-')}`}
+                                                        active={activeItem === item}
+                                                        onClick={this.handleItemClick}
+                                                    />
+                                                ))
+                                            }
+                                        </Menu>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            <Segment style={{ padding: '3em', marginBottom: '1em' }}>
+                                <Switch>
+                                    <Route exact path="/compliance" component={ComplianceHome} />
+                                    <Route path="/compliance/Health-And-Safety" component={HealthAndSafety} />
+                                    <Route path="/compliance/First-Aid-At-Work" component={FirstAidAtWork} />
+                                    <Route path="/compliance/Basic-Life-Support-with-AED" component={BlsAed} />
+                                    <Route path="/compliance/Paediatric-First-Aid" component={PaediatricFirstAid} />
+                                    <Route path="/compliance/Activity-First-Aid" component={ActivityFirstAid} />
+                                    <Route path="/compliance/Junior-And-Bespoke-First-Aid" component={BespokeFirstAid} />
+                                    <Route path="/compliance/Anaphylaxis-Management" component={AnaphylaxisManagement} />
+                                    <Route path="/compliance/Catastrophic-Bleeds" component={CatastrophicBleedManagement} />
+                                    <Route path="/compliance/Food-Safety" component={FoodSafety} />
+                                    <Route path="/compliance/Mental-Health-First-Aid" component={MentalHealthFirstAid} />
+                                    <Route path="/compliance/Safe-Guarding" component={SafeGuarding} />
+                                </Switch>
+                            </Segment>
+                        </Grid.Column>
+                    </Grid>
                 </Router>
             </>
         )

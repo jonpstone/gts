@@ -38,78 +38,64 @@ export default class Compliance extends React.PureComponent {
 
         return (
             <>
-                <NavBar/>
-                <Grid
-                    borderless 
-                    id='orgSecHero'
-                    textAlign='center'
-                    style={{ margin: '0 0 1em 0' }}
-                >
-                    <Grid.Row>
-                        <Header inverted as='h1' style={{ marginTop: '.8em', fontSize: '5em' }}>
-                            ORGANISATION SECURITY
-                        </Header>
-                    </Grid.Row>
-                </Grid>
+				<NavBar path={this.props.location.pathname}/>
                 <Router>
-                    <Responsive>
-                        <Grid centered style={{ marginBottom: '.1em' }}>
-                            <Grid.Column borderless stretched width={10}>
-                                <Ref innerRef={this.contextRef}>
-                                    <Rail position='right'>
-                                        <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
-                                            <Back2Top
-                                                scrollDuration={500}
-                                            >
-                                                <Button inverted color='blue' size='huge'>
-                                                    &nbsp; Top &nbsp;
-                                                    <Icon name='double angle up'/>
-                                                </Button>
-                                            </Back2Top>
-                                        </Sticky>
-                                    </Rail>
-                                </Ref>
-                                <Ref innerRef={this.contextRef}>
-                                    <Rail position='left'>
-                                        <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
-                                            <Menu fluid vertical tabular>
-                                                <Menu.Item
-                                                    id='menuItem'
-                                                    style={{ outline: 'none' }}
-                                                    name='Operational Security'
-                                                    as={Link}
-                                                    to='/organisation-security'
-                                                    active={activeItem === 'Operational Security'}
-                                                    onClick={this.handleItemClick}
-                                                />
-                                                {
-                                                    linkNames.map((item) => (
-                                                        <Menu.Item
-                                                            id='menuItem'
-                                                            style={{ outline: 'none' }}
-                                                            name={item}
-                                                            as={Link}
-                                                            to={`/organisation-security/${item.replace(/\s+/g, '-')}`}
-                                                            active={activeItem === item}
-                                                            onClick={this.handleItemClick}
-                                                        />
-                                                    ))
-                                                }
-                                            </Menu>
-                                        </Sticky>
-                                    </Rail>
-                                </Ref>
-                                <Segment style={{ padding: '3em', marginBottom: '1em' }}>
-                                    <Switch>
-                                        <Route exact path="/organisation-security" component={OrgSecHome} />
-                                        <Route path="/organisation-security/Lockdown-Consultancy" component={LockdownConsultancy} />
-                                        <Route path="/organisation-security/Security-Audit" component={SecurityAudit} />
-                                        <Route path="/organisation-security/SICM" component={SICM} />
-                                    </Switch>
-                                </Segment>
-                            </Grid.Column>
-                        </Grid>
-                    </Responsive>
+                    <Grid centered style={{ margin: '1em 0 .1em 0' }}>
+                        <Grid.Column borderless stretched width={10}>
+                            <Ref innerRef={this.contextRef}>
+                                <Rail position='right'>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ margin: '2.1em'}}>
+                                        <Back2Top
+                                            scrollDuration={500}
+                                        >
+                                            <Button inverted color='blue' size='huge'>
+                                                &nbsp; Top &nbsp;
+                                                <Icon name='double angle up'/>
+                                            </Button>
+                                        </Back2Top>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            <Ref innerRef={this.contextRef}>
+                                <Rail position='left'>
+                                    <Sticky context={this.contextRef} offset={100} styleElement={{ marginTop: '2.1em'}}>
+                                        <Menu fluid vertical tabular>
+                                            <Menu.Item
+                                                id='menuItem'
+                                                style={{ outline: 'none' }}
+                                                name='Operational Security'
+                                                as={Link}
+                                                to='/organisation-security'
+                                                active={activeItem === 'Operational Security'}
+                                                onClick={this.handleItemClick}
+                                            />
+                                            {
+                                                linkNames.map((item) => (
+                                                    <Menu.Item
+                                                        id='menuItem'
+                                                        style={{ outline: 'none' }}
+                                                        name={item}
+                                                        as={Link}
+                                                        to={`/organisation-security/${item.replace(/\s+/g, '-')}`}
+                                                        active={activeItem === item}
+                                                        onClick={this.handleItemClick}
+                                                    />
+                                                ))
+                                            }
+                                        </Menu>
+                                    </Sticky>
+                                </Rail>
+                            </Ref>
+                            <Segment style={{ padding: '3em', marginBottom: '1em' }}>
+                                <Switch>
+                                    <Route exact path="/organisation-security" component={OrgSecHome} />
+                                    <Route path="/organisation-security/Lockdown-Consultancy" component={LockdownConsultancy} />
+                                    <Route path="/organisation-security/Security-Audit" component={SecurityAudit} />
+                                    <Route path="/organisation-security/SICM" component={SICM} />
+                                </Switch>
+                            </Segment>
+                        </Grid.Column>
+                    </Grid>
                 </Router>
             </>
         )

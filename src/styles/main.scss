@@ -52,6 +52,7 @@ html {
 		url('/images/HMS_Dragon.jpg');
 }
 #compHero {
+	height: 15em;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right bottom,
@@ -251,6 +252,7 @@ html {
 	padding: '1em' !important;
 }
 #orgSecHero {
+	height: 15em;
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to right bottom,
@@ -380,7 +382,7 @@ html {
 		url('/images/SICM3.jpg');
 }
 #SICM4 {
-	height: 28.5em;
+	height: 30em;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to right,
@@ -437,29 +439,46 @@ html {
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
-		rgba(#1c360b, 1),
-		rgba(#262e36, 0.7)),
+		rgba(#1c360b, 0.7),
+		rgba(#262e36, 1)),
 		url('/images/woodlandSurvival.jpg');
 }
 #paraSurvival {
+	color: white;
 	height: 26.6em;
 	background-size: cover;
-	background-color: #bbd0c4;
+	background-color: #262e36;
 }
 #corporateTeamBuilding {
 	background-size: cover;
 	background-color: #bbd0c4;
 }
 #corporateTeamBuildingBullets {
-	height: 20.85em;
+	height: 22.35em;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to right,
 		rgba(#4b4705, 1),
-		rgba(#082507, 0.7)),
+		rgba(#082507, 0.5)),
 		url('/images/woodlandSurvivalTwo.jpg');
 }
 #faq {
+	color: white;
 	background-size: cover;
-	background-color: #d0c4bb;
+	background-color: #4b4705;
+}
+#pastEventsText {
+	height: 39em;
+	color: white;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to left,
+		rgba(#4d423a, 1),
+		rgba(#3a4d4c, 0.8)),
+		url('/images/edgeHill.jpg');
+}
+#pastEvents {
+	color: white;
+	background-size: cover;
+	background-color: #4d423a;
 }
