@@ -49,7 +49,7 @@ const HomepageHeading = ({ mobile }) =>
 					inverted
 					style={{
 						fontSize: mobile ? '2em' : '4em',
-						fontWeight: 'normal',
+						fontWeight: 'bold',
 					}}
 				/>
 			</Grid.Row>
@@ -70,13 +70,21 @@ const HomepageHeading = ({ mobile }) =>
 					</Header>
 				</Grid.Column>
 			</Grid.Row>
-		</Grid>
-			<a href='#finish'>
-				<Button inverted size='huge' className='scrollBottom' style={{ marginBottom: '8%' }}>
-					&nbsp; Learn More &nbsp;
+			<Grid.Row style={{ marginTop: '2em' }}>
+				<Button inverted as='a' href='#finish' size='huge' className='scrollBottom' style={{ marginRight: '2.5em' }}>
+					&nbsp; Discover &nbsp; &nbsp;
 					<Icon name='angle down'/>
 				</Button>
-			</a>
+				<Button inverted as={Link} to='/about' size='huge' style={{ marginRight: '2.5em' }}>
+					&nbsp; About &nbsp;
+					<Icon name='angle right'/>
+				</Button>
+				<Button inverted as={Link} to='/contact' size='huge'>
+					&nbsp; Contact &nbsp;
+					<Icon name='angle right'/>
+				</Button>
+			</Grid.Row>
+		</Grid>
 	</Container>
 
 class DesktopContainer extends React.Component {
@@ -265,7 +273,7 @@ const HomepageLayout = () =>
 								fire safety and warden course I have done."
 							</Header>
 							<p style={{ fontSize: '1.33em' }}>
-								Larni - Compliance Officer
+								Tanya - Compliance Officer
 							</p>
 						</Grid.Column>
 					</Grid.Row>
@@ -322,7 +330,7 @@ const HomepageLayout = () =>
 			<Segment style={{ padding: '0' }} vertical borderless>
 				<Grid stackable columns='equal'>
 					<Grid.Row style={{ margin: '0', padding: '0' }}>
-						<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 15em' }}>
+						<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 12em' }}>
 							<Header inverted as='h3' style={{ fontSize: '2em' }}>
 								Upcoming Public Courses
 							</Header>
@@ -339,7 +347,7 @@ const HomepageLayout = () =>
 								direct families.
 							</p><br/>
 							<Button inverted as={Link} to="/forces-covenant" size='huge'>
-								Forces Covenant
+								Forces Support
 								<Icon name='angle right'/>
 							</Button>
 						</Grid.Column>

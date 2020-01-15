@@ -49,7 +49,7 @@ html {
 	background-image: linear-gradient(to right bottom,
 		rgba(rgb(0, 0, 0), 0.7),
 		rgba(rgb(0, 0, 0), 0.7)),
-		url('/images/HMS_Dragon.jpg');
+		url('/images/britishForces.jpeg');
 }
 #compHero {
 	height: 15em;
@@ -481,4 +481,39 @@ html {
 	color: white;
 	background-size: cover;
 	background-color: #4d423a;
+}
+#aboutHero {
+	height: 15em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.8),
+		rgba(rgb(24, 23, 70), 0.8)),
+		url('/images/medAid.jpg');
+}
+#aboutTeam {
+	color: white;
+	height: 32em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left,
+		rgba(#223446, 1),
+		rgba(#262e36, 0.1)),
+		url('/images/steve.jpg');
+}
+#aboutLocation {
+	color: white;
+	height: 32em;
+	background-size: cover;
+	background-image: linear-gradient(to right,
+		rgba(#223446, 1),
+		rgba(#081605, 1));
+}
+#aboutMap {
+	color: white;
+	height: 32em;
+	background-size: cover;
+	background-image: linear-gradient(to right,
+		rgba(#081605, 1),
+		rgba(#081605, 1));
 }

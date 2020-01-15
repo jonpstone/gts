@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {
-	Button,
-	Grid,
-	Header,
-	List,
-	Segment,
-} from 'semantic-ui-react'
+import { Button, Grid, Header, List, Segment } from 'semantic-ui-react'
 
 export default props =>
 	<Segment inverted vertical style={{ padding: '5em' }}>

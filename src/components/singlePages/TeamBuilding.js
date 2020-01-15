@@ -4,10 +4,6 @@ import Fade from 'react-reveal/Fade'
 import NavBar from '../layouts/Header'
 
 export default class TeamBuilding extends React.Component {
-	state = {}
-
-	hideFixedMenu = () => { this.setState({ fixed: false }) }
-	showFixedMenu = () => { this.setState({ fixed: true }) }
 
 	componentDidMount() { window.scrollTo(0, 0) }
 
@@ -39,17 +35,16 @@ export default class TeamBuilding extends React.Component {
 									Bring your team together in this exciting outdoor experience, they will 
 									develop new skills and learn dynamic ways to work together to solve any task
 								</p>
-									<List bulleted items={[
-										'Building Shelter',
-										'Making Fire',
-										'Purifying Water',
-										'Hunting Food',
-										'Navigation',
-										'Team Command Tasks',
-										'Assault Courses (optional)',
-										'Problem Solving'
-									]}
-								/>
+								<List bulleted items={[
+									'Building Shelter',
+									'Making Fire',
+									'Purifying Water',
+									'Hunting Food',
+									'Navigation',
+									'Team Command Tasks',
+									'Assault Courses (optional)',
+									'Problem Solving'
+								]} />
 							</Grid.Column>
 							<Grid.Column id='paraSurvival' floated='right' width={8} style={{ padding: '2.65em 4em' }}>
 								<p style={{ fontSize: '1.33em' }}>
@@ -142,7 +137,7 @@ export default class TeamBuilding extends React.Component {
 									will gain from this experience will only be matched by their sense of 
 									overwhelming achievement. You will be walking in history’s footsteps, our 
 									instructor guides will be informing you of the historical facts of key moments 
-									in the Walls history and events, the units that manned the mile forts and where 
+									in the wall's history and events, the units that manned the mile forts and where 
 									these men came from.
 								</p>
 								<p style={{ fontSize: '1.33em' }}>

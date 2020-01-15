@@ -40,7 +40,9 @@ export default class DesktopContainerMenu extends React.Component {
 							path === '/team-building' ? 'teamBuildingHero' : (
 								path === '/forces-covenant' ? 'forcesHero' : (
 									path === '/compliance' ? 'compHero' : (
-										path === '/organisation-security' ? 'orgSecHero' : null 
+										path === '/organisation-security' ? 'orgSecHero' : (
+											path === '/about' ? 'aboutHero' : null
+										) 
 									)
 								)
 							) 
@@ -119,7 +121,7 @@ export default class DesktopContainerMenu extends React.Component {
 											as='h1'
 											content='TEAM BUILDING & EVENTS'
 											inverted
-											style={{ fontSize: '4em', fontWeight: 'bold', marginTop: '27%' }}
+											style={{ fontSize: '4em', fontWeight: 'bold', marginTop: '25%' }}
 										/> : (
 											path === '/forces-covenant' ? 									
 											<Header
@@ -141,7 +143,15 @@ export default class DesktopContainerMenu extends React.Component {
 														content='COMPLIANCE'
 														inverted
 														style={{ fontSize: '3em', fontWeight: 'bold' }}
-													/> : null
+													/> : (
+														path === '/about' ?
+														<Header
+															as='h1'
+															content='ABOUT GTS'
+															inverted
+															style={{ fontSize: '3em', fontWeight: 'bold' }}
+														/> : null
+													)
 												)
 											)
 										)
@@ -164,12 +174,10 @@ export default class DesktopContainerMenu extends React.Component {
 									</Grid.Column>
 								</Grid.Row>
 							</Grid>
-							<a href='#finish'>
-								<Button inverted size='huge' className='scrollBottom' style={{ marginBottom: '8%' }}>
+								<Button inverted as='a' href='#finish' size='huge' className='scrollBottom' style={{ marginBottom: '8%' }}>
 									&nbsp; Learn More &nbsp;
 									<Icon name='angle down'/>
 								</Button>
-							</a>
 						</Container>
 					</Segment>
 				</Visibility>

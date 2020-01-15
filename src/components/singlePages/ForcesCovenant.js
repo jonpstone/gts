@@ -1,14 +1,8 @@
 import React from 'react'
-import { Container, Header, Grid, Segment, Button, Icon, Menu, Sidebar, Responsive, Image, Visibility } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'
 import ForcesCoursesCarousel from '../NonPageComponents/ForcesCoursesCarousel'
 import NavBar from '../layouts/Header'
-
-const getWidth = () => {
-	const isSSR = typeof window === 'undefined'
-	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
-}
 
 export default class ForceCovenant extends React.Component {
 	state = {}

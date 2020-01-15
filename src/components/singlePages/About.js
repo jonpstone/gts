@@ -1,54 +1,236 @@
 import React from 'react';
-import { Container, Header } from 'semantic-ui-react'
+import { Segment, Grid, Header, List, Image } from 'semantic-ui-react'
 import NavBar from '../../components/layouts/Header'
+import Fade from 'react-reveal/Fade'
 
-export default props =>
-  <>
-    <NavBar/>
-    <Container text style={{ marginTop: '7em' }}>
-      <Header as='h2'>About</Header>
-      <p>
-        Golbourn Training Solutions believes in making training fun, interactive and realistic. With our courses the dreaded mandatory 
-        training is a thing of the past. We will adapt our courses around each and every learner to maximise not only their individual 
-        experience but for the group as a whole. The right environment, the right atmosphere and the right instructor can get the best 
-        out of everyone. 
+export default class About extends React.Component {
 
-        We make our First Aid Training scenarios as realistic as possible with the use of casualty simulation, this is not only fun and 
-        realistic, but it is a crucial learning tool. When your First Aider is in an emergency situation their training and muscle memory 
-        will make the difference.
+    componentDidMount() { window.scrollTo(0, 0) }
 
-        Learning is developing, developing is investing, investing is securing success for the future. 
-
-        We aim to help make your staff the best they can be, and with our security training we will prepare you with the skills to protect
-        your staff and clients.
-      </p>
-    </Container>
-    <Container text style={{ marginTop: '7em' }}>
-      <Header as='h2'>Our Team</Header>
-      <p>
-        Steven Golbourn
-        Managing Director
-        Phone: 07904 014772 - 01926825682
-        E-mail: steve@golbourntrainingsolutions.co.uk
-
-        My name is Steve, and I’m the Managing Director of Golbourn Training Solutions and lead instructor, I started this company to not 
-        only make a successful business, but to enhance a part of my character and life that I love, investing and developing other 
-        people’s skills. Watching a learner go from strength to strength over a short period of time truly does motivate me.
-
-        My background in instructing and development has been gained from 16 years’ service in the British Army, where I was a Team Medic, 
-        Battlefield Casualty Drills Trainer and Small Arms Weapons Instructor. I have completed multiple operational tours and met many 
-        wonderful people from all walks of life and parts of the world. The military has given me the skills to be dynamic, flexible and 
-        have confidence in my holistic approach to learner development. I have a can do, will do attitude.
-
-        The SICM - Serious Incident Control Measures Course was designed to help organisations to be able to impliment their own easy step 
-        by step protection system, while ensuring the staff are as prepared and practiced as possible to deal with terror threats. Have a 
-        look at our SICM page for more information, including our Lockdown Services. 
-
-        I aim to provide competitive prices to all my courses, but Golbourn Training Solutions openly offers discounts and support to the 
-        Armed Forces, Blue Light Services, Schools, Charities, Care Industries and Volunteer groups. Some of the UK's best.
-
-        I hope you select Golbourn Training Solutions to help in your investment and development of your staff now and in the future. 
-        I aim to prove compliance training can be fun.
-      </p>
-    </Container>
-  </>
+    render() {
+        return (
+            <>
+                <NavBar path={this.props.location.pathname}/>
+                <Segment style={{ padding: '8em', border: 'none' }} vertical>
+                    <Grid divided container stackable verticalAlign='top'>
+                        <Grid.Row>
+                            <Grid.Column 
+                                floated='left' 
+                                width={8} 
+                                style={{paddingRight: '5em', marginBottom: '1.5em'}}
+                            >
+                                <Header as='h3' style={{ fontSize: '2em' }}>
+                                    Philosophy
+                                </Header>
+                                <p style={{ fontSize: '1.33em' }}>
+                                    Golbourn Training Solutions believes in making training fun, interactive and 
+                                    realistic. With our courses the dreaded mandatory training is a thing of the 
+                                    past. We will adapt our courses around each and every learner to maximise not 
+                                    only their individual experience but for the group as a whole. The right 
+                                    environment, the right atmosphere and the right instructor can get the best out 
+                                    of everyone.
+                                </p>
+                                <p style={{ fontSize: '1.33em' }}>
+                                    Learning is <b>developing</b>, developing is <b>investing</b>, investing is 
+                                    securing <b>success</b> for the future.
+                                </p>
+                            </Grid.Column>
+                            <Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+                                <Header as='h3' style={{ fontSize: '2em' }}>
+                                    Method
+                                </Header>
+                                <p style={{ fontSize: '1.33em' }}>
+                                    We make our Training scenarios as realistic as possible with the use of casualty 
+                                    simulation and job related tasks, this is not only fun and realistic, but it's a 
+                                    crucial learning tool. When your First Aider for example is in an emergency 
+                                    situation their training and muscle memory will make the difference.
+                                </p>
+                                <p style={{ fontSize: '1.33em' }}>
+                                    We aim to help make your staff the best they can be, and with our security 
+                                    training we will prepare you with the skills to protect your staff and clients.
+                                </p>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
+                <Fade bottom>
+					<Grid borderless stackable verticalAlign='top'>
+						<Grid.Row>
+                            <Grid.Column id='aboutTeam' floated='right' width={8} style={{ padding: '2.65em 4em' }}>
+								<p style={{ fontSize: '1.33em', paddingLeft: '18.6em' }}>
+                                    <b>Steven Golbourn</b><br/>
+                                    <b>Managing Director</b><br/>
+                                    <b>Office:</b> 01926 825682<br/>
+                                    <b>Mobile:</b> 07904 014772<br/>
+                                    <b>Email:</b> <a href="mailto:steve@golbourntrainingsolutions.co.uk">steve@golbourntrainingsolutions.co.uk</a>
+								</p>
+							</Grid.Column>
+							<Grid.Column id='aboutLocation' floated='right' width={4} style={{ padding: '2.65em 0 0 5em' }}>
+                                <p style={{ fontSize: '1.33em' }}>
+                                    Golbourn Training Solutions Ltd provides UK coverage. We can come to your location 
+                                    or you can book at one of centres from the below list. 
+                                </p>
+                                <List bulleted style={{ fontSize: '1.33em' }} items={[
+                                    'Lossiemouth, Moray',
+                                    'Catterick, North Yorkshire',
+                                    'Coventry, West-Midlands',
+                                    'Aldershot, Hampshire',
+                                    'Poole, Dorset'
+                                ]} />
+							</Grid.Column>
+                            <Grid.Column id='aboutMap' width={4} style={{ margin: '0', padding: '0'}}>
+                                <Image
+                                    floated='right'
+                                    centered 
+                                    src='/images/ukMap.png' 
+                                    size='large' 
+                                    style={{ margin: '0', padding: '0' }} 
+                                />
+                            </Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
+                <Fade bottom>
+					<Grid stackable verticalAlign='top'>
+						<Grid.Row style={{ margin: '3em 0 1em 0' }}>
+							<Header as='h3' icon textAlign='center' style={{ fontSize: '2em' }}>
+								CLIENT TESTIMONIALS 
+							</Header>
+						</Grid.Row>
+                    </Grid>
+                </Fade>
+                <Fade bottom>
+                    <Grid stackable verticalAlign='top'>
+						<Grid.Row>
+                            <Grid.Column
+                                    floated='right' 
+                                    width={8} 
+                                    style={{
+                                        backgroundColor: '#7ea5a3',
+                                        padding: '2em 4em', 
+                                        color: 'white', 
+                                        fontSize: '1.33em'
+                                    }}
+                                >
+                                <p>
+                                    Excellent course and a great trainer - interactive, engaging and interesting. We 
+                                    have used Steve for both First Aid and AED training and I have definitely come away 
+                                    from both feeling confident that I could help in an emergency situation. We will, 
+                                    without question, use Steve again when refreshers are due. 
+                                </p>
+                                <p>
+                                    <b>Nick Felton 2017</b>
+                                </p>
+							</Grid.Column>
+							<Grid.Column
+								floated='left' 
+								width={8} 
+								style={{
+                                    backgroundColor: '#a58f7e',
+                                    padding: '2em 4em', 
+									color: 'white', 
+									fontSize: '1.33em'
+								}}
+							>
+                                <p>
+                                    Steve has delivered a number of outstanding courses for us as a subcontractor. He is 
+                                    extremely reliable and an excellent communicator. Feedback from our Trainees emphasise 
+                                    his commitment, attention to their needs and how interesting they find his courses. 
+                                    Thank you Steve.
+                                </p>
+                                <p>
+                                    <b>Vivienne 2017</b>
+                                </p>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
+                <Fade bottom>
+					<Grid stackable verticalAlign='top'>
+						<Grid.Row style={{ margin: '0', padding: '0' }}>
+                            <Grid.Column
+                                    floated='right' 
+                                    width={8} 
+                                    style={{
+                                        backgroundColor: '#a5a37e',
+                                        padding: '2em 4em', 
+                                        color: 'white', 
+                                        fontSize: '1.33em'
+                                    }}
+                                >
+                                <p>
+                                    I was really nervous about attending a First Aid course, Steve helped me feel 
+                                    relaxed and I thoroughly enjoyed it. I would definitely recommend Golbourn Training 
+                                    Solutions.
+                                </p>
+                                <p>
+                                    <b>Jo Cross 2017</b>
+                                </p>
+							</Grid.Column>
+							<Grid.Column
+								floated='left' 
+								width={8} 
+								style={{
+                                    backgroundColor: '#7ea58f',
+                                    padding: '2em 4em', 
+									color: 'white', 
+									fontSize: '1.33em'
+								}}
+							>
+                                <p>
+                                    Attended a First Aid Course as a requirement of being a Scout Leader. The day's 
+                                    course was informative, professional and fun. Thank you.
+                                </p>
+                                <p>
+                                    <b>Graham Folkes-Skinner 2017</b>
+                                </p>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
+                <Fade bottom>
+					<Grid stackable verticalAlign='top'>
+						<Grid.Row style={{ margin: '0', padding: '0' }}>
+                            <Grid.Column
+                                    floated='right' 
+                                    width={8} 
+                                    style={{
+                                        backgroundColor: '#81a57e',
+                                        padding: '2em 4em', 
+                                        color: 'white', 
+                                        fontSize: '1.33em'
+                                    }}
+                                >
+                                <p>
+                                    Attended a fire warden course with Golbourn Training Solutions, best fire safety and 
+                                    warden course I have done. 
+                                </p>
+                                <p>
+                                    <b>Tanya Davies 2016</b>
+                                </p>
+							</Grid.Column>
+							<Grid.Column
+								floated='left' 
+								width={8} 
+								style={{
+                                    backgroundColor: '#94a57e',
+                                    padding: '2em 4em', 
+									color: 'white', 
+									fontSize: '1.33em'
+								}}
+							>
+                                <p>
+                                    Great CPD first aid training from Golbourn Training Solutions. Very informative but 
+                                    relaxed environment so we could ask lots of questions. Excellent trainer. Thank you. 
+                                </p>
+                                <p>
+                                    <b>Rachel 2016</b>
+                                </p>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Fade>
+            </>
+        )
+    }
+}
