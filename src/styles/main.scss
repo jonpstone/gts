@@ -54,10 +54,10 @@ html {
 #compHero {
 	height: 15em;
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	background-image: linear-gradient(to right bottom,
-		rgba(rgb(114, 20, 20), 0.5),
-		rgba(rgb(24, 23, 70), 0.5)),
+		rgba(rgb(114, 20, 20), 0.7),
+		rgba(rgb(24, 23, 70), 0.7)),
 		url('/images/Palace_of_Westminster.jpg');
 }
 #faawSyllabus {
@@ -254,11 +254,11 @@ html {
 #orgSecHero {
 	height: 15em;
 	background-size: cover;
-	background-position: top;
+	background-position: center;
 	background-image: linear-gradient(to right bottom,
 		rgba(rgb(114, 20, 20), 0.7),
 		rgba(rgb(24, 23, 70), 0.7)),
-		url('/images/policeOfficer.jpg');
+		url('/images/scotlandYard.jpg');
 }
 #orgSecOne {
 	height: 30em;
@@ -516,4 +516,13 @@ html {
 	background-image: linear-gradient(to right,
 		rgba(#081605, 1),
 		rgba(#081605, 1));
+}
+#contactHero {
+	height: 15em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.8),
+		rgba(rgb(24, 23, 70), 0.8)),
+		url('/images/CPR_training-05.jpg');
 }

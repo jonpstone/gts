@@ -39,9 +39,11 @@ export default class DesktopContainerMenu extends React.Component {
 						id={ 
 							path === '/team-building' ? 'teamBuildingHero' : (
 								path === '/forces-covenant' ? 'forcesHero' : (
-									path === '/compliance' ? 'compHero' : (
-										path === '/organisation-security' ? 'orgSecHero' : (
-											path === '/about' ? 'aboutHero' : null
+									path.includes('compliance') ? 'compHero' : (
+										path.includes('organisation-security') ? 'orgSecHero' : (
+											path === '/about' ? 'aboutHero' : (
+												path === '/contact' ? 'contactHero' : null
+											)
 										) 
 									)
 								)
@@ -130,14 +132,14 @@ export default class DesktopContainerMenu extends React.Component {
 												inverted
 												style={{ fontSize: '4em', fontWeight: 'bold',	marginTop: '30%' }}
 											/> : (
-												path === '/organisation-security' ? 									
+												path.includes('organisation-security') ? 									
 												<Header
 													as='h1'
 													content='ORGANISATION SECURITY'
 													inverted
 													style={{ fontSize: '3em', fontWeight: 'bold' }}
 												/> : (
-													path === '/compliance' ? 									
+													path.includes('compliance') ? 									
 													<Header
 														as='h1'
 														content='COMPLIANCE'
@@ -150,7 +152,15 @@ export default class DesktopContainerMenu extends React.Component {
 															content='ABOUT GTS'
 															inverted
 															style={{ fontSize: '3em', fontWeight: 'bold' }}
-														/> : null
+														/> : (
+															path === '/contact' ?
+															<Header
+																as='h1'
+																content='CONTACT US'
+																inverted
+																style={{ fontSize: '3em', fontWeight: 'bold' }}
+															/> : null
+														)
 													)
 												)
 											)

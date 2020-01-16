@@ -43,7 +43,6 @@ export default class ComplianceHome extends React.Component {
                             Wikipedia
                         </Label>
                     </Grid.Row>
-                    <Grid.Row id='complianceSpacer' style={{ height: '20em' }}></Grid.Row>
                     <Divider horizontal style={{ margin: '3.5em 0' }}>
                         Is your organisation HSE Compliant?
                     </Divider>
