@@ -72,7 +72,7 @@ export default props =>
 						inverted 
 						size='huge' 
 						icon='linkedin'
-						href='https://www.linkedin.com/in/steven-golbourn-gts-training/' 
+						href='https://www.linkedin.com/company/golbourn-training-solutions-ltd/' 
 						target='_blank'
 					/>
 					</List.Item>

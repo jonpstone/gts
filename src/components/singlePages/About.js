@@ -56,12 +56,12 @@ export default class About extends React.Component {
                 <Fade bottom>
 					<Grid borderless stackable verticalAlign='top'>
 						<Grid.Row>
-                            <Grid.Column id='aboutTeam' floated='right' width={8} style={{ padding: '2.65em 4em' }}>
+                            <Grid.Column id='aboutTeam' width={8} style={{ padding: '2.65em' }}>
 								<p style={{ fontSize: '1.33em', paddingLeft: '18.6em' }}>
                                     <b>Steven Golbourn</b><br/>
                                     <b>Managing Director</b><br/>
-                                    <b>Office:</b> 01926 825682<br/>
-                                    <b>Mobile:</b> 07904 014772<br/>
+                                    <b>Office:</b> <a href='tel:01926825682'>01926 825682</a><br/>
+                                    <b>Mobile:</b> <a href='tel:07904014772'>07904 014772</a><br/>
                                     <b>Email:</b> <a href="mailto:steve@golbourntrainingsolutions.co.uk">steve@golbourntrainingsolutions.co.uk</a>
 								</p>
 							</Grid.Column>
@@ -93,7 +93,7 @@ export default class About extends React.Component {
                 <Fade bottom>
 					<Grid stackable verticalAlign='top'>
 						<Grid.Row style={{ margin: '3em 0 1em 0' }}>
-							<Header as='h3' icon textAlign='center' style={{ fontSize: '2em' }}>
+							<Header as='h3' icon textAlign='center' style={{ fontSize: '2em', marginBottom: '1em' }}>
 								CLIENT TESTIMONIALS 
 							</Header>
 						</Grid.Row>
@@ -101,7 +101,7 @@ export default class About extends React.Component {
                 </Fade>
                 <Fade bottom>
                     <Grid stackable verticalAlign='top'>
-						<Grid.Row>
+						<Grid.Row style={{ margin: '0', padding: '0', backgroundColor: '#a58f7e' }}>
                             <Grid.Column
                                     floated='right' 
                                     width={8} 
@@ -126,7 +126,6 @@ export default class About extends React.Component {
 								floated='left' 
 								width={8} 
 								style={{
-                                    backgroundColor: '#a58f7e',
                                     padding: '2em 4em', 
 									color: 'white', 
 									fontSize: '1.33em'
@@ -134,9 +133,9 @@ export default class About extends React.Component {
 							>
                                 <p>
                                     Steve has delivered a number of outstanding courses for us as a subcontractor. He is 
-                                    extremely reliable and an excellent communicator. Feedback from our Trainees emphasise 
-                                    his commitment, attention to their needs and how interesting they find his courses. 
-                                    Thank you Steve.
+                                    extremely reliable and an excellent communicator. Feedback from our Trainees 
+                                    emphasise his commitment, attention to their needs and how interesting they find his
+                                    courses. Thank you Steve.
                                 </p>
                                 <p>
                                     <b>Vivienne 2017</b>
@@ -147,7 +146,7 @@ export default class About extends React.Component {
 				</Fade>
                 <Fade bottom>
 					<Grid stackable verticalAlign='top'>
-						<Grid.Row style={{ margin: '0', padding: '0' }}>
+						<Grid.Row style={{ margin: '0', padding: '0', backgroundColor: '#7ea58f' }}>
                             <Grid.Column
                                     floated='right' 
                                     width={8} 
@@ -171,7 +170,6 @@ export default class About extends React.Component {
 								floated='left' 
 								width={8} 
 								style={{
-                                    backgroundColor: '#7ea58f',
                                     padding: '2em 4em', 
 									color: 'white', 
 									fontSize: '1.33em'
@@ -190,12 +188,11 @@ export default class About extends React.Component {
 				</Fade>
                 <Fade bottom>
 					<Grid stackable verticalAlign='top'>
-						<Grid.Row style={{ margin: '0', padding: '0' }}>
+						<Grid.Row style={{ margin: '0', padding: '0', backgroundColor: '#81a57e' }}>
                             <Grid.Column
                                     floated='right' 
                                     width={8} 
                                     style={{
-                                        backgroundColor: '#81a57e',
                                         padding: '2em 4em', 
                                         color: 'white', 
                                         fontSize: '1.33em'
