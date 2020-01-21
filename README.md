@@ -19,4 +19,4 @@ To run this application locally navigate using the command line to the root dire
 
 `cd gts && yarn install && yarn start`
 
-The app will be running at [http://localhost:3000/]. Enjoy!
+The app will be running at (http://localhost:3000/). Enjoy!
