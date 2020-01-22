@@ -33,18 +33,9 @@ export class BespokeFirstAid extends React.Component {
 							Practical and theory based assessments, with scenario exercises can be used to great effect.
 						</Grid.Column>
 					</Grid.Row>
-					<Grid.Row>
-						<Grid.Column textAlign='center' style={{ paddingTop: '1em' }}>
-							<b>Please Contact us to arrange a course just for you.</b><br/><br/>
-							<Button inverted size='huge' color='blue' as={Link} to='/contact' style={{ margin: '3em 0' }}>
-								&nbsp; Call Today &nbsp;
-								<Icon name='angle right'/>
-							</Button>
-						</Grid.Column>
-					</Grid.Row>
 				</Grid>
 		
-				<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '2em' }}>
+				<Header as='h2' textAlign='center' style={{ marginTop: '2em', fontSize: '2em', marginBottom: '2em' }}>
 					Junior First Aid
 				</Header>
 		

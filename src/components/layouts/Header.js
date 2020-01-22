@@ -42,7 +42,9 @@ export default class DesktopContainerMenu extends React.Component {
 									path.includes('compliance') ? 'compHero' : (
 										path.includes('organisation-security') ? 'orgSecHero' : (
 											path === '/about' ? 'aboutHero' : (
-												path === '/contact' ? 'contactHero' : null
+												path === '/contact' ? 'contactHero' : (
+													path === '/policy' ? 'policyHero' : null
+												)
 											)
 										) 
 									)
@@ -159,7 +161,15 @@ export default class DesktopContainerMenu extends React.Component {
 																content='CONTACT US'
 																inverted
 																style={{ fontSize: '3em', fontWeight: 'bold' }}
-															/> : null
+															/> : (
+																path === '/policy' ?
+																<Header
+																	as='h1'
+																	content='POLICIES'
+																	inverted
+																	style={{ fontSize: '3em', fontWeight: 'bold' }}
+																/> : null
+															)
 														)
 													)
 												)
@@ -167,7 +177,7 @@ export default class DesktopContainerMenu extends React.Component {
 										)
 									}
 								</Grid.Row>
-								<Grid.Row>				
+								<Grid.Row>
 									<Grid.Column>
 										{
 											path === '/team-building' ? 

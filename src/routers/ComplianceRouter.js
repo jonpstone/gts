@@ -1,8 +1,8 @@
 import React, { createRef } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon } from 'semantic-ui-react'
-import Back2Top from 'react-back2top';
-import NavBar from '../components/layouts/Header';
+import { Menu, Grid, Segment, Sticky, Ref, Rail, Button, Icon } from 'semantic-ui-react'
+import Back2Top from 'react-back2top'
+import NavBar from '../components/layouts/Header'
 import {
     ActivityFirstAid, 
     AnaphylaxisManagement, 
@@ -16,7 +16,7 @@ import {
     PaediatricFirstAid, 
     SafeGuarding, 
     ComplianceHome,
-  } from '../components/compliance'
+} from '../components/compliance'
 
 export default class Compliance extends React.Component {
     state = { activeItem: null }

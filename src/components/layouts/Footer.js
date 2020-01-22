@@ -24,7 +24,7 @@ export default props =>
 					<List link inverted >
 						<List.Item as={Link} to="/about" style={{ outline: 'none' }}>About</List.Item >
 						<List.Item as={Link} to="/contact" style={{ outline: 'none' }}>Contact</List.Item>
-						<List.Item as={Link} to="/" style={{ outline: 'none' }}>Sitemap</List.Item>
+						<List.Item as={Link} to="/site-map" style={{ outline: 'none' }}>Sitemap</List.Item>
 						<List.Item as={Link} to="/policy" style={{ outline: 'none' }}>Policy</List.Item>
 					</List>
 				</Grid.Column>
@@ -33,6 +33,9 @@ export default props =>
 				<List link inverted>
 					<List.Item as='a' href='https://www.hse.gov.uk/' target='_blank' style={{ outline: 'none' }}>
 						Health & Safety Executive
+					</List.Item>
+					<List.Item as='a' href='https://www.mi5.gov.uk/threat-levels' target='_blank' style={{ outline: 'none' }}>
+						UK Threat Level
 					</List.Item>
 					<List.Item as='a' href='https://www.gov.uk/government/publications/first-aid-in-schools' target='_blank' style={{ outline: 'none' }}>
 						First Aid in Schools 
@@ -82,15 +85,15 @@ export default props =>
 						size="huge" 
 						icon='instagram'
 						as='a'
-						href='#'
+						href='https://www.instagram.com/'
 						target='_blank'
 					/>
 					</List.Item>
 				</List>
 				<Grid.Row>
 					<p style={{ fontSize: '.8em', marginTop: '2em', color: 'grey' }}>
-					Registered in England and Wales, No. 11621225<br/>
-					© Golbourn Training Solutions 
+						Registered in England and Wales, No. 11621225<br/>
+						© Golbourn Training Solutions 
 					</p>
 				</Grid.Row>
 				</Grid.Column>

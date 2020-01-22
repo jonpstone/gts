@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Form, Segment, Container, Input, Grid } from 'semantic-ui-react'
 import NavBar from '../../components/layouts/Header'
 
