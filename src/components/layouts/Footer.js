@@ -24,7 +24,7 @@ export default props =>
 					<List link inverted >
 						<List.Item as={Link} to="/about" style={{ outline: 'none' }}>About</List.Item >
 						<List.Item as={Link} to="/contact" style={{ outline: 'none' }}>Contact</List.Item>
-						<List.Item as={Link} to="/site-map" style={{ outline: 'none' }}>Sitemap</List.Item>
+						<List.Item as={Link} to="/sitemap" style={{ outline: 'none' }}>Sitemap</List.Item>
 						<List.Item as={Link} to="/policy" style={{ outline: 'none' }}>Policy</List.Item>
 					</List>
 				</Grid.Column>

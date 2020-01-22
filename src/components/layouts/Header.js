@@ -43,7 +43,9 @@ export default class DesktopContainerMenu extends React.Component {
 										path.includes('organisation-security') ? 'orgSecHero' : (
 											path === '/about' ? 'aboutHero' : (
 												path === '/contact' ? 'contactHero' : (
-													path === '/policy' ? 'policyHero' : null
+													path === '/policy' ? 'policyHero' : (
+														path === '/sitemap' ? 'sitemapHero' : null
+													)
 												)
 											)
 										) 
@@ -168,7 +170,15 @@ export default class DesktopContainerMenu extends React.Component {
 																	content='POLICIES'
 																	inverted
 																	style={{ fontSize: '3em', fontWeight: 'bold' }}
-																/> : null
+																/> : (
+																	path === '/sitemap' ?
+																	<Header
+																		as='h1'
+																		content='SITEMAP'
+																		inverted
+																		style={{ fontSize: '3em', fontWeight: 'bold' }}
+																	/> : null
+																)
 															)
 														)
 													)

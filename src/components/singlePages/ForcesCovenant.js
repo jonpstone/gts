@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Grid, Segment, Responsive, Image } from 'semantic-ui-react'
+import { Header, Grid, Segment, Image } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'
 import ForcesCoursesCarousel from '../NonPageComponents/ForcesCoursesCarousel'
 import NavBar from '../layouts/Header'

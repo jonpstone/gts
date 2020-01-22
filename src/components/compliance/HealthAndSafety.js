@@ -36,7 +36,7 @@ export class HealthAndSafety extends React.Component {
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
-					Health and Safety Training
+					Health & Safety Training
 				</Header>
 
 				<Container textAlign='center'>

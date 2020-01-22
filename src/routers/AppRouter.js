@@ -21,7 +21,7 @@ export default props =>
       <Route path="/compliance" component={ComplianceRouter} />
       <Route path="/organisation-security" component={OrgSecRouter} />
       <Route path="/policy" component={PolicyRouter} />
-      <Route path="/site-map" component={SiteMap} />
+      <Route path="/sitemap" component={SiteMap} />
 
       {/* 404 Not Found */}
       <Route component={NotFound} />
