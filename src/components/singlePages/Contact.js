@@ -1,12 +1,23 @@
 import React from 'react'
-import { Segment, Container, Label } from 'semantic-ui-react'
+import { Segment, Container, Label, Message } from 'semantic-ui-react'
 import { Form } from 'formsy-semantic-ui-react'
 import Reaptcha from 'reaptcha'
 import * as emailjs from 'emailjs-com'
 import NavBar from '../../components/layouts/Header'
 
 export default class Contact extends React.Component {
-	state = { firstName: '', lastName: '', company: '', address: '', email: '', phone: '', course: '', message: '', verified: false }
+	state = { 
+		firstName: '', 
+		lastName: '', 
+		company: '', 
+		address: '', 
+		email: '', 
+		phone: '', 
+		course: '', 
+		message: '', 
+		verified: false,
+		successMessage: false
+	}
 
 	recaptchaRef = React.createRef();
 
@@ -19,7 +30,7 @@ export default class Contact extends React.Component {
 	onValidSubmit = () => {
 		const { firstName, lastName, company, address, email, phone, course, message, verified } = this.state
 
-		if (verified) {
+		// if (verified) {
 			let templateParams = {
 				from_name: `${firstName} ${lastName}`,
 				course_html: course,
@@ -35,7 +46,11 @@ export default class Contact extends React.Component {
 				templateParams,
 				'user_N2HYJqOA8jsIKmxLnaGqr'
 			)
-		}
+			this.setState({
+				successMessage: true
+			})
+			this.form.reset()
+		// }
 	}
 
 	render() {
@@ -47,6 +62,7 @@ export default class Contact extends React.Component {
 						<Form
 							ref={ ref => this.form = ref }
 							onValidSubmit={ this.onValidSubmit }
+							success
 						>
 							<Form.Group widths="equal">
 								<Form.Input
@@ -135,12 +151,18 @@ export default class Contact extends React.Component {
 								placeholder="Tell us more about you..."
 								onChange={this.handleChange}
 								errorLabel={ <Label color="red" pointing="above" /> }
-								validationErrors={{
-									isDefaultRequiredValue: 'We need to know more about you',
-								}}
+								validationErrors={{	isDefaultRequiredValue: 'We need to know more about you' }}
 							/>
 
-							<Reaptcha sitekey="6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU" onVerify={this.onVerify} /><br/>
+							{/* <Reaptcha sitekey="6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU" onVerify={this.onVerify} /><br/> */}
+
+							{ this.state.successMessage ? (
+								<Message
+									success
+									header='Form Completed'
+									content="Your information has been sent to the GTS team, you'll be hearing from us soon."
+								/>
+							) : null }
 
 							<Form.Checkbox
 								name="terms"
@@ -148,13 +170,11 @@ export default class Contact extends React.Component {
 								onChange={this.handleChange}
 								validations="isTrue"
 								errorLabel={ <Label color="red" pointing="above" /> }
-								validationErrors={{
-									isTrue: 'Please agree to electronic data usage to proceed',
-								}}
+								validationErrors={{	isTrue: 'Please agree to electronic data usage to proceed' }}
 							/>
 
 							<Form.Group>
-								<Form.Button inverted content="Submit" color="blue"/>
+								<Form.Button inverted content="Submit" color="blue" />
 								<Form.Button 
 									inverted 
 									type="button" 
@@ -170,5 +190,3 @@ export default class Contact extends React.Component {
 		);
 	}
 }
-
-// 6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU
