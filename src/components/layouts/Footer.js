@@ -29,22 +29,19 @@ export default props =>
 					</List>
 				</Grid.Column>
 				<Grid.Column width={3}>
-				<Header inverted as='h4' content='Links & Resources' />
+				<Header inverted as='h4' content='Resources' />
 				<List link inverted>
 					<List.Item as='a' href='https://www.hse.gov.uk/' target='_blank' style={{ outline: 'none' }}>
 						Health & Safety Executive
 					</List.Item>
-					<List.Item as='a' href='https://www.mi5.gov.uk/threat-levels' target='_blank' style={{ outline: 'none' }}>
-						UK Threat Level
-					</List.Item>
 					<List.Item as='a' href='https://www.gov.uk/government/publications/first-aid-in-schools' target='_blank' style={{ outline: 'none' }}>
 						First Aid in Schools 
 					</List.Item>
-					<List.Item as='a' href='http://www.sja.org.uk/sja/default.aspx' target='_blank' style={{ outline: 'none' }}>
-						St John Ambulance
+					<List.Item as='a' href='https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/' target='_blank' style={{ outline: 'none' }}>
+						Mental Health Services
 					</List.Item>
-					<List.Item as='a' href='https://www.mind.org.uk/' target='_blank' style={{ outline: 'none' }}>
-						Mind
+					<List.Item as='a' href='https://www.mi5.gov.uk/threat-levels' target='_blank' style={{ outline: 'none' }}>
+						Terrorism Threat Level
 					</List.Item>
 				</List>
 				</Grid.Column>
