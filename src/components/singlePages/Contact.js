@@ -1,34 +1,41 @@
 import React from 'react'
 import { Segment, Container, Label } from 'semantic-ui-react'
-import { Form } from 'formsy-semantic-ui-react';
+import { Form } from 'formsy-semantic-ui-react'
+import Reaptcha from 'reaptcha'
 import * as emailjs from 'emailjs-com'
 import NavBar from '../../components/layouts/Header'
 
 export default class Contact extends React.Component {
-	state = { firstName: '', lastName: '', company: '', address: '', email: '', phone: '', course: '', message: '' }
+	state = { firstName: '', lastName: '', company: '', address: '', email: '', phone: '', course: '', message: '', verified: false }
+
+	recaptchaRef = React.createRef();
 
 	componentDidMount() { window.scrollTo(0, 0) }
 
 	handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
+	onVerify = recaptchaResponse => this.setState({ verified: true })
+
 	onValidSubmit = () => {
-		const { firstName, lastName, company, address, email, phone, course, message } = this.state
-		
-		let templateParams = {
-			from_name: `${firstName} ${lastName}`,
-			course_html: course,
-			company_html: company,
-			address_html: address,
-			email_html: email,
-			phone_html: phone,
-			message_html: message,
+		const { firstName, lastName, company, address, email, phone, course, message, verified } = this.state
+
+		if (verified) {
+			let templateParams = {
+				from_name: `${firstName} ${lastName}`,
+				course_html: course,
+				company_html: company,
+				address_html: address,
+				email_html: email,
+				phone_html: phone,
+				message_html: message,
+			}
+			emailjs.send(
+				'gmail',
+				'template_C6XeWaW9',
+				templateParams,
+				'user_N2HYJqOA8jsIKmxLnaGqr'
+			)
 		}
-		emailjs.send(
-			'gmail',
-			'template_XXXXXXXXXX',
-			templateParams,
-			'user_XXXXXXXXXXXXXXXXXX'
-		)
 	}
 
 	render() {
@@ -133,6 +140,8 @@ export default class Contact extends React.Component {
 								}}
 							/>
 
+							<Reaptcha sitekey="6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU" onVerify={this.onVerify} /><br/>
+
 							<Form.Checkbox
 								name="terms"
 								label="I hereby agree that my data entered in the contact form will be stored electronically, and will be processed and used for the purpose of establishing contact. I am aware that I can revoke my consent at any time."
@@ -146,7 +155,13 @@ export default class Contact extends React.Component {
 
 							<Form.Group>
 								<Form.Button inverted content="Submit" color="blue"/>
-								<Form.Button inverted type="button" color="blue" content="Reset" onClick={ () => this.form.reset() }/>
+								<Form.Button 
+									inverted 
+									type="button" 
+									color="blue" 
+									content="Reset" 
+									onClick={ () => this.form.reset() }
+								/>
 							</Form.Group>
 						</Form>
 					</Container>
@@ -155,3 +170,5 @@ export default class Contact extends React.Component {
 		);
 	}
 }
+
+// 6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU
