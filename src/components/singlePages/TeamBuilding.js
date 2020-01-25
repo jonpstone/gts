@@ -19,9 +19,9 @@ export default class TeamBuilding extends React.Component {
 								WOODLAND SURVIVAL COURSE
 							</Header>
 						</Grid.Row>
-						<Grid.Row>
+						<Grid.Row id='teamBuildingBullets'>
 							<Grid.Column
-								id='teamBuildingBullets'
+								// id=''
 								floated='left' 
 								width={8} 
 								style={{ 
@@ -46,7 +46,7 @@ export default class TeamBuilding extends React.Component {
 									'Problem Solving'
 								]} />
 							</Grid.Column>
-							<Grid.Column id='paraSurvival' floated='right' width={8} style={{ padding: '2.65em 4em' }}>
+							<Grid.Column floated='right' width={8} style={{ padding: '2.65em 4em' }}>
 								<p style={{ fontSize: '1.33em' }}>
 									Our new Survival Skills and Command Tasks, run by our survival expert Fred 
 									Boucher will bring your teams together to problem solve outside of the 
@@ -69,9 +69,8 @@ export default class TeamBuilding extends React.Component {
 								CORPORATE TEAM BUILDING 
 							</Header>
 						</Grid.Row>
-						<Grid.Row>
+						<Grid.Row id='corporateTeamBuildingBullets'>
 							<Grid.Column
-								id='faq' 
 								floated='right' 
 								width={8} 
 								style={{ padding: '3em 4em' }}
@@ -89,7 +88,6 @@ export default class TeamBuilding extends React.Component {
 								</p>
 							</Grid.Column>
 							<Grid.Column
-								id='corporateTeamBuildingBullets'
 								floated='left' 
 								width={8} 
 								style={{
@@ -122,11 +120,11 @@ export default class TeamBuilding extends React.Component {
 								TEAM BUILDING WALKS
 							</Header>
 						</Grid.Row>
-						<Grid.Row style={{ padding: '0', margin: '0' }}>
+						<Grid.Row id='walksRow' style={{ padding: '0', margin: '0', backgroundColor: '#4d423a' }}>
 							<Grid.Column
 								id='pastEventsText' 
 								floated='right' 
-								width={8} 
+								width={8}
 								style={{ padding: '2em 4em' }}
 							>
 								<p style={{ fontSize: '1.33em' }}>
@@ -155,7 +153,7 @@ export default class TeamBuilding extends React.Component {
 							>
 								<p style={{ fontSize: '1.33em' }}>
 									<b>Experience Hadrian’s Wall &nbsp; | &nbsp; Hadrian’s Gift &nbsp; | &nbsp; 5 Days</b><br/>
-									This adventure is far less demanding on the feet than Empires End Walk, but 
+									This adventure is far less demanding on the feet than the Empires End Walk, but 
 									still a life experience never to be forgotten. This 5-day event will see you and
 									your staff mini bused around the spectacular Roman museums along the length of 
 									the wall, while enjoying the local hospitality from tea rooms to traditional 

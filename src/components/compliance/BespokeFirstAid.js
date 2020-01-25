@@ -15,11 +15,12 @@ export class BespokeFirstAid extends React.Component {
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Bespoke First Aid
 				</Header>
-		
+
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Tailored Syllabus
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Tailored Syllabus
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							Golbourn Training Solutions will develop a First Aid Course to meet your 
@@ -54,8 +55,8 @@ export class BespokeFirstAid extends React.Component {
 				</Grid>
 		
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='juniorSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[

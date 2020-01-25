@@ -56,10 +56,10 @@ export class FirstAidAtWork extends React.Component {
 					</Button>
 				</Container>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Level 3 First Aid at Work &nbsp; | &nbsp; 3 days
+				</Divider>
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 3 First Aid at Work &nbsp; | &nbsp; 3 days
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							This comprehensive three-day course covers a wide range of first aid 
@@ -71,8 +71,10 @@ export class FirstAidAtWork extends React.Component {
 							First Aid, meeting the statutory requirements of the Health and Safety 
 							(First Aid) Regulations 1981.
 						</Grid.Column>
-					</Grid.Row>
-					<Divider horizontal style={{ margin: '5em 0' }}>Course Duration</Divider>
+					</Grid.Row>						
+				</Grid>
+				<Divider horizontal style={{ margin: '5em 0' }}>Course Duration</Divider>
+				<Grid>
 					<Grid.Row>
 						This course runs over 18 hours and is spread over at least 3 days. Ideally, the 
 						course should be run over three consecutive days, but we have the flexibility to 
@@ -83,8 +85,8 @@ export class FirstAidAtWork extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='faawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[
@@ -119,6 +121,7 @@ export class FirstAidAtWork extends React.Component {
 						</Grid.Row>
 					</Grid>
 				</Fade>
+				
 				<Fade bottom>
 					<Grid divided stackable columns='equal'>
 						<Grid.Row style={{ margin: '5em 0' }}>
@@ -154,13 +157,11 @@ export class FirstAidAtWork extends React.Component {
 							<Divider horizontal style={{ margin: '5em 0' }}>
 								Level 3 Emergency First Aid at Work &nbsp; | &nbsp; 1 day
 							</Divider>
-							<Grid.Column style={{ padding: '0 2em 0 0' }}>
-								The Emergency First Aid at Work course will enable your company to meet its 
-								regulatory requirements, if after completing a First Aid risk assessment your 
-								organisation is classed as a low risk working environment. Golbourn Training 
-								Solutions can provide First Aid risk assessment. All learners will have the 
-								skills and knowledge to provide basic, lifesaving First Aid in the workplace.
-							</Grid.Column>
+							The Emergency First Aid at Work course will enable your company to meet its 
+							regulatory requirements, if after completing a First Aid risk assessment your 
+							organisation is classed as a low risk working environment. Golbourn Training 
+							Solutions can provide First Aid risk assessment. All learners will have the 
+							skills and knowledge to provide basic, lifesaving First Aid in the workplace.
 						</Grid.Row>
 					</Fade>
 					<Fade bottom>
@@ -174,8 +175,8 @@ export class FirstAidAtWork extends React.Component {
 				</Grid>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[
@@ -235,11 +236,12 @@ export class FirstAidAtWork extends React.Component {
 					</Header>
 				</Fade>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Requalification &nbsp; | &nbsp; 2 days
+				</Divider>
+
 				<Fade bottom>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Requalification &nbsp; | &nbsp; 2 days
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								This two day First Aid at Work course is designed for those who currently hold a 
@@ -254,8 +256,8 @@ export class FirstAidAtWork extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Rules for Attendance</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Rules for Attendance</Divider>
 						<Grid.Row id='faawRequal' style={{ color: 'white', padding: '5em' }}>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								A First Aider can renew their First Aid at Work qualification by attending a two 
@@ -272,8 +274,8 @@ export class FirstAidAtWork extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Special Considerations</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Special Considerations</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								A signed letter from the employer to the provider of the training stating the reasons 
@@ -290,9 +292,9 @@ export class FirstAidAtWork extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '3em 0' }}>Important</Divider>
 					<Grid stackable columns='equal'>
 						<Grid.Row style={{ marginBottom: '4em' }}>
-						<Divider horizontal style={{ margin: '3em 0' }}>Important</Divider>
 							<Grid.Column>
 								If the First Aider has lapsed beyond 3 months, then they must attend a full 3-day First Aid at Work course.<br/><br/>
 

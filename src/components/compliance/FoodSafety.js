@@ -41,10 +41,11 @@ export default class BlsAed extends React.Component {
 					</Button>
 				</Container>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Level 2 Food Safety in Catering &nbsp; | &nbsp; 1 day
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Food Safety in Catering &nbsp; | &nbsp; 1 day
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							<p>
@@ -68,8 +69,8 @@ export default class BlsAed extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='foodSafetyOneSyllabus' 
 							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
@@ -89,10 +90,10 @@ export default class BlsAed extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '7em 0 5em 0' }}>
+						Level 2 Good Nutrition &nbsp; | &nbsp; 4 hours
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '7em 0 5em 0' }}>
-							Level 2 Good Nutrition &nbsp; | &nbsp; 4 hours
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								<p>
@@ -123,8 +124,8 @@ export default class BlsAed extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='foodSafetyTwoSyllabus' 
 							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
@@ -152,8 +153,8 @@ export default class BlsAed extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Certification</Divider>
 					<Grid>
-						<Divider horizontal style={{ margin: '5em 0' }}>Certification</Divider>
 						<Grid.Row>
 							This is achieved by on-going theoretical teaching by the instructor, culminating with a 
 							written test. This qualification does not expire, but refresher training and keeping up to 

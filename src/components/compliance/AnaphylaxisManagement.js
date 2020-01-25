@@ -16,10 +16,11 @@ export class ActivityFirstAid extends React.Component {
 				Anaphylaxis Management
 			</Header>
 	
+			<Divider horizontal style={{ margin: '5em 0' }}>
+				Anaphylaxis Management &nbsp; | &nbsp; 1 day
+			</Divider>
+
 			<Grid divided stackable columns='equal'>
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Anaphylaxis Management &nbsp; | &nbsp; 1 day
-				</Divider>
 				<Grid.Row>
 					<Grid.Column style={{ padding: '0 2em 0 0' }}>
 						<p>
@@ -48,8 +49,8 @@ export class ActivityFirstAid extends React.Component {
 			</Grid>
 			
 			<Fade bottom>
+				<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 				<Grid stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid.Row id='anaphylaxisSyllabus' style={{ color: 'white', padding: '2em 0 2em 2em' }}>
 						<Grid.Column>
 							<List bulleted>

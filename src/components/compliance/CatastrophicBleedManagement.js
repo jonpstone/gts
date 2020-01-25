@@ -15,11 +15,12 @@ export class CatastrophicBleedManagement extends React.Component {
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Catastrophic Bleed Management
 				</Header>
+
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Catastrophic Bleed Management  &nbsp; | &nbsp; 3 hours
+				</Divider>
 		
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Catastrophic Bleed Management  &nbsp; | &nbsp; 3 hours
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							Our Golbourn Training Solutions Catastrophic Bleed Management Course is ideal for 
@@ -39,8 +40,8 @@ export class CatastrophicBleedManagement extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Course Content</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Course Content</Divider>
 						<Grid.Row id='bleedsSyllabus' style={{ color: 'white', padding: '5em 0 5em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[

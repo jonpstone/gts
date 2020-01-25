@@ -308,7 +308,8 @@ html {
 		url('/images/lockdownFence.jpg');
 }
 #lockdownOptionOne {
-	height: 18em;
+	min-height: 18em;
+	max-height: 100%;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -317,7 +318,8 @@ html {
 		url('/images/policeTape.jpg');
 }
 #lockdownOptionTwo {
-	height: 18em;
+	min-height: 18em;
+	max-height: 100%;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -326,7 +328,8 @@ html {
 		url('/images/emergencyResponseVehicle.jpg');
 }
 #lockdownOptionThree {
-	height: 20em;
+	min-height: 20em;
+	max-height: 100%;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -335,7 +338,8 @@ html {
 		url('/images/fireLondon.jpg');
 }
 #lockdownOptionFour {
-	height: 18em;
+	min-height: 18em;
+	max-height: 100%;
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to right,
@@ -347,7 +351,8 @@ html {
 	margin: .5em;
 }
 #secAudit {
-	height: 35em;
+	min-height: 40em;
+	max-height: 100%;
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(to right,
@@ -364,7 +369,6 @@ html {
 		url('/images/terrorist.jpg');
 }
 #SICM2 {
-	height: 21.5em;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to right,
@@ -373,7 +377,6 @@ html {
 		url('/images/SICM4.jpg');
 }
 #SICM3 {
-	height: 21.5em;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to left,
@@ -382,7 +385,6 @@ html {
 		url('/images/SICM3.jpg');
 }
 #SICM4 {
-	height: 30em;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to right,
@@ -391,7 +393,6 @@ html {
 		url('/images/SICM2.jpg');
 }
 #SICM5 {
-	height: 17.5em;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -400,7 +401,6 @@ html {
 		url('/images/SICM6.jpg');
 }
 #SICM6 {
-	height: 25.4em;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to left,
@@ -409,7 +409,6 @@ html {
 		url('/images/SICM8.jpg');
 }
 #SICM7 {
-	height: 18.5em;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -436,6 +435,7 @@ html {
 		url('/images/HadrianWall.jpg');
 }
 #teamBuildingBullets {
+	color: white;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to right,
@@ -443,44 +443,23 @@ html {
 		rgba(#262e36, 1)),
 		url('/images/woodlandSurvival.jpg');
 }
-#paraSurvival {
-	color: white;
-	height: 26.6em;
-	background-size: cover;
-	background-color: #262e36;
-}
-#corporateTeamBuilding {
-	background-size: cover;
-	background-color: #bbd0c4;
-}
 #corporateTeamBuildingBullets {
-	height: 22.35em;
+	color: white;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to right,
 		rgba(#4b4705, 1),
-		rgba(#082507, 0.5)),
+		rgba(#082507, 0.8)),
 		url('/images/woodlandSurvivalTwo.jpg');
 }
-#faq {
-	color: white;
-	background-size: cover;
-	background-color: #4b4705;
-}
-#pastEventsText {
-	height: 39em;
+#walksRow {
 	color: white;
 	background-size: cover;
 	background-position: bottom;
 	background-image: linear-gradient(to left,
 		rgba(#4d423a, 1),
-		rgba(#3a4d4c, 0.8)),
+		rgba(#3a4d4c, 0.9)),
 		url('/images/edgeHill.jpg');
-}
-#pastEvents {
-	color: white;
-	background-size: cover;
-	background-color: #4d423a;
 }
 #aboutHero {
 	height: 15em;

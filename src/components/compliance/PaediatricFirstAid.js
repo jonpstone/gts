@@ -41,10 +41,11 @@ export class PaediatricFirstAid extends React.Component {
 					</Button>
 				</Container>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Paediatric First Aid &nbsp; | &nbsp; 2 days
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Paediatric First Aid &nbsp; | &nbsp; 2 days
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							This course has been developed for those who are working with children and 
@@ -72,8 +73,8 @@ export class PaediatricFirstAid extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='paediatricSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[
@@ -135,12 +136,13 @@ export class PaediatricFirstAid extends React.Component {
 					</Header>
 				</Fade>
 				
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
 					<Fade bottom>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day
-							</Divider>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								The Emergency First Aid at Work course will enable your company to meet its 
 								regulatory requirements, if after completing a First Aid risk assessment your 
@@ -161,8 +163,8 @@ export class PaediatricFirstAid extends React.Component {
 				</Grid>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='emergencyPaediatricSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[

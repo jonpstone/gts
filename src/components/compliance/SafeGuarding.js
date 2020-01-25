@@ -23,7 +23,11 @@ export default class SafeGuarding extends React.Component {
 						persons from abuse or neglect we need to learn how to identify vulnerable individuals and take 
 						necessary steps to stop abuse and neglect.
 					</Grid.Row>
-					<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
+				</Grid>
+
+				<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
+
+				<Grid divided stackable columns='equal'>
 					<Grid.Row style={{ marginBottom: '3em' }}>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							Everyone has the right to be safe and live without the fear of abuse, neglect or 
@@ -42,8 +46,8 @@ export default class SafeGuarding extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='safeGuardingSyllabus' 
 							style={{ color: 'white', padding: '4em 1em 4em 6em', fontSize: '1.3em' }}

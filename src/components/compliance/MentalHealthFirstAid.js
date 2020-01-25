@@ -56,10 +56,11 @@ export default class MentalHealthFirstAid extends React.Component {
 					</Button>
 				</Container>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Level 1 Award in Awareness of First Aid for Mental Health &nbsp; | &nbsp; 4 hours
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 1 Award in Awareness of First Aid for Mental Health &nbsp; | &nbsp; 4 hours
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							Anyone can be affected by a mental health condition either themselves or a family member, 
@@ -75,8 +76,8 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='mentalHealthOneSyllabus' style={{ color: 'white', padding: '2em 0 2em 7em' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
@@ -115,10 +116,10 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								This course is suitable for everyone but has been designed to help employers to provide	a 
@@ -131,7 +132,13 @@ export default class MentalHealthFirstAid extends React.Component {
 								point of contact within the workplace to help and support those with a suspected mental 
 								health condition.
 							</Grid.Column>
-							<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
+						</Grid.Row>
+					</Grid>
+						
+					<Divider horizontal style={{ margin: '5em 0' }}>❖</Divider>
+
+					<Grid divided stackable columns='equal'>
+						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								Building on the Level 1 Award in Awareness of First Aid for Mental Health this course 
 								introduces the First Aid for Mental Health Action Plan which allows learners to provide 
@@ -149,8 +156,8 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='mentalHealthTwoSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
@@ -192,10 +199,10 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								This course builds on the Level 2 Award in First Aid for Mental Health and covers a wider 
@@ -213,8 +220,8 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='mentalHealthThreeSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[

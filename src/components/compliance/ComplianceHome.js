@@ -43,9 +43,13 @@ export default class ComplianceHome extends React.Component {
                             Wikipedia
                         </Label>
                     </Grid.Row>
-                    <Divider horizontal style={{ margin: '3.5em 0' }}>
-                        Is your organisation HSE Compliant?
-                    </Divider>
+                </Grid>                    
+
+                <Divider horizontal style={{ margin: '3.5em 0' }}>
+                    Is your organisation HSE Compliant?
+                </Divider>
+                    
+                <Grid divided stackable columns='equal'>
                     <Grid.Row>
                         <Grid.Column style={{ padding: '0 2em 0 0' }}>
                             If you have over 5 employees you must have a written Health & Safety policy, safe system of 

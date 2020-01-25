@@ -79,10 +79,10 @@ export class HealthAndSafety extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								This is an excellent introduction to health and safety in the workplace and will benefit any
@@ -99,8 +99,8 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='healthAndSafetyOneSyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
 							<Grid.Column>
 								<List bulleted items={[
@@ -116,10 +116,10 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 2 Health & Safety in the workplace &nbsp; | &nbsp; 1 Day
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 2 Health & Safety in the workplace &nbsp; | &nbsp; 1 Day
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								This is an excellent introduction to health & safety in the workplace and will benefit 
@@ -136,8 +136,8 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='healthAndSafetyTwoSyllabus' 
 							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
@@ -163,10 +163,10 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 2 Manual Handling Course (Principles and Practice) &nbsp; | &nbsp; 1 Day
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 2 Manual Handling Course (Principles and Practice) &nbsp; | &nbsp; 1 Day
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								<p>
@@ -201,8 +201,8 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='manualHandlingSyllabus' 
 							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
@@ -228,10 +228,10 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Level 2 Fire Safety &nbsp; | &nbsp; 2 days
+					</Divider>
 					<Grid divided stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>
-							Level 2 Fire Safety &nbsp; | &nbsp; 2 days
-						</Divider>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								You will, no doubt, be well aware of the potentially devastating effects of fires in the
@@ -253,8 +253,8 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row 
 							id='fireSyllabus' 
 							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
@@ -273,8 +273,8 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Grid divided stackable columns='equal'>
 					<Divider horizontal style={{ margin: '5em 0' }}>Note</Divider>
+					<Grid divided stackable columns='equal'>
 						<Container textAlign='center' style={{ marginBottom: '2em' }}>
 							<strong>Golbourn training solutions also offer a Bespoke in house Fire Safety Awareness course.</strong>
 						</Container>

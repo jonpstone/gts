@@ -28,17 +28,17 @@ export default class LockDownConsultancy extends React.Component {
 							It IS about PREPARATION . . . <br/><br/>
 							. . . and <strong>PRESERVING LIFE</strong>
 						</Grid.Column>
-						<Grid.Column id='terroristSICM' style={{ paddingLeft: '27%'}}></Grid.Column>
+						<Grid.Column id='terroristSICM' style={{ paddingLeft: '27%', height: '100%' }}></Grid.Column>
 					</Grid.Row>
 				</Grid>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Why do I need this course, that’s what the Security and Emergency Services are for?
+					</Divider>
 					<Grid stackable columns='equal'>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								Why do I need this course, that’s what the Security and Emergency Services are for?
-							</Divider>
-							<Grid.Column id='SICM2'></Grid.Column>
+							<Grid.Column id='SICM2' style={{ height: '100%' }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#acc2b1', color: 'white' }}>
 								<p>
 									This country’s security and emergency services are the best in the world, and as a 
@@ -79,18 +79,18 @@ export default class LockDownConsultancy extends React.Component {
 									treatment can survive even major trauma injuries. 
 								</p>								
 							</Grid.Column>
-							<Grid.Column id='SICM3'></Grid.Column>
+							<Grid.Column id='SICM3' style={{ height: '100%' }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						COURSE INTRODUCTION
+					</Divider>
 					<Grid padded stackable columns='equal'>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								COURSE INTRODUCTION
-							</Divider>
-							<Grid.Column id='SICM4'></Grid.Column>
+							<Grid.Column id='SICM4' style={{ height: '100%' }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#92939d', color: 'white' }}>
 							<p>
 								This three day course has been developed as a guide to increase the skill set of key 
@@ -132,18 +132,18 @@ export default class LockDownConsultancy extends React.Component {
 								caught up in this situation will be any	casualties best chance of survival.
 							</p>
 							</Grid.Column>
-							<Grid.Column id='SICM5'></Grid.Column>
+							<Grid.Column id='SICM5' style={{ height: '100%' }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						IMPORTANT SICM COURSE INFORMATION
+					</Divider>
 					<Grid stackable columns='equal' style={{ marginBottom: '2em' }}>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								IMPORTANT SICM COURSE INFORMATION
-							</Divider>
-							<Grid.Column id='SICM6'></Grid.Column>
+							<Grid.Column id='SICM6' style={{ height: '100%' }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#c6b49a', color: 'white' }}>
 							<h4>COPYRIGHT</h4>
 							<p>
@@ -189,7 +189,7 @@ export default class LockDownConsultancy extends React.Component {
 									known.
 								</p>
 							</Grid.Column>
-							<Grid.Column id='SICM7'></Grid.Column>
+							<Grid.Column id='SICM7' style={{ height: '100%' }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>

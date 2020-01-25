@@ -41,10 +41,11 @@ export default class BlsAed extends React.Component {
 					</Button>
 				</Container>
 
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Basic Life Support with AED &nbsp; | &nbsp; 4 hours
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Basic Life Support with AED &nbsp; | &nbsp; 4 hours
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							<p>
@@ -72,8 +73,8 @@ export default class BlsAed extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='blsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[
@@ -96,6 +97,7 @@ export default class BlsAed extends React.Component {
 						</Grid.Row>
 					</Grid>
 				</Fade>
+
 				<Fade bottom>
 					<Grid divided stackable columns='equal'>
 						<Grid.Row style={{ margin: '5em 0' }}>
@@ -150,8 +152,8 @@ export default class BlsAed extends React.Component {
 				</Grid>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='cprBlsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[

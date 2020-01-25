@@ -15,14 +15,15 @@ export default class LockDownConsultancy extends React.Component {
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
 					Lockdown Training and Consultancy
 				</Header>
-		
+
+				<Divider horizontal style={{ margin: '5em 0' }}>Ask yourself these simple questions</Divider>
+
 				<Grid divided stackable columns='equal' style={{ marginTop: '3em' }}>
 					<Grid.Row>
 						In the current security climate across the United Kingdom and Europe, it is vital that identified
 						potential targets are fully prepared to react effectively and instantly. Having a Lockdown 
 						procedure in place is essential, however your Lockdown is only as good as the people doing it.
 					</Grid.Row>
-					<Divider horizontal style={{ margin: '5em 0' }}>Ask yourself these simple questions</Divider>
 					<Grid.Row 
 						id='lockdownQuestions' 
 						textAlign='center'
@@ -60,11 +61,11 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '0 0 5em' }}>
+						Option 1 &nbsp; | &nbsp; Basic Package
+					</Divider>
 					<Grid stackable columns='equal'>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '0 0 5em' }}>
-								Option 1 &nbsp; | &nbsp; Basic Package
-							</Divider>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#c8dbe3', color: '#4f4f4f' }}>
 								One of our instructors will meet with the Senior Leadership or Management Team to gain 
 								knowledge of current procedures and understand the layout.  They will then comprise a 
@@ -76,11 +77,11 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Option 2 &nbsp; | &nbsp; Intermediate Package
+					</Divider>
 					<Grid stackable columns='equal'>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								Option 2 &nbsp; | &nbsp; Intermediate Package
-							</Divider>
 							<Grid.Column id='lockdownOptionTwo'></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#acc2b1', color: 'white' }}>
 								One of our instructors will meet with the Senior Leadership or Management Team to gain 
@@ -94,11 +95,11 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Option 3 &nbsp; | &nbsp; Intermediate Plus Package
+					</Divider>
 					<Grid padded stackable columns='equal'>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								Option 3 &nbsp; | &nbsp; Intermediate Plus Package
-							</Divider>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed', color: '#4f4f4f' }}>
 								One of our instructors will meet with the Senior Leadership or Management Team to gain 
 								knowledge of current procedures and understand the layout. They will then design the bespoke
@@ -115,11 +116,11 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>
+						Option 4 &nbsp; | &nbsp; Advanced Package - Serious Incident Control Measures
+					</Divider>
 					<Grid stackable columns='equal' style={{ marginBottom: '2em' }}>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								Option 4 &nbsp; | &nbsp; Advanced Package - Serious Incident Control Measures
-							</Divider>
 							<Grid.Column id='lockdownOptionFour'></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#e0c8bf', color: 'white' }}>
 								The S.I.C.M Package can be suitable as a stand alone management system or as an integrated 

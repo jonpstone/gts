@@ -16,10 +16,11 @@ export default class ActivityFirstAid extends React.Component {
 					Activity First Aid
 				</Header>
 		
+				<Divider horizontal style={{ margin: '5em 0' }}>
+					Level 3 Activity First Aid &nbsp; | &nbsp; 2 days
+				</Divider>
+
 				<Grid divided stackable columns='equal'>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 3 Activity First Aid &nbsp; | &nbsp; 2 days
-					</Divider>
 					<Grid.Row>
 						<Grid.Column style={{ padding: '0 2em 0 0' }}>
 							This Level 3 qualification is made up of two units including First Aid Essentials. 
@@ -39,8 +40,8 @@ export default class ActivityFirstAid extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
+					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 						<Grid.Row id='activitySyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
 							<Grid.Column>
 								<List bulleted items={[
