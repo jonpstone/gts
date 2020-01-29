@@ -57,7 +57,7 @@ export default class Contact extends React.Component {
 		return(
 			<>
 				<NavBar path={this.props.location.pathname}/>
-                <Segment style={{ padding: '8em', border: 'none' }} vertical>
+                <Segment style={{ padding: '8em 1em', border: 'none' }} vertical>
 					<Container text>
 						<Form
 							ref={ ref => this.form = ref }
@@ -154,7 +154,7 @@ export default class Contact extends React.Component {
 								validationErrors={{	isDefaultRequiredValue: 'We need to know more about you' }}
 							/>
 
-							{/* <Reaptcha sitekey="6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU" onVerify={this.onVerify} /><br/> */}
+							<Reaptcha sitekey="6LcqANIUAAAAAFdG00rgFaAFW9cd3euOBnNe9owU" onVerify={this.onVerify} /><br/>
 
 							{ this.state.successMessage ? (
 								<Message

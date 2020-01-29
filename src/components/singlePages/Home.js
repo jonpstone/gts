@@ -34,7 +34,7 @@ const HomepageHeading = ({ mobile }) =>
 				marginBottom: mobile ? '1em' : '2em',
 			}}
 		>
-			<Grid.Row>
+			<Grid.Row style={{ marginBottom: mobile ? '1.5em' : null }}>
 				<Image 
 					src='/images/GTS1.png' 
 					size='small'
@@ -50,10 +50,11 @@ const HomepageHeading = ({ mobile }) =>
 					style={{
 						fontSize: mobile ? '2em' : '4em',
 						fontWeight: 'bold',
+						marginBottom: mobile ? '1em' : null,
 					}}
 				/>
 			</Grid.Row>
-			<Grid.Row>				
+			<Grid.Row style={{ marginBottom: mobile ? '1em' : null}}>				
 				<Grid.Column>
 					<Header as='h2' inverted style={{color: '#FFC300'}}>
 						PROFESSIONAL
@@ -71,18 +72,28 @@ const HomepageHeading = ({ mobile }) =>
 				</Grid.Column>
 			</Grid.Row>
 			<Grid.Row style={{ marginTop: '2em' }}>
-				<Button inverted as='a' href='#finish' size='huge' className='scrollBottom' style={{ marginRight: '2.5em' }}>
-					&nbsp; Discover &nbsp; &nbsp;
-					<Icon name='angle down'/>
-				</Button>
-				<Button inverted as={Link} to='/about' size='huge' style={{ marginRight: '2.5em' }}>
-					&nbsp; About &nbsp;
-					<Icon name='angle right'/>
-				</Button>
-				<Button inverted as={Link} to='/contact' size='huge'>
-					&nbsp; Contact &nbsp;
-					<Icon name='angle right'/>
-				</Button>
+				<Grid.Column>
+					<Button inverted as='a' href='#finish' size='huge' className='scrollBottom'>
+						&nbsp; Discover &nbsp; &nbsp;
+						<Icon name='angle down'/>
+					</Button>
+				</Grid.Column>
+				<Grid.Column>
+					<Button inverted as={Link} to='/about' size='huge'>
+						&nbsp; About &nbsp;
+						<Icon name='angle right'/>
+					</Button>
+				</Grid.Column>
+				<Grid.Column>
+					{
+						mobile ? null : (
+							<Button inverted as={Link} to='/contact' size='huge'>
+								&nbsp; Contact &nbsp;
+								<Icon name='angle right'/>
+							</Button>
+						)
+					}
+				</Grid.Column>
 			</Grid.Row>
 		</Grid>
 	</Container>
@@ -193,42 +204,41 @@ export class MobileContainer extends React.Component {
 					vertical
 					visible={sidebarOpened}
 				>
-				<Menu.Item as='a' active>
-				Home
-				</Menu.Item>
-				<Menu.Item as='a'>Work</Menu.Item>
-				<Menu.Item as='a'>Company</Menu.Item>
-				<Menu.Item as='a'>Careers</Menu.Item>
-				<Menu.Item as='a'>Log in</Menu.Item>
-				<Menu.Item as='a'>Sign Up</Menu.Item>
-			</Sidebar>
+					<Menu.Item as={Link} to="/" active>Home</Menu.Item>
+					<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+					<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+					<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+					<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
+					<Menu.Item as={Link} to="/contact" className='menuItems'>Contact</Menu.Item>
+				</Sidebar>
 
-			<Sidebar.Pusher dimmed={sidebarOpened}>
-				<Segment
-				inverted
-				textAlign='center'
-				style={{ minHeight: 350, padding: '1em 0em' }}
-				vertical
-				>
-				<Container>
-					<Menu inverted pointing secondary size='large'>
-					<Menu.Item onClick={this.handleToggle}>
-						<Icon name='sidebar' />
-					</Menu.Item>
-					<Menu.Item position='right'>
-						<Button as='a' inverted>
-						Log in
-						</Button>
-						<Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-						Sign Up
-						</Button>
-					</Menu.Item>
-					</Menu>
-				</Container>
-				<HomepageHeading mobile />
-				</Segment>
-				{children}
-			</Sidebar.Pusher>
+				<Sidebar.Pusher dimmed={sidebarOpened}>
+					<Segment
+						id='mobileHeader'
+						inverted
+						textAlign='center'
+						style={{ minHeight: 350, padding: '1em 0em' }}
+						vertical
+					>
+						<Container>
+							<Menu inverted borderless secondary size='large'>
+								<Menu.Item onClick={this.handleToggle}>
+									<Icon name='sidebar' size='large' />
+								</Menu.Item>
+								<Menu.Item position='right'>
+									<Button as='a' href='tel:07904014772' inverted>
+										Call
+									</Button>
+									<Button as={Link} to='/contact' inverted style={{ marginLeft: '0.5em' }}>
+										Email
+									</Button>
+								</Menu.Item>
+							</Menu>
+						</Container>
+						<HomepageHeading mobile />
+					</Segment>
+					{children}
+				</Sidebar.Pusher>
 			</Responsive>
 		)
 	}
@@ -244,7 +254,7 @@ const HomepageLayout = () =>
 	<ResponsiveContainer>
 		<div id='finish'></div>
 		<Fade bottom>
-			<Segment style={{ padding: '6em' }} vertical>
+			<Segment style={{ padding: '6em 1em' }} vertical>
 				<Grid stackable>
 					<Grid.Row>
 						<Grid.Column>
@@ -281,7 +291,7 @@ const HomepageLayout = () =>
 			</Segment>
 		</Fade>
 		<Fade bottom>
-			<Segment style={{ padding: '8em' }} vertical>
+			<Segment style={{ padding: '8em 1em' }} vertical>
 				<Grid divided container stackable verticalAlign='top'>
 					<Grid.Row>
 						<Grid.Column 
@@ -330,13 +340,13 @@ const HomepageLayout = () =>
 			<Segment style={{ padding: '0' }} vertical borderless>
 				<Grid stackable columns='equal'>
 					<Grid.Row style={{ margin: '0', padding: '0' }}>
-						<Grid.Column id='comThree' style={{ padding: '5em 10em 5em 12em' }}>
+						<Grid.Column id='comThree' style={{ padding: '5em' }}>
 							<Header inverted as='h3' style={{ fontSize: '2em' }}>
 								Upcoming Public Courses
 							</Header>
 							<CoursesCarousel />
 						</Grid.Column>
-						<Grid.Column id='comFour' style={{ padding: '5em 10em 5em 15em' }}>
+						<Grid.Column id='comFour' style={{ padding: '5em' }}>
 							<Header inverted as='h3' style={{ fontSize: '2em' }}>
 								Supporting HM Forces and Veterans
 							</Header>
@@ -346,7 +356,7 @@ const HomepageLayout = () =>
 								throughout the year and multiple locations for both service personnel and their 
 								direct families.
 							</p><br/>
-							<Button inverted as={Link} to="/forces-covenant" size='huge'>
+							<Button inverted as={Link} to="/forces-covenant" size='huge' style={{ marginBottom: '1em' }}>
 								Forces Support
 								<Icon name='angle right'/>
 							</Button>

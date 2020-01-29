@@ -1,0 +1,45 @@
+#forcesHero {
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: linear-gradient(to right bottom,
+		rgba(#1c360b, 0.7),
+		rgba(#262e36, 0.7)),
+		url('/images/British_troops_2.jpg');
+}
+#teamBuildingHero {
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/HadrianWall.jpg');
+}
+#teamBuildingBullets {
+	color: white;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(#1c360b, 0.7),
+		rgba(#262e36, 1)),
+		url('/images/woodlandSurvival.jpg');
+}
+#corporateTeamBuildingBullets {
+	color: white;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to right,
+		rgba(#4b4705, 1),
+		rgba(#082507, 0.8)),
+		url('/images/woodlandSurvivalTwo.jpg');
+}
+#walksRow {
+	color: white;
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to left,
+		rgba(#4d423a, 1),
+		rgba(#3a4d4c, 0.9)),
+		url('/images/edgeHill.jpg');
+}

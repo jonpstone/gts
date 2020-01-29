@@ -1,0 +1,16 @@
+#paediatricSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(131, 122, 45), 0.8),
+		rgba(rgb(99, 4, 56), 0.8)),
+		url('/images/paediatricFirstAid.jpg');
+}
+#emergencyPaediatricSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left,
+		rgba(rgb(41, 109, 77), 0.8),
+		rgba(rgb(32, 30, 153), 0.8)),
+		url('/images/emergencyPaediatricFirstAid.jpg');
+}

@@ -1,0 +1,58 @@
+#orgSecHero {
+	height: 15em;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.7),
+		rgba(rgb(24, 23, 70), 0.7)),
+		url('/images/securityGuard.jpg');
+}
+#orgSecOne {
+	height: 30em;
+	color: white;
+	padding-top: 70%;
+	text-align: center;
+	margin-bottom: 2em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/cctvCamera.jpg');
+}
+#orgSecTwo {
+	height: 30em;
+	color: white;
+	padding-top: 65%;
+	text-align: center;
+	margin-bottom: 2em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/lockdownRooms.jpg');
+}
+#orgSecThree {
+	height: 30em;
+	color: white;
+	padding-top: 65%;
+	text-align: center;
+	margin-bottom: 2em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/seriousIncidentTwo.jpg');
+}
+#secAudit {
+	min-height: 40em;
+	max-height: 100%;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right,
+		rgba(rgb(114, 20, 20), 0.5),
+		rgba(rgb(24, 23, 70), 0.5)),
+		url('/images/internetSecurity.jpg');
+}

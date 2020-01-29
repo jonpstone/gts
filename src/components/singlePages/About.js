@@ -11,7 +11,7 @@ export default class About extends React.Component {
         return (
             <>
                 <NavBar path={this.props.location.pathname}/>
-                <Segment style={{ padding: '8em', border: 'none' }} vertical>
+                <Segment style={{ padding: '8em 1em', border: 'none' }} vertical>
                     <Grid divided container stackable verticalAlign='top'>
                         <Grid.Row>
                             <Grid.Column 
@@ -54,41 +54,32 @@ export default class About extends React.Component {
                     </Grid>
                 </Segment>
                 <Fade bottom>
-					<Grid borderless stackable verticalAlign='top'>
-						<Grid.Row>
-                            <Grid.Column id='aboutTeam' width={8} style={{ padding: '2.65em' }}>
-								<p style={{ fontSize: '1.33em', paddingLeft: '18.6em' }}>
-                                    <b>Steven Golbourn</b><br/>
-                                    <b>Managing Director</b><br/>
-                                    <b>Office:</b> <a href='tel:01926825682'>01926 825682</a><br/>
-                                    <b>Mobile:</b> <a href='tel:07904014772'>07904 014772</a><br/>
-                                    <b>Email:</b> <a href="mailto:steve@golbourntrainingsolutions.co.uk">steve@golbourntrainingsolutions.co.uk</a>
-								</p>
-							</Grid.Column>
-							<Grid.Column id='aboutLocation' floated='right' width={4} style={{ padding: '2.65em 0 0 5em' }}>
-                                <p style={{ fontSize: '1.33em' }}>
-                                    Golbourn Training Solutions Ltd provides UK coverage. We can come to your location 
-                                    or you can book at one of centres from the below list. 
-                                </p>
-                                <List bulleted style={{ fontSize: '1.33em' }} items={[
-                                    'Lossiemouth, Moray',
-                                    'Catterick, North Yorkshire',
-                                    'Coventry, West-Midlands',
-                                    'Aldershot, Hampshire',
-                                    'Poole, Dorset'
-                                ]} />
-							</Grid.Column>
-                            <Grid.Column id='aboutMap' width={4} style={{ margin: '0', padding: '0'}}>
-                                <Image
-                                    floated='right'
-                                    centered 
-                                    src='/images/ukMap.png' 
-                                    size='large' 
-                                    style={{ margin: '0', padding: '0' }} 
-                                />
-                            </Grid.Column>
-						</Grid.Row>
-					</Grid>
+                    <Segment style={{ border: 'none' }} vertical>
+                        <Grid borderless container stackable verticalAlign='top'>
+                            <Grid.Row>
+                                <Grid.Column floated='right' width={8}>
+                                    <p style={{ fontSize: '1.33em' }}>
+                                        Golbourn Training Solutions Ltd provides UK coverage. We can come to your location 
+                                        or you can book at one of the centres from the below list. 
+                                    </p>
+                                    <List bulleted style={{ fontSize: '1.33em' }} items={[
+                                        'Lossiemouth, Moray',
+                                        'Catterick, North Yorkshire',
+                                        'Coventry, West Midlands',
+                                        'Aldershot, Hampshire',
+                                        'Poole, Dorset'
+                                    ]} />
+                                </Grid.Column>
+                                <Grid.Column width={8} style={{ margin: '0', padding: '0'}}>
+                                    <Image
+                                        centered
+                                        src='/images/ukMap.png' 
+                                        size='large' 
+                                    />
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                    </Segment>
 				</Fade>
                 <Fade bottom>
 					<Grid stackable verticalAlign='top'>

@@ -1,0 +1,65 @@
+#compHero {
+	height: 15em;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(114, 20, 20), 0.7),
+		rgba(rgb(24, 23, 70), 0.7)),
+		url('/images/Palace_of_Westminster.jpg');
+}
+#activitySyllabus {
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(to left,
+		rgba(rgb(138, 173, 157), 0.8),
+		rgba(rgb(33, 32, 56), 0.8)),
+		url('/images/activityFirstAid.jpg');
+}
+#juniorSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right bottom,
+		rgba(rgb(33, 158, 102), 0.8),
+		rgba(rgb(8, 7, 5), 0.8)),
+		url('/images/junior.png');
+}
+#anaphylaxisSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right top,
+		rgba(rgb(167, 164, 4), 0.8),
+		rgba(rgb(8, 7, 5), 0.8)),
+		url('/images/wasps.jpg');
+}
+#blsAedSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to left top,
+		rgba(rgb(199, 197, 87), 0.8),
+		rgba(rgb(32, 122, 167), 0.8)),
+		url('/images/AED.jpg');
+}
+#cprBlsAedSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(62, 124, 33), 0.8),
+		rgba(rgb(167, 104, 32), 0.8)),
+		url('/images/blsAed.jpg');
+}
+#bleedsSyllabus {
+	background-size: cover;
+	background-position: bottom;
+	background-image: linear-gradient(to left,
+		rgba(rgb(33, 47, 124), 0.7),
+		rgba(rgb(177, 14, 14), 0.7)),
+		url('/images/Bleeding.png');
+}
+#safeGuardingSyllabus {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to right,
+		rgba(rgb(7, 23, 97), 0.8),
+		rgba(rgb(77, 62, 62), 0.8)),
+		url('/images/safeGuarding.jpg');
+}
