@@ -133,41 +133,34 @@ class DesktopContainer extends React.Component {
 								outline: 'none',
 								padding: '.2em 2.4em'
 							} : { padding: '.2em 2.4em'}}
-						> 
+						>
 							<Menu.Menu>
 								<Image
 									id='gtsLogoHeader'
 									as={Link} to='/'
 									size='mini'
 									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
-									style={{ outline: 'none' }}
+									style={{ outline: 'none', margin: '.7em 1em 0 0' }}
 								/>
+								<Menu.Item as={Link} to='/contact' icon inverted={!fixed}>
+									<Icon name='mail' size='large'/>
+									&nbsp; Email Us
+								</Menu.Item>
+								<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed}>
+									<Icon name='phone square' size='large'/>
+									&nbsp; +44 (0)1926 825682
+								</Menu.Item>
 								<Menu.Item 
 									className='menuPhoneNumbers' 
 									inverted={!fixed}
 								>
-									Call Us Today:&nbsp; &nbsp;
-									<a 
-										id='telOne' 
-										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
-										href='tel:07904014772'
-									>
-										07904 014772
-									</a>
-									&nbsp; | &nbsp; 
-									<a 
-										id='telTwo' 
-										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
-										href='tel:01926825682'
-									>
-										01926 825682
-									</a>
 								</Menu.Item>
 							</Menu.Menu>
-							<Menu.Menu position='right' id='menuHome'>
+							<Menu.Menu position='right'>
 								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+								<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
 								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
 							</Menu.Menu>
 						</Menu>
@@ -208,7 +201,9 @@ export class MobileContainer extends React.Component {
 					<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 					<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
 					<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+					<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
 					<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
+					<Menu.Item as={Link} to="/about" className='menuItems'>About</Menu.Item>
 					<Menu.Item as={Link} to="/contact" className='menuItems'>Contact</Menu.Item>
 				</Sidebar>
 

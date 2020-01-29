@@ -1,17 +1,41 @@
-import React from 'react';
-import { Container, Header } from 'semantic-ui-react'
+import React from 'react'
+import moment from 'moment'
+import { Segment, Header } from 'semantic-ui-react'
+import { Calendar, momentLocalizer } from 'react-big-calendar'
 import NavBar from '../../components/layouts/Header'
+import MobileNavBar from '../../components/layouts/MobileHeader'
+import events from '../events'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
 
-export default props =>
+export default class PublicCourses extends React.Component {
+
+	componentDidMount() { window.scrollTo(0, 0) }
+
+	render() {
+
+
+		return (
+			<>
+				<NavBar path={this.props.location.pathname} body={<Body/>}/>
+				<MobileNavBar body={<Body mobile/>}/>
+			</>
+		)
+	}
+}
+
+const localizer = momentLocalizer(moment)
+
+const Body = ({ mobile }) => (
 	<>
-		<NavBar/>
-		<Container text style={{ marginTop: '7em' }}>
-			<Header as='h2'>Public Courses Dates</Header>
-			<p>
-				See Golbourn Training Solutions Managing Directors training availability, please keep in mind any date and location 
-				is possible through the Regional Instructors.
-				
-				Below are a list of all our Public Courses, we also deliver private courses please contact us for more details.
-			</p>
-		</Container>
+		<Header as='h2' style={mobile ? { fontSize: '3em' } : { display: 'none' }}>PUBLIC COURSES</Header>
+		<Segment basic style={mobile ? { marginTop: '2em' } : null }>
+			<Calendar
+				localizer={localizer}
+				events={events}
+				startAccessor="start"
+				endAccessor="end"
+				style={{ height: 700 }}
+			/>
+		</Segment>
 	</>
+)

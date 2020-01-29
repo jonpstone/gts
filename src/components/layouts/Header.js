@@ -26,7 +26,7 @@ export default class DesktopContainerMenu extends React.Component {
 
 	render() {
 		const { fixed } = this.state
-		const { path } = this.props
+		const { path, body } = this.props
 
 		return (
 			<Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -44,7 +44,9 @@ export default class DesktopContainerMenu extends React.Component {
 											path === '/about' ? 'aboutHero' : (
 												path === '/contact' ? 'contactHero' : (
 													path === '/policy' ? 'policyHero' : (
-														path === '/sitemap' ? 'sitemapHero' : null
+														path === '/sitemap' ? 'sitemapHero' : (
+															path === '/public-courses' ? 'publicHero' : null
+														)
 													)
 												)
 											)
@@ -76,34 +78,26 @@ export default class DesktopContainerMenu extends React.Component {
 									as={Link} to='/'
 									size='mini'
 									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
-									style={{ outline: 'none' }}
-
+									style={{ outline: 'none', margin: '.7em 1em 0 0' }}
 								/>
+								<Menu.Item as={Link} to='/contact' icon inverted={!fixed}>
+									<Icon name='mail' size='large'/>
+									&nbsp; Email Us
+								</Menu.Item>
+								<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed}>
+									<Icon name='phone square' size='large'/>
+									&nbsp; +44 (0)1926 825682
+								</Menu.Item>
 								<Menu.Item 
 									className='menuPhoneNumbers' 
 									inverted={!fixed}
 								>
-									Call Us Today:&nbsp; &nbsp;
-									<a 
-										id='telOne' 
-										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
-										href='tel:07904014772'
-									>
-										07904 014772
-									</a>
-									&nbsp; | &nbsp; 
-									<a 
-										id='telTwo' 
-										style={fixed ? { color: 'black', outline: 'none' } : { outline: 'none' }} 
-										href='tel:01926825682'
-									>
-										01926 825682
-									</a>
 								</Menu.Item>
 							</Menu.Menu>
 							<Menu.Menu position='right'>
 								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+								<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
 								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
 								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
 							</Menu.Menu>
@@ -177,7 +171,15 @@ export default class DesktopContainerMenu extends React.Component {
 																		content='SITEMAP'
 																		inverted
 																		style={{ fontSize: '3em', fontWeight: 'bold' }}
-																	/> : null
+																	/> : (
+																		path === '/public-courses' ?
+																		<Header
+																			as='h1'
+																			content='PUBLIC COURSES'
+																			inverted
+																			style={{ fontSize: '3em', fontWeight: 'bold' }}
+																		/> : null
+																	)
 																)
 															)
 														)
@@ -210,6 +212,7 @@ export default class DesktopContainerMenu extends React.Component {
 								</Button>
 						</Container>
 					</Segment>
+					{body}
 				</Visibility>
 			</Responsive>
 		)

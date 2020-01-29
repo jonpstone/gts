@@ -4,8 +4,20 @@ import { Form } from 'formsy-semantic-ui-react'
 import Reaptcha from 'reaptcha'
 import * as emailjs from 'emailjs-com'
 import NavBar from '../../components/layouts/Header'
+import MobileNavBar from '../../components/layouts/MobileHeader'
 
-export default class Contact extends React.Component {
+export default class ContactForm extends React.Component {
+	render() {
+		return (
+			<>
+				<NavBar path={this.props.location.pathname} body={<Contact/>}/>
+				<MobileNavBar body={<Contact mobile/>}/>
+			</>
+		)
+	}
+}
+
+class Contact extends React.Component {
 	state = { 
 		firstName: '', 
 		lastName: '', 
@@ -56,7 +68,6 @@ export default class Contact extends React.Component {
 	render() {
 		return(
 			<>
-				<NavBar path={this.props.location.pathname}/>
                 <Segment style={{ padding: '8em 1em', border: 'none' }} vertical>
 					<Container text>
 						<Form
