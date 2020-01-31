@@ -142,11 +142,11 @@ class DesktopContainer extends React.Component {
 									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
 									style={{ outline: 'none', margin: '.7em 1em 0 0' }}
 								/>
-								<Menu.Item as={Link} to='/contact' icon inverted={!fixed}>
+								<Menu.Item as={Link} to='/contact' icon inverted={!fixed} style={{ outline: 'none' }}>
 									<Icon name='mail' size='large'/>
 									&nbsp; Email Us
 								</Menu.Item>
-								<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed}>
+								<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed} style={{ outline: 'none' }}>
 									<Icon name='phone square' size='large'/>
 									&nbsp; +44 (0)1926 825682
 								</Menu.Item>

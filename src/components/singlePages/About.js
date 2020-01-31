@@ -21,9 +21,9 @@ export default class About extends React.Component {
 const Body = ({ mobile }) => (
     <>
         <Header as='h2' style={mobile ? { fontSize: '3em' } : { display: 'none' }}>ABOUT</Header>
-        <Segment style={mobile ? { padding: '3em 1em', backgroundColor: 'white' } : { padding: '8em' }} vertical>
+        <Segment basic style={mobile ? { padding: '3em 1em', backgroundColor: ' #f2efed' } : { padding: '8em' }} vertical>
             <Grid divided container stackable verticalAlign='top'>
-                <Grid.Row>
+                <Grid.Row> 
                     <Grid.Column 
                         floated='left' 
                         width={8} 
@@ -64,13 +64,13 @@ const Body = ({ mobile }) => (
             </Grid>
         </Segment>
         <Fade bottom>
-            <Segment style={{ border: 'none' }} vertical>
-                <Grid borderless container stackable verticalAlign='top'>
-                    <Grid.Row>
+            <Segment basic vertical>
+                <Grid container stackable verticalAlign='top'>
+                    <Grid.Row style={{ border: '0' }}>
                         <Grid.Column floated='right' width={8}>
                             <p style={{ fontSize: '1.33em' }}>
                                 Golbourn Training Solutions Ltd provides UK coverage. We can come to your location 
-                                or you can book at one of the centres from the below list. 
+                                or you can book at one of the centres from the below list.
                             </p>
                             <List bulleted style={{ fontSize: '1.33em' }} items={[
                                 'Lossiemouth, Moray',
@@ -94,7 +94,14 @@ const Body = ({ mobile }) => (
         <Fade bottom>
             <Grid stackable verticalAlign='top'>
                 <Grid.Row style={{ margin: '3em 0 1em 0' }}>
-                    <Header as='h3' icon textAlign='center' style={{ fontSize: '2em', marginBottom: '1em' }}>
+                    <Header
+                        icon
+                        as='h3' 
+                        textAlign='center' 
+                        style={mobile ? 
+                            { marginTop: '2em', fontSize: '2em', marginBottom: '1em' } : 
+                            { fontSize: '2em', marginBottom: '1em' }}
+                        >
                         CLIENT TESTIMONIALS 
                     </Header>
                 </Grid.Row>

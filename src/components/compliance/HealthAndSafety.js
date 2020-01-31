@@ -45,7 +45,7 @@ export class HealthAndSafety extends React.Component {
 						color='blue' 
 						size='huge' 
 						onClick={this.handleLeftOnClick} 
-						style={{ marginRight: '1.2em'}}
+						style={{ margin: '0 1.2em .5em 0'}}
 					>
 						&nbsp; Manual Handling &nbsp;
 						<Icon name='angle down'/>

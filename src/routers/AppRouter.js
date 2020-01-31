@@ -18,7 +18,6 @@ export default props =>
       <Route path="/public-courses" component={Public} />
       <Route path="/forces-covenant" component={ForcesCovenant} />
 
-
       {/* Other Routers */}
       <Route path="/compliance" component={ComplianceRouter} />
       <Route path="/organisation-security" component={OrgSecRouter} />
@@ -28,5 +27,5 @@ export default props =>
       {/* 404 Not Found */}
       <Route component={NotFound} />
     </Switch>
-    <Footer />
+    <Footer mobile tablet/>
   </BrowserRouter>

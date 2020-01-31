@@ -12,8 +12,6 @@ export default class PublicCourses extends React.Component {
 	componentDidMount() { window.scrollTo(0, 0) }
 
 	render() {
-
-
 		return (
 			<>
 				<NavBar path={this.props.location.pathname} body={<Body/>}/>
