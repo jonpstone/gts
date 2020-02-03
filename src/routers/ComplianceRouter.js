@@ -19,13 +19,27 @@ import {
     ComplianceHome,
 } from '../components/compliance'
 
-
 export default class Compliance extends React.Component {
+
+    componentDidMount() { window.scrollTo(0, 0) }
+
+    render() {
+        const { pathname } = this.props.location
+        return (
+            <>
+                <NavBar path={pathname} body={<Body path={pathname}/>}/>
+                <MobileNavBar body={<Body path={pathname} mobile/>}/>
+            </>
+        )
+    }
+}
+
+class Body extends React.Component {
     state = { activeItem: null }
     contextRef = createRef()
 
     componentDidMount() {
-        let strippedPath = this.stripPathToString(this.props.location.pathname)
+        let strippedPath = this.stripPathToString(this.props.path)
         if (this.state.activeItem !== strippedPath && (strippedPath === 'compliance')) {
             this.setState({ 
                 activeItem: 'Compliance Home'
@@ -66,7 +80,6 @@ export default class Compliance extends React.Component {
 
         return (
             <>
-				<NavBar path={this.props.location.pathname} />
                 <Router>
                     <Grid centered style={{ margin: '1em 0 .1em 0' }}>
                         <Grid.Column borderless stretched computer={16} largeScreen={7} widescreen={10}>
@@ -127,14 +140,19 @@ export default class Compliance extends React.Component {
                                     onHide={this.handleSidebarHide}
                                     vertical
                                     visible={sidebarOpened}
+                                    direction='right'
                                 >
-                                    <Menu.Item name='Compliance Home' as={Link} to='/compliance' />
+                                    <Menu.Item 
+                                        name='Compliance Home' 
+                                        as={Link} to='/compliance' 
+                                        onClick={this.handleSidebarHide}/>
                                     {
                                         linkNames.map((item) => (
                                             <Menu.Item
                                                 name={item}
                                                 as={Link}
                                                 to={`/compliance/${item.replace(/\s+/g, '-')}`}
+                                                onClick={this.handleSidebarHide}
                                             />
                                         ))
                                     }
@@ -145,7 +163,7 @@ export default class Compliance extends React.Component {
                                         textAlign='center'
                                         style={{ padding: '1em 0em', backgroundColor: 'white' }}
                                     >
-                                        <Container>
+                                        <Container fluid textAlign='right'>
                                             <Menu borderless secondary size='large'>
                                                 <Button 
                                                     inverted 
@@ -154,7 +172,7 @@ export default class Compliance extends React.Component {
                                                     onClick={this.handleToggle}
                                                 >
                                                     <Icon name='sidebar' size='small'/>
-                                                    <div style={{ display: 'inline-block', fontSize: '1em' }}>COMPLIANCE</div>
+                                                    <div style={{ display: 'inline-block', fontSize: '.8em' }}>COMPLIANCE</div>
                                                 </Button>
                                             </Menu>
                                         </Container>

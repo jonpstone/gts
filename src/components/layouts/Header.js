@@ -23,6 +23,8 @@ export default class DesktopContainerMenu extends React.Component {
 
 	hideFixedMenu = () => { this.setState({ fixed: false }) }
 	showFixedMenu = () => { this.setState({ fixed: true }) }
+	
+	componentDidMount() { window.scrollTo(0, 0) }
 
 	render() {
 		const { fixed } = this.state
