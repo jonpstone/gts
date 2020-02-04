@@ -63,6 +63,7 @@ class Body extends React.Component {
 
     render() {
         const { activeItem, sidebarOpened } = this.state
+        const { mobile } = this.props
 
         const linkNames = [
             'Health And Safety', 
@@ -157,26 +158,25 @@ class Body extends React.Component {
                                         ))
                                     }
                                 </Sidebar>
-                                <Sidebar.Pusher dimmed={sidebarOpened}>
+                                <Sidebar.Pusher>
                                     <Segment
                                         vertical
                                         textAlign='center'
                                         style={{ padding: '1em 0em', backgroundColor: 'white' }}
                                     >
-                                        <Container fluid textAlign='right'>
-                                            <Menu borderless secondary size='large'>
+                                            <Container>
                                                 <Button 
                                                     inverted 
                                                     color='blue' 
                                                     size='huge' 
                                                     onClick={this.handleToggle}
+                                                    floated='right'
                                                 >
                                                     <Icon name='sidebar' size='small'/>
                                                     <div style={{ display: 'inline-block', fontSize: '.8em' }}>COMPLIANCE</div>
                                                 </Button>
-                                            </Menu>
-                                        </Container>
-                                        <RouterSection />
+                                            </Container>
+                                        <RouterSection mobile/>
                                     </Segment>
                                 </Sidebar.Pusher>
                             </Responsive>
@@ -188,11 +188,14 @@ class Body extends React.Component {
     }
 }
 
-const RouterSection = () => (
-    <Segment style={{ padding: '3em', margin: '.8em 0 1em 0' }}>
+const RouterSection = (props) => (
+    <Segment style={props.mobile ? 
+        { padding: '3em .5em', margin: '4.4em 0 1em 0' } : 
+        { padding: '3em', margin: '.8em 0 1em 0' }}
+    >
         <Switch>
             <Route exact path="/compliance" component={ComplianceHome} />
-            <Route path="/compliance/Health-And-Safety" component={HealthAndSafety} />
+            <Route path="/compliance/Health-And-Safety" render={(props) => <HealthAndSafety {...props} mobile />}/>
             <Route path="/compliance/First-Aid-At-Work" component={FirstAidAtWork} />
             <Route path="/compliance/Basic-Life-Support-with-AED" component={BlsAed} />
             <Route path="/compliance/Paediatric-First-Aid" component={PaediatricFirstAid} />

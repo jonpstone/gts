@@ -57,7 +57,7 @@ export class BespokeFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='juniorSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='juniorSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Contents of the First Aid Box',

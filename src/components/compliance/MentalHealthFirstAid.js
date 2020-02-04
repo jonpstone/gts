@@ -45,7 +45,7 @@ export default class MentalHealthFirstAid extends React.Component {
 						color='blue' 
 						size='huge' 
 						onClick={this.handleLeftOnClick} 
-						style={{ marginRight: '1.2em'}}
+						style={{ marginBottom: '.5em'}}
 					>
 						&nbsp; Level 2 Award &nbsp;
 						<Icon name='angle down'/>
@@ -78,9 +78,9 @@ export default class MentalHealthFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='mentalHealthOneSyllabus' style={{ color: 'white', padding: '2em 0 2em 7em' }}>
+						<Grid.Row id='mentalHealthOneSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
-								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
+								<List bulleted style={{ fontSize: '2em', padding: '10%' }} items={[
 										'What is First Aid for Mental Health?', 
 										'Identifying mental health conditions',
 										'Providing advice and starting a conversation',
@@ -158,7 +158,7 @@ export default class MentalHealthFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='mentalHealthTwoSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='mentalHealthTwoSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
 										'What is First Aid for Mental Health?',
@@ -222,9 +222,9 @@ export default class MentalHealthFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='mentalHealthThreeSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='mentalHealthThreeSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
-								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
+								<List bulleted style={{ fontSize: '2em', padding: '10%' }} items={[
 										'What is First Aid for Mental Health?',
 										'Identifying mental health conditions',
 										'Providing advice and starting a conversation',

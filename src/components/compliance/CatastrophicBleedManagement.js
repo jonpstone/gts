@@ -29,12 +29,12 @@ export class CatastrophicBleedManagement extends React.Component {
 						</Grid.Column>
 						<Grid.Column style={{ padding: '0 0 0 2em' }}>
 							It can be run in the following options:<br/><br/>
-								<List bulleted>
-									<List.Item>A 2-3 hour stand alone course</List.Item>
-									<List.Item>A bolt on to a regulated course, such as EFAW or FAW</List.Item>
-									<List.Item> an add-on to the +F bolt on course</List.Item>
-									<List.Item> part of the bespoke serious incident control measures course</List.Item>
-								</List>
+							<List bulleted>
+								<List.Item>A 2-3 hour stand alone course</List.Item>
+								<List.Item>A bolt on to a regulated course, such as EFAW or FAW</List.Item>
+								<List.Item> an add-on to the +F bolt on course</List.Item>
+								<List.Item> part of the bespoke serious incident control measures course</List.Item>
+							</List>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
@@ -42,7 +42,7 @@ export class CatastrophicBleedManagement extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Course Content</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='bleedsSyllabus' style={{ color: 'white', padding: '5em 0 5em 9em' }}>
+						<Grid.Row id='bleedsSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Changes to UK Guidelines',

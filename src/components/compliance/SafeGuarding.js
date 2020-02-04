@@ -50,7 +50,7 @@ export default class SafeGuarding extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='safeGuardingSyllabus' 
-							style={{ color: 'white', padding: '4em 1em 4em 6em', fontSize: '1.3em' }}
+							style={{ color: 'white', padding: '10%', fontSize: '1.3em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[

@@ -45,7 +45,7 @@ export class FirstAidAtWork extends React.Component {
 						color='blue' 
 						size='huge' 
 						onClick={this.handleLeftOnClick} 
-						style={{ marginRight: '1.2em'}}
+						style={{ marginBottom: '.5em'}}
 					>
 						&nbsp; Emergency First Aid at Work &nbsp;
 						<Icon name='angle down'/>
@@ -87,7 +87,7 @@ export class FirstAidAtWork extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='faawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='faawSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Legalities, responsibilities and reporting', 
@@ -177,7 +177,7 @@ export class FirstAidAtWork extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='emergencyFaawSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting', 

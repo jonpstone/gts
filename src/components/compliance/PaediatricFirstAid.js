@@ -75,7 +75,7 @@ export class PaediatricFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='paediatricSyllabus' style={{ color: 'white', padding: '2em 0 2em 9em' }}>
+						<Grid.Row id='paediatricSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',
@@ -165,7 +165,7 @@ export class PaediatricFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='emergencyPaediatricSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
+						<Grid.Row id='emergencyPaediatricSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',

@@ -73,7 +73,7 @@ export default class BlsAed extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='foodSafetyOneSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
+							style={{ color: 'white', padding: '10%', fontSize: '1.5em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -128,7 +128,7 @@ export default class BlsAed extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='foodSafetyTwoSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
+							style={{ color: 'white', padding: '10%', fontSize: '1.5em' }}
 						>
 							<Grid.Column>
 								<List bulleted items={[

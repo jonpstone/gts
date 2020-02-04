@@ -75,7 +75,7 @@ export default class BlsAed extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='blsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
+						<Grid.Row id='blsAedSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',
@@ -154,7 +154,7 @@ export default class BlsAed extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='cprBlsAedSyllabus' style={{ color: 'white', padding: '4em 0 4em 9em' }}>
+						<Grid.Row id='cprBlsAedSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting', 

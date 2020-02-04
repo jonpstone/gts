@@ -30,11 +30,15 @@ export class HealthAndSafety extends React.Component {
 			})
 		}
 	}
-		
+
 	render() {
+		const { mobile } = this.props
+
 		return (
-			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
-			
+			<Container style={mobile ? 
+				{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5', padding: '0 .5em' } : 
+				{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}
+			>
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
 					Health & Safety Training
 				</Header>
@@ -45,13 +49,18 @@ export class HealthAndSafety extends React.Component {
 						color='blue' 
 						size='huge' 
 						onClick={this.handleLeftOnClick} 
-						style={{ margin: '0 1.2em .5em 0'}}
+						style={{ marginBottom: '.5em' }}
 					>
 						&nbsp; Manual Handling &nbsp;
 						<Icon name='angle down'/>
 					</Button>
-					<Button inverted color='blue' size='huge' onClick={this.handleRightOnClick}>
-					&nbsp; Fire Safety &nbsp;
+					<Button 
+						inverted 
+						color='blue' 
+						size='huge' 
+						onClick={this.handleRightOnClick}
+					>
+						&nbsp; Fire Safety &nbsp;
 						<Icon name='double angle down'/>
 					</Button>
 				</Container>
@@ -61,11 +70,19 @@ export class HealthAndSafety extends React.Component {
 						<Grid.Column>
 							All workers have a right to work in places where risks to their health and safety are 
 							properly controlled. Health and safety is there to help prevent you from suffering injury or
-							illness	through work.
+							illness	through work. 
 						</Grid.Column>
 					</Grid.Row>
-					<Grid.Row id='healthAndSafetySyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
+					<Grid.Row 
+						id='healthAndSafetySyllabus' 
+						style={
+							mobile ? 
+								{ color: 'white', padding: '2%', fontSize: '1.5em' } : 
+								{ color: 'white', padding: '10%', fontSize: '1.5em' }
+							}
+						>
 						<Grid.Column>
+							It is the employer's responsibility to:<br />
 							<List bulleted items={[
 									'Carryout Risk Assessments',
 									'Put in place control measures',
@@ -101,7 +118,14 @@ export class HealthAndSafety extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='healthAndSafetyOneSyllabus' style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}>
+						<Grid.Row 
+							id='healthAndSafetyOneSyllabus' 
+							style={
+								mobile ? 
+									{color: 'white', padding: '2%', fontSize: '1.5em'} : 
+									{ color: 'white', padding: '10%', fontSize: '1.5em' }
+								}
+							>
 							<Grid.Column>
 								<List bulleted items={[
 										'Understanding the importance of health, safety and welfare standards in the workplace',
@@ -140,8 +164,12 @@ export class HealthAndSafety extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='healthAndSafetyTwoSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
-						>
+							style={
+								mobile ? 
+									{ color: 'white', padding: '2%', marginBottom: '4em', fontSize: '1.5em' } : 
+									{ color: 'white', padding: '10%', marginBottom: '4em', fontSize: '1.5em' }
+								}
+							>
 							<Grid.Column>
 								<List bulleted items={[
 										'The roles and responsibilities for health, safety and welfare in the workplace',
@@ -205,8 +233,12 @@ export class HealthAndSafety extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='manualHandlingSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', margin: '0 0 4em 0', fontSize: '1.5em' }}
-						>
+							style={
+								mobile ? 
+									{ color: 'white', padding: '2%', marginBottom: '4em', fontSize: '1.5em' } : 
+									{ color: 'white', padding: '10%', marginBottom: '4em', fontSize: '1.5em' }
+								}
+							>
 							<Grid.Column>
 								<List bulleted items={[
 										'Understand the reasons for safe manual handling',
@@ -257,8 +289,12 @@ export class HealthAndSafety extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='fireSyllabus' 
-							style={{ color: 'white', padding: '3em 3em 3em 5em', fontSize: '1.5em' }}
-						>
+							style={
+								mobile ? 
+									{ color: 'white', padding: '2%', fontSize: '1.5em' } : 
+									{ color: 'white', padding: '10%', fontSize: '1.5em' }
+								}
+							>
 							<Grid.Column>
 								<List bulleted items={[
 										'The hazards and risks associated with fire in the workplace',
