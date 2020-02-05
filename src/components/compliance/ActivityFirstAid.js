@@ -9,6 +9,8 @@ export default class ActivityFirstAid extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 	
@@ -42,7 +44,13 @@ export default class ActivityFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='activitySyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='activitySyllabus' 
+							style={ mobile ? 
+								{color: 'white', padding: '2%'} : 
+								{ color: 'white', padding: '10%' }
+							}
+						>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',

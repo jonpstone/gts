@@ -9,6 +9,8 @@ export default class SafeGuarding extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 	
@@ -50,7 +52,10 @@ export default class SafeGuarding extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='safeGuardingSyllabus' 
-							style={{ color: 'white', padding: '10%', fontSize: '1.3em' }}
+							style={ mobile ? 
+								{ color: 'white', padding: '2%', fontSize: '1.33em', textAlign: 'left' } : 
+								{ color: 'white', padding: '10%', fontSize: '1.33em' }
+							}
 						>
 							<Grid.Column>
 								<List bulleted items={[

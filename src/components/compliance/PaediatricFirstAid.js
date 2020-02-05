@@ -22,6 +22,8 @@ export class PaediatricFirstAid extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
@@ -36,14 +38,30 @@ export class PaediatricFirstAid extends React.Component {
 						size='huge' 
 						onClick={this.handleOnClick} 
 					>
-						&nbsp; Emergency Paediatric First Aid &nbsp;
-						<Icon name='angle down'/>
+						{
+							mobile ? (
+								"Emergency Paediatric First Aid"
+							) : (
+								<>
+									&nbsp; Emergency Paediatric First Aid &nbsp;
+									<Icon name='angle down'/>
+								</>
+							)
+						}
 					</Button>
 				</Container>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Paediatric First Aid &nbsp; | &nbsp; 2 days
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Paediatric First Aid &nbsp; | &nbsp; 2 days
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Paediatric First Aid | 2 Days
+						</div>
+					)
+				}
 
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
@@ -75,7 +93,9 @@ export class PaediatricFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='paediatricSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='paediatricSyllabus' 
+							style={ mobile ? { color: 'white', padding: '2%' } : { color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',
@@ -136,14 +156,22 @@ export class PaediatricFirstAid extends React.Component {
 					</Header>
 				</Fade>
 				
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Emergency Paediatric First Aid &nbsp; | &nbsp; 1 day
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Emergency Paediatric First Aid | 1 Day
+						</div>
+					)
+				}
 
 				<Grid divided stackable columns='equal'>
 					<Fade bottom>
 						<Grid.Row>
-							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+							<Grid.Column>
 								The Emergency First Aid at Work course will enable your company to meet its 
 								regulatory requirements, if after completing a First Aid risk assessment your 
 								organisation is classed as a low risk working environment. Golbourn Training 
@@ -165,7 +193,13 @@ export class PaediatricFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='emergencyPaediatricSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='emergencyPaediatricSyllabus' 
+							style={ mobile ? 
+								{ color: 'white', padding: '2%' } : 
+								{ color: 'white', padding: '10%' }
+							}
+						>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',

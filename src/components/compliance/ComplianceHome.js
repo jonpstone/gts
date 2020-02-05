@@ -8,6 +8,8 @@ export default class ComplianceHome extends React.Component {
     }
     
     render() {
+        const { mobile } = this.props
+
         return (
             <Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
                 <Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
@@ -43,11 +45,19 @@ export default class ComplianceHome extends React.Component {
                             Wikipedia
                         </Label>
                     </Grid.Row>
-                </Grid>                    
+                </Grid>       
 
-                <Divider horizontal style={{ margin: '3.5em 0' }}>
-                    Is your organisation HSE Compliant?
-                </Divider>
+				{
+					!mobile ? (
+                        <Divider horizontal style={{ margin: '3.5em 0' }}>
+                            Is your organisation HSE Compliant?
+                        </Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Is your organisation HSE Compliant?
+						</div>
+					)
+				}
                     
                 <Grid divided stackable columns='equal'>
                     <Grid.Row>

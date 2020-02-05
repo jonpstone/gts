@@ -32,6 +32,8 @@ export default class MentalHealthFirstAid extends React.Component {
 	}
 		
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
@@ -47,18 +49,43 @@ export default class MentalHealthFirstAid extends React.Component {
 						onClick={this.handleLeftOnClick} 
 						style={{ marginBottom: '.5em'}}
 					>
-						&nbsp; Level 2 Award &nbsp;
-						<Icon name='angle down'/>
+						{
+							mobile ? (
+								"Level 2 Award"
+							) : (
+								<>
+									&nbsp; Level 2 Award &nbsp;
+									<Icon name='angle down'/>
+								</>
+							)
+						}
 					</Button>
 					<Button inverted color='blue' size='huge' onClick={this.handleRightOnClick}>
-					&nbsp; Level 3 Award &nbsp;
-						<Icon name='double angle down'/>
+						{
+							mobile ? (
+								"Level 3 Award"
+							) : (
+								<>
+									&nbsp; Level 3 Award &nbsp;
+									<Icon name='double angle down'/>
+								</>
+							)
+						}
+
 					</Button>
 				</Container>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Level 1 Award in Awareness of First Aid for Mental Health &nbsp; | &nbsp; 4 hours
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Level 1 Award in Awareness of First Aid for Mental Health &nbsp; | &nbsp; 4 hours
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Level 1 Award in Awareness of First Aid for Mental Health | 4 Hours
+						</div>
+					)
+				}
 
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
@@ -80,7 +107,10 @@ export default class MentalHealthFirstAid extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row id='mentalHealthOneSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
-								<List bulleted style={{ fontSize: '2em', padding: '10%' }} items={[
+								<List 
+									bulleted 
+									style={ mobile ? { fontSize: '1.33em', padding: '2%' } : { fontSize: '2em', padding: '10%' }} 
+									items={[
 										'What is First Aid for Mental Health?', 
 										'Identifying mental health conditions',
 										'Providing advice and starting a conversation',
@@ -116,9 +146,17 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 2 Award in First Aid for Mental Health &nbsp; | &nbsp; 1 day
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 2 Award in First Aid for Mental Health | 1 day
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -160,7 +198,13 @@ export default class MentalHealthFirstAid extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row id='mentalHealthTwoSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
-								<List bulleted style={{ fontSize: '2em', padding: '2em' }} items={[
+								<List 
+									bulleted 
+									style={ mobile ? 
+										{ fontSize: '1.33em', padding: '2%' } : 
+										{ fontSize: '2em', padding: '2em' }
+									} 
+									items={[
 										'What is First Aid for Mental Health?',
 										'Identifying mental health conditions',
 										'Providing advice and starting a conversation',
@@ -199,9 +243,17 @@ export default class MentalHealthFirstAid extends React.Component {
 				</Fade>
 				
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 3 Award in Supervising First Aid for Mental Health &nbsp; | &nbsp; 2 days
+							</Divider>
+						) : (
+							<div style={{ margin: '2em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 3 Award in Supervising First Aid for Mental Health | 2 days
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -224,7 +276,13 @@ export default class MentalHealthFirstAid extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row id='mentalHealthThreeSyllabus' style={{ color: 'white', padding: '10%' }}>
 							<Grid.Column>
-								<List bulleted style={{ fontSize: '2em', padding: '10%' }} items={[
+								<List 
+									bulleted 
+									style={ mobile ? 
+										{ fontSize: '1.33em', padding: '2%' } : 
+										{ fontSize: '2em', padding: '10%' }
+									} 
+									items={[
 										'What is First Aid for Mental Health?',
 										'Identifying mental health conditions',
 										'Providing advice and starting a conversation',

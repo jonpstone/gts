@@ -22,6 +22,8 @@ export default class BlsAed extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
@@ -36,14 +38,30 @@ export default class BlsAed extends React.Component {
 						size='huge' 
 						onClick={this.handleOnClick} 
 					>
-						&nbsp; Level 2 Good Nutrition &nbsp;
-						<Icon name='angle down'/>
+						{
+							mobile ? (
+								"Level 2 Good Nutrition"
+							) : (
+								<>
+									&nbsp; Level 2 Good Nutrition &nbsp;
+									<Icon name='angle down'/>
+								</>
+							)
+						}
 					</Button>
 				</Container>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Level 2 Food Safety in Catering &nbsp; | &nbsp; 1 day
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Level 2 Food Safety in Catering &nbsp; | &nbsp; 1 day
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Level 2 Food Safety in Catering | 1 Day
+						</div>
+					)
+				}
 
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
@@ -73,7 +91,10 @@ export default class BlsAed extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='foodSafetyOneSyllabus' 
-							style={{ color: 'white', padding: '10%', fontSize: '1.5em' }}
+							style={ mobile ? 
+								{ color: 'white', padding: '2%', fontSize: '1.33em', textAlign: 'left' } : 
+								{ color: 'white', padding: '10%', fontSize: '1.5em' }
+							}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -90,9 +111,17 @@ export default class BlsAed extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '7em 0 5em 0' }}>
-						Level 2 Good Nutrition &nbsp; | &nbsp; 4 hours
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '7em 0 5em 0' }}>
+								Level 2 Good Nutrition &nbsp; | &nbsp; 4 hours
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 2 Good Nutrition | 4 Hours
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -128,7 +157,10 @@ export default class BlsAed extends React.Component {
 					<Grid stackable columns='equal'>
 						<Grid.Row 
 							id='foodSafetyTwoSyllabus' 
-							style={{ color: 'white', padding: '10%', fontSize: '1.5em' }}
+							style={ mobile ? 
+								{ color: 'white', padding: '2%', fontSize: '1.33em', textAlign: 'left' } : 
+								{ color: 'white', padding: '10%', fontSize: '1.5em' }
+							}
 						>
 							<Grid.Column>
 								<List bulleted items={[
@@ -160,7 +192,7 @@ export default class BlsAed extends React.Component {
 							written test. This qualification does not expire, but refresher training and keeping up to 
 							date with changes to policies and procedures is vital to keep the qualification current.
 						</Grid.Row>
-						<Divider horizontal style={{ margin: '5em 0' }}>Certification</Divider>
+						<Divider horizontal style={{ margin: '5em 0' }}>Numbers</Divider>
 						<Grid.Row>
 							A maximum of 16 students are allowed and must be a minimum of 14 years of age and a 
 							certificate can be offered to all, subject to assessment.

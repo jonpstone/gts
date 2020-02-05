@@ -35,9 +35,11 @@ export class HealthAndSafety extends React.Component {
 		const { mobile } = this.props
 
 		return (
-			<Container style={mobile ? 
-				{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5', padding: '0 .5em' } : 
-				{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}
+			<Container style={
+				mobile ? 
+					{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5', padding: '0 .5em' } : 
+					{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }
+				}
 			>
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em', marginBottom: '1.5em' }}>
 					Health & Safety Training
@@ -51,8 +53,16 @@ export class HealthAndSafety extends React.Component {
 						onClick={this.handleLeftOnClick} 
 						style={{ marginBottom: '.5em' }}
 					>
-						&nbsp; Manual Handling &nbsp;
-						<Icon name='angle down'/>
+						{
+							mobile ? (
+								"Manual Handling"
+							) : (
+								<>
+									&nbsp; Manual Handling &nbsp;
+									<Icon name='angle down'/>
+								</>
+							)
+						}
 					</Button>
 					<Button 
 						inverted 
@@ -60,8 +70,16 @@ export class HealthAndSafety extends React.Component {
 						size='huge' 
 						onClick={this.handleRightOnClick}
 					>
-						&nbsp; Fire Safety &nbsp;
-						<Icon name='double angle down'/>
+						{
+							mobile ? (
+								"Fire Safety"
+							) : (
+								<>
+									&nbsp; Fire Safety &nbsp;
+									<Icon name='double angle down'/>
+								</>
+							)
+						}
 					</Button>
 				</Container>
 
@@ -96,9 +114,17 @@ export class HealthAndSafety extends React.Component {
 				</Grid>
 				
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 1 Health & Safety in the workplace &nbsp; | &nbsp; 4 hours
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 1 Health & Safety in the workplace | 4 Hours
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -140,9 +166,17 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Health & Safety in the workplace &nbsp; | &nbsp; 1 Day
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 2 Health & Safety in the workplace &nbsp; | &nbsp; 1 Day
+							</Divider>
+						) : (
+							<div style={{ margin: '4em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 2 Health & Safety in the workplace | 1 Day
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -191,9 +225,17 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Manual Handling Course (Principles and Practice) &nbsp; | &nbsp; 1 Day
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 2 Manual Handling Course (Principles and Practice) &nbsp; | &nbsp; 1 Day
+							</Divider>
+						) : (
+							<div style={{ margin: '4em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 2 Manual Handling Course (Principles and Practice) | 1 Day
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
@@ -260,9 +302,17 @@ export class HealthAndSafety extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Level 2 Fire Safety &nbsp; | &nbsp; 2 days
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Level 2 Fire Safety &nbsp; | &nbsp; 2 days
+							</Divider>
+						) : (
+							<div style={{ margin: '4em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Level 2 Fire Safety | 2 Days
+							</div>
+						)
+					}
 					<Grid divided stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>

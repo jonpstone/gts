@@ -1,7 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Link } from 'react-router-dom'
-import { Container, Header, Divider, Grid, List, Button, Icon } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, List } from 'semantic-ui-react'
 
 export class BespokeFirstAid extends React.Component {
 
@@ -10,6 +9,8 @@ export class BespokeFirstAid extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 				<Header as='h2' textAlign='center' style={{ fontSize: '2em' }}>
@@ -57,7 +58,9 @@ export class BespokeFirstAid extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='juniorSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='juniorSyllabus' 
+							style={ mobile ? { color: 'white', padding: '2%' } : { color: 'white', padding: '10%' }}>
 							<Grid.Column>
 								<List bulleted items={[
 										'Contents of the First Aid Box',

@@ -21,7 +21,7 @@ export default class About extends React.Component {
 const Body = ({ mobile }) => (
     <>
         <Header as='h2' style={mobile ? { fontSize: '3em' } : { display: 'none' }}>ABOUT</Header>
-        <Segment basic style={mobile ? { padding: '3em 1em', backgroundColor: ' #f2efed' } : { padding: '8em' }} vertical>
+        <Segment basic style={mobile ? { padding: '3em 1em' } : { padding: '8em' }} vertical>
             <Grid divided container stackable verticalAlign='top'>
                 <Grid.Row> 
                     <Grid.Column 

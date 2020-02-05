@@ -22,6 +22,8 @@ export default class BlsAed extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 			
@@ -36,14 +38,30 @@ export default class BlsAed extends React.Component {
 						size='huge' 
 						onClick={this.handleOnClick} 
 					>
-						&nbsp; CPR with Basic Life Support & AED &nbsp;
-						<Icon name='angle down'/>
+						{
+							mobile ? (
+								"CPR with Basic Life Support & AED"
+							) : (
+								<>
+									&nbsp; CPR with Basic Life Support & AED &nbsp;
+									<Icon name='angle down'/>
+								</>
+							)
+						}
 					</Button>
 				</Container>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Basic Life Support with AED &nbsp; | &nbsp; 4 hours
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Basic Life Support with AED &nbsp; | &nbsp; 4 hours
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Basic Life Support with AED | 4 Hours
+						</div>
+					)
+				}
 
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
@@ -75,7 +93,13 @@ export default class BlsAed extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='blsAedSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='blsAedSyllabus' 
+							style={ mobile ? 
+								{ color: 'white', padding: '2%' } : 
+								{ color: 'white', padding: '10%' }
+							}
+						>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting',
@@ -138,10 +162,18 @@ export default class BlsAed extends React.Component {
 				<Grid divided stackable columns='equal'>
 					<Fade bottom>
 						<Grid.Row>
-							<Divider horizontal style={{ margin: '5em 0' }}>
-								CPR with BLS & AED &nbsp; | &nbsp; 1 day
-							</Divider>
-							<Grid.Column style={{ padding: '0 2em 0 0' }}>
+							{
+								!mobile ? (
+									<Divider horizontal style={{ margin: '5em 0' }}>
+										CPR with BLS & AED &nbsp; | &nbsp; 1 day
+									</Divider>
+								) : (
+									<div style={{ margin: '3em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+										CPR with BLS & AED | 1 Day
+									</div>
+								)
+							}
+							<Grid.Column>
 								Not only does this course deal with the use of an AED and the above syllabus, but
 								it also includes vital training in resuscitation and choking procedures. A minimum 
 								of six contact hours in the classroom, consisting of practical and theoretical 
@@ -154,7 +186,13 @@ export default class BlsAed extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Syllabus</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='cprBlsAedSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='cprBlsAedSyllabus' 
+							style={ mobile ?
+								{ color: 'white', padding: '2%' } :
+								{ color: 'white', padding: '10%' }
+							}
+						>
 							<Grid.Column>
 								<List bulleted items={[
 										'Responsibilities and reporting', 

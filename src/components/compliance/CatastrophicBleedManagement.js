@@ -9,6 +9,8 @@ export class CatastrophicBleedManagement extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 	
@@ -16,9 +18,17 @@ export class CatastrophicBleedManagement extends React.Component {
 					Catastrophic Bleed Management
 				</Header>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>
-					Catastrophic Bleed Management  &nbsp; | &nbsp; 3 hours
-				</Divider>
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>
+							Catastrophic Bleed Management  &nbsp; | &nbsp; 3 hours
+						</Divider>
+					) : (
+						<div style={{ margin: '5em 0 3em 0', fontSize: '1em', fontWeight: 'bold' }}>
+							Catastrophic Bleed Management | 3 Hours
+						</div>
+					)
+				}
 		
 				<Grid divided stackable columns='equal'>
 					<Grid.Row>
@@ -42,7 +52,14 @@ export class CatastrophicBleedManagement extends React.Component {
 				<Fade bottom>
 					<Divider horizontal style={{ margin: '5em 0' }}>Course Content</Divider>
 					<Grid stackable columns='equal'>
-						<Grid.Row id='bleedsSyllabus' style={{ color: 'white', padding: '10%' }}>
+						<Grid.Row 
+							id='bleedsSyllabus' 
+							style={ 
+								mobile ? 
+								{ color: 'white', padding: '2%', textAlign: 'left' } : 
+								{ color: 'white', padding: '10%' }
+							}
+						>
 							<Grid.Column>
 								<List bulleted items={[
 										'Changes to UK Guidelines',

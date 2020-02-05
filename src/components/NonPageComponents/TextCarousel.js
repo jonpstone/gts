@@ -2,16 +2,16 @@ import React from "react";
 import { Button, Header } from 'semantic-ui-react';
 import { CarouselProvider, Slide, Slider, ButtonBack, ButtonNext } from "pure-react-carousel";
 
-export default props =>
-		<CarouselProvider
-			naturalSlideWidth={1.8}
-			naturalSlideHeight={1.2}
-			totalSlides={6}
-			isPlaying={true}
-			interval={4000}
-			playDirection={'forward'}
-			touchEnabled={true}
-		>
+const TextCarousel = ({ mobile }) => (
+	<CarouselProvider
+		naturalSlideWidth={ mobile ? 1 : 1.8}
+		naturalSlideHeight={ mobile ? 2 : 1.2}
+		totalSlides={6}
+		isPlaying={true}
+		interval={4000}
+		playDirection={'forward'}
+		touchEnabled={true}
+	>
 		<Slider>
 			<Slide index={0}>
 				<p style={{ fontSize: '1.1em', color: 'white' }}>
@@ -192,3 +192,6 @@ export default props =>
 		</ButtonNext>
 
 	</CarouselProvider>
+)
+
+export default TextCarousel

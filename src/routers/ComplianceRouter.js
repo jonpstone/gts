@@ -170,7 +170,6 @@ class Body extends React.Component {
                                                     color='blue' 
                                                     size='huge' 
                                                     onClick={this.handleToggle}
-                                                    floated='right'
                                                 >
                                                     <Icon name='sidebar' size='small'/>
                                                     <div style={{ display: 'inline-block', fontSize: '.8em' }}>COMPLIANCE</div>
@@ -190,22 +189,22 @@ class Body extends React.Component {
 
 const RouterSection = (props) => (
     <Segment style={props.mobile ? 
-        { padding: '3em .5em', margin: '4.4em 0 1em 0' } : 
+        { padding: '3em .5em', margin: '1em 0 1em 0' } : 
         { padding: '3em', margin: '.8em 0 1em 0' }}
     >
         <Switch>
-            <Route exact path="/compliance" component={ComplianceHome} />
-            <Route path="/compliance/Health-And-Safety" render={(props) => <HealthAndSafety {...props} mobile />}/>
-            <Route path="/compliance/First-Aid-At-Work" component={FirstAidAtWork} />
-            <Route path="/compliance/Basic-Life-Support-with-AED" component={BlsAed} />
-            <Route path="/compliance/Paediatric-First-Aid" component={PaediatricFirstAid} />
-            <Route path="/compliance/Activity-First-Aid" component={ActivityFirstAid} />
-            <Route path="/compliance/Junior-And-Bespoke-First-Aid" component={BespokeFirstAid} />
-            <Route path="/compliance/Anaphylaxis-Management" component={AnaphylaxisManagement} />
-            <Route path="/compliance/Catastrophic-Bleeds" component={CatastrophicBleedManagement} />
-            <Route path="/compliance/Food-Safety" component={FoodSafety} />
-            <Route path="/compliance/Mental-Health-First-Aid" component={MentalHealthFirstAid} />
-            <Route path="/compliance/Safe-Guarding" component={SafeGuarding} />
+            <Route exact path="/compliance" render={() => <ComplianceHome mobile={props.mobile} />} />
+            <Route path="/compliance/Health-And-Safety" render={() => <HealthAndSafety mobile={props.mobile} />} />
+            <Route path="/compliance/First-Aid-At-Work" render={() => <FirstAidAtWork mobile={props.mobile} />} />
+            <Route path="/compliance/Basic-Life-Support-with-AED" render={() => <BlsAed mobile={props.mobile} />} />
+            <Route path="/compliance/Paediatric-First-Aid" render={() => <PaediatricFirstAid mobile={props.mobile} />} />
+            <Route path="/compliance/Activity-First-Aid" render={() => <ActivityFirstAid mobile={props.mobile} />} />
+            <Route path="/compliance/Junior-And-Bespoke-First-Aid" render={() => <BespokeFirstAid mobile={props.mobile} />} />
+            <Route path="/compliance/Anaphylaxis-Management" render={() => <AnaphylaxisManagement mobile={props.mobile} />} />
+            <Route path="/compliance/Catastrophic-Bleeds" render={() => <CatastrophicBleedManagement mobile={props.mobile} />} />
+            <Route path="/compliance/Food-Safety" render={() => <FoodSafety mobile={props.mobile} />} />
+            <Route path="/compliance/Mental-Health-First-Aid" render={() => <MentalHealthFirstAid mobile={props.mobile} />} />
+            <Route path="/compliance/Safe-Guarding" render={() => <SafeGuarding mobile={props.mobile} />} />
         </Switch>
     </Segment>
 )
