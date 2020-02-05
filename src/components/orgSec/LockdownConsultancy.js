@@ -9,6 +9,8 @@ export default class LockDownConsultancy extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 
@@ -16,21 +18,35 @@ export default class LockDownConsultancy extends React.Component {
 					Lockdown Training and Consultancy
 				</Header>
 
-				<Divider horizontal style={{ margin: '5em 0' }}>Ask yourself these simple questions</Divider>
-
 				<Grid divided stackable columns='equal' style={{ marginTop: '3em' }}>
 					<Grid.Row>
 						In the current security climate across the United Kingdom and Europe, it is vital that identified
 						potential targets are fully prepared to react effectively and instantly. Having a Lockdown 
 						procedure in place is essential, however your Lockdown is only as good as the people doing it.
 					</Grid.Row>
+				</Grid>
+				
+				{
+					!mobile ? (
+						<Divider horizontal style={{ margin: '5em 0' }}>Ask yourself these simple questions</Divider>
+					) : (
+						<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+							Ask Yourself These Simple Questions
+						</div>
+					)
+				}
+
+				<Grid divided stackable columns='equal' style={mobile ? null : { marginTop: '3em' }}>
 					<Grid.Row 
 						id='lockdownQuestions' 
 						textAlign='center'
-						style={{ color: 'white', padding: '2em 0', fontSize: '1.5em' }}
+						style={ mobile ? 
+							{ color: 'white', padding: '5%', fontSize: '1.2em' } : 
+							{ color: 'white', padding: '2em 0', fontSize: '1.5em' }
+						}
 					>
 						<Grid.Column>
-							<List bulleted items={[
+							<List bulleted style={ mobile ? {textAlign: 'left'} : null } items={[
 									'Do you have a Lockdown procedure?',
 									'Do your staff know and understand it?',
 									'Do they have the confidence and training to achieve it?',
@@ -45,7 +61,7 @@ export default class LockDownConsultancy extends React.Component {
 				
 				<Fade bottom>
 					<Grid divided stackable columns='equal'>
-						<Grid.Row style={{ margin: '5em 0' }}>
+						<Grid.Row style={mobile ? { margin: '2em 0' } : { margin: '5em 0' }}>
 							<Grid.Column style={{ padding: '0 2em 0 0' }}>
 								Our team of subject matter experts from across the military, police and counter-terrorist
 								communities have 135 years combined operational experience in counter-threat and control 
@@ -61,9 +77,17 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '0 0 5em' }}>
-						Option 1 &nbsp; | &nbsp; Basic Package
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '0 0 5em' }}>
+								Option 1 &nbsp; | &nbsp; Basic Package
+							</Divider>
+						) : (
+							<div style={{ margin: '2em 0', fontSize: '1em', fontWeight: 'bold' }}>
+								Option 1 | Basic Package
+							</div>
+						)
+					}
 					<Grid stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#c8dbe3', color: '#4f4f4f' }}>
@@ -77,9 +101,17 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Option 2 &nbsp; | &nbsp; Intermediate Package
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Option 2 &nbsp; | &nbsp; Intermediate Package
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+								Option 2 | Intermediate Package
+							</div>
+						)
+					}
 					<Grid stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column id='lockdownOptionTwo'></Grid.Column>
@@ -95,9 +127,17 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Option 3 &nbsp; | &nbsp; Intermediate Plus Package
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Option 3 &nbsp; | &nbsp; Intermediate Plus Package
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 1em', fontSize: '1em', fontWeight: 'bold' }}>
+								Option 3 | Intermediate Plus Package
+							</div>
+						)
+					}
 					<Grid padded stackable columns='equal'>
 						<Grid.Row>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#e6e9ed', color: '#4f4f4f' }}>
@@ -116,9 +156,17 @@ export default class LockDownConsultancy extends React.Component {
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Option 4 &nbsp; | &nbsp; Advanced Package - Serious Incident Control Measures
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>
+								Option 4 &nbsp; | &nbsp; Advanced Package - Serious Incident Control Measures
+							</Divider>
+						) : (
+							<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+								Option 4 | Advanced Package - Serious Incident Control Measures
+							</div>
+						)
+					}
 					<Grid stackable columns='equal' style={{ marginBottom: '2em' }}>
 						<Grid.Row>
 							<Grid.Column id='lockdownOptionFour'></Grid.Column>

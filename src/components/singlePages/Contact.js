@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Container, Label, Message } from 'semantic-ui-react'
+import { Segment, Container, Label, Message, Header } from 'semantic-ui-react'
 import { Form } from 'formsy-semantic-ui-react'
 import Reaptcha from 'reaptcha'
 import * as emailjs from 'emailjs-com'
@@ -66,9 +66,19 @@ class Contact extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return(
 			<>
-                <Segment style={{ padding: '8em 1em', border: 'none' }} vertical>
+				<Header as='h2' style={mobile ? { fontSize: '3em' } : { display: 'none' }}>CONTACT</Header>
+				<Segment
+					vertical
+					style={
+						mobile ? 
+							{ padding: '2em 1em', border: 'none', textAlign: 'left' } : 
+							{ padding: '2em 1em', border: 'none' }
+						}
+					>
 					<Container text>
 						<Form
 							ref={ ref => this.form = ref }

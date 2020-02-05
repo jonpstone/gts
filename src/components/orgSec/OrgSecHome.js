@@ -14,9 +14,9 @@ export default class OrgSecHome extends React.Component {
                     Operational Security
                 </Header>
 
-                <Grid divided stackable columns='equal'>
+                <Grid divided stackable columns='equal' textAlign='center'>
                     <Grid.Row>
-                        <Grid.Column>
+                        <Grid.Column tablet={16} computer={5} largeScreen={16} widescreen={5} style={{ marginBottom: '2em' }}>
                             <Grid.Row id='orgSecOne'>
                                 <h1>SECURITY AUDIT</h1>
                             </Grid.Row>
@@ -24,14 +24,14 @@ export default class OrgSecHome extends React.Component {
                             security measures and processes and complete a report of their findings and
                             recommendations.
                         </Grid.Column>
-                        <Grid.Column>
+                        <Grid.Column tablet={16} computer={5} largeScreen={16} widescreen={5} style={{ marginBottom: '2em' }}>
                             <Grid.Row id='orgSecTwo'>
                                 <h1>LOCKDOWN CONSULTANCY</h1>
                             </Grid.Row>
                             We hope and we pray that the worst will never happen, but we must always be prepared. We
                             will provide consultancy and training to ensure your orgainisation is Lockdown ready.
                         </Grid.Column>
-                        <Grid.Column>
+                        <Grid.Column tablet={16} computer={5} largeScreen={16} widescreen={5} style={{ marginBottom: '2em' }}>
                             <Grid.Row id='orgSecThree'>
                                 <h1>SERIOUS INCIDENT CONTROL MEASURES</h1>
                             </Grid.Row>

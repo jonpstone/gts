@@ -1,6 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Container, Header, Divider, Grid, List } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid } from 'semantic-ui-react'
 
 export default class LockDownConsultancy extends React.Component {
 

@@ -25,6 +25,7 @@ export default class Compliance extends React.Component {
 
     render() {
         const { pathname } = this.props.location
+
         return (
             <>
                 <NavBar path={pathname} body={<Body path={pathname}/>}/>
@@ -63,7 +64,6 @@ class Body extends React.Component {
 
     render() {
         const { activeItem, sidebarOpened } = this.state
-        const { mobile } = this.props
 
         const linkNames = [
             'Health And Safety', 
@@ -145,8 +145,10 @@ class Body extends React.Component {
                                 >
                                     <Menu.Item 
                                         name='Compliance Home' 
-                                        as={Link} to='/compliance' 
-                                        onClick={this.handleSidebarHide}/>
+                                        as={Link} 
+                                        to='/compliance' 
+                                        onClick={this.handleSidebarHide}
+                                    />
                                     {
                                         linkNames.map((item) => (
                                             <Menu.Item
