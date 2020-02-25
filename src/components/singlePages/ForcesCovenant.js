@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Grid, Segment, Image } from 'semantic-ui-react'
+import { Header, Grid, Segment, Responsive } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'
 import ForcesCoursesCarousel from '../NonPageComponents/ForcesCoursesCarousel'
 import NavBar from '../layouts/Header'
@@ -94,7 +94,7 @@ class Body extends React.Component {
 					<Segment style={{ padding: '0' }} vertical borderless>
 						<Grid stackable columns='equal'>
 							<Grid.Row style={{ margin: '0', padding: '0' }}>
-								<Grid.Column style={{ backgroundColor: '#607e6d', padding: '5em 10em 5em 15em' }}>
+								<Grid.Column style={{ backgroundColor: '#607e6d', padding: '5em 10em 2em 15em' }}>
 									<Header 
 										inverted 
 										as='h3' 
@@ -104,19 +104,12 @@ class Body extends React.Component {
 									</Header>
 									<ForcesCoursesCarousel/>
 								</Grid.Column>
-								<Grid.Column style={{ backgroundColor: '#6eb8ff', padding: '5em 1em 0 0' }}>
-									<Grid.Row>
-										<Image centered src='/images/SLC.jpg' size='big' />
-									</Grid.Row>
-									<Grid.Row>
-										<Image 
-											centered 
-											src='/images/forcesFamily.jpg' 
-											size='massive' 
-											style={{ width: '100%' }} 
-										/>
-									</Grid.Row>
-								</Grid.Column>
+									<Grid.Column style={{ padding: '0' }}>
+										<Responsive minWidth={1800}>
+											<Grid.Row id='slc'></Grid.Row>
+											<Grid.Row id='forcesFamily'></Grid.Row>
+										</Responsive>
+									</Grid.Column>
 							</Grid.Row>
 						</Grid>
 					</Segment>

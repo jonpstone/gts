@@ -1,6 +1,6 @@
 import React, { createRef } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { Menu, Responsive, Header, Grid, Segment, Sticky, Ref, Rail, Button, Icon, Sidebar, Container } from 'semantic-ui-react'
+import { Menu, Responsive, Grid, Segment, Sticky, Ref, Rail, Button, Icon, Sidebar, Container } from 'semantic-ui-react'
 import { SICM, LockdownConsultancy, SecurityAudit, OrgSecHome } from '../components/orgSec'
 import Back2Top from 'react-back2top'
 import NavBar from '../components/layouts/Header'
@@ -51,7 +51,6 @@ class Body extends React.PureComponent {
 
     render() {
         const { activeItem, sidebarOpened  } = this.state
-        const { mobile } = this.props
         const linkNames = ['Security Audit', 'Lockdown Consultancy', 'SICM']
 
         return (

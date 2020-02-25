@@ -1,6 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { Container, Header, Divider, Grid } from 'semantic-ui-react'
+import { Container, Header, Divider, Grid, Responsive } from 'semantic-ui-react'
 
 export default class LockDownConsultancy extends React.Component {
 
@@ -9,6 +9,8 @@ export default class LockDownConsultancy extends React.Component {
 	}
 
 	render() {
+		const { mobile } = this.props
+
 		return (
 			<Container style={{ marginTop: '2em', fontSize: '1.2em', lineHeight: '1.5' }}>
 
@@ -22,23 +24,40 @@ export default class LockDownConsultancy extends React.Component {
 						current Corporate Incident Management system.
 					</Grid.Row>
 					<Grid.Row>
-						<Grid.Column style={{ padding: '6% 14%', backgroundColor: '#c8dbe3', color: '#4f4f4f' }}>
+						<Grid.Column style={{ padding: '6% 12%', backgroundColor: '#c8dbe3', color: '#4f4f4f' }}>
 							It is NOT about ALARMISM . . . <br/><br/>
 							It IS about PREVENTION . . . <br/><br/>
 							It IS about PREPARATION . . . <br/><br/>
 							. . . and <strong>PRESERVING LIFE</strong>
 						</Grid.Column>
-						<Grid.Column id='terroristSICM' style={{ paddingLeft: '27%', height: '100%' }}></Grid.Column>
+						<Grid.Column id='terroristSICM' style={{ paddingLeft: '27%' }}></Grid.Column>
 					</Grid.Row>
 				</Grid>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						Why do I need this course, that’s what the Security and Emergency Services are for?
-					</Divider>
+					{
+						!mobile ? (
+							<>
+								<Responsive minWidth={1920}>
+									<Divider horizontal style={{ margin: '5em 0' }} computer={8}>
+										Why do I need this course, that’s what the Security and Emergency Services are for?
+									</Divider>
+								</Responsive>
+								<Responsive minWidth={769} maxWidth={1919}>
+									<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+										Why do I need this course, that’s what the Security and Emergency Services are for?
+									</div>
+								</Responsive>
+							</>							
+						) : (
+								<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+									Why do I need this course, that’s what the Security and Emergency Services are for?
+								</div>
+						)
+					}
 					<Grid stackable columns='equal'>
 						<Grid.Row>
-							<Grid.Column id='SICM2' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM2' style={{  }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#acc2b1', color: 'white' }}>
 								<p>
 									This country’s security and emergency services are the best in the world, and as a 
@@ -79,18 +98,24 @@ export default class LockDownConsultancy extends React.Component {
 									treatment can survive even major trauma injuries. 
 								</p>								
 							</Grid.Column>
-							<Grid.Column id='SICM3' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM3' style={{  }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						COURSE INTRODUCTION
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>COURSE INTRODUCTION</Divider>
+						) : (
+							<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+								Course Introduction
+							</div>
+						)
+					}
 					<Grid padded stackable columns='equal'>
 						<Grid.Row>
-							<Grid.Column id='SICM4' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM4' style={{  }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#92939d', color: 'white' }}>
 							<p>
 								This three day course has been developed as a guide to increase the skill set of key 
@@ -132,18 +157,24 @@ export default class LockDownConsultancy extends React.Component {
 								caught up in this situation will be any	casualties best chance of survival.
 							</p>
 							</Grid.Column>
-							<Grid.Column id='SICM5' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM5' style={{  }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>
 
 				<Fade bottom>
-					<Divider horizontal style={{ margin: '5em 0' }}>
-						IMPORTANT SICM COURSE INFORMATION
-					</Divider>
+					{
+						!mobile ? (
+							<Divider horizontal style={{ margin: '5em 0' }}>IMPORTANT SICM COURSE INFORMATION</Divider>
+						) : (
+							<div style={{ margin: '5em 0 2em', fontSize: '1em', fontWeight: 'bold' }}>
+								Important SICM Course Information
+							</div>
+						)
+					}
 					<Grid stackable columns='equal' style={{ marginBottom: '2em' }}>
 						<Grid.Row>
-							<Grid.Column id='SICM6' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM6' style={{  }}></Grid.Column>
 							<Grid.Column style={{ padding: '1em', backgroundColor: '#c6b49a', color: 'white' }}>
 							<h4>COPYRIGHT</h4>
 							<p>
@@ -189,7 +220,7 @@ export default class LockDownConsultancy extends React.Component {
 									known.
 								</p>
 							</Grid.Column>
-							<Grid.Column id='SICM7' style={{ height: '100%' }}></Grid.Column>
+							<Grid.Column id='SICM7' style={{  }}></Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Fade>

@@ -7,6 +7,20 @@
 		rgba(#262e36, 0.7)),
 		url('/images/British_troops_2.jpg');
 }
+#forcesFamily {
+	min-height: 35em;
+	max-height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('/images/forcesFamily.jpg');
+}
+#slc {
+	min-height: 35em;
+	max-height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('/images/SLC.jpg');
+}
 #teamBuildingHero {
 	min-height: 100vh;
 	background-attachment: fixed;

@@ -1,24 +1,52 @@
 import React from "react";
-import { Button, List } from 'semantic-ui-react';
+import { Button, List, Responsive } from 'semantic-ui-react';
 import { 
 		CarouselProvider, 
 		Slide, 
 		Slider, 
 		ButtonBack, 
 		ButtonNext
-} from "pure-react-carousel";
+} from 'pure-react-carousel'
 
-const TextCarousel = () => (
-	<CarouselProvider
-		naturalSlideWidth={1}
-		naturalSlideHeight={.55}
-		totalSlides={4}
-		isPlaying={true}
-		interval={5000}
-		playDirection={'forward'}
-		touchEnabled={true}
-	>
-		<Slider>
+const getWidth = () => {
+	const isSSR = typeof window === 'undefined'
+	return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
+}
+
+export default props =>
+    <>
+        <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
+            <CarouselProvider
+                naturalSlideWidth={1}
+                naturalSlideHeight={.55}
+                totalSlides={4}
+                isPlaying={true}
+                interval={5000}
+                playDirection={'forward'}
+                touchEnabled={true}
+            >
+                <Body />
+            </CarouselProvider>
+        </Responsive>
+
+        <Responsive getWidth={getWidth} minWidth={Responsive.onlyMobile.minWidth} maxWidth={Responsive.onlyTablet.maxWidth}>
+            <CarouselProvider
+                naturalSlideWidth={1}
+                naturalSlideHeight={.55}
+                totalSlides={4}
+                isPlaying={true}
+                interval={5000}
+                playDirection={'forward'}
+                touchEnabled={true}
+            >
+                <Body />
+            </CarouselProvider>
+        </Responsive>
+    </>
+
+const Body = () => 
+    <>
+        <Slider>
 			<Slide index={0}>
 				<p style={{ fontSize: '1.33em', color: 'white' }}>
                     <h2>BUNDLE COURSE 1</h2>
@@ -99,8 +127,4 @@ const TextCarousel = () => (
 		<ButtonNext style={{ all: 'unset' }}>
             <Button inverted labelPosition='right' icon='right chevron' content='Forward' />
 		</ButtonNext>
-
-	</CarouselProvider>
-);
-
-export default TextCarousel;
+    </>
