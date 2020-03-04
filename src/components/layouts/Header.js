@@ -62,48 +62,7 @@ export default class DesktopContainerMenu extends React.Component {
 						style={{ padding: '1em 0em' }}
 						vertical
 					>
-						<Menu
-							borderless
-							fixed={!fixed ? null : 'top'}
-							inverted={!fixed}
-							size='large'
-							style={!fixed ? {
-								backgroundColor: 'transparent', 
-								border: 'none', 
-								outline: 'none',
-								padding: '.2em 2.4em'
-							} : { padding: '.2em 2.4em'}}
-						>
-							<Menu.Menu>
-								<Image
-									id='gtsLogoHeader'
-									as={Link} to='/'
-									size='mini'
-									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
-									style={{ outline: 'none', margin: '.7em 1em 0 0' }}
-								/>
-								<Menu.Item as={Link} to='/contact' icon inverted={!fixed} style={{ outline: 'none' }}>
-									<Icon name='mail' size='large'/>
-									&nbsp; Email Us
-								</Menu.Item>
-								<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed} style={{ outline: 'none' }}>
-									<Icon name='phone square' size='large'/>
-									&nbsp; +44 (0)1926 825682
-								</Menu.Item>
-								<Menu.Item 
-									className='menuPhoneNumbers' 
-									inverted={!fixed}
-								>
-								</Menu.Item>
-							</Menu.Menu>
-							<Menu.Menu position='right'>
-								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
-								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
-								<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
-								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
-								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
-							</Menu.Menu>
-						</Menu>
+						<NavMenu fixed={fixed}/>
 						<Container>
 							<Grid
 								stackable
@@ -220,3 +179,47 @@ export default class DesktopContainerMenu extends React.Component {
 		)
 	}
 }
+
+const NavMenu = ({fixed}) =>
+	<Menu
+		borderless
+		fixed={!fixed ? null : 'top'}
+		inverted={!fixed}
+		size='large'
+		style={!fixed ? {
+			backgroundColor: 'transparent', 
+			border: 'none', 
+			outline: 'none',
+			padding: '.2em 2.4em'
+		} : { padding: '.2em 2.4em'}}
+		>
+		<Menu.Menu>
+			<Image
+				id='gtsLogoHeader'
+				as={Link} to='/'
+				size='mini'
+				src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
+				style={{ outline: 'none', margin: '.7em 1em 0 0' }}
+			/>
+			<Menu.Item as={Link} to='/contact' icon inverted={!fixed} style={{ outline: 'none' }}>
+				<Icon name='mail' size='large'/>
+				&nbsp; Email Us
+			</Menu.Item>
+			<Menu.Item as='a' href='tel:01926825682' icon inverted={!fixed} style={{ outline: 'none' }}>
+				<Icon name='phone square' size='large'/>
+				&nbsp; +44 (0)1926 825682
+			</Menu.Item>
+			<Menu.Item 
+				className='menuPhoneNumbers' 
+				inverted={!fixed}
+			>
+			</Menu.Item>
+		</Menu.Menu>
+		<Menu.Menu position='right'>
+			<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
+			<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
+			<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
+			<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
+			<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
+		</Menu.Menu>
+	</Menu>

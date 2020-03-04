@@ -18,7 +18,7 @@ export default props =>
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyComputer.minWidth}>
             <CarouselProvider
                 naturalSlideWidth={1}
-                naturalSlideHeight={.55}
+                naturalSlideHeight={1}
                 totalSlides={4}
                 isPlaying={true}
                 interval={5000}
@@ -32,7 +32,7 @@ export default props =>
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyMobile.minWidth} maxWidth={Responsive.onlyTablet.maxWidth}>
             <CarouselProvider
                 naturalSlideWidth={1}
-                naturalSlideHeight={.55}
+                naturalSlideHeight={.8}
                 totalSlides={4}
                 isPlaying={true}
                 interval={5000}

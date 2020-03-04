@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Grid, Segment, Responsive } from 'semantic-ui-react'
+import { Header, Grid, Segment, Image } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'
 import ForcesCoursesCarousel from '../NonPageComponents/ForcesCoursesCarousel'
 import NavBar from '../layouts/Header'
@@ -39,7 +39,6 @@ class Body extends React.Component {
 						<Grid divided container stackable verticalAlign='top'>
 							<Grid.Row>
 								<Grid.Column 
-									floated='left' 
 									width={8} 
 									style={{paddingRight: '5em', marginBottom: '1.5em'}}
 								>
@@ -56,7 +55,7 @@ class Body extends React.Component {
 										family members.
 									</p>
 								</Grid.Column>
-								<Grid.Column floated='right' width={8} style={{paddingLeft: '5em'}}>
+								<Grid.Column floated='right' width={8} style={{ paddingLeft: '5em' }}>
 									<Header as='h3' style={{ fontSize: '2em' }}>
 										Forces Discount
 									</Header>
@@ -69,47 +68,42 @@ class Body extends React.Component {
 									</p>
 								</Grid.Column>
 							</Grid.Row>
-							<Grid.Row>
-								<Grid.Column>
-									<Header as='h3' style={mobile ? {fontSize: '2em'} : { fontSize: '2em', marginTop: '2em' }}>
-										Veteran Staff
-									</Header>
-									<p style={{ fontSize: '1.33em' }}>
-										All our instructors are veterans themselves and understand the need for flexible 
-										training. If you want a bespoke package putting together to meet your needs 
-										please just ask, if we can, we will. 
-									</p>
-									<p style={{ fontSize: '1.33em' }}>
-										Please contact us for further details.
-									</p>
-									<p style={{ fontSize: '1.33em' }}>
-										* You can use your SLC on all our course packages.
-									</p>
-								</Grid.Column>
-							</Grid.Row>
 						</Grid>
 					</Segment>
 				</Fade>
 				<Fade bottom>
-					<Segment style={{ padding: '0' }} vertical borderless>
-						<Grid stackable columns='equal'>
-							<Grid.Row style={{ margin: '0', padding: '0' }}>
-								<Grid.Column style={{ backgroundColor: '#607e6d', padding: '5em 10em 2em 15em' }}>
+					<Segment style={{ padding: '0', backgroundColor: '#607e6d' }} vertical borderless>
+						<Grid container stackable columns='equal'>
+							<Grid.Row style={!mobile ? { marginTop: '5em' } : { margin: '0', padding: '0' }}>
+								<Grid.Column style={{ color: 'white', paddingRight: '5em' }}>
+									<Header as='h3' style={{ fontSize: '2.2em', color: 'white' }}>
+										Veteran Staff
+									</Header>
+										<p style={{ fontSize: '1.33em' }}>
+											All our instructors are veterans themselves and understand the need for flexible 
+											training. If you want a bespoke package putting together to meet your needs 
+											please just ask, if we can, we will. 
+										</p>
+										<p style={{ fontSize: '1.33em' }}>
+											Please contact us for further details.
+										</p>
+										<p style={{ fontSize: '1.33em' }}>
+											* You can use your SLC on all our course packages.
+										</p><br />
+										<Image src='/images/SLC.jpg' />
+										{/* <Grid.Row id='slc'></Grid.Row>
+										<Grid.Row id='forcesFamily'></Grid.Row> */}
+								</Grid.Column>
+								<Grid.Column style={{ paddingLeft: '5em' }}>
 									<Header 
 										inverted 
 										as='h3' 
 										style={{ fontSize: '2em', color: 'white' }}
 									>
-										GTS MOD 3 Day Bundle Course Offers<br/><br/>
+										<p>GTS MOD 3 Day Bundle Course Offers</p><br />
 									</Header>
-									<ForcesCoursesCarousel/>
+									<ForcesCoursesCarousel/><br />
 								</Grid.Column>
-									<Grid.Column style={{ padding: '0' }}>
-										<Responsive minWidth={1800}>
-											<Grid.Row id='slc'></Grid.Row>
-											<Grid.Row id='forcesFamily'></Grid.Row>
-										</Responsive>
-									</Grid.Column>
 							</Grid.Row>
 						</Grid>
 					</Segment>
