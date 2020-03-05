@@ -2,7 +2,7 @@ import React from 'react'
 import { Segment, Container, Label, Message, Header } from 'semantic-ui-react'
 import { Form } from 'formsy-semantic-ui-react'
 import Reaptcha from 'reaptcha'
-import * as emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 import NavBar from '../../components/layouts/Header'
 import MobileNavBar from '../../components/layouts/MobileHeader'
 
