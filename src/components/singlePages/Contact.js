@@ -42,7 +42,7 @@ class Contact extends React.Component {
 	onValidSubmit = () => {
 		const { firstName, lastName, company, address, email, phone, course, message, verified } = this.state
 
-		// if (verified) {
+		if (verified) {
 			let templateParams = {
 				from_name: `${firstName} ${lastName}`,
 				course_html: course,
@@ -62,7 +62,7 @@ class Contact extends React.Component {
 				successMessage: true
 			})
 			this.form.reset()
-		// }
+		}
 	}
 
 	render() {
