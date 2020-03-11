@@ -73,7 +73,7 @@ export default class MobileContainerMenu extends React.Component {
                                 <Image
                                     as={Link}
                                     to='/'
-                                    src='/images/GTS.png' 
+                                    src='/images/GTS.webp' 
                                     size='small'
                                     style={{ marginTop: '1em' }} 
                                     wrapped
