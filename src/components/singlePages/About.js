@@ -83,7 +83,7 @@ const Body = ({ mobile }) => (
                         <Grid.Column width={8} style={{ margin: '0', padding: '0'}}>
                             <Image
                                 centered
-                                src='/images/ukMap.png' 
+                                src='/images/ukMap.webp' 
                                 size='large' 
                             />
                         </Grid.Column>

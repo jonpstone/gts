@@ -90,7 +90,7 @@ class Body extends React.Component {
 										<p style={{ fontSize: '1.33em' }}>
 											* You can use your SLC on all our course packages.
 										</p><br />
-										<Image src='/images/SLC.jpg' />
+										<Image src='/images/SLC.webp' />
 										{/* <Grid.Row id='slc'></Grid.Row>
 										<Grid.Row id='forcesFamily'></Grid.Row> */}
 								</Grid.Column>

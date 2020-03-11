@@ -5,21 +5,21 @@
 	background-image: linear-gradient(to right bottom,
 		rgba(#1c360b, 0.7),
 		rgba(#262e36, 0.7)),
-		url('/images/British_troops_2.jpg');
+		url('/images/British_troops_2.webp');
 }
 #forcesFamily {
 	min-height: 35em;
 	max-height: 100%;
 	background-size: cover;
 	background-position: center;
-	background-image: url('/images/forcesFamily.jpg');
+	background-image: url('/images/forcesFamily.webp');
 }
 #slc {
 	min-height: 35em;
 	max-height: 100%;
 	background-size: cover;
 	background-position: center;
-	background-image: url('/images/SLC.jpg');
+	background-image: url('/images/SLC.webp');
 }
 #teamBuildingHero {
 	min-height: 100vh;
@@ -28,7 +28,7 @@
 	background-image: linear-gradient(to right bottom,
 		rgba(rgb(114, 20, 20), 0.5),
 		rgba(rgb(24, 23, 70), 0.5)),
-		url('/images/HadrianWall.jpg');
+		url('/images/HadrianWall.webp');
 }
 #teamBuildingBullets {
 	color: white;
@@ -37,7 +37,7 @@
 	background-image: linear-gradient(to right,
 		rgba(#1c360b, 0.7),
 		rgba(#262e36, 1)),
-		url('/images/woodlandSurvival.jpg');
+		url('/images/woodlandSurvival.webp');
 }
 #corporateTeamBuildingBullets {
 	color: white;
@@ -46,7 +46,7 @@
 	background-image: linear-gradient(to right,
 		rgba(#4b4705, 1),
 		rgba(#082507, 0.8)),
-		url('/images/woodlandSurvivalTwo.jpg');
+		url('/images/woodlandSurvivalTwo.webp');
 }
 #walksRow {
 	color: white;
@@ -55,5 +55,5 @@
 	background-image: linear-gradient(to left,
 		rgba(#4d423a, 1),
 		rgba(#3a4d4c, 0.9)),
-		url('/images/edgeHill.jpg');
+		url('/images/edgeHill.webp');
 }

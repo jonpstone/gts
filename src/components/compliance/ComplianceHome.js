@@ -41,7 +41,7 @@ export default class ComplianceHome extends React.Component {
                             image
                             basic
                         >
-                            <Image src='/images/cc_logo.png'/>
+                            <Image src='/images/cc_logo.webp'/>
                             Wikipedia
                         </Label>
                     </Grid.Row>

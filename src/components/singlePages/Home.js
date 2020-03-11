@@ -36,7 +36,7 @@ const HomepageHeading = ({ mobile }) =>
 		>
 			<Grid.Row style={{ marginBottom: mobile ? '1.5em' : null }}>
 				<Image 
-					src='/images/GTS1.png' 
+					src='/images/GTS1.webp' 
 					size='small'
 					style={{ marginTop: mobile ? '1em' : '10%' }} 
 					wrapped
@@ -139,7 +139,7 @@ class DesktopContainer extends React.Component {
 									id='gtsLogoHeader'
 									as={Link} to='/'
 									size='mini'
-									src={!fixed ? '/images/GTS1.png' : '/images/GTS.png'}
+									src={!fixed ? '/images/GTS1.webp' : '/images/GTS.webp'}
 									style={{ outline: 'none', margin: '.7em 1em 0 0' }}
 								/>
 								<Menu.Item as={Link} to='/contact' icon inverted={!fixed} style={{ outline: 'none' }}>
@@ -253,7 +253,7 @@ const HomepageLayout = () =>
 				<Grid stackable>
 					<Grid.Row>
 						<Grid.Column>
-							<Image src='/images/logoChain.png' size='massive' centered/>
+							<Image src='/images/logoChain.webp' size='massive' centered/>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>
