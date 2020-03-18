@@ -38,7 +38,7 @@ const HomepageHeading = ({ mobile }) =>
 				<Image 
 					src='/images/GTS1.webp' 
 					size='small'
-					style={{ marginTop: mobile ? '1em' : '10%' }} 
+					style={{ marginTop: mobile ? '1em' : '5em' }} 
 					wrapped
 				/>
 			</Grid.Row>
@@ -159,8 +159,8 @@ class DesktopContainer extends React.Component {
 							<Menu.Menu position='right'>
 								<Menu.Item as={Link} to="/compliance" className='menuItems'>Compliance</Menu.Item>
 								<Menu.Item as={Link} to="/organisation-security" className='menuItems'>Organisation Security</Menu.Item>
-								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
 								<Menu.Item as={Link} to="/public-courses" className='menuItems'>Public Courses</Menu.Item>
+								<Menu.Item as={Link} to="/team-building" className='menuItems'>Team Building</Menu.Item>
 								<Menu.Item as={Link} to="/forces-covenant" className='menuItems'>Forces Support</Menu.Item>
 							</Menu.Menu>
 						</Menu>
