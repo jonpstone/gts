@@ -1,5 +1,4 @@
 #heroHome {
-	min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
 	min-height: calc(var(--vh, 1vh) * 100);
 	background-size: cover;
 	background-attachment: fixed;
