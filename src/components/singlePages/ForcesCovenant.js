@@ -27,7 +27,7 @@ class Body extends React.Component {
 
 	render() {
 		const { mobile } = this.props
-
+		
 		return (
 			<>
 				<Header as='h2' style={mobile ? { fontSize: '3em' } : { display: 'none' }}>FORCES SUPPORT</Header>
