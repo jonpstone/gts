@@ -10,7 +10,7 @@
     "express": "^4.17.1",
     "formsy-react": "^1.1.5",
     "formsy-semantic-ui-react": "^0.3.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mixin-deep": "^2.0.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
